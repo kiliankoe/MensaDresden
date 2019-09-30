@@ -3,27 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C5D234241B900E4EFB5 /* AppDelegate.swift */; };
 		39281C60234241B900E4EFB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C5F234241B900E4EFB5 /* SceneDelegate.swift */; };
-		39281C62234241B900E4EFB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C61234241B900E4EFB5 /* ContentView.swift */; };
+		39281C62234241B900E4EFB5 /* CanteenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C61234241B900E4EFB5 /* CanteenListView.swift */; };
 		39281C64234241BC00E4EFB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39281C63234241BC00E4EFB5 /* Assets.xcassets */; };
 		39281C67234241BC00E4EFB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39281C66234241BC00E4EFB5 /* Preview Assets.xcassets */; };
 		39281C6A234241BC00E4EFB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39281C68234241BC00E4EFB5 /* LaunchScreen.storyboard */; };
+		39281C74234247C100E4EFB5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39281C76234247C100E4EFB5 /* Localizable.strings */; };
+		39281C7923424CEA00E4EFB5 /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C7823424CEA00E4EFB5 /* MealListView.swift */; };
+		39281C7C23425BB600E4EFB5 /* RemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 39281C7B23425BB600E4EFB5 /* RemoteImage */; };
+		39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C7E23427F9B00E4EFB5 /* MealCell.swift */; };
+		39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C802342823800E4EFB5 /* PriceLabel.swift */; };
+		39281C83234282C100E4EFB5 /* MealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C82234282C100E4EFB5 /* MealImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		39281C5A234241B900E4EFB5 /* MensaDresden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MensaDresden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39281C5D234241B900E4EFB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39281C5F234241B900E4EFB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		39281C61234241B900E4EFB5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		39281C61234241B900E4EFB5 /* CanteenListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanteenListView.swift; sourceTree = "<group>"; };
 		39281C63234241BC00E4EFB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39281C66234241BC00E4EFB5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		39281C69234241BC00E4EFB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39281C6B234241BC00E4EFB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39281C75234247C100E4EFB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		39281C77234247C200E4EFB5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		39281C7823424CEA00E4EFB5 /* MealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListView.swift; sourceTree = "<group>"; };
+		39281C7E23427F9B00E4EFB5 /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
+		39281C802342823800E4EFB5 /* PriceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLabel.swift; sourceTree = "<group>"; };
+		39281C82234282C100E4EFB5 /* MealImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39281C7C23425BB600E4EFB5 /* RemoteImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,11 +71,13 @@
 			children = (
 				39281C5D234241B900E4EFB5 /* AppDelegate.swift */,
 				39281C5F234241B900E4EFB5 /* SceneDelegate.swift */,
-				39281C61234241B900E4EFB5 /* ContentView.swift */,
+				39281C61234241B900E4EFB5 /* CanteenListView.swift */,
+				39281C7D23427F8400E4EFB5 /* MealList */,
 				39281C63234241BC00E4EFB5 /* Assets.xcassets */,
 				39281C68234241BC00E4EFB5 /* LaunchScreen.storyboard */,
 				39281C6B234241BC00E4EFB5 /* Info.plist */,
 				39281C65234241BC00E4EFB5 /* Preview Content */,
+				39281C76234247C100E4EFB5 /* Localizable.strings */,
 			);
 			path = MensaDresden;
 			sourceTree = "<group>";
@@ -73,6 +88,17 @@
 				39281C66234241BC00E4EFB5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		39281C7D23427F8400E4EFB5 /* MealList */ = {
+			isa = PBXGroup;
+			children = (
+				39281C7823424CEA00E4EFB5 /* MealListView.swift */,
+				39281C7E23427F9B00E4EFB5 /* MealCell.swift */,
+				39281C82234282C100E4EFB5 /* MealImage.swift */,
+				39281C802342823800E4EFB5 /* PriceLabel.swift */,
+			);
+			path = MealList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +117,9 @@
 			dependencies = (
 			);
 			name = MensaDresden;
+			packageProductDependencies = (
+				39281C7B23425BB600E4EFB5 /* RemoteImage */,
+			);
 			productName = MensaDresden;
 			productReference = 39281C5A234241B900E4EFB5 /* MensaDresden.app */;
 			productType = "com.apple.product-type.application";
@@ -117,8 +146,12 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 39281C51234241B900E4EFB5;
+			packageReferences = (
+				39281C7A23425BB600E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */,
+			);
 			productRefGroup = 39281C5B234241B900E4EFB5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39281C6A234241BC00E4EFB5 /* LaunchScreen.storyboard in Resources */,
+				39281C74234247C100E4EFB5 /* Localizable.strings in Resources */,
 				39281C67234241BC00E4EFB5 /* Preview Assets.xcassets in Resources */,
 				39281C64234241BC00E4EFB5 /* Assets.xcassets in Resources */,
 			);
@@ -146,9 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,
+				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
+				39281C83234282C100E4EFB5 /* MealImage.swift in Sources */,
 				39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */,
 				39281C60234241B900E4EFB5 /* SceneDelegate.swift in Sources */,
-				39281C62234241B900E4EFB5 /* ContentView.swift in Sources */,
+				39281C62234241B900E4EFB5 /* CanteenListView.swift in Sources */,
+				39281C7923424CEA00E4EFB5 /* MealListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +201,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		39281C76234247C100E4EFB5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39281C75234247C100E4EFB5 /* en */,
+				39281C77234247C200E4EFB5 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -170,6 +217,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -230,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -342,6 +391,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		39281C7A23425BB600E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/crelies/RemoteImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		39281C7B23425BB600E4EFB5 /* RemoteImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39281C7A23425BB600E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */;
+			productName = RemoteImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 39281C52234241B900E4EFB5 /* Project object */;
 }
