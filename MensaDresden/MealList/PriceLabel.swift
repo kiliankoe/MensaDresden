@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct PriceLabel: View {
-    var price: String
+    var price: Double
 
     var body: some View {
-        Text(self.price)
+        Text(String(format: "%.2f€", self.price))
             .font(.system(.caption, design: .rounded))
             .bold()
             .foregroundColor(.white)
@@ -16,6 +16,6 @@ struct PriceLabel: View {
 
 struct PriceLabel_Previews: PreviewProvider {
     static var previews: some View {
-        PriceLabel(price: "2,80€")
+        PriceLabel(price: 2.8)
     }
 }
