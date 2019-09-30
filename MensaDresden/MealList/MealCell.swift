@@ -9,7 +9,7 @@ struct MealCell: View {
             MealImage(imageURL: meal.imageURL)
             VStack(alignment: .leading) {
                 Text(meal.category)
-                    .font(.caption)
+                    .font(Font.caption.smallCaps())
                     .foregroundColor(.gray)
 
                 Text(meal.name)
