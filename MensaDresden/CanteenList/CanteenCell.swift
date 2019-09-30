@@ -6,7 +6,7 @@ struct CanteenCell: View {
 
     var body: some View {
         HStack {
-            MapView(coordinate: canteen.coordinate)
+            MapView(coordinate: canteen.coordinate!)
                 .frame(width: 150, height: 100, alignment: .trailing)
                 .cornerRadius(8)
                 .padding(.trailing, 2)
@@ -22,7 +22,12 @@ struct CanteenCell: View {
 
 struct CanteenCell_Previews: PreviewProvider {
     static var previews: some View {
-        CanteenCell(canteen: Canteen(id: 1, name: "Alte Mensa", address: "Mommsenstr. 13, 01069 Dresden",
-                                     coordinate: CLLocationCoordinate2D(latitude: 51.02696733929933, longitude: 13.726491630077364)))
+        CanteenCell(canteen: Canteen(id: 1,
+                                     name: "Alte Mensa",
+                                     city: "Dresden",
+                                     address: "Mommsenstr. 13, 01069 Dresden",
+                                     coordinates: [51.02696733929933, 13.726491630077364],
+                                     url: URL(string: "https://studentenwerk-dresden.de")!,
+                                     menu: URL(string: "https://studentenwerk-dresden.de")!))
     }
 }

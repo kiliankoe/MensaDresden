@@ -6,7 +6,7 @@ struct MealCell: View {
 
     var body: some View {
         HStack {
-            MealImage(imageURL: meal.imageURL)
+            MealImage(imageURL: meal.image)
             VStack(alignment: .leading) {
                 Text(meal.category)
                     .font(Font.caption.smallCaps())
@@ -17,8 +17,8 @@ struct MealCell: View {
                     .padding(.top, 1)
 
                 HStack {
-                    PriceLabel(price: "2,80€")
-                    PriceLabel(price: "4,70€")
+                    PriceLabel(price: meal.prices.students)
+                    PriceLabel(price: meal.prices.employees)
                 }
             }
         }
@@ -29,9 +29,10 @@ struct MealCell_Previews: PreviewProvider {
     static var previews: some View {
         MealCell(meal: Meal(id: 1,
                             name: "Rindfleischpfanne mit Möhre, Ananas, Mango und Kokosmilch, dazu Mie Nudeln",
+                            notes: [""],
+                            prices: Meal.Prices(students: 2.9, employees: 4.7),
                             category: "Wok & Grill",
-                            studentPrice: 2.9,
-                            employeePrice: 4.7,
-                            imageURL: URL(string: "https://bilderspeiseplan.studentenwerk-dresden.de/m18/201909/233593.jpg")!))
+                            image: URL(string: "https://bilderspeiseplan.studentenwerk-dresden.de/m18/201909/233593.jpg")!,
+                            url: URL(string: "https://studentenwerk-dresden.de")!))
     }
 }

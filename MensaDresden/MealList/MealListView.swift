@@ -1,14 +1,5 @@
 import SwiftUI
 
-struct Meal: Identifiable {
-    let id: Int
-    let name: String
-    let category: String
-    let studentPrice: Double
-    let employeePrice: Double
-    let imageURL: URL
-}
-
 struct MealListView: View {
     var canteenName = ""
 
@@ -20,8 +11,8 @@ struct MealListView: View {
     }()
 
     @State var meals: [Meal] = [
-        Meal(id: 1, name: "Rindfleischpfanne mit Möhre, Ananas, Mango und Kokosmilch, dazu Mie Nudeln", category: "Wok & Grill", studentPrice: 2.9, employeePrice: 4.7, imageURL: URL(string: "https://bilderspeiseplan.studentenwerk-dresden.de/m18/201909/233593.jpg")!),
-        Meal(id: 2, name: "Hausgemachte Kartoffelpuffer mit Wurzelgemüse, dazu Kräuterquark-Dip und Salat", category: "fertig 3", studentPrice: 2.25, employeePrice: 4.05, imageURL: URL(string: "https://bilderspeiseplan.studentenwerk-dresden.de/m18/201909/233594.jpg")!),
+        Meal(id: 1, name: "Rindfleischpfanne mit Möhre, Ananas, Mango und Kokosmilch, dazu Mie Nudeln", notes: [""], prices: Meal.Prices(students: 2.9, employees: 4.7), category: "Wok & Grill", image: URL(string: "https://bilderspeiseplan.studentenwerk-dresden.de/m18/201909/233593.jpg")!, url: URL(string: "https://studentenwerk-dresden.de")!),
+        Meal(id: 2, name: "Hausgemachte Kartoffelpuffer mit Wurzelgemüse, dazu Kräuterquark-Dip und Salat", notes: [""], prices: Meal.Prices(students: 2.25, employees: 4.05), category: "fertig 3", image: URL(string: "https://bilderspeiseplan.studentenwerk-dresden.de/m18/201909/233594.jpg")!, url: URL(string: "https://studentenwerk-dresden.de")!)
     ]
 
     @State var selectedDate = 0

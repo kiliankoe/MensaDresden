@@ -21,6 +21,8 @@
 		39281C83234282C100E4EFB5 /* MealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C82234282C100E4EFB5 /* MealImage.swift */; };
 		39281C8623428CB500E4EFB5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8523428CB500E4EFB5 /* MapView.swift */; };
 		39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C872342910600E4EFB5 /* CanteenCell.swift */; };
+		39281C8D234297E000E4EFB5 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal.swift */; };
+		39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8E2342985900E4EFB5 /* Canteen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		39281C82234282C100E4EFB5 /* MealImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealImage.swift; sourceTree = "<group>"; };
 		39281C8523428CB500E4EFB5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		39281C872342910600E4EFB5 /* CanteenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanteenCell.swift; sourceTree = "<group>"; };
+		39281C8C234297E000E4EFB5 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		39281C8E2342985900E4EFB5 /* Canteen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canteen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		39281C5C234241B900E4EFB5 /* MensaDresden */ = {
 			isa = PBXGroup;
 			children = (
+				39281C89234292C100E4EFB5 /* API */,
 				39281C5D234241B900E4EFB5 /* AppDelegate.swift */,
 				39281C5F234241B900E4EFB5 /* SceneDelegate.swift */,
 				39281C8423428CAA00E4EFB5 /* CanteenList */,
@@ -113,6 +118,15 @@
 				39281C872342910600E4EFB5 /* CanteenCell.swift */,
 			);
 			path = CanteenList;
+			sourceTree = "<group>";
+		};
+		39281C89234292C100E4EFB5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				39281C8C234297E000E4EFB5 /* Meal.swift */,
+				39281C8E2342985900E4EFB5 /* Canteen.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +209,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,
+				39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */,
 				39281C8623428CB500E4EFB5 /* MapView.swift in Sources */,
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
+				39281C8D234297E000E4EFB5 /* Meal.swift in Sources */,
 				39281C83234282C100E4EFB5 /* MealImage.swift in Sources */,
 				39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */,
 				39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */,
