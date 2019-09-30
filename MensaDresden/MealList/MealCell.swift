@@ -17,8 +17,8 @@ struct MealCell: View {
                     .padding(.top, 1)
 
                 HStack {
-                    PriceLabel(price: meal.prices.students)
-                    PriceLabel(price: meal.prices.employees)
+                    PriceLabel(price: meal.prices?.students)
+                    PriceLabel(price: meal.prices?.employees)
                 }
             }
         }

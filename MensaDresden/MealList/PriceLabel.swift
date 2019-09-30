@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct PriceLabel: View {
-    var price: Double
+    var price: Double?
 
     var body: some View {
-        Text(String(format: "%.2f€", self.price))
+        Text(String(format: "%.2f€", self.price ?? 0))
             .font(.system(.caption, design: .rounded))
             .bold()
             .foregroundColor(.white)
