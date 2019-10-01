@@ -34,6 +34,14 @@ class MealService: ObservableObject {
         }
     }
 
+    var canteenID: Int?
+
+    var dateOffset = 0 {
+        didSet {
+            self.fetchMeals(date: Date().addingTimeInterval(Double(self.dateOffset * 24 * 3600)))
+        }
+    }
+
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -44,9 +52,10 @@ class MealService: ObservableObject {
 
     public let objectWillChange = PassthroughSubject<Void, Never>()
 
-    func fetchMeals(for canteen: Int, date: Date) {
+    func fetchMeals(date: Date) {
+        guard let canteenID = self.canteenID else { return }
         self.cancellable = URLSession.shared
-            .dataTaskPublisher(for: URL(string: "canteens/\(canteen)/days/\(dateFormatter.string(from: date))/meals", relativeTo: baseURL)!)
+            .dataTaskPublisher(for: URL(string: "canteens/\(canteenID)/days/\(dateFormatter.string(from: date))/meals", relativeTo: baseURL)!)
             .map { $0.data }
             .decode(type: [Meal].self, decoder: JSONDecoder())
             .replaceError(with: [])

@@ -3,19 +3,11 @@ import SwiftUI
 struct MealListView: View {
     @ObservedObject private var service = MealService()
     @State var canteen: Canteen?
-    @State var selectedDate = 0
-
-    static let priceFormatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.locale = .current
-        formatter.numberStyle = .currency
-        return formatter
-    }()
 
     var body: some View {
         VStack {
             HStack {
-                Picker("Date", selection: $selectedDate) {
+                Picker("Date", selection: $service.dateOffset) {
                     Text("Today").tag(0)
                     Text("Tomorrow").tag(1)
                 }
@@ -29,7 +21,8 @@ struct MealListView: View {
             .navigationBarTitle(canteen!.name)
         }
         .onAppear {
-            self.service.fetchMeals(for: self.canteen!.id, date: Date())
+            self.service.canteenID = self.canteen!.id
+            self.service.fetchMeals(date: Date())
         }
     }
 }
