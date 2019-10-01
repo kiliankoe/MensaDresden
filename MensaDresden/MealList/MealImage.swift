@@ -12,7 +12,7 @@ struct MealImage: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(8)
-                .frame(width: 150, height: 100, alignment: .leading)
+                .frame(width: 150)
         }) {
             MealImageText(text: "Image loading...")
         }
