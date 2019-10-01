@@ -15,19 +15,19 @@
 		39281C6A234241BC00E4EFB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39281C68234241BC00E4EFB5 /* LaunchScreen.storyboard */; };
 		39281C74234247C100E4EFB5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39281C76234247C100E4EFB5 /* Localizable.strings */; };
 		39281C7923424CEA00E4EFB5 /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C7823424CEA00E4EFB5 /* MealListView.swift */; };
-		39281C7C23425BB600E4EFB5 /* RemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 39281C7B23425BB600E4EFB5 /* RemoteImage */; };
 		39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C7E23427F9B00E4EFB5 /* MealCell.swift */; };
 		39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C802342823800E4EFB5 /* PriceLabel.swift */; };
 		39281C83234282C100E4EFB5 /* MealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C82234282C100E4EFB5 /* MealImage.swift */; };
-		39281C8623428CB500E4EFB5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8523428CB500E4EFB5 /* MapView.swift */; };
 		39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C872342910600E4EFB5 /* CanteenCell.swift */; };
 		39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8A234292CD00E4EFB5 /* OpenMensa.swift */; };
 		39281C8D234297E000E4EFB5 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal.swift */; };
 		39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8E2342985900E4EFB5 /* Canteen.swift */; };
+		39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 39281CD12343CFB400E4EFB5 /* RemoteImage */; };
+		394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D002343D0C9005F076C /* MealDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		39281C5A234241B900E4EFB5 /* MensaDresden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MensaDresden.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39281C5A234241B900E4EFB5 /* Mensa Dresden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mensa Dresden.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39281C5D234241B900E4EFB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39281C5F234241B900E4EFB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		39281C61234241B900E4EFB5 /* CanteenListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanteenListView.swift; sourceTree = "<group>"; };
@@ -41,11 +41,11 @@
 		39281C7E23427F9B00E4EFB5 /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
 		39281C802342823800E4EFB5 /* PriceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLabel.swift; sourceTree = "<group>"; };
 		39281C82234282C100E4EFB5 /* MealImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealImage.swift; sourceTree = "<group>"; };
-		39281C8523428CB500E4EFB5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		39281C872342910600E4EFB5 /* CanteenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanteenCell.swift; sourceTree = "<group>"; };
 		39281C8A234292CD00E4EFB5 /* OpenMensa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMensa.swift; sourceTree = "<group>"; };
 		39281C8C234297E000E4EFB5 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		39281C8E2342985900E4EFB5 /* Canteen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canteen.swift; sourceTree = "<group>"; };
+		394D9D002343D0C9005F076C /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39281C7C23425BB600E4EFB5 /* RemoteImage in Frameworks */,
+				39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,13 +65,14 @@
 			children = (
 				39281C5C234241B900E4EFB5 /* MensaDresden */,
 				39281C5B234241B900E4EFB5 /* Products */,
+				39281CC0234318F400E4EFB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		39281C5B234241B900E4EFB5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				39281C5A234241B900E4EFB5 /* MensaDresden.app */,
+				39281C5A234241B900E4EFB5 /* Mensa Dresden.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,6 +109,7 @@
 				39281C7E23427F9B00E4EFB5 /* MealCell.swift */,
 				39281C82234282C100E4EFB5 /* MealImage.swift */,
 				39281C802342823800E4EFB5 /* PriceLabel.swift */,
+				394D9D002343D0C9005F076C /* MealDetailView.swift */,
 			);
 			path = MealList;
 			sourceTree = "<group>";
@@ -116,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				39281C61234241B900E4EFB5 /* CanteenListView.swift */,
-				39281C8523428CB500E4EFB5 /* MapView.swift */,
 				39281C872342910600E4EFB5 /* CanteenCell.swift */,
 			);
 			path = CanteenList;
@@ -130,6 +131,13 @@
 				39281C8E2342985900E4EFB5 /* Canteen.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		39281CC0234318F400E4EFB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,10 +157,10 @@
 			);
 			name = MensaDresden;
 			packageProductDependencies = (
-				39281C7B23425BB600E4EFB5 /* RemoteImage */,
+				39281CD12343CFB400E4EFB5 /* RemoteImage */,
 			);
 			productName = MensaDresden;
-			productReference = 39281C5A234241B900E4EFB5 /* MensaDresden.app */;
+			productReference = 39281C5A234241B900E4EFB5 /* Mensa Dresden.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -181,7 +189,7 @@
 			);
 			mainGroup = 39281C51234241B900E4EFB5;
 			packageReferences = (
-				39281C7A23425BB600E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */,
+				39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */,
 			);
 			productRefGroup = 39281C5B234241B900E4EFB5 /* Products */;
 			projectDirPath = "";
@@ -214,13 +222,13 @@
 				39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */,
 				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,
 				39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */,
-				39281C8623428CB500E4EFB5 /* MapView.swift in Sources */,
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal.swift in Sources */,
 				39281C83234282C100E4EFB5 /* MealImage.swift in Sources */,
 				39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */,
 				39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */,
 				39281C60234241B900E4EFB5 /* SceneDelegate.swift in Sources */,
+				394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */,
 				39281C62234241B900E4EFB5 /* CanteenListView.swift in Sources */,
 				39281C7923424CEA00E4EFB5 /* MealListView.swift in Sources */,
 			);
@@ -379,7 +387,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mensa Dresden";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -399,7 +407,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mensa Dresden";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -429,7 +437,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		39281C7A23425BB600E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */ = {
+		39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/crelies/RemoteImage";
 			requirement = {
@@ -440,9 +448,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		39281C7B23425BB600E4EFB5 /* RemoteImage */ = {
+		39281CD12343CFB400E4EFB5 /* RemoteImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 39281C7A23425BB600E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */;
+			package = 39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */;
 			productName = RemoteImage;
 		};
 /* End XCSwiftPackageProductDependency section */
