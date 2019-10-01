@@ -26,7 +26,7 @@ struct PriceLabel: View {
                     .cornerRadius(4)
             )
         } else {
-            return AnyView(EmptyView())
+            return AnyView(Text(""))
         }
     }
 }
