@@ -2,15 +2,32 @@ import SwiftUI
 
 struct PriceLabel: View {
     var price: Double?
+    var priceText: String? {
+        guard let price = price else { return nil }
+        return PriceLabel.priceFormatter.string(from: price as NSNumber)
+    }
 
-    var body: some View {
-        Text(String(format: "%.2f€", self.price ?? 0))
-            .font(.system(.caption, design: .rounded))
-            .bold()
-            .foregroundColor(.white)
-            .padding(4)
-            .background(Color.gray)
-            .cornerRadius(4)
+    static let priceFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "de_DE")
+        formatter.numberStyle = .currency
+        return formatter
+    }()
+
+    var body: AnyView {
+        if let priceText = priceText {
+            return AnyView(
+                Text(priceText)
+                    .font(.system(.caption, design: .rounded))
+                    .bold()
+                    .foregroundColor(.white)
+                    .padding(4)
+                    .background(Color.gray)
+                    .cornerRadius(4)
+            )
+        } else {
+            return AnyView(EmptyView())
+        }
     }
 }
 
