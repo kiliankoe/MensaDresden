@@ -19,15 +19,17 @@ struct MealDetailView: View {
 
             VStack(alignment: .leading) {
                 Text(meal!.category)
-                    .font(Font.callout.smallCaps())
+                    .font(Font.headline.smallCaps())
                     .foregroundColor(.gray)
+                    .padding(.bottom)
                 Text(meal!.name)
-                    .font(.headline)
+                    .font(.title)
                     .lineLimit(5)
+
                 HStack {
                     PriceLabel(price: meal?.prices?.students)
                     PriceLabel(price: meal?.prices?.employees)
-                }
+                }.padding(.vertical)
 
                 ForEach(meal!.notes, id: \.self) { note in
                     Text(note).font(.caption)
