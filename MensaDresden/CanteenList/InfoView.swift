@@ -33,11 +33,13 @@ struct InfoView: View {
                 Button(action: {
                     UIApplication.shared.open(URL(string: "mailto:me@kilian.io?subject=Mensa%20Dresden")!, options: [:])
                 }) {
-                    Image(systemName: "envelope")
-                        .font(.system(size: 20))
-                        .padding()
-                    Text("Feedback")
-                        .font(.system(size: 20))
+                    HStack {
+                        Image(systemName: "envelope")
+                            .font(.system(size: 20))
+                            .padding()
+                        Text("Feedback")
+                            .font(.system(size: 20))
+                    }
                 }
             }
 
