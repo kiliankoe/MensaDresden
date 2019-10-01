@@ -16,7 +16,9 @@ struct MealListView: View {
                 .padding(.trailing, 20)
             }
             List(service.meals) { meal in
-                MealCell(meal: meal)
+                NavigationLink(destination: MealDetailView(meal: meal)) {
+                    MealCell(meal: meal)
+                }
             }
             .navigationBarTitle(canteen!.name)
         }
