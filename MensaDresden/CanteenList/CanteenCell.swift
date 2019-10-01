@@ -6,7 +6,9 @@ struct CanteenCell: View {
 
     var body: some View {
         HStack {
-            MapView(coordinate: canteen.coordinate!)
+            Image(canteen.name.replacingOccurrences(of: "/", with: ""))
+                .resizable()
+                .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 100, alignment: .trailing)
                 .cornerRadius(8)
                 .padding(.trailing, 2)
