@@ -12,6 +12,7 @@ struct CanteenListView: View {
                 }
             }
             .navigationBarTitle("Canteens")
+            .navigationBarItems(trailing: NavigationLink(destination: InfoView()) { Image(systemName: "info.circle") })
         }
         .onAppear {
             self.service.fetchCanteens()

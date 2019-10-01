@@ -24,6 +24,7 @@
 		39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8E2342985900E4EFB5 /* Canteen.swift */; };
 		39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 39281CD12343CFB400E4EFB5 /* RemoteImage */; };
 		394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D002343D0C9005F076C /* MealDetailView.swift */; };
+		394D9D032343EFD4005F076C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D022343EFD4005F076C /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		39281C8C234297E000E4EFB5 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		39281C8E2342985900E4EFB5 /* Canteen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canteen.swift; sourceTree = "<group>"; };
 		394D9D002343D0C9005F076C /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		394D9D022343EFD4005F076C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				39281C61234241B900E4EFB5 /* CanteenListView.swift */,
 				39281C872342910600E4EFB5 /* CanteenCell.swift */,
+				394D9D022343EFD4005F076C /* InfoView.swift */,
 			);
 			path = CanteenList;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */,
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal.swift in Sources */,
+				394D9D032343EFD4005F076C /* InfoView.swift in Sources */,
 				39281C83234282C100E4EFB5 /* MealImage.swift in Sources */,
 				39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */,
 				39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */,
