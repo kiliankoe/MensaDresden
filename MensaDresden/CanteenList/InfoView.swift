@@ -18,7 +18,8 @@ struct InfoView: View {
                 .cornerRadius(30)
                 .shadow(radius: 10)
 
-            Text("Mensa Dresden").font(.system(.title, design: .rounded))
+            Text("Mensa Dresden")
+                .font(.system(.title, design: .rounded))
             HStack {
                 Text("Version \(shortVersion)")
                     .font(.subheadline)
@@ -27,6 +28,11 @@ struct InfoView: View {
                 Text("Build \(version)")
                     .font(.subheadline)
                     .foregroundColor(.gray)
+            }.padding(.bottom)
+
+            VStack(alignment: .leading) {
+                Text("Image Rights: ").bold() + Text("Studentenwerk Dresden")
+                Text("Icon: ").bold() + Text("Eddy Wong from the Noun Project")
             }
 
             HStack {
@@ -42,8 +48,6 @@ struct InfoView: View {
                     }
                 }
             }
-
-            Text("Image Rights: ").bold() + Text("Studentenwerk Dresden").bold()
 
             Spacer()
         }
