@@ -8,9 +8,18 @@ struct MealCell: View {
         HStack {
             MealImage(imageURL: meal.image)
             VStack(alignment: .leading) {
-                Text(meal.category)
-                    .font(Font.caption.smallCaps())
-                    .foregroundColor(.gray)
+                HStack {
+                    Text(meal.category)
+                        .font(Font.caption.smallCaps())
+                        .foregroundColor(.gray)
+                    Spacer()
+                    ForEach(meal.diet, id: \.self) { diet in
+                        Text(diet.description)
+                            .font(Font.caption.smallCaps())
+                            .bold()
+                            .foregroundColor(.green)
+                    }
+                }
 
                 Text(meal.name)
                     .lineLimit(3)
@@ -22,6 +31,7 @@ struct MealCell: View {
                 }
             }
         }
+        .opacity(1.0)
     }
 }
 

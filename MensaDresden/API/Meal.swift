@@ -1,4 +1,5 @@
 import Foundation
+import Regex
 
 struct Meal: Identifiable, Decodable {
     let id: Int
@@ -54,5 +55,92 @@ struct Meal: Identifiable, Decodable {
         self.category = category
         self.image = image
         self.url = url
+    }
+
+    var diet: [Diet] {
+        self.notes
+            .compactMap { Diet(note: $0) }
+    }
+
+    var ingredients: [Ingredient] {
+        self.notes
+            .compactMap { Ingredient(note: $0) }
+    }
+
+    var allergens: [Allergen] {
+        self.notes
+            .compactMap { Allergen(note: $0) }
+    }
+}
+
+enum Diet: CustomStringConvertible {
+    case vegan
+    case vegetarian
+
+    init?(note: String) {
+        let note = note.lowercased()
+        if note.contains("vegan") {
+            self = .vegan
+        } else if note.contains("vegetarisch") || note.contains("nomeat") {
+            self = .vegetarian
+        } else {
+            return nil
+        }
+    }
+
+    var description: String {
+        switch self {
+        case .vegan:
+            return "vegan"
+        case .vegetarian:
+            return "vegetarian"
+        }
+    }
+}
+
+enum Ingredient {
+    case pork
+    case beef
+    case alcohol
+    case garlic
+
+    init?(note: String) {
+        let note = note.lowercased()
+        if note.contains("schweinefleisch") {
+            self = .pork
+        } else if note.contains("rindfleisch") {
+            self = .beef
+        } else if note.contains("alkohol") {
+            self = .alcohol
+        } else if note.contains("knoblauch") {
+            self = .garlic
+        } else {
+            return nil
+        }
+    }
+}
+
+enum Allergen: String, CaseIterable {
+    case gluten = "A"
+    case shellfish = "B"
+    case eggs = "C"
+    case fish = "D"
+    case peanuts = "E"
+    case soy = "F"
+    case lactose = "G"
+    case nuts = "H"
+    case celery = "I"
+    case mustard = "J"
+    case sesame = "K"
+    case sulfite = "L"
+    case lupin = "M"
+    case molluscs = "N"
+
+    init?(note: String) {
+        let regex = Regex(#"\(([A-Z])\d?\)"#)
+        guard let identifier = regex.firstMatch(in: note)?.captures[0] else {
+            return nil
+        }
+        self.init(rawValue: identifier)
     }
 }

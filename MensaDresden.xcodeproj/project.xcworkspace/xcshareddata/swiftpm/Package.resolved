@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Regex",
+        "repositoryURL": "https://github.com/sharplet/Regex",
+        "state": {
+          "branch": null,
+          "revision": "a819aed0e9555268c29a62500fe6fb781ae7f57d",
+          "version": "2.1.0"
+        }
+      },
+      {
         "package": "RemoteImage",
         "repositoryURL": "https://github.com/crelies/RemoteImage",
         "state": {
