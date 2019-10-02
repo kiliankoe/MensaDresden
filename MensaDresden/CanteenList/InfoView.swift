@@ -20,11 +20,10 @@ struct InfoView: View {
 
             Text("Mensa Dresden")
                 .font(.system(.title, design: .rounded))
-            HStack {
+            HStack(spacing: 5) {
                 Text("Version \(shortVersion)")
                     .font(.subheadline)
                     .foregroundColor(.gray)
-                    .padding(.trailing, 2)
                 Text("Build \(version)")
                     .font(.subheadline)
                     .foregroundColor(.gray)
@@ -35,14 +34,13 @@ struct InfoView: View {
                 Text("Icon: ").bold() + Text("Eddy Wong from the Noun Project")
             }
 
-            HStack {
+            HStack(spacing: 10) {
                 Button(action: {
                     UIApplication.shared.open(URL(string: "mailto:me@kilian.io?subject=Mensa%20Dresden")!, options: [:])
                 }) {
                     HStack {
                         Image(systemName: "envelope")
                             .font(.system(size: 20))
-                            .padding()
                         Text("Feedback")
                             .font(.system(size: 20))
                     }
