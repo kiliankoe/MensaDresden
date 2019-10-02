@@ -73,7 +73,7 @@ struct Meal: Identifiable, Decodable {
     }
 }
 
-enum Diet: CustomStringConvertible {
+enum Diet {
     case vegan
     case vegetarian
 
@@ -85,15 +85,6 @@ enum Diet: CustomStringConvertible {
             self = .vegetarian
         } else {
             return nil
-        }
-    }
-
-    var description: String {
-        switch self {
-        case .vegan:
-            return "vegan"
-        case .vegetarian:
-            return "vegetarian"
         }
     }
 }

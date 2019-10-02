@@ -14,7 +14,7 @@ struct MealCell: View {
                         .foregroundColor(.gray)
                     Spacer()
                     ForEach(meal.diet, id: \.self) { diet in
-                        Text(diet.description)
+                        Text(LocalizedStringKey(String(describing: diet)))
                             .font(Font.caption.smallCaps())
                             .bold()
                             .foregroundColor(.green)
