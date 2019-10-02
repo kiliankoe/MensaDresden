@@ -44,6 +44,7 @@ class MealService: ObservableObject {
 
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US")
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
