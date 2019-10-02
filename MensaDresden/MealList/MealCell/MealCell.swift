@@ -18,6 +18,7 @@ struct MealCell: View {
                             .font(Font.caption.smallCaps())
                             .bold()
                             .foregroundColor(.green)
+                            .lineLimit(1)
                     }
                 }
 
