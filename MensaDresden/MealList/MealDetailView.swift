@@ -43,6 +43,7 @@ struct MealDetailView: View {
             UIApplication.shared.open(self.meal!.url, options: [:], completionHandler: nil)
         }) {
             Image(systemName: "globe")
+                .font(.system(size: 20))
         })
     }
 }
