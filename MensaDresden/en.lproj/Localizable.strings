@@ -4,5 +4,29 @@
 "Image loading..." = "Image loading...";
 "Feedback" = "Feedback";
 "Image Rights: " = "Image Rights: ";
+
 "vegan" = "vegan";
 "vegetarian" = "vegetarian";
+
+"Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out." = "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out.";
+"Deselect any allergens you don't want to eat. Meals known to be containing them will be grayed out." = "Deselect any allergens you don't want to eat. Meals known to be containing them will be grayed out.";
+
+"pork" = "Pork";
+"beef" = "Beef";
+"alcohol" = "Alcohol";
+"garlic" = "Garlic";
+
+"gluten" = "Gluten";
+"shellfish" = "Shellfish";
+"eggs" = "Eggs";
+"fish" = "Fish";
+"peanuts" = "Peanuts";
+"soy" = "Soy";
+"lactose" = "Lactose";
+"nuts" = "Nuts";
+"celery" = "Celery";
+"mustard" = "Mustard";
+"sesame" = "Sesame";
+"sulfite" = "Sulfite";
+"lupin" = "Lupin";
+"molluscs" = "Molluscs";

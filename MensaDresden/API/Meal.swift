@@ -89,7 +89,7 @@ enum Diet {
     }
 }
 
-enum Ingredient {
+enum Ingredient: CaseIterable {
     case pork
     case beef
     case alcohol

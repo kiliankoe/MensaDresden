@@ -4,5 +4,29 @@
 "Image loading..." = "Bild wird geladen...";
 "Feedback" = "Feedback";
 "Image Rights: " = "Bildrechte: ";
+
 "vegan" = "vegan";
 "vegetarian" = "vegetarisch";
+
+"Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out." = "Wähle Zutaten aus, die du nicht zur dir nehmen möchtest. Mahlzeiten, die diese Zutaten enthalten, werden in der Liste ausgegraut dargestellt.";
+"Deselect any allergens you don't want to eat. Meals known to be containing them will be grayed out." = "Wähle Allergene aus, die du nicht zur dir nehmen möchtest. Mahlzeiten, die diese Allergene enthalten, werden in der Liste ausgegraut dargestellt.";
+
+"pork" = "Schweinefleisch";
+"beef" = "Rindfleisch";
+"alcohol" = "Alkohol";
+"garlic" = "Knoblauch";
+
+"gluten" = "Glutenhaltiges Getreide";
+"shellfish" = "Krebstiere";
+"eggs" = "Eier";
+"fish" = "Fisch";
+"peanuts" = "Erdnüsse";
+"soy" = "Soja";
+"lactose" = "Milch/Milchzucker (Laktose)";
+"nuts" = "Schalenfrüchte (Nüsse)";
+"celery" = "Sellerie";
+"mustard" = "Senf";
+"sesame" = "Sesam";
+"sulfite" = "Sulfit/Schwefeldioxid";
+"lupin" = "Lupine";
+"molluscs" = "Weichtiere";

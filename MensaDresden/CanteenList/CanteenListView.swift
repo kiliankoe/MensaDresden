@@ -13,10 +13,18 @@ struct CanteenListView: View {
             }
             .navigationBarTitle("Canteens")
             .navigationBarItems(trailing:
-                NavigationLink(destination: InfoView()) {
-                    Image(systemName: "info.circle")
-                        .font(.system(size: 20))
+                HStack {
+                    NavigationLink(destination: SettingsView()) {
+                        Image(systemName: "gear")
+                            .font(.system(size: 20))
+                    }
+                    .padding(.trailing, 5)
+                    NavigationLink(destination: InfoView()) {
+                        Image(systemName: "info.circle")
+                            .font(.system(size: 20))
+                    }
                 }
+
             )
         }
         .onAppear {
