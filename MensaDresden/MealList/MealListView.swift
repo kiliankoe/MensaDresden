@@ -2,7 +2,7 @@ import SwiftUI
 
 struct MealListView: View {
     @ObservedObject private var service = MealService()
-    @State var canteen: Canteen?
+    @State var canteen: Canteen
 
     var body: some View {
         VStack {
@@ -20,17 +20,19 @@ struct MealListView: View {
                     MealCell(meal: meal)
                 }
             }
-            .navigationBarTitle(canteen!.name)
+            .navigationBarTitle(canteen.name)
         }
         .onAppear {
-            self.service.canteenID = self.canteen!.id
+            self.service.canteenID = self.canteen.id
             self.service.fetchMeals(date: Date())
         }
     }
 }
 
 struct MealListView_Previews: PreviewProvider {
+    static let alteMensa = Canteen(id: 1, name: "Alte Mensa", city: "Dresden", address: "Mommsenstr. 13, 01069 Dresden", coordinates: [51.02696733929933, 13.726491630077364], url: URL(string: "https://www.studentenwerk-dresden.de/mensen/details-alte-mensa.html")!, menu: URL(string: "https://www.studentenwerk-dresden.de/mensen/speiseplan/alte-mensa.html")!)
+
     static var previews: some View {
-        MealListView()
+        MealListView(canteen: alteMensa)
     }
 }
