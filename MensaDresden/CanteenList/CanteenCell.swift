@@ -17,6 +17,7 @@ struct CanteenCell: View {
                     .font(.headline)
                 Text(canteen.address)
                     .font(.subheadline)
+                    .foregroundColor(.gray)
                     .lineLimit(3)
             }
         }
