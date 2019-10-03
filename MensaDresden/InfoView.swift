@@ -41,9 +41,14 @@ struct InfoView: View {
                     HStack {
                         Image(systemName: "envelope")
                             .font(.system(size: 20))
+                            .foregroundColor(.white)
                         Text("Feedback")
                             .font(.system(size: 20))
+                            .foregroundColor(.white)
                     }
+                    .padding(8)
+                    .background(Color.gray)
+                    .cornerRadius(4)
                 }
             }
 
