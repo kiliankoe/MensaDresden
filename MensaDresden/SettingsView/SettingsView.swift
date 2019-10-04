@@ -16,7 +16,7 @@ struct SettingsView: View {
 
                 }
             }
-            Section(header: Text("Deselect any allergens you don't want to eat. Meals known to be containing them will be grayed out.")) {
+            Section(header: Text("Same goes for allergens. Uncheck anything you don't want in your food.")) {
                 ForEach(Allergen.allCases, id: \.self) { allergen in
                     HStack {
                         Text(LocalizedStringKey(String(describing: allergen)))
