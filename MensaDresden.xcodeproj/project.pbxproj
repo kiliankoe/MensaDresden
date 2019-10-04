@@ -29,6 +29,7 @@
 		394D9D1923455051005F076C /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D1823455051005F076C /* APITests.swift */; };
 		394D9D1A234550E6005F076C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal.swift */; };
 		394D9D1F234560B4005F076C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D1E234560B4005F076C /* SettingsView.swift */; };
+		396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C4AF023480E6E009A9F52 /* EmealView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		394D9D1223455039005F076C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		394D9D1823455051005F076C /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		394D9D1E234560B4005F076C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		396C4AF023480E6E009A9F52 /* EmealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmealView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				39281C5D234241B900E4EFB5 /* AppDelegate.swift */,
 				39281C5F234241B900E4EFB5 /* SceneDelegate.swift */,
 				394D9D022343EFD4005F076C /* InfoView.swift */,
+				396C4AF023480E6E009A9F52 /* EmealView.swift */,
 				394D9D0423454E77005F076C /* SettingsView */,
 				39281C8423428CAA00E4EFB5 /* CanteenList */,
 				39281C7D23427F8400E4EFB5 /* MealList */,
@@ -320,6 +323,7 @@
 				39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */,
 				39281C60234241B900E4EFB5 /* SceneDelegate.swift in Sources */,
 				394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */,
+				396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */,
 				39281C62234241B900E4EFB5 /* CanteenListView.swift in Sources */,
 				39281C7923424CEA00E4EFB5 /* MealListView.swift in Sources */,
 			);

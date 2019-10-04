@@ -14,6 +14,11 @@ struct CanteenListView: View {
             .navigationBarTitle("Canteens")
             .navigationBarItems(trailing:
                 HStack {
+                    NavigationLink(destination: EmealView()) {
+                        Image(systemName: "creditcard")
+                            .font(.system(size: 20))
+                    }
+                    .padding(.trailing, 5)
                     NavigationLink(destination: SettingsView()) {
                         Image(systemName: "gear")
                             .font(.system(size: 20))
