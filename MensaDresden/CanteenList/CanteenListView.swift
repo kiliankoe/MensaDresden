@@ -6,7 +6,15 @@ struct CanteenListView: View {
 
     @EnvironmentObject var settings: Settings
     var canteens: [Canteen] {
-        service.canteens.sorted { lhs, rhs in settings.favoriteCanteens.contains(lhs.name) }
+        let favorites = service.canteens.filter { settings.favoriteCanteens.contains($0.name) }
+        let nonFavorites = service.canteens.filter { !settings.favoriteCanteens.contains($0.name) }
+
+        let sortedFavorites = favorites.sorted { (lhs, rhs) in
+            // Force Unwrap should be safe here, since the list was just filtered based on favorites.
+            settings.favoriteCanteens.firstIndex(of: lhs.name)! < settings.favoriteCanteens.firstIndex(of: rhs.name)!
+        }
+
+        return sortedFavorites + nonFavorites
     }
 
     var body: some View {
