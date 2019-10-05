@@ -38,6 +38,7 @@ struct MealCell: View {
                 Text(meal.name)
                     .lineLimit(3)
                     .padding(.top, 1)
+                    .layoutPriority(1)
 
                 HStack {
                     PriceLabel(price: meal.prices?.students)
