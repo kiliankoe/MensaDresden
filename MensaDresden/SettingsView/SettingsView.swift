@@ -23,7 +23,7 @@ struct SettingsView: View {
     var body: some View {
         List {
             if !settings.favoriteCanteens.isEmpty {
-                Section(header: Text("Your favorite canteens. Tap the heart on a canteen's menu to toggle or swipe to delete here.")) {
+                Section(header: Text("Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order.")) {
                     ForEach(settings.favoriteCanteens, id: \.self) { favorite in
                         Text(favorite)
                     }
