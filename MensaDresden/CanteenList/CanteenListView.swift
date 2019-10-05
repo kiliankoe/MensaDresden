@@ -2,7 +2,7 @@ import SwiftUI
 import MapKit
 
 struct CanteenListView: View {
-    @ObservedObject private var service = CanteenService()
+    @ObservedObject private var service = OpenMensaService()
 
     @EnvironmentObject var settings: Settings
     var canteens: [Canteen] {
@@ -20,7 +20,7 @@ struct CanteenListView: View {
     var body: some View {
         NavigationView {
             List(canteens) { canteen in
-                NavigationLink(destination: MealListView(canteen: canteen)) {
+                NavigationLink(destination: MealListView(service: self.service, canteen: canteen)) {
                     CanteenCell(canteen: canteen)
                 }
             }
