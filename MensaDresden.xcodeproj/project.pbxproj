@@ -32,6 +32,7 @@
 		396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C4AF023480E6E009A9F52 /* EmealView.swift */; };
 		39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1418C23481B5F00FEE789 /* LargeButton.swift */; };
 		39A1418F2348210000FEE789 /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1418E2348210000FEE789 /* BarButton.swift */; };
+		39A141912348813D00FEE789 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141902348813D00FEE789 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		396C4AF023480E6E009A9F52 /* EmealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmealView.swift; sourceTree = "<group>"; };
 		39A1418C23481B5F00FEE789 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		39A1418E2348210000FEE789 /* BarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
+		39A141902348813D00FEE789 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				394D9D1E234560B4005F076C /* SettingsView.swift */,
+				39A141902348813D00FEE789 /* Settings.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				39A1418F2348210000FEE789 /* BarButton.swift in Sources */,
 				39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */,
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
+				39A141912348813D00FEE789 /* Settings.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal.swift in Sources */,
 				394D9D032343EFD4005F076C /* InfoView.swift in Sources */,
 				39281C83234282C100E4EFB5 /* MealImage.swift in Sources */,

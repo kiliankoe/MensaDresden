@@ -4,9 +4,14 @@ import MapKit
 struct CanteenListView: View {
     @ObservedObject private var service = CanteenService()
 
+    @EnvironmentObject var settings: Settings
+    var canteens: [Canteen] {
+        service.canteens.sorted { lhs, rhs in settings.favoriteCanteens.contains(lhs.name) }
+    }
+
     var body: some View {
         NavigationView {
-            List(service.canteens) { canteen in
+            List(canteens) { canteen in
                 NavigationLink(destination: MealListView(canteen: canteen)) {
                     CanteenCell(canteen: canteen)
                 }

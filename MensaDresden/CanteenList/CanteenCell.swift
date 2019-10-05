@@ -4,14 +4,31 @@ import MapKit
 struct CanteenCell: View {
     var canteen: Canteen
 
+    @EnvironmentObject var settings: Settings
+
+    var isFavorite: Bool {
+        settings.favoriteCanteens.contains(canteen.name)
+    }
+
     var body: some View {
         HStack {
-            Image(canteen.name.replacingOccurrences(of: "/", with: ""))
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 100, alignment: .trailing)
-                .cornerRadius(8)
-                .padding(.trailing, 2)
+            ZStack(alignment: .bottomLeading) {
+                Image(canteen.name.replacingOccurrences(of: "/", with: ""))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 150, height: 100, alignment: .trailing)
+                    .cornerRadius(8)
+                    .padding(.trailing, 2)
+                if isFavorite {
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.red)
+                        .font(.caption)
+                        .padding(6)
+                        .background(Color.white)
+                        .clipShape(Circle())
+                        .offset(x: 5, y: -5)
+                }
+            }
             VStack(alignment: .leading) {
                 Text(canteen.name)
                     .font(.headline)

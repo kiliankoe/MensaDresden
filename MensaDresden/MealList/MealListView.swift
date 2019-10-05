@@ -4,6 +4,8 @@ struct MealListView: View {
     @ObservedObject private var service = MealService()
     @State var canteen: Canteen
 
+    @EnvironmentObject var settings: Settings
+
     var body: some View {
         VStack {
             HStack {
@@ -22,6 +24,11 @@ struct MealListView: View {
             }
             .navigationBarTitle(canteen.name)
         }
+        .navigationBarItems(trailing: BarButtonButton(
+            view: settings.favoriteCanteens.contains(canteen.name) ? AnyView(Image(systemName: "heart.fill").foregroundColor(.red)) : AnyView(Image(systemName: "heart")),
+            action: {
+                self.settings.toggleFavorite(canteen: self.canteen.name)
+            }))
         .onAppear {
             self.service.canteenID = self.canteen.id
             self.service.fetchMeals(date: Date())
