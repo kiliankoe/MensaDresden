@@ -34,14 +34,9 @@ struct InfoView: View {
                 Text("Icon: ").bold() + Text("Eddy Wong from the Noun Project")
             }
 
-            HStack(spacing: 10) {
-                Button(action: {
-                    UIApplication.shared.open(URL(string: "mailto:me@kilian.io?subject=Mensa%20Dresden")!, options: [:])
-                }) {
-                    LargeButton(text: "Feedback", backgroundColor: .gray)
-                        .padding(.vertical)
-                }
-            }
+            LargeButton(text: "Feedback", backgroundColor: .gray) {
+                UIApplication.shared.open(URL(string: "mailto:me@kilian.io?subject=Mensa%20Dresden")!, options: [:])
+            }.padding(.vertical)
 
             Spacer()
         }

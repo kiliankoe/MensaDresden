@@ -32,10 +32,8 @@ struct EmealView: View {
                 }.offset(x: 20, y: 0)
             }
 
-            Button(action: {
-
-            }) {
-                LargeButton(text: "Scan Mensa Card")
+            LargeButton(text: "Scan Mensa Card") {
+                
             }
 
             Spacer()
