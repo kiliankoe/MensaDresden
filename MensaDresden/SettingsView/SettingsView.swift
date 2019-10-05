@@ -1,8 +1,6 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State var testToggle = true
-
     @EnvironmentObject var settings: Settings
 
     var editButton: AnyView {
@@ -38,7 +36,7 @@ struct SettingsView: View {
                     HStack {
                         Text(LocalizedStringKey(String(describing: ingredient)))
                         Spacer()
-                        Toggle(isOn: self.$testToggle) { EmptyView() }
+                        Toggle(isOn: self.settings.ingredientBlacklist.binding(for: ingredient), label: { EmptyView() })
                     }
                 }
             }
@@ -47,7 +45,7 @@ struct SettingsView: View {
                     HStack {
                         Text(LocalizedStringKey(String(describing: allergen)))
                         Spacer()
-                        Toggle(isOn: self.$testToggle) { EmptyView() }
+                        Toggle(isOn: self.settings.allergenBlacklist.binding(for: allergen), label: { EmptyView() })
                     }
                 }
             }

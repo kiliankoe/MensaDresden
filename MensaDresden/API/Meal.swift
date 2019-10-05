@@ -75,6 +75,20 @@ struct Meal: Identifiable, Decodable {
         self.notes
             .compactMap { Allergen(note: $0) }
     }
+
+    func contains(unwantedIngredients: [Ingredient], unwantedAllergens: [Allergen]) -> Bool {
+        for ingredient in unwantedIngredients {
+            if ingredients.contains(ingredient) {
+                return true
+            }
+        }
+        for allergen in unwantedAllergens {
+            if allergens.contains(allergen) {
+                return true
+            }
+        }
+        return false
+    }
 }
 
 enum Diet {
@@ -93,7 +107,7 @@ enum Diet {
     }
 }
 
-enum Ingredient: CaseIterable {
+enum Ingredient: String, CaseIterable, Equatable {
     case pork
     case beef
     case alcohol

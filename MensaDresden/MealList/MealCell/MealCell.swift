@@ -5,6 +5,7 @@ struct MealCell: View {
     var meal: Meal
 
     @Environment(\.colorScheme) var colorSheme
+    @EnvironmentObject var settings: Settings
 
     var imageView: AnyView {
         if meal.imageIsPlaceholder && colorSheme == .dark {
@@ -46,7 +47,7 @@ struct MealCell: View {
                 }
             }
         }
-        .opacity(1.0)
+        .opacity(meal.contains(unwantedIngredients: settings.ingredientBlacklist.storage, unwantedAllergens: settings.allergenBlacklist.storage) ? 0.3 : 1.0)
     }
 }
 

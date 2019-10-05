@@ -33,6 +33,8 @@
 		39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1418C23481B5F00FEE789 /* LargeButton.swift */; };
 		39A1418F2348210000FEE789 /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1418E2348210000FEE789 /* BarButton.swift */; };
 		39A141912348813D00FEE789 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141902348813D00FEE789 /* Settings.swift */; };
+		39A141932348EBC000FEE789 /* BlacklistBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141922348EBC000FEE789 /* BlacklistBinding.swift */; };
+		39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141942348EBEE00FEE789 /* UserDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		39A1418C23481B5F00FEE789 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		39A1418E2348210000FEE789 /* BarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
 		39A141902348813D00FEE789 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		39A141922348EBC000FEE789 /* BlacklistBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklistBinding.swift; sourceTree = "<group>"; };
+		39A141942348EBEE00FEE789 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,8 @@
 			children = (
 				39A1418C23481B5F00FEE789 /* LargeButton.swift */,
 				39A1418E2348210000FEE789 /* BarButton.swift */,
+				39A141922348EBC000FEE789 /* BlacklistBinding.swift */,
+				39A141942348EBEE00FEE789 /* UserDefault.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -336,9 +342,11 @@
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39A141912348813D00FEE789 /* Settings.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal.swift in Sources */,
+				39A141932348EBC000FEE789 /* BlacklistBinding.swift in Sources */,
 				394D9D032343EFD4005F076C /* InfoView.swift in Sources */,
 				39281C83234282C100E4EFB5 /* MealImage.swift in Sources */,
 				394D9D1F234560B4005F076C /* SettingsView.swift in Sources */,
+				39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */,
 				39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */,
 				39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */,
 				39281C60234241B900E4EFB5 /* SceneDelegate.swift in Sources */,
