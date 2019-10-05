@@ -40,9 +40,9 @@ struct MealDetailView: View {
             Spacer()
         }
         .navigationBarTitle(Text(""), displayMode: .inline)
-        .navigationBarItems(trailing: BarButtonButton(action: {
+        .navigationBarItems(trailing: BarButtonButton(view: Image(systemName: "globe"), action: {
             UIApplication.shared.open(self.meal.url, options: [:], completionHandler: nil)
-        }, image: Image(systemName: "globe")))
+        }))
     }
 }
 

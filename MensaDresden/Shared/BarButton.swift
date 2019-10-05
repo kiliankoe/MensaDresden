@@ -11,12 +11,12 @@ struct BarButtonNavigationLink<DestinationView: View>: View {
     }
 }
 
-struct BarButtonButton: View {
+struct BarButtonButton<ButtonView: View>: View {
+    var view: ButtonView
     var action: () -> Void
-    var image: Image
 
     var body: some View {
-        Button(action: action, label: { image.font(.system(size: 22)) })
+        Button(action: action, label: { view.font(.system(size: 22)) })
     }
 }
 
