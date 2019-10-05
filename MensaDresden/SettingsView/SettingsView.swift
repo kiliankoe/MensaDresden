@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct SettingsView: View {
-    let ingredients: [Ingredient] = [.alcohol, .pork]
     @State var testToggle = true
 
     var body: some View {
@@ -13,7 +12,6 @@ struct SettingsView: View {
                         Spacer()
                         Toggle(isOn: self.$testToggle) { EmptyView() }
                     }
-
                 }
             }
             Section(header: Text("Same goes for allergens. Uncheck anything you don't want in your food.")) {
