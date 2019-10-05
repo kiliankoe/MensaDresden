@@ -9,7 +9,7 @@
 "vegetarian" = "vegetarisch";
 
 "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out." = "Wähle Zutaten ab, die du nicht zur dir nehmen möchtest. Mahlzeiten, die diese Zutaten enthalten, werden in der Liste ausgegraut dargestellt.";
-"Same goes for allergens. Uncheck anything you don't want in your food." = "Gleiches Spiel für Allergene. Ist irgendwas dabei, was du nicht in deinem Essen haben möchtest?";
+"Same goes for allergens. Uncheck anything you don't want in your food." = "Gleiches Spiel für Allergene. Ist etwas dabei, was du nicht in deinem Essen haben möchtest?";
 
 "Balance" = "Betrag";
 "Last Transaction" = "Letzte Transaktion";
