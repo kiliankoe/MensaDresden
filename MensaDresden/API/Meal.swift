@@ -10,6 +10,10 @@ struct Meal: Identifiable, Decodable {
     let image: URL
     let url: URL
 
+    var imageIsPlaceholder: Bool {
+        image.absoluteString == "https://static.studentenwerk-dresden.de/bilder/mensen/studentenwerk-dresden-lieber-mensen-gehen.jpg"
+    }
+
     private enum CodingKeys: String, CodingKey {
         case id
         case name

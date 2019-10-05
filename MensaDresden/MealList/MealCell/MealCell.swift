@@ -4,9 +4,20 @@ import RemoteImage
 struct MealCell: View {
     var meal: Meal
 
+    @Environment(\.colorScheme) var colorSheme
+
+    var imageView: AnyView {
+        if meal.imageIsPlaceholder && colorSheme == .dark {
+            return AnyView(MealImage(imageURL: meal.image)
+                .colorInvert())
+        }
+        return AnyView(MealImage(imageURL: meal.image))
+    }
+
     var body: some View {
         HStack {
-            MealImage(imageURL: meal.image)
+            imageView
+
             VStack(alignment: .leading) {
                 HStack {
                     Text(meal.category)
