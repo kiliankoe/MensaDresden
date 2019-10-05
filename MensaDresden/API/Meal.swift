@@ -89,6 +89,20 @@ struct Meal: Identifiable, Decodable {
         }
         return false
     }
+
+    static var placeholderImageURL: URL {
+        return URL(string: "https://static.studentenwerk-dresden.de/bilder/mensen/studentenwerk-dresden-lieber-mensen-gehen.jpg")!
+    }
+
+    static var example: Meal {
+        Meal(id: 1,
+             name: "Rindfleischpfanne mit Möhre, Ananas, Mango und Kokosmilch, dazu Mie Nudeln",
+             notes: [""],
+             prices: Meal.Prices(students: 2.9, employees: 4.7),
+             category: "Wok & Grill",
+             image: URL(string: "https://bilderspeiseplan.studentenwerk-dresden.de/m18/201909/233593.jpg")!,
+             url: URL(string: "https://studentenwerk-dresden.de")!)
+    }
 }
 
 enum Diet {

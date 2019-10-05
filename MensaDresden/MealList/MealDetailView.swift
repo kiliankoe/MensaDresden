@@ -6,16 +6,7 @@ struct MealDetailView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            RemoteImage(url: meal.image, errorView: { error in
-                Text(error.localizedDescription)
-            }, imageView: { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: UIScreen.main.bounds.width)
-            }) {
-                Text("Image loading...")
-            }
+            MealImage(imageURL: meal.image, size: UIScreen.main.bounds.width, roundedCorners: false)
 
             VStack(alignment: .leading) {
                 Text(meal.category)

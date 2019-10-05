@@ -156,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				39281C7823424CEA00E4EFB5 /* MealListView.swift */,
+				39281C82234282C100E4EFB5 /* MealImage.swift */,
 				394D9D002343D0C9005F076C /* MealDetailView.swift */,
 				394D9D1D23455C99005F076C /* MealCell */,
 			);
@@ -210,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				39281C7E23427F9B00E4EFB5 /* MealCell.swift */,
-				39281C82234282C100E4EFB5 /* MealImage.swift */,
 				39281C802342823800E4EFB5 /* PriceLabel.swift */,
 			);
 			path = MealCell;

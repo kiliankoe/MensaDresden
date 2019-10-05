@@ -4,22 +4,11 @@ import RemoteImage
 struct MealCell: View {
     var meal: Meal
 
-    @Environment(\.colorScheme) var colorSheme
     @EnvironmentObject var settings: Settings
-
-    var imageView: AnyView {
-        if meal.imageIsPlaceholder && colorSheme == .dark {
-            return AnyView(Image("meal_placeholder")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150))
-        }
-        return AnyView(MealImage(imageURL: meal.image))
-    }
 
     var body: some View {
         HStack {
-            imageView
+            MealImage(imageURL: meal.image, size: 150, roundedCorners: true)
 
             VStack(alignment: .leading) {
                 HStack {
@@ -53,12 +42,6 @@ struct MealCell: View {
 
 struct MealCell_Previews: PreviewProvider {
     static var previews: some View {
-        MealCell(meal: Meal(id: 1,
-                            name: "Rindfleischpfanne mit Möhre, Ananas, Mango und Kokosmilch, dazu Mie Nudeln",
-                            notes: [""],
-                            prices: Meal.Prices(students: 2.9, employees: 4.7),
-                            category: "Wok & Grill",
-                            image: URL(string: "https://bilderspeiseplan.studentenwerk-dresden.de/m18/201909/233593.jpg")!,
-                            url: URL(string: "https://studentenwerk-dresden.de")!))
+        MealCell(meal: Meal.example)
     }
 }
