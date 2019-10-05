@@ -14,20 +14,11 @@ struct CanteenListView: View {
             .navigationBarTitle("Canteens")
             .navigationBarItems(trailing:
                 HStack {
-                    NavigationLink(destination: EmealView()) {
-                        Image(systemName: "creditcard")
-                            .font(.system(size: 20))
-                    }
-                    .padding(.trailing, 5)
-                    NavigationLink(destination: SettingsView()) {
-                        Image(systemName: "gear")
-                            .font(.system(size: 20))
-                    }
-                    .padding(.trailing, 5)
-                    NavigationLink(destination: InfoView()) {
-                        Image(systemName: "info.circle")
-                            .font(.system(size: 20))
-                    }
+                    BarButtonNavigationLink(destination: EmealView(), image: Image(systemName: "creditcard"))
+                        .padding(.trailing, 5)
+                    BarButtonNavigationLink(destination: SettingsView(), image: Image(systemName: "gear"))
+                        .padding(.trailing, 5)
+                    BarButtonNavigationLink(destination: InfoView(), image: Image(systemName: "info.circle"))
                 }
 
             )
