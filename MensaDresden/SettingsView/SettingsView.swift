@@ -5,10 +5,21 @@ struct SettingsView: View {
 
     @EnvironmentObject var settings: Settings
 
+    var editButton: AnyView {
+        if settings.favoriteCanteens.isEmpty {
+            return AnyView(EmptyView())
+        }
+        return AnyView(EditButton())
+    }
+
     func deleteFavorite(at offsets: IndexSet) {
         for idx in offsets {
             settings.favoriteCanteens.remove(at: idx)
         }
+    }
+
+    func moveFavorites(fromOffsets offsets: IndexSet, toOffset offset: Int) {
+        settings.favoriteCanteens.move(fromOffsets: offsets, toOffset: offset)
     }
 
     var body: some View {
@@ -17,7 +28,9 @@ struct SettingsView: View {
                 Section(header: Text("Your favorite canteens. Tap the heart on a canteen's menu to toggle or swipe to delete here.")) {
                     ForEach(settings.favoriteCanteens, id: \.self) { favorite in
                         Text(favorite)
-                    }.onDelete(perform: deleteFavorite(at:))
+                    }
+                    .onMove(perform: moveFavorites(fromOffsets:toOffset:))
+                    .onDelete(perform: deleteFavorite(at:))
                 }
             }
             Section(header: Text("Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out.")) {
@@ -38,7 +51,9 @@ struct SettingsView: View {
                     }
                 }
             }
-        }.listStyle(GroupedListStyle())
+        }
+        .listStyle(GroupedListStyle())
+        .navigationBarItems(trailing: editButton)
     }
 }
 
