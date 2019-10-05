@@ -30,6 +30,7 @@
 		394D9D1A234550E6005F076C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal.swift */; };
 		394D9D1F234560B4005F076C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D1E234560B4005F076C /* SettingsView.swift */; };
 		396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C4AF023480E6E009A9F52 /* EmealView.swift */; };
+		39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1418C23481B5F00FEE789 /* LargeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		394D9D1823455051005F076C /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		394D9D1E234560B4005F076C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		396C4AF023480E6E009A9F52 /* EmealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmealView.swift; sourceTree = "<group>"; };
+		39A1418C23481B5F00FEE789 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		39281C5C234241B900E4EFB5 /* MensaDresden */ = {
 			isa = PBXGroup;
 			children = (
+				39A1418B23481B4D00FEE789 /* Shared */,
 				39281C89234292C100E4EFB5 /* API */,
 				39281C5D234241B900E4EFB5 /* AppDelegate.swift */,
 				39281C5F234241B900E4EFB5 /* SceneDelegate.swift */,
@@ -198,6 +201,14 @@
 				39281C802342823800E4EFB5 /* PriceLabel.swift */,
 			);
 			path = MealCell;
+			sourceTree = "<group>";
+		};
+		39A1418B23481B4D00FEE789 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				39A1418C23481B5F00FEE789 /* LargeButton.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +325,7 @@
 				39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */,
 				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,
 				39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */,
+				39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */,
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal.swift in Sources */,
 				394D9D032343EFD4005F076C /* InfoView.swift in Sources */,

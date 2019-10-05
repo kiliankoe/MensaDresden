@@ -35,14 +35,7 @@ struct EmealView: View {
             Button(action: {
 
             }) {
-                Text("Scan Mensa Card")
-                    .font(.headline)
-                    .bold()
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: UIScreen.main.bounds.width - 40)
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                LargeButton(text: "Scan Mensa Card")
             }
 
             Spacer()

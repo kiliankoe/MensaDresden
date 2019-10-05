@@ -38,17 +38,8 @@ struct InfoView: View {
                 Button(action: {
                     UIApplication.shared.open(URL(string: "mailto:me@kilian.io?subject=Mensa%20Dresden")!, options: [:])
                 }) {
-                    HStack {
-                        Image(systemName: "envelope")
-                            .font(.system(size: 20))
-                            .foregroundColor(.white)
-                        Text("Feedback")
-                            .font(.system(size: 20))
-                            .foregroundColor(.white)
-                    }
-                    .padding(8)
-                    .background(Color.gray)
-                    .cornerRadius(4)
+                    LargeButton(text: "Feedback", backgroundColor: .gray)
+                        .padding(.vertical)
                 }
             }
 
