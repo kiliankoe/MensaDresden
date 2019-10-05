@@ -8,25 +8,29 @@ struct MealDetailView: View {
         VStack(alignment: .leading) {
             MealImage(imageURL: meal.image, size: UIScreen.main.bounds.width, roundedCorners: false)
 
-            VStack(alignment: .leading) {
-                Text(meal.category)
-                    .font(Font.headline.smallCaps())
-                    .foregroundColor(.gray)
-                    .padding(.bottom)
-                Text(meal.name)
-                    .font(.title)
-                    .lineLimit(5)
-                    .layoutPriority(1)
+            Text(meal.category)
+                .font(Font.headline.smallCaps())
+                .foregroundColor(.gray)
+                .padding(.horizontal)
+                .padding(.bottom)
 
-                HStack {
-                    PriceLabel(price: meal.prices?.students)
-                    PriceLabel(price: meal.prices?.employees)
-                }.padding(.vertical)
+            Text(meal.name)
+                .font(.title)
+                .lineLimit(5)
+                .layoutPriority(1)
+                .padding(.horizontal)
 
-                ForEach(meal.notes, id: \.self) { note in
-                    Text(note).font(.caption)
-                }
+            HStack {
+                PriceLabel(price: meal.prices?.students)
+                PriceLabel(price: meal.prices?.employees)
             }.padding()
+
+            VStack(alignment: .leading) {
+                ForEach(meal.notes, id: \.self) { note in
+                    Text(note)
+                        .font(.caption)
+                }
+            }.padding(.horizontal)
 
             Spacer()
         }
