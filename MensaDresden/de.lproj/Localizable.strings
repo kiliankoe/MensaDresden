@@ -12,6 +12,10 @@
 "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out." = "Wähle Zutaten ab, die du nicht zur dir nehmen möchtest. Mahlzeiten, die diese Zutaten enthalten, werden in der Liste ausgegraut dargestellt.";
 "Same goes for allergens. Uncheck anything you don't want in your food." = "Gleiches Spiel für Allergene. Ist etwas dabei, was du nicht in deinem Essen haben möchtest?";
 
+"Hold your Emeal card to your device." = "Halte deine Emeal Karte an dein Gerät.";
+"Unable to read NFC tag." = "Lesen der NFC Karte fehlgeschlagen.";
+"Connection error. Please try again." = "Verbindungsfehler. Bitte versuche es erneut.";
+"Emeal recognized, but decoding has not yet been implemented." = "Emeal erkannt, die Dekodierung ist allerdings noch nicht komplett implementiert.";
 "Balance" = "Betrag";
 "Last Transaction" = "Letzte Transaktion";
 "Scan Mensa Card" = "Mensa Karte scannen";

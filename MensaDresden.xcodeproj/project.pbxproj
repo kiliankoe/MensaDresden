@@ -35,6 +35,7 @@
 		39A141912348813D00FEE789 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141902348813D00FEE789 /* Settings.swift */; };
 		39A141932348EBC000FEE789 /* BlacklistBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141922348EBC000FEE789 /* BlacklistBinding.swift */; };
 		39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141942348EBEE00FEE789 /* UserDefault.swift */; };
+		39A141A02348F49700FEE789 /* Emeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1419F2348F49700FEE789 /* Emeal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		39A141902348813D00FEE789 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		39A141922348EBC000FEE789 /* BlacklistBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklistBinding.swift; sourceTree = "<group>"; };
 		39A141942348EBEE00FEE789 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		39A141972348EF1D00FEE789 /* Mensa Dresden.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mensa Dresden.entitlements"; sourceTree = "<group>"; };
+		39A1419F2348F49700FEE789 /* Emeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emeal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,14 +125,15 @@
 		39281C5C234241B900E4EFB5 /* MensaDresden */ = {
 			isa = PBXGroup;
 			children = (
+				39A141972348EF1D00FEE789 /* Mensa Dresden.entitlements */,
 				39281C5D234241B900E4EFB5 /* AppDelegate.swift */,
 				39281C5F234241B900E4EFB5 /* SceneDelegate.swift */,
 				394D9D022343EFD4005F076C /* InfoView.swift */,
-				396C4AF023480E6E009A9F52 /* EmealView.swift */,
 				39A1418B23481B4D00FEE789 /* Shared */,
 				39281C89234292C100E4EFB5 /* API */,
-				394D9D0423454E77005F076C /* SettingsView */,
 				39281C8423428CAA00E4EFB5 /* CanteenList */,
+				394D9D0423454E77005F076C /* SettingsView */,
+				39A141962348EEEE00FEE789 /* Emeal */,
 				39281C7D23427F8400E4EFB5 /* MealList */,
 				39281C63234241BC00E4EFB5 /* Assets.xcassets */,
 				39281C68234241BC00E4EFB5 /* LaunchScreen.storyboard */,
@@ -221,6 +225,15 @@
 				39A141942348EBEE00FEE789 /* UserDefault.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		39A141962348EEEE00FEE789 /* Emeal */ = {
+			isa = PBXGroup;
+			children = (
+				396C4AF023480E6E009A9F52 /* EmealView.swift */,
+				39A1419F2348F49700FEE789 /* Emeal.swift */,
+			);
+			path = Emeal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A141A02348F49700FEE789 /* Emeal.swift in Sources */,
 				39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */,
 				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,
 				39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */,
@@ -517,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "MensaDresden/Mensa Dresden.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresden/Preview Content\"";
@@ -538,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "MensaDresden/Mensa Dresden.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresden/Preview Content\"";

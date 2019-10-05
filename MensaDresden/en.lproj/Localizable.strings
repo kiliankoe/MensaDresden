@@ -12,6 +12,10 @@
 "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out." = "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out.";
 "Same goes for allergens. Uncheck anything you don't want in your food." = "Same goes for allergens. Uncheck anything you don't want in your food.";
 
+"Hold your Emeal card to your device." = "Hold your Emeal card to your device.";
+"Unable to read NFC tag." = "Unable to read NFC tag.";
+"Connection error. Please try again." = "Connection error. Please try again.";
+"Emeal recognized, but decoding has not yet been implemented." = "Emeal recognized, but decoding has not yet been implemented.";
 "Balance" = "Balance";
 "Last Transaction" = "Last Transaction";
 "Scan Mensa Card" = "Scan Mensa Card";

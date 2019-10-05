@@ -4,6 +4,8 @@ struct EmealView: View {
     @State var amount: Double = 13.37
     @State var lastTransaction = 3.5
 
+    @ObservedObject var emeal = Emeal()
+
     var body: some View {
         VStack {
             ZStack(alignment: .leading) {
@@ -33,7 +35,7 @@ struct EmealView: View {
             }
 
             LargeButton(text: "Scan Mensa Card") {
-                
+                self.emeal.readCard()
             }
 
             Spacer()
