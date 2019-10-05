@@ -8,8 +8,10 @@ struct MealCell: View {
 
     var imageView: AnyView {
         if meal.imageIsPlaceholder && colorSheme == .dark {
-            return AnyView(MealImage(imageURL: meal.image)
-                .colorInvert())
+            return AnyView(Image("meal_placeholder")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 150))
         }
         return AnyView(MealImage(imageURL: meal.image))
     }
