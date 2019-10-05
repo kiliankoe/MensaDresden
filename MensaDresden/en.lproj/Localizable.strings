@@ -11,6 +11,10 @@
 "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out." = "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out.";
 "Same goes for allergens. Uncheck anything you don't want in your food." = "Same goes for allergens. Uncheck anything you don't want in your food.";
 
+"Balance" = "Balance";
+"Last Transaction" = "Last Transaction";
+"Scan Mensa Card" = "Scan Mensa Card";
+
 "pork" = "Pork";
 "beef" = "Beef";
 "alcohol" = "Alcohol";
