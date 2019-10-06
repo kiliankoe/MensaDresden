@@ -4,6 +4,10 @@ import MapKit
 struct CanteenListView: View {
     @ObservedObject private var service = OpenMensaService()
 
+    var isIpad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+
     @EnvironmentObject var settings: Settings
     var canteens: [Canteen] {
         let favorites = service.canteens.filter { settings.favoriteCanteens.contains($0.name) }
@@ -27,8 +31,10 @@ struct CanteenListView: View {
             .navigationBarTitle("Canteens")
             .navigationBarItems(trailing:
                 HStack {
+                    if !isIpad {
                     BarButtonNavigationLink(destination: EmealView(), image: Image(systemName: "creditcard"))
                         .padding(.trailing, 5)
+                    }
                     BarButtonNavigationLink(destination: SettingsView(), image: Image(systemName: "gear"))
                         .padding(.trailing, 5)
                     BarButtonNavigationLink(destination: InfoView(), image: Image(systemName: "info.circle"))
