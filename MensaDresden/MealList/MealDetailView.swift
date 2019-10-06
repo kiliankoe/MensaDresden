@@ -8,11 +8,19 @@ struct MealDetailView: View {
         VStack(alignment: .leading) {
             MealImage(imageURL: meal.image, width: UIScreen.main.bounds.width, roundedCorners: false, contentMode: .fit)
 
-            Text(meal.category)
-                .font(Font.headline.smallCaps())
-                .foregroundColor(.gray)
-                .padding(.horizontal)
-                .padding(.bottom)
+            HStack {
+                if meal.isDinner {
+                    Image(systemName: "moon.fill")
+                        .font(.headline)
+                        .foregroundColor(.yellow)
+                }
+                Text(meal.category)
+                    .font(Font.headline.smallCaps())
+                    .foregroundColor(.gray)
+            }
+            .padding(.horizontal)
+            .padding(.bottom)
+
 
             Text(meal.name)
                 .font(.title)

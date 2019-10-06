@@ -33,6 +33,13 @@ struct MealCell: View {
                 HStack {
                     PriceLabel(price: meal.prices?.students)
                     PriceLabel(price: meal.prices?.employees)
+
+                    if meal.isDinner {
+                        Spacer()
+                        Image(systemName: "moon.fill")
+                            .font(.headline)
+                            .foregroundColor(.yellow)
+                    }
                 }
             }
         }

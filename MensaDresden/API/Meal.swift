@@ -90,6 +90,10 @@ struct Meal: Identifiable, Decodable {
         return false
     }
 
+    var isDinner: Bool {
+        category.lowercased().contains("abend")
+    }
+
     static var placeholderImageURL: URL {
         return URL(string: "https://static.studentenwerk-dresden.de/bilder/mensen/studentenwerk-dresden-lieber-mensen-gehen.jpg")!
     }
