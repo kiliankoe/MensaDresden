@@ -36,6 +36,7 @@ struct CanteenListView: View {
 
             )
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             self.service.fetchCanteens()
         }
