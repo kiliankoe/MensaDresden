@@ -1,12 +1,9 @@
 import SwiftUI
 import MapKit
+import CoreNFC
 
 struct CanteenListView: View {
     @ObservedObject private var service = OpenMensaService()
-
-    var isIpad: Bool {
-        UIDevice.current.userInterfaceIdiom == .pad
-    }
 
     @EnvironmentObject var settings: Settings
     var canteens: [Canteen] {
@@ -31,7 +28,7 @@ struct CanteenListView: View {
             .navigationBarTitle("Canteens")
             .navigationBarItems(trailing:
                 HStack {
-                    if !isIpad {
+                    if NFCReaderSession.readingAvailable {
                     BarButtonNavigationLink(destination: EmealView(), image: Image(systemName: "creditcard"))
                         .padding(.trailing, 5)
                     }
