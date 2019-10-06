@@ -8,7 +8,7 @@ struct MealCell: View {
 
     var body: some View {
         HStack {
-            MealImage(imageURL: meal.image, size: 150, roundedCorners: true)
+            MealImage(imageURL: meal.image, width: 130, height: 95, roundedCorners: true, contentMode: .fill)
 
             VStack(alignment: .leading) {
                 HStack {

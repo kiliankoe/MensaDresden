@@ -6,7 +6,7 @@ struct MealDetailView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            MealImage(imageURL: meal.image, size: UIScreen.main.bounds.width, roundedCorners: false)
+            MealImage(imageURL: meal.image, width: UIScreen.main.bounds.width, roundedCorners: false, contentMode: .fit)
 
             Text(meal.category)
                 .font(Font.headline.smallCaps())
