@@ -16,7 +16,7 @@ struct CanteenCell: View {
                 Image(canteen.name.replacingOccurrences(of: "/", with: ""))
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 150, height: 100, alignment: .trailing)
+                    .frame(width: 130, height: 90, alignment: .trailing)
                     .cornerRadius(8)
                     .padding(.trailing, 2)
                 if isFavorite {
