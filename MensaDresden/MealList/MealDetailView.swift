@@ -18,6 +18,16 @@ struct MealDetailView: View {
                 Text(meal.category)
                     .font(Font.headline.smallCaps())
                     .foregroundColor(.gray)
+
+                Spacer()
+
+                ForEach(meal.diet, id: \.self) { diet in
+                    Text(LocalizedStringKey(String(describing: diet)))
+                        .font(Font.headline.smallCaps())
+                        .bold()
+                        .foregroundColor(.green)
+                        .lineLimit(1)
+                }
             }
             .padding(.horizontal)
             .padding(.bottom)
