@@ -36,6 +36,8 @@
 		39A141932348EBC000FEE789 /* BlacklistBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141922348EBC000FEE789 /* BlacklistBinding.swift */; };
 		39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141942348EBEE00FEE789 /* UserDefault.swift */; };
 		39A141A02348F49700FEE789 /* Emeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1419F2348F49700FEE789 /* Emeal.swift */; };
+		39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */; };
+		39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB72234BB0350081B9AE /* HostingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		39A141942348EBEE00FEE789 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		39A141972348EF1D00FEE789 /* Mensa Dresden.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mensa Dresden.entitlements"; sourceTree = "<group>"; };
 		39A1419F2348F49700FEE789 /* Emeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emeal.swift; sourceTree = "<group>"; };
+		39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOrientation.swift; sourceTree = "<group>"; };
+		39BEEB72234BB0350081B9AE /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 				39A141972348EF1D00FEE789 /* Mensa Dresden.entitlements */,
 				39281C5D234241B900E4EFB5 /* AppDelegate.swift */,
 				39281C5F234241B900E4EFB5 /* SceneDelegate.swift */,
+				39BEEB72234BB0350081B9AE /* HostingController.swift */,
 				394D9D022343EFD4005F076C /* InfoView.swift */,
 				39A1418B23481B4D00FEE789 /* Shared */,
 				39281C89234292C100E4EFB5 /* API */,
@@ -223,6 +228,7 @@
 				39A1418E2348210000FEE789 /* BarButton.swift */,
 				39A141922348EBC000FEE789 /* BlacklistBinding.swift */,
 				39A141942348EBEE00FEE789 /* UserDefault.swift */,
+				39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -347,12 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */,
 				39A141A02348F49700FEE789 /* Emeal.swift in Sources */,
 				39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */,
 				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,
 				39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */,
 				39A1418F2348210000FEE789 /* BarButton.swift in Sources */,
 				39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */,
+				39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */,
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39A141912348813D00FEE789 /* Settings.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal.swift in Sources */,

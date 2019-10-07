@@ -5,6 +5,8 @@ import CoreNFC
 struct CanteenListView: View {
     @ObservedObject private var service = OpenMensaService()
 
+    @EnvironmentObject var deviceOrientation: DeviceOrientation
+
     @EnvironmentObject var settings: Settings
     var canteens: [Canteen] {
         let favorites = service.canteens.filter { settings.favoriteCanteens.contains($0.name) }
@@ -20,26 +22,33 @@ struct CanteenListView: View {
 
     var body: some View {
         NavigationView {
-            List(canteens) { canteen in
-                NavigationLink(destination: MealListView(service: self.service, canteen: canteen)) {
-                    CanteenCell(canteen: canteen)
+            Group {
+                List(canteens) { canteen in
+                    NavigationLink(destination: MealListView(service: self.service, canteen: canteen)) {
+                        CanteenCell(canteen: canteen)
+                    }
+                }
+                .navigationBarTitle("Canteens")
+                .navigationBarItems(trailing:
+                    HStack {
+                        if NFCReaderSession.readingAvailable {
+                        BarButtonNavigationLink(destination: EmealView(), image: Image(systemName: "creditcard"))
+                            .padding(.trailing, 5)
+                        }
+                        BarButtonNavigationLink(destination: SettingsView(), image: Image(systemName: "gear"))
+                            .padding(.trailing, 5)
+                        BarButtonNavigationLink(destination: InfoView(), image: Image(systemName: "info.circle"))
+                    }
+                )
+                VStack {
+                    Text("🍲 Bon appétit!")
+                        .font(.title)
+                    if !deviceOrientation.isLandscape {
+                        Text("Swipe from the left to open the list of canteens.")
+                    }
                 }
             }
-            .navigationBarTitle("Canteens")
-            .navigationBarItems(trailing:
-                HStack {
-                    if NFCReaderSession.readingAvailable {
-                    BarButtonNavigationLink(destination: EmealView(), image: Image(systemName: "creditcard"))
-                        .padding(.trailing, 5)
-                    }
-                    BarButtonNavigationLink(destination: SettingsView(), image: Image(systemName: "gear"))
-                        .padding(.trailing, 5)
-                    BarButtonNavigationLink(destination: InfoView(), image: Image(systemName: "info.circle"))
-                }
-
-            )
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             self.service.fetchCanteens()
         }
