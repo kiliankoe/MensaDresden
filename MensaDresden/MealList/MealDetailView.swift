@@ -5,53 +5,55 @@ struct MealDetailView: View {
     var meal: Meal
 
     var body: some View {
-        VStack(alignment: .leading) {
-            MealImage(imageURL: meal.image, width: UIScreen.main.bounds.width, roundedCorners: false, contentMode: .fit)
+        ScrollView {
+            VStack(alignment: .leading) {
+                MealImage(imageURL: meal.image, width: UIScreen.main.bounds.width, roundedCorners: false, contentMode: .fit)
+                    .padding(.bottom)
+
+                HStack {
+                    if meal.isDinner {
+                        Image(systemName: "moon.fill")
+                            .font(.headline)
+                            .foregroundColor(.yellow)
+                    }
+                    Text(meal.category)
+                        .font(Font.headline.smallCaps())
+                        .foregroundColor(.gray)
+
+                    Spacer()
+
+                    ForEach(meal.diet, id: \.self) { diet in
+                        Text(LocalizedStringKey(String(describing: diet)))
+                            .font(Font.headline.smallCaps())
+                            .bold()
+                            .foregroundColor(.green)
+                            .lineLimit(1)
+                    }
+                }
+                .padding(.horizontal)
                 .padding(.bottom)
 
-            HStack {
-                if meal.isDinner {
-                    Image(systemName: "moon.fill")
-                        .font(.headline)
-                        .foregroundColor(.yellow)
-                }
-                Text(meal.category)
-                    .font(Font.headline.smallCaps())
-                    .foregroundColor(.gray)
+
+                Text(meal.name)
+                    .font(.title)
+                    .lineLimit(5)
+                    .layoutPriority(1)
+                    .padding(.horizontal)
+
+                HStack {
+                    PriceLabel(price: meal.prices?.students)
+                    PriceLabel(price: meal.prices?.employees)
+                }.padding()
+
+                VStack(alignment: .leading) {
+                    ForEach(meal.notes, id: \.self) { note in
+                        Text(note)
+                            .font(.caption)
+                    }
+                }.padding(.horizontal)
 
                 Spacer()
-
-                ForEach(meal.diet, id: \.self) { diet in
-                    Text(LocalizedStringKey(String(describing: diet)))
-                        .font(Font.headline.smallCaps())
-                        .bold()
-                        .foregroundColor(.green)
-                        .lineLimit(1)
-                }
             }
-            .padding(.horizontal)
-            .padding(.bottom)
-
-
-            Text(meal.name)
-                .font(.title)
-                .lineLimit(5)
-                .layoutPriority(1)
-                .padding(.horizontal)
-
-            HStack {
-                PriceLabel(price: meal.prices?.students)
-                PriceLabel(price: meal.prices?.employees)
-            }.padding()
-
-            VStack(alignment: .leading) {
-                ForEach(meal.notes, id: \.self) { note in
-                    Text(note)
-                        .font(.caption)
-                }
-            }.padding(.horizontal)
-
-            Spacer()
         }
         .navigationBarTitle(Text(""), displayMode: .inline)
         .navigationBarItems(trailing: BarButtonButton(view: Image(systemName: "globe"), action: {
