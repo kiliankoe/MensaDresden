@@ -8,17 +8,20 @@ struct MealImage: View {
     var roundedCorners: Bool
     var contentMode: ContentMode
 
-    @Environment(\.colorScheme) private var colorScheme
+    var placeholderImage: some View {
+        Image("meal_placeholder")
+            .resizable()
+            .aspectRatio(contentMode: contentMode)
+            .frame(width: width)
+    }
 
     var body: some View {
-        if imageURL == Meal.placeholderImageURL && colorScheme == .dark {
-            return AnyView(Image("meal_placeholder")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: self.width))
+        if imageURL == Meal.placeholderImageURL {
+            return AnyView(placeholderImage)
         }
-        return AnyView(RemoteImage(url: imageURL, errorView: { error in
-            MealImageText(text: error.localizedDescription)
+
+        return AnyView(RemoteImage(url: imageURL, errorView: { _ in
+            self.placeholderImage
         }, imageView: { image in
             image
                 .resizable()
@@ -26,22 +29,8 @@ struct MealImage: View {
                 .frame(width: self.width, height: self.height)
                 .clipShape(RoundedRectangle(cornerRadius: self.roundedCorners ? 8 : 0))
         }, loadingView: {
-            MealImageText(text: "Image loading...")
+            self.placeholderImage
         }))
-    }
-}
-
-struct MealImageText: View {
-    var text: String
-
-    var body: some View {
-        HStack {
-            Spacer()
-            Text(self.text)
-                .font(.caption)
-                .foregroundColor(.gray)
-            Spacer()
-        }.frame(width: 130, height: 95, alignment: .leading)
     }
 }
 
