@@ -7,6 +7,7 @@ struct MealDetailView: View {
     var body: some View {
         VStack(alignment: .leading) {
             MealImage(imageURL: meal.image, width: UIScreen.main.bounds.width, roundedCorners: false, contentMode: .fit)
+                .padding(.bottom)
 
             HStack {
                 if meal.isDinner {
