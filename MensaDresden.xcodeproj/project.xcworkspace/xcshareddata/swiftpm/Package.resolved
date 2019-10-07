@@ -14,9 +14,9 @@
         "package": "RemoteImage",
         "repositoryURL": "https://github.com/crelies/RemoteImage",
         "state": {
-          "branch": null,
-          "revision": "d5e498f41ad52c9b4b03241c38f1414cd29ef211",
-          "version": "0.1.0"
+          "branch": "master",
+          "revision": "9eb8540d3553a45df892a06db324ab5ce7861720",
+          "version": null
         }
       }
     ]
