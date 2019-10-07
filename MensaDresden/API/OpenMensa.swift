@@ -80,7 +80,14 @@ class OpenMensaService: ObservableObject {
                 .decode(type: [Meal].self, decoder: JSONDecoder())
                 .replaceError(with: [])
                 .receive(on: DispatchQueue.main)
-                .sink { self.meals[id] = $0 }
+                .sink { [weak self] in
+                    let meals = $0.sorted { lhs, rhs in
+                        if lhs.isDinner { return false }
+                        if rhs.isDinner { return true }
+                        return lhs.name < rhs.name
+                    }
+                    self?.meals[id] = meals
+                }
 //                .assign(to: \.meals[id], on: self)
         }
 }
