@@ -39,6 +39,7 @@
 		39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */; };
 		39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB72234BB0350081B9AE /* HostingController.swift */; };
 		39CD5B11234E590300435E71 /* HTMLString in Frameworks */ = {isa = PBXBuildFile; productRef = 39CD5B10234E590300435E71 /* HTMLString */; };
+		39CD5B13234E60D100435E71 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B12234E60D100435E71 /* ShareSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		39A1419F2348F49700FEE789 /* Emeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emeal.swift; sourceTree = "<group>"; };
 		39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOrientation.swift; sourceTree = "<group>"; };
 		39BEEB72234BB0350081B9AE /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		39CD5B12234E60D100435E71 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				39A141922348EBC000FEE789 /* BlacklistBinding.swift */,
 				39A141942348EBEE00FEE789 /* UserDefault.swift */,
 				39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */,
+				39CD5B12234E60D100435E71 /* ShareSheetView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */,
 				396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */,
 				39281C62234241B900E4EFB5 /* CanteenListView.swift in Sources */,
+				39CD5B13234E60D100435E71 /* ShareSheetView.swift in Sources */,
 				39281C7923424CEA00E4EFB5 /* MealListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

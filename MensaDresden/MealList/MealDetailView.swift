@@ -4,6 +4,8 @@ import RemoteImage
 struct MealDetailView: View {
     var meal: Meal
 
+    @State private var showingShareSheet = false
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -55,9 +57,11 @@ struct MealDetailView: View {
                 Spacer()
             }
         }
+        // FIXME: This is far from ideal, but is the best thing I can currently come up with.
+        .sheet(isPresented: $showingShareSheet, content: { ShareSheet(sharing: [self.meal.activityItem]) })
         .navigationBarTitle(Text(""), displayMode: .inline)
-        .navigationBarItems(trailing: BarButtonButton(view: Image(systemName: "globe"), action: {
-            UIApplication.shared.open(self.meal.url, options: [:], completionHandler: nil)
+        .navigationBarItems(trailing: BarButtonButton(view: Image(systemName: "square.and.arrow.up"), action: {
+            self.showingShareSheet.toggle()
         }))
     }
 }

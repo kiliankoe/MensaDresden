@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 import Regex
 import HTMLString
 
@@ -108,6 +109,32 @@ struct Meal: Identifiable, Decodable {
              category: "Wok & Grill",
              image: URL(string: "https://bilderspeiseplan.studentenwerk-dresden.de/m18/201909/233593.jpg")!,
              url: URL(string: "https://studentenwerk-dresden.de")!)
+    }
+}
+
+extension Meal {
+    var activityItem: ActivityItem {
+        return ActivityItem(meal: self)
+    }
+
+    class ActivityItem: NSObject, UIActivityItemSource {
+        let meal: Meal
+
+        init(meal: Meal) {
+            self.meal = meal
+        }
+
+        func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+            meal.name
+        }
+
+        func activityViewController(_ activityViewController: UIActivityViewController, subjectForActivityType activityType: UIActivity.ActivityType?) -> String {
+            meal.name
+        }
+
+        func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+            meal.url
+        }
     }
 }
 
