@@ -3,7 +3,7 @@ import SwiftUI
 import Combine
 
 class DeviceOrientation: ObservableObject {
-    @Published var isLandscape: Bool = false
+    @Published var isLandscape: Bool
 
     init(isLandscape: Bool) {
         self.isLandscape = isLandscape
