@@ -38,6 +38,7 @@
 		39A141A02348F49700FEE789 /* Emeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1419F2348F49700FEE789 /* Emeal.swift */; };
 		39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */; };
 		39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB72234BB0350081B9AE /* HostingController.swift */; };
+		39CD5B11234E590300435E71 /* HTMLString in Frameworks */ = {isa = PBXBuildFile; productRef = 39CD5B10234E590300435E71 /* HTMLString */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				394D9D0923454FC0005F076C /* Regex in Frameworks */,
+				39CD5B11234E590300435E71 /* HTMLString in Frameworks */,
 				39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +263,7 @@
 			packageProductDependencies = (
 				39281CD12343CFB400E4EFB5 /* RemoteImage */,
 				394D9D0823454FC0005F076C /* Regex */,
+				39CD5B10234E590300435E71 /* HTMLString */,
 			);
 			productName = MensaDresden;
 			productReference = 39281C5A234241B900E4EFB5 /* Mensa Dresden.app */;
@@ -316,6 +319,7 @@
 			packageReferences = (
 				39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */,
 				394D9D0723454FC0005F076C /* XCRemoteSwiftPackageReference "Regex" */,
+				39CD5B0F234E590300435E71 /* XCRemoteSwiftPackageReference "HTMLString" */,
 			);
 			productRefGroup = 39281C5B234241B900E4EFB5 /* Products */;
 			projectDirPath = "";
@@ -672,6 +676,14 @@
 				minimumVersion = 2.1.0;
 			};
 		};
+		39CD5B0F234E590300435E71 /* XCRemoteSwiftPackageReference "HTMLString" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexaubry/HTMLString";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -684,6 +696,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 394D9D0723454FC0005F076C /* XCRemoteSwiftPackageReference "Regex" */;
 			productName = Regex;
+		};
+		39CD5B10234E590300435E71 /* HTMLString */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39CD5B0F234E590300435E71 /* XCRemoteSwiftPackageReference "HTMLString" */;
+			productName = HTMLString;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

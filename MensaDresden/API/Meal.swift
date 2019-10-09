@@ -1,5 +1,6 @@
 import Foundation
 import Regex
+import HTMLString
 
 struct Meal: Identifiable, Decodable {
     let id: Int
@@ -39,6 +40,7 @@ struct Meal: Identifiable, Decodable {
         self.id = try container.decode(Int.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.notes = try container.decode([String].self, forKey: .notes)
+            .map { $0.removingHTMLEntities }
 
         if let prices = try? container.decode(Prices.self, forKey: .prices) {
             self.prices = prices
