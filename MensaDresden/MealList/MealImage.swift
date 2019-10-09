@@ -37,7 +37,8 @@ struct MealImage: View {
 struct MealImage_Previews: PreviewProvider {
     static var previews: some View {
         MealImage(imageURL: URL(string: "https://bilderspeiseplan.studentenwerk-dresden.de/m18/201909/233593.jpg")!,
-                  width: 500,
+                  width: 130,
+                  height: 95,
                   roundedCorners: true,
                   contentMode: .fill)
     }
