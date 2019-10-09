@@ -49,7 +49,6 @@ struct CanteenListView: View {
                 }
             }
         }
-        .accentColor(.green)
         .onAppear {
             self.service.fetchCanteens()
         }
