@@ -34,7 +34,9 @@ struct EmealView: View {
                 }.offset(x: 20, y: 0)
             }
 
-            LargeButton(text: "Scan Mensa Card") {
+            LargeButton(content: {
+                Text("Scan Mensa Card")
+            }) {
                 self.emeal.readCard()
             }
 

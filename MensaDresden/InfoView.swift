@@ -35,9 +35,15 @@ struct InfoView: View {
                 Text("Huge thanks to Lucas Vogel!")
             }
 
-            LargeButton(text: "Feedback", backgroundColor: .gray) {
+            LargeButton(backgroundColor: .gray, content: {
+                HStack {
+                    Image(systemName: "envelope")
+                    Text("Feedback")
+                }
+            }) {
                 UIApplication.shared.open(URL(string: "mailto:me@kilian.io?subject=Mensa%20Dresden")!, options: [:])
-            }.padding(.vertical)
+            }
+            .padding(.vertical)
 
             Spacer()
         }
@@ -46,6 +52,8 @@ struct InfoView: View {
 
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {
-        InfoView()
+        NavigationView {
+            InfoView()
+        }
     }
 }

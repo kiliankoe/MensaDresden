@@ -1,9 +1,10 @@
 import SwiftUI
 
-struct LargeButton: View {
-    var text: String
+struct LargeButton<Content: View>: View {
     var textColor = Color.white
     var backgroundColor = Color.blue
+
+    var content: () -> Content
 
     var action: () -> Void
 
@@ -11,9 +12,8 @@ struct LargeButton: View {
         Button(action: action) {
             HStack {
                 Spacer()
-                Text(LocalizedStringKey(text))
+                content()
                     .font(.headline)
-                    .bold()
                     .foregroundColor(textColor)
                     .padding()
                 Spacer()
@@ -28,6 +28,13 @@ struct LargeButton: View {
 
 struct LargeButton_Previews: PreviewProvider {
     static var previews: some View {
-        LargeButton(text: "Some Text", action: {})
+        LargeButton(
+            content: {
+                HStack {
+                    Image(systemName: "hand.thumbsup")
+                    Text("Upvote")
+                }
+            },
+            action: {})
     }
 }
