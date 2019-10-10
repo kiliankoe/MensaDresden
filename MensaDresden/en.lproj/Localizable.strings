@@ -10,9 +10,6 @@
 "🍲 Bon appétit!" = "🍲 Bon appétit!";
 "Swipe from the left to open the list of canteens." = "Swipe from the left to open the list of canteens.";
 
-"vegan" = "vegan";
-"vegetarian" = "vegetarian";
-
 "Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order." = "Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order.";
 "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out." = "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out.";
 "Same goes for allergens. Uncheck anything you don't want in your food." = "Same goes for allergens. Uncheck anything you don't want in your food.";
@@ -24,6 +21,12 @@
 "Balance" = "Balance";
 "Last Transaction" = "Last Transaction";
 "Scan Mensa Card" = "Scan Mensa Card";
+
+"Rate meal" = "Rate meal";
+"Send feedback regarding this meal directly to the Studentenwerk." = "Send feedback regarding this meal directly to the Studentenwerk.";
+
+"vegan" = "vegan";
+"vegetarian" = "vegetarian";
 
 "pork" = "Pork";
 "beef" = "Beef";

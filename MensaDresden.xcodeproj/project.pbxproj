@@ -40,6 +40,8 @@
 		39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB72234BB0350081B9AE /* HostingController.swift */; };
 		39CD5B11234E590300435E71 /* HTMLString in Frameworks */ = {isa = PBXBuildFile; productRef = 39CD5B10234E590300435E71 /* HTMLString */; };
 		39CD5B13234E60D100435E71 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B12234E60D100435E71 /* ShareSheetView.swift */; };
+		39CD5B19234F778400435E71 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B18234F778400435E71 /* WebView.swift */; };
+		39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOrientation.swift; sourceTree = "<group>"; };
 		39BEEB72234BB0350081B9AE /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		39CD5B12234E60D100435E71 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
+		39CD5B18234F778400435E71 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeedbackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 				39281C7823424CEA00E4EFB5 /* MealListView.swift */,
 				39281C82234282C100E4EFB5 /* MealImage.swift */,
 				394D9D002343D0C9005F076C /* MealDetailView.swift */,
+				39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */,
 				394D9D1D23455C99005F076C /* MealCell */,
 			);
 			path = MealList;
@@ -234,6 +239,7 @@
 				39A141942348EBEE00FEE789 /* UserDefault.swift */,
 				39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */,
 				39CD5B12234E60D100435E71 /* ShareSheetView.swift */,
+				39CD5B18234F778400435E71 /* WebView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */,
 				39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */,
 				39A141A02348F49700FEE789 /* Emeal.swift in Sources */,
 				39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */,
@@ -371,6 +378,7 @@
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39A141912348813D00FEE789 /* Settings.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal.swift in Sources */,
+				39CD5B19234F778400435E71 /* WebView.swift in Sources */,
 				39A141932348EBC000FEE789 /* BlacklistBinding.swift in Sources */,
 				394D9D032343EFD4005F076C /* InfoView.swift in Sources */,
 				39281C83234282C100E4EFB5 /* MealImage.swift in Sources */,

@@ -54,7 +54,7 @@ struct MealDetailView: View {
                     }
                 }.padding(.horizontal)
 
-                Spacer()
+                FeedbackButton(meal: meal)
             }
         }
         // FIXME: This is far from ideal, but is the best thing I can currently come up with.
@@ -66,16 +66,30 @@ struct MealDetailView: View {
     }
 }
 
-struct MealDetailView_Previews: PreviewProvider {
-    static let meal = Meal(id: 1, name: "Rahmsoße mit Tomaten und Zucchini", notes: [], prices: nil, category: "Pasta", image: URL(string: "https://static.studentenwerk-dresden.de/bilder/mensen/studentenwerk-dresden-lieber-mensen-gehen.jpg")!, url: URL(string: "https://www.studentenwerk-dresden.de/mensen/speiseplan/details-233603.html")!)
+struct FeedbackButton: View {
+    var meal: Meal
 
-    static var previews: some View {
-        MealDetailView(meal: meal)
+    var feedbackURL: URL {
+        URL(string: "https://www.studentenwerk-dresden.de/kontakt.html?bereich=mensen&page=mensen_luk&thema=luk&eid=\(meal.id)")!
+    }
+
+    var body: some View {
+        NavigationLink(destination: WebView(url: feedbackURL)) {
+            VStack(alignment: .leading) {
+                Text("Rate meal")
+                Text("Send feedback regarding this meal directly to the Studentenwerk.")
+                    .foregroundColor(.primary)
+                    .font(.caption)
+            }
+            .padding(.horizontal)
+        }
     }
 }
 
-extension String: Identifiable {
-    public var id: String {
-        return self
+struct MealDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            MealDetailView(meal: Meal.example)
+        }
     }
 }
