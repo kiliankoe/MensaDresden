@@ -35,15 +35,29 @@ struct InfoView: View {
                 Text("Huge thanks to Lucas Vogel!")
             }
 
-            LargeButton(backgroundColor: .gray, content: {
-                HStack {
-                    Image(systemName: "envelope")
-                    Text("Feedback")
-                }
-            }) {
-                UIApplication.shared.open(URL(string: "mailto:me@kilian.io?subject=Mensa%20Dresden")!, options: [:])
-            }
-            .padding(.vertical)
+            VStack(alignment: .leading) {
+                Button(
+                    action: {
+                        UIApplication.shared.open(URL(string: "https://github.com/kiliankoe/MensaDresden")!)
+                    },
+                    label: {
+                        HStack {
+                            Image(systemName: "desktopcomputer")
+                            Text("This app is open source on GitHub.")
+                        }
+                })
+
+                Button(
+                    action: {
+                        UIApplication.shared.open(URL(string: "mailto:me@kilian.io?subject=Mensa%20Dresden")!)
+                    },
+                    label: {
+                        HStack {
+                            Image(systemName: "envelope")
+                            Text("Feedback? Send me an E-Mail.")
+                        }
+                })
+            }.padding(.top)
 
             Spacer()
         }
