@@ -55,7 +55,7 @@ struct MealDetailView: View {
                 }.padding(.horizontal)
 
                 FeedbackButton(meal: meal)
-                    .padding(.top)
+                    .padding(.vertical)
             }
         }
         // FIXME: This is far from ideal, but is the best thing I can currently come up with.
