@@ -567,6 +567,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2019.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = YES;
@@ -591,6 +592,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2019.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = YES;
