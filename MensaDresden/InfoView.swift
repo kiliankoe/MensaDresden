@@ -34,6 +34,7 @@ struct InfoView: View {
                 Text("Icon: ").bold() + Text("Eddy Wong from the Noun Project")
                 Text("Huge thanks to Lucas Vogel!")
             }
+            .padding(.horizontal)
 
             VStack(alignment: .leading) {
                 Button(
