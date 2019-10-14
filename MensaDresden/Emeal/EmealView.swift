@@ -24,7 +24,6 @@ struct EmealView: View {
 //                if NFCReaderSession.readingAvailable {
                 if false {
                     EmealCardView(amount: amount, lastTransaction: lastTransaction)
-                        .padding(.top)
                         .padding(.horizontal)
 
                     LargeButton(content: {
@@ -73,7 +72,6 @@ struct EmealView: View {
 
                 Spacer()
             }
-            .padding(.horizontal)
             .navigationBarTitle("Emeal")
         }
         .navigationViewStyle(StackNavigationViewStyle())

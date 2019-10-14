@@ -9,8 +9,6 @@ struct EmealCardView: View {
             Image("emeal_empty")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: UIScreen.main.bounds.width - 40)
-                .padding(.bottom)
                 .shadow(radius: 10)
 
             VStack(alignment: .leading) {
