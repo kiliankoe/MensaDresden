@@ -57,6 +57,17 @@ struct InfoView: View {
                             Text("Feedback? Send me an E-Mail.")
                         }
                 })
+
+                Button(
+                    action: {
+                        UIApplication.shared.open(URL(string: "https://testflight.apple.com/join/xE99ppRh")!)
+                    },
+                    label: {
+                        HStack {
+                            Image(systemName: "ant")
+                            Text("Want to help beta test this application?")
+                        }
+                })
             }.padding(.top)
 
             Spacer()
