@@ -27,6 +27,7 @@ struct AppView: View {
                     }
                 }
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
