@@ -28,7 +28,7 @@
 "Unable to read NFC tag." = "Lesen der NFC Karte fehlgeschlagen.";
 "Connection error. Please try again." = "Verbindungsfehler. Bitte versuche es erneut.";
 "Emeal recognized, but decoding has not yet been implemented." = "Emeal erkannt, die Dekodierung ist allerdings noch nicht komplett implementiert.";
-"Balance" = "Betrag";
+"Balance" = "Guthaben";
 "Last Transaction" = "Letzte Transaktion";
 "Scan Mensa Card" = "Mensa Karte scannen";
 "Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here." = "Du nutzt Autoload? Trage deine Zugangsdaten in den App Einstellungen ein damit all deine letzten Transaktionen hier angezeigt werden.";
