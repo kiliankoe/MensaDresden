@@ -1,47 +1,85 @@
 import SwiftUI
+import Combine
+import CoreNFC
 
 struct EmealView: View {
+    @EnvironmentObject var service: OpenMensaService
+    @EnvironmentObject var settings: Settings
+
     @State var amount: Double = 13.37
     @State var lastTransaction = 3.5
 
     @ObservedObject var emeal = Emeal()
 
+    static var transactionDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter
+    }()
+
     var body: some View {
-        VStack {
-            ZStack(alignment: .leading) {
-                Image("emeal_empty")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: UIScreen.main.bounds.width - 40)
-                    .padding(.bottom)
-                    .shadow(radius: 10)
+        NavigationView {
+            VStack {
+//                if NFCReaderSession.readingAvailable {
+                if false {
+                    EmealCardView(amount: amount, lastTransaction: lastTransaction)
+                        .padding(.top)
+                        .padding(.horizontal)
 
-                VStack(alignment: .leading) {
-                    Text("Balance")
-                        .font(Font.headline.smallCaps())
-                        .foregroundColor(.white)
-                    Text("\(amount, specifier: "%.2f")€")
-                        .font(.system(size: 50))
-                        .foregroundColor(.white)
-                        .padding(.bottom, UIScreen.main.bounds.height * 0.04)
+                    LargeButton(content: {
+                        Text("Scan Mensa Card")
+                    }) {
+                        self.emeal.readCard()
+                    }
+                    .padding(.horizontal)
+                }
 
-                    Text("Last Transaction")
-                        .font(Font.subheadline.smallCaps())
-                        .foregroundColor(.white)
-                    Text("\(lastTransaction, specifier: "%.2f")€")
-                        .font(.title)
-                        .foregroundColor(.white)
-                }.offset(x: 20, y: 0)
+                if settings.areAutoloadCredentialsAvailable {
+//                if true {
+                    List(service.transactions, id: \.id) { transaction in
+                        VStack(alignment: .leading) {
+                            Text(Self.transactionDateFormatter.string(from: transaction.date))
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                            HStack {
+                                Text(transaction.location)
+                                Spacer()
+                                Text("\(transaction.amount, specifier: "%.2f")€")
+                            }
+                            ForEach(transaction.positions, id: \.id) { pos in
+                                HStack {
+                                    Text(pos.name)
+                                    Spacer()
+                                    Text("\(pos.price, specifier: "%.2f")€")
+                                }
+                                .font(.caption)
+                            }
+                        }
+                    }
+                } else {
+                    VStack(alignment: .leading) {
+                        Text("Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here.")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                            .padding(.bottom, 5)
+                        NavigationLink(destination: WebView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!)) {
+                            Text("Autoload Information")
+                                .font(.caption)
+                        }
+                    }
+                    .padding(.top)
+                }
+
+                Spacer()
             }
-
-            LargeButton(content: {
-                Text("Scan Mensa Card")
-            }) {
-                self.emeal.readCard()
-            }
-
-            Spacer()
-        }.padding()
+            .padding(.horizontal)
+            .navigationBarTitle("Emeal")
+//            .navigationViewStyle(StackNavigationViewStyle())
+        }
+        .onAppear {
+            self.service.getTransactions()
+        }
     }
 }
 

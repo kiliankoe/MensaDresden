@@ -20,11 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let settings = Settings()
             let deviceOrientation = DeviceOrientation(isLandscape: window.windowScene?.interfaceOrientation.isLandscape ?? false)
 
-            let canteenListView = CanteenListView()
+            let service = OpenMensaService(settings: settings)
+            
+            let appView = AppView()
                 .environmentObject(settings)
                 .environmentObject(deviceOrientation)
+                .environmentObject(service)
 
-            window.rootViewController = HostingController(rootView: canteenListView)
+            window.rootViewController = HostingController(rootView: appView)
             self.window = window
             window.makeKeyAndVisible()
         }

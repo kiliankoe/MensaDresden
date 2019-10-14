@@ -1,17 +1,26 @@
+"Menu" = "Menu";
+"Emeal" = "Emeal";
+"Settings" = "Settings";
+
 "Canteens" = "Canteens";
 "Today" = "Today";
 "Tomorrow" = "Tomorrow";
 "Image loading..." = "Image loading...";
 
-"Huge thanks to Lucas Vogel!" = "Huge thanks to Lucas Vogel!";
+"Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!" = "Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!";
 "This app is open source on GitHub." = "This app is open source on GitHub.";
 "Feedback? Send me an E-Mail." = "Feedback? Send me an E-Mail.";
+"Want to help beta test this application?" = "Want to help beta test this application?";
 "Image Rights: " = "Image Rights: ";
 
 "🍲 Bon appétit!" = "🍲 Bon appétit!";
 "Swipe from the left to open the list of canteens." = "Swipe from the left to open the list of canteens.";
 
 "Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order." = "Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order.";
+"Using Autoload? Enter your credentials here to show all latest transactions on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers." = "Using Autoload? Enter your credentials here to show all latest transactions on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers for authentification purposes.";
+"Cardnumber" = "Cardnumber";
+"Password" = "Password";
+"Autoload Information" = "Autoload Information";
 "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out." = "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out.";
 "Same goes for allergens. Uncheck anything you don't want in your food." = "Same goes for allergens. Uncheck anything you don't want in your food.";
 
@@ -22,6 +31,7 @@
 "Balance" = "Balance";
 "Last Transaction" = "Last Transaction";
 "Scan Mensa Card" = "Scan Mensa Card";
+"Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here." = "Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here.";
 
 "Rate meal" = "Rate meal";
 "Send feedback regarding this meal directly to the Studentenwerk." = "Send feedback regarding this meal directly to the Studentenwerk.";
@@ -48,3 +58,5 @@
 "sulfite" = "Sulfite";
 "lupin" = "Lupin";
 "molluscs" = "Molluscs";
+
+"About" = "About";

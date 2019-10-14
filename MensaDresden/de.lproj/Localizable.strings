@@ -1,17 +1,26 @@
+"Menu" = "Speiseplan";
+"Emeal" = "Emeal";
+"Settings" = "Einstellungen";
+
 "Canteens" = "Mensen";
 "Today" = "Heute";
 "Tomorrow" = "Morgen";
 "Image loading..." = "Bild wird geladen...";
 
-"Huge thanks to Lucas Vogel!" = "Vielen Dank an Lucas Vogel!";
+"Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!" = "Vielen Dank an Lucas Vogel, Georg Sieber, alle Mitwirkenden auf GitHub und die Beta-Tester für das fantastische Feedback!";
 "This app is open source on GitHub." = "Diese App ist open source auf GitHub.";
 "Feedback? Send me an E-Mail." = "Feedback? Schick' mir eine E-Mail.";
+"Want to help beta test this application?" = "Lust auf Beta-Versionen dieser App?";
 "Image Rights: " = "Bildrechte: ";
 
 "🍲 Bon appétit!" = "🍲 Guten Appetit!";
 "Swipe from the left to open the list of canteens." = "Swipe von links um die Liste von Mensen zu sehen.";
 
 "Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order." = "Deine Lieblingsmensen. Tippe auf das Herz im Speiseplan einer Mensa oder bearbeite die Liste hier um Mensen zu löschen oder umzusortieren.";
+"Using Autoload? Enter your credentials here to show all latest transactions on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers." = "Du benutzt Autoload? Trage hier deine Zugangsdaten ein um alle letzten Transkationen auf der Emeal Seite anzuzeigen. Deine Zugangsdaten werden sicher nur auf diesem Gerät gespeichert und ausschließlich zur Authentifizierung an Server des Studentenwerks übertragen.";
+"Cardnumber" = "Kartennummer";
+"Password" = "Passwort";
+"Autoload Information" = "Informationen zu Autoload";
 "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out." = "Wähle Zutaten ab, die du nicht zur dir nehmen möchtest. Mahlzeiten, die diese Zutaten enthalten, werden in der Liste ausgegraut dargestellt.";
 "Same goes for allergens. Uncheck anything you don't want in your food." = "Gleiches Spiel für Allergene. Ist etwas dabei, was du nicht in deinem Essen haben möchtest?";
 
@@ -22,6 +31,7 @@
 "Balance" = "Betrag";
 "Last Transaction" = "Letzte Transaktion";
 "Scan Mensa Card" = "Mensa Karte scannen";
+"Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here." = "Du nutzt Autoload? Trage deine Zugangsdaten in den App Einstellungen ein damit all deine letzten Transaktionen hier angezeigt werden.";
 
 "Rate meal" = "Angebot bewerten";
 "Send feedback regarding this meal directly to the Studentenwerk." = "Sende Feedback zur Mahlzeit direkt an das Studentenwerk.";
@@ -48,3 +58,5 @@
 "sulfite" = "Sulfit/Schwefeldioxid";
 "lupin" = "Lupine";
 "molluscs" = "Weichtiere";
+
+"About" = "Über";

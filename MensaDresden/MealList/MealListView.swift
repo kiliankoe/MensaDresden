@@ -36,7 +36,8 @@ struct MealListView: View {
 }
 
 struct MealListView_Previews: PreviewProvider {
-    static let service = OpenMensaService()
+    static let settings = Settings()
+    static let service = OpenMensaService(settings: Self.settings)
 
     static var previews: some View {
         MealListView(service: service, canteen: Canteen.example)

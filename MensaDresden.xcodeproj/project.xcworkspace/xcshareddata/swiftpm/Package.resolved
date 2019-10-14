@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "KeychainItem",
+        "repositoryURL": "https://github.com/objcio/keychain-item",
+        "state": {
+          "branch": "master",
+          "revision": "563fc973ee4c1fcdea646630f847a241025da3c4",
+          "version": null
+        }
+      },
+      {
         "package": "Regex",
         "repositoryURL": "https://github.com/sharplet/Regex",
         "state": {
@@ -25,6 +34,15 @@
         "state": {
           "branch": "master",
           "revision": "9eb8540d3553a45df892a06db324ab5ce7861720",
+          "version": null
+        }
+      },
+      {
+        "package": "StuWeDD",
+        "repositoryURL": "https://github.com/kiliankoe/stuwedd",
+        "state": {
+          "branch": "master",
+          "revision": "9db01ca8e694a31b8055f3abb1f6768e644dedb7",
           "version": null
         }
       }

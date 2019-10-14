@@ -3,8 +3,7 @@ import MapKit
 import CoreNFC
 
 struct CanteenListView: View {
-    @ObservedObject private var service = OpenMensaService()
-
+    @EnvironmentObject var service: OpenMensaService
     @EnvironmentObject var deviceOrientation: DeviceOrientation
 
     @EnvironmentObject var settings: Settings
@@ -29,17 +28,6 @@ struct CanteenListView: View {
                     }
                 }
                 .navigationBarTitle("Canteens")
-                .navigationBarItems(trailing:
-                    HStack {
-//                        if NFCReaderSession.readingAvailable {
-//                        BarButtonNavigationLink(destination: EmealView(), image: Image(systemName: "creditcard"))
-//                            .padding(.trailing, 5)
-//                        }
-                        BarButtonNavigationLink(destination: SettingsView(), image: Image(systemName: "gear"))
-                            .padding(.trailing, 5)
-                        BarButtonNavigationLink(destination: InfoView(), image: Image(systemName: "info.circle"))
-                    }
-                )
                 VStack {
                     Text("🍲 Bon appétit!")
                         .font(.title)

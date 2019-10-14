@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import StuWeDD
 
 enum Day: Int {
     case today = 0
@@ -17,6 +18,12 @@ extension Date {
 }
 
 class OpenMensaService: ObservableObject {
+    var settings: Settings
+
+    init(settings: Settings) {
+        self.settings = settings
+    }
+
     let baseURL = URL(string: "https://api.studentenwerk-dresden.de/openmensa/v2/")!
 
     var objectWillChange = ObservableObjectPublisher()
@@ -73,21 +80,44 @@ class OpenMensaService: ObservableObject {
         }
 
         self.request?.cancel()
-            self.request = URLSession.shared
-                .dataTaskPublisher(for: URL(string: "canteens/\(id)/days/\(dateFormatter.string(from: date))/meals", relativeTo: baseURL)!)
-//                .dataTaskPublisher(for: URL(string: "canteens/\(id)/days/2019-10-02/meals", relativeTo: baseURL)!)
-                .map { $0.data }
-                .decode(type: [Meal].self, decoder: JSONDecoder())
-                .replaceError(with: [])
-                .receive(on: DispatchQueue.main)
-                .sink { [weak self] in
-                    let meals = $0.sorted { lhs, rhs in
-                        if lhs.isDinner { return false }
-                        if rhs.isDinner { return true }
-                        return lhs.name < rhs.name
-                    }
-                    self?.meals[id] = meals
+        self.request = URLSession.shared
+            .dataTaskPublisher(for: URL(string: "canteens/\(id)/days/\(dateFormatter.string(from: date))/meals", relativeTo: baseURL)!)
+//            .dataTaskPublisher(for: URL(string: "canteens/\(id)/days/2019-10-07/meals", relativeTo: baseURL)!)
+            .map { $0.data }
+            .decode(type: [Meal].self, decoder: JSONDecoder())
+            .replaceError(with: [])
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+                let meals = $0.sorted { lhs, rhs in
+                    if lhs.isDinner { return false }
+                    if rhs.isDinner { return true }
+                    return lhs.name < rhs.name
                 }
-//                .assign(to: \.meals[id], on: self)
+                self?.meals[id] = meals
+            }
+//            .assign(to: \.meals[id], on: self)
+    }
+
+    var transactions: [StuWeDD.Transaction] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
         }
+    }
+
+    func getTransactions() {
+        guard let cardnumber = settings.autoloadCardnumber, let password = settings.autoloadPassword else {
+            return
+        }
+        Cardservice.login(username: cardnumber, password: password) { result in
+            guard let service = result.success else { return }
+
+            let oneYearAgo = Date().addingTimeInterval(-365 * 24 * 3600)
+            service.transactions(begin: oneYearAgo, end: Date()) { result in
+                guard let transactions = result.success else { return }
+                self.transactions = transactions.reversed()
+            }
+        }
+    }
 }
