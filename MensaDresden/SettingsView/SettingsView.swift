@@ -73,6 +73,7 @@ struct SettingsView: View {
             .navigationBarTitle("Settings")
             .navigationBarItems(trailing: editButton)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

@@ -75,8 +75,8 @@ struct EmealView: View {
             }
             .padding(.horizontal)
             .navigationBarTitle("Emeal")
-//            .navigationViewStyle(StackNavigationViewStyle())
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             self.service.getTransactions()
         }
