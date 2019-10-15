@@ -32,7 +32,10 @@ struct InfoView: View {
             VStack(alignment: .leading) {
                 Text("Image Rights: ").bold() + Text("Studentenwerk Dresden")
                 Text("Icon: ").bold() + Text("Eddy Wong from the Noun Project")
-                Text("Huge thanks to Lucas Vogel!")
+
+                Text("Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!")
+                    .font(.caption)
+                    .padding(.top)
             }
             .padding(.horizontal)
 

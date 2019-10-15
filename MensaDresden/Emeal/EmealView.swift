@@ -6,9 +6,6 @@ struct EmealView: View {
     @EnvironmentObject var service: OpenMensaService
     @EnvironmentObject var settings: Settings
 
-    @State var amount: Double = 13.37
-    @State var lastTransaction = 3.5
-
     @ObservedObject var emeal = Emeal()
 
     static var transactionDateFormatter: DateFormatter = {
@@ -21,9 +18,8 @@ struct EmealView: View {
     var body: some View {
         NavigationView {
             VStack {
-//                if NFCReaderSession.readingAvailable {
-                if false {
-                    EmealCardView(amount: amount, lastTransaction: lastTransaction)
+                if NFCReaderSession.readingAvailable {
+                    EmealCardView(amount: emeal.currentBalance, lastTransaction: emeal.lastTransaction)
                         .padding(.horizontal)
 
                     LargeButton(content: {
@@ -35,7 +31,6 @@ struct EmealView: View {
                 }
 
                 if settings.areAutoloadCredentialsAvailable {
-//                if true {
                     List(service.transactions, id: \.id) { transaction in
                         VStack(alignment: .leading) {
                             Text(Self.transactionDateFormatter.string(from: transaction.date))
