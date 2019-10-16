@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "EmealKit",
+        "repositoryURL": "https://github.com/kiliankoe/EmealKit",
+        "state": {
+          "branch": "master",
+          "revision": "1457c8e0a879d6eccbb458cdb74583f729a901e2",
+          "version": null
+        }
+      },
+      {
         "package": "HTMLString",
         "repositoryURL": "https://github.com/alexaubry/HTMLString",
         "state": {
@@ -34,15 +43,6 @@
         "state": {
           "branch": "master",
           "revision": "9eb8540d3553a45df892a06db324ab5ce7861720",
-          "version": null
-        }
-      },
-      {
-        "package": "StuWeDD",
-        "repositoryURL": "https://github.com/kiliankoe/stuwedd",
-        "state": {
-          "branch": "master",
-          "revision": "9db01ca8e694a31b8055f3abb1f6768e644dedb7",
           "version": null
         }
       }

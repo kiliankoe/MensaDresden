@@ -1,6 +1,6 @@
 import Foundation
 import Combine
-import StuWeDD
+import EmealKit
 
 enum Day: Int {
     case today = 0
@@ -98,7 +98,7 @@ class OpenMensaService: ObservableObject {
 //            .assign(to: \.meals[id], on: self)
     }
 
-    var transactions: [StuWeDD.Transaction] = [] {
+    var transactions: [EmealKit.Transaction] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.objectWillChange.send()
