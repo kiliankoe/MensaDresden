@@ -10,8 +10,19 @@ class Emeal: NSObject, ObservableObject, NFCTagReaderSessionDelegate {
     static var DEMO    : Bool   = false
 
     var cardID: Int = 0
-    var currentBalance: Double = 0
-    var lastTransaction: Double = 0
+
+    @UserDefault("emeal.currentbalance", defaultValue: 0)
+    var currentBalance: Double {
+        didSet {
+            lastScan = Date()
+        }
+    }
+
+    @UserDefault("emeal.lasttransaction", defaultValue: 0)
+    var lastTransaction: Double
+
+    @UserDefault("emeal.lastscan", defaultValue: nil)
+    var lastScan: Date?
 
     let objectWillChange = ObservableObjectPublisher()
     var readerSession: NFCTagReaderSession?

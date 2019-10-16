@@ -30,7 +30,8 @@
 "Emeal recognized, but decoding has not yet been implemented." = "Emeal erkannt, die Dekodierung ist allerdings noch nicht komplett implementiert.";
 "Balance" = "Guthaben";
 "Last Transaction" = "Letzte Transaktion";
-"Scan Mensa Card" = "Mensa Karte scannen";
+"Scan Mensa Card" = "Emeal scannen";
+"Last scanned" = "Zuletzt gescannt";
 "Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here." = "Du nutzt Autoload? Trage deine Zugangsdaten in den App Einstellungen ein damit all deine letzten Transaktionen hier angezeigt werden.";
 
 "Rate meal" = "Angebot bewerten";

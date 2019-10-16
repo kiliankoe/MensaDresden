@@ -3,6 +3,14 @@ import SwiftUI
 struct EmealCardView: View {
     var amount: Double
     var lastTransaction: Double
+    var lastScan: Date?
+
+    var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter
+    }()
 
     var body: some View {
         ZStack(alignment: .leading) {
@@ -18,7 +26,7 @@ struct EmealCardView: View {
                 Text("\(amount, specifier: "%.2f")€")
                     .font(.system(size: 50))
                     .foregroundColor(.white)
-                    .padding(.bottom, UIScreen.main.bounds.height * 0.04)
+                    .padding(.bottom, UIScreen.main.bounds.height * 0.02)
 
                 Text("Last Transaction")
                     .font(Font.subheadline.smallCaps())
@@ -26,6 +34,16 @@ struct EmealCardView: View {
                 Text("\(lastTransaction, specifier: "%.2f")€")
                     .font(.title)
                     .foregroundColor(.white)
+
+                if lastScan != nil {
+                    Text("Last scanned")
+                        .font(Font.caption.smallCaps())
+                        .foregroundColor(.white)
+                        .padding(.top, UIScreen.main.bounds.height * 0.01)
+                    Text(dateFormatter.string(from: lastScan!))
+                        .font(.subheadline)
+                        .foregroundColor(.white)
+                }
             }.offset(x: 20, y: 0)
         }
     }
@@ -101,14 +119,18 @@ extension Color {
 struct EmealCardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            EmealCardView(amount: 13.37, lastTransaction: 3.5)
+            EmealCardView(amount: 13.37, lastTransaction: 3.5, lastScan: Date())
                 .previewLayout(.sizeThatFits)
+            EmealCardView(amount: 13.37, lastTransaction: 3.5, lastScan: nil)
+            .previewLayout(.sizeThatFits)
             EmealCardView2(amount: 13.37, lastTransaction: 3.5)
                 .previewLayout(.sizeThatFits)
-//            EmealCardView(amount: 13.37, lastTransaction: 3.5)
+//            EmealCardView(amount: 13.37, lastTransaction: 3.5, lastScan: Date())
 //                .previewDevice("iPhone SE")
-//            EmealCardView(amount: 13.37, lastTransaction: 3.5)
+//            EmealCardView(amount: 13.37, lastTransaction: 3.5, lastScan: nil)
 //                .previewDevice("iPhone 11 Pro")
+//            EmealCardView(amount: 13.37, lastTransaction: 3.5, lastScan: Date())
+//                .previewDevice("iPad Pro (12.9-inch)")
         }
         .padding()
     }
