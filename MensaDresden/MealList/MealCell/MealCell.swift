@@ -31,8 +31,11 @@ struct MealCell: View {
                     .layoutPriority(1)
 
                 HStack {
-                    PriceLabel(price: meal.prices?.students)
-                    PriceLabel(price: meal.prices?.employees)
+                    if settings.priceTypeIsStudent {
+                        PriceLabel(price: meal.prices?.students)
+                    } else {
+                        PriceLabel(price: meal.prices?.employees)
+                    }
 
                     if meal.isDinner {
                         Spacer()
@@ -40,7 +43,7 @@ struct MealCell: View {
                             .font(.headline)
                             .foregroundColor(.yellow)
                     }
-                }
+                }.padding(.top, 5)
             }
         }
         .opacity(meal.contains(unwantedIngredients: settings.ingredientBlacklist.storage, unwantedAllergens: settings.allergenBlacklist.storage) ? 0.3 : 1.0)

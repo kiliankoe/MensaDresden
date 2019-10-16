@@ -18,6 +18,9 @@
 
 "Favorite Canteens" = "Lieblingsmensen";
 "Ingredients & Allergens" = "Zutaten & Allergene";
+"Price Type" = "Welchen Preis zahlst du?";
+"Student" = "Student";
+"Employee" = "Mitarbeiter";
 "Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order." = "Deine Lieblingsmensen. Tippe auf das Herz im Speiseplan einer Mensa oder bearbeite die Liste hier um Mensen zu löschen oder umzusortieren.";
 "Using Autoload? Enter your credentials here to show all latest transactions on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers." = "Du benutzt Autoload? Trage hier deine Zugangsdaten ein um alle letzten Transaktionen auf der Emeal Seite anzuzeigen. Deine Zugangsdaten werden sicher nur auf diesem Gerät gespeichert und ausschließlich zur Authentifizierung an Server des Studentenwerks übertragen.";
 "Cardnumber" = "Kartennummer";

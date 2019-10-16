@@ -13,6 +13,26 @@ class Settings: ObservableObject {
         }
     }
 
+    enum PriceType: String {
+        case student
+        case employee
+    }
+
+    @UserDefault("priceType", defaultValue: PriceType.student.rawValue)
+    var priceType: PriceType.RawValue
+    var priceTypeBinding: Binding<PriceType> {
+        return Binding<PriceType>(
+            get: {
+                PriceType(rawValue: self.priceType)!
+            },
+            set: { val in
+                self.priceType = val.rawValue
+            })
+    }
+    var priceTypeIsStudent: Bool {
+        priceType == PriceType.student.rawValue
+    }
+
     func toggleFavorite(canteen: String) {
         if let idx = favoriteCanteens.firstIndex(of: canteen) {
             favoriteCanteens.remove(at: idx)

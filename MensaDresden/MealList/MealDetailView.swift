@@ -4,6 +4,8 @@ import RemoteImage
 struct MealDetailView: View {
     var meal: Meal
 
+    @EnvironmentObject var settings: Settings
+
     @State private var showingShareSheet = false
 
     var body: some View {
@@ -43,8 +45,11 @@ struct MealDetailView: View {
                     .padding(.horizontal)
 
                 HStack {
-                    PriceLabel(price: meal.prices?.students)
-                    PriceLabel(price: meal.prices?.employees)
+                    if settings.priceTypeIsStudent {
+                        PriceLabel(price: meal.prices?.students)
+                    } else {
+                        PriceLabel(price: meal.prices?.employees)
+                    }
                 }.padding()
 
                 VStack(alignment: .leading) {

@@ -16,6 +16,13 @@ struct SettingsView: View {
                     Text("Ingredients & Allergens")
                 }
 
+                Section(header: Text("Price Type")) {
+                    Picker(selection: settings.priceTypeBinding, label: Text("Price Type")) {
+                        Text("Student").tag(Settings.PriceType.student)
+                        Text("Employee").tag(Settings.PriceType.employee)
+                    }.pickerStyle(SegmentedPickerStyle())
+                }
+
                 Section(header: Text("Using Autoload? Enter your credentials here to show all latest transactions on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers.")) {
                     TextField("Cardnumber", text: settings.autoloadCardnumberBinding)
                         .textContentType(.username)
