@@ -110,12 +110,18 @@ class OpenMensaService: ObservableObject {
         guard let cardnumber = settings.autoloadCardnumber, let password = settings.autoloadPassword else {
             return
         }
+
+        if cardnumber == "appledemo" && password == "appledemo" {
+            self.transactions = Transaction.exampleValues
+            return
+        }
+
         Cardservice.login(username: cardnumber, password: password) { result in
-            guard let service = result.success else { return }
+            guard let service = try? result.get() else { return }
 
             let threeMonthsAgo = Date().addingTimeInterval(-90 * 24 * 3600)
             service.transactions(begin: threeMonthsAgo, end: Date()) { result in
-                guard let transactions = result.success else { return }
+                guard let transactions = try? result.get() else { return }
                 self.transactions = transactions.reversed()
             }
         }
