@@ -35,6 +35,8 @@
 		396FC3BC2353BF60007B97F3 /* KeychainItem in Frameworks */ = {isa = PBXBuildFile; productRef = 396FC3BB2353BF60007B97F3 /* KeychainItem */; };
 		396FC3DF23578793007B97F3 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = 396FC3DE23578793007B97F3 /* EmealKit */; };
 		396FC3E22357A1A9007B97F3 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3E12357A1A9007B97F3 /* Transaction.swift */; };
+		396FC3E42357B257007B97F3 /* FavoriteCanteensSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3E32357B257007B97F3 /* FavoriteCanteensSetting.swift */; };
+		396FC3E82357B6E4007B97F3 /* IngredientsAllergensSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3E72357B6E4007B97F3 /* IngredientsAllergensSetting.swift */; };
 		39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1418C23481B5F00FEE789 /* LargeButton.swift */; };
 		39A1418F2348210000FEE789 /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1418E2348210000FEE789 /* BarButton.swift */; };
 		39A141912348813D00FEE789 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141902348813D00FEE789 /* Settings.swift */; };
@@ -88,6 +90,8 @@
 		396FC3AF235378C1007B97F3 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		396FC3B423539145007B97F3 /* EmealCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmealCardView.swift; sourceTree = "<group>"; };
 		396FC3E12357A1A9007B97F3 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		396FC3E32357B257007B97F3 /* FavoriteCanteensSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCanteensSetting.swift; sourceTree = "<group>"; };
+		396FC3E72357B6E4007B97F3 /* IngredientsAllergensSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsAllergensSetting.swift; sourceTree = "<group>"; };
 		39A1418C23481B5F00FEE789 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		39A1418E2348210000FEE789 /* BarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
 		39A141902348813D00FEE789 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				394D9D1E234560B4005F076C /* SettingsView.swift */,
+				396FC3E32357B257007B97F3 /* FavoriteCanteensSetting.swift */,
+				396FC3E72357B6E4007B97F3 /* IngredientsAllergensSetting.swift */,
 				39A141902348813D00FEE789 /* Settings.swift */,
 			);
 			path = SettingsView;
@@ -402,6 +408,7 @@
 				39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */,
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39A141912348813D00FEE789 /* Settings.swift in Sources */,
+				396FC3E42357B257007B97F3 /* FavoriteCanteensSetting.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal.swift in Sources */,
 				39CD5B19234F778400435E71 /* WebView.swift in Sources */,
 				39A141932348EBC000FEE789 /* BlacklistBinding.swift in Sources */,
@@ -414,6 +421,7 @@
 				39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */,
 				396FC3B0235378C1007B97F3 /* AppView.swift in Sources */,
 				39281C60234241B900E4EFB5 /* SceneDelegate.swift in Sources */,
+				396FC3E82357B6E4007B97F3 /* IngredientsAllergensSetting.swift in Sources */,
 				394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */,
 				396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */,
 				39281C62234241B900E4EFB5 /* CanteenListView.swift in Sources */,
