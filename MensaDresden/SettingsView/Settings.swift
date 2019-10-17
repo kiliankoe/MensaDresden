@@ -6,6 +6,8 @@ import KeychainItem
 class Settings: ObservableObject {
     var objectWillChange = ObservableObjectPublisher()
 
+    // MARK: Favorites
+
     @UserDefault("favoriteCanteens", defaultValue: [])
     var favoriteCanteens: [String] {
         didSet {
@@ -13,7 +15,17 @@ class Settings: ObservableObject {
         }
     }
 
-    enum PriceType: String {
+    func toggleFavorite(canteen: String) {
+        if let idx = favoriteCanteens.firstIndex(of: canteen) {
+            favoriteCanteens.remove(at: idx)
+        } else {
+            favoriteCanteens.append(canteen)
+        }
+    }
+
+    // MARK: Price Type
+
+    enum PriceType: String, CaseIterable {
         case student
         case employee
     }
@@ -33,13 +45,32 @@ class Settings: ObservableObject {
         priceType == PriceType.student.rawValue
     }
 
-    func toggleFavorite(canteen: String) {
-        if let idx = favoriteCanteens.firstIndex(of: canteen) {
-            favoriteCanteens.remove(at: idx)
-        } else {
-            favoriteCanteens.append(canteen)
-        }
+    // MARK: Canteen Sorting
+
+    enum CanteenSorting: String, CaseIterable {
+        case `default`
+        case distance
+        case alphabetical
     }
+
+    @UserDefault("canteenSorting", defaultValue: CanteenSorting.default.rawValue)
+    var canteenSorting: CanteenSorting.RawValue
+    var canteenSortingBinding: Binding<CanteenSorting> {
+        return Binding<CanteenSorting>(
+        get: {
+            CanteenSorting(rawValue: self.canteenSorting)!
+        },
+        set: { val in
+            if val == .distance {
+                UserLocation.shared.start()
+            } else {
+                UserLocation.shared.stop()
+            }
+            self.canteenSorting = val.rawValue
+        })
+    }
+
+    // MARK: Ingredients & Allergens
 
     var ingredientBlacklist = BlacklistBinding<Ingredient>(userDefaultsKey: "ingredientBlacklist") {
         didSet {
@@ -52,6 +83,8 @@ class Settings: ObservableObject {
             self.objectWillChange.send()
         }
     }
+
+    // MARK: Autoload
 
     @KeychainItem(account: "stuwedd.autoload.cardnumber")
     var autoloadCardnumber: String?

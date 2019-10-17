@@ -19,6 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 .environmentObject(deviceOrientation)
                 .environmentObject(service)
 
+            if settings.canteenSorting == Settings.CanteenSorting.distance.rawValue {
+                UserLocation.shared.start()
+            }
+
             window.rootViewController = HostingController(rootView: appView)
             self.window = window
             window.makeKeyAndVisible()

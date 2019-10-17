@@ -1,5 +1,5 @@
 import Foundation
-import struct CoreLocation.CLLocationCoordinate2D
+import CoreLocation
 
 struct Canteen: Identifiable, Decodable {
     let id: Int
@@ -10,6 +10,10 @@ struct Canteen: Identifiable, Decodable {
     var coordinate: CLLocationCoordinate2D? {
         guard self.coordinates.count == 2 else { return nil }
         return CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1])
+    }
+    var location: CLLocation? {
+        guard let coordinate = self.coordinate else { return nil }
+        return CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
     let url: URL
     let menu: URL

@@ -16,10 +16,17 @@ struct SettingsView: View {
                     Text("Ingredients & Allergens")
                 }
 
+                Picker(selection: settings.canteenSortingBinding, label: Text("Canteen Sorting")) {
+                    ForEach(Settings.CanteenSorting.allCases, id: \.self) { sorting in
+                        Text(LocalizedStringKey(sorting.rawValue)).tag(sorting)
+                    }
+                }
+
                 Section(header: Text("Price Type")) {
                     Picker(selection: settings.priceTypeBinding, label: Text("Price Type")) {
-                        Text("Student").tag(Settings.PriceType.student)
-                        Text("Employee").tag(Settings.PriceType.employee)
+                        ForEach(Settings.PriceType.allCases, id: \.self) { priceType in
+                            Text(LocalizedStringKey(priceType.rawValue)).tag(priceType)
+                        }
                     }.pickerStyle(SegmentedPickerStyle())
                 }
 
@@ -49,5 +56,6 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+            .environmentObject(Settings())
     }
 }
