@@ -28,6 +28,7 @@ struct AppView: View {
                 }
         }
         .edgesIgnoringSafeArea(.top)
+        .accentColor(.green)
     }
 }
 
