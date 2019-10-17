@@ -63,6 +63,7 @@ struct EmealView: View {
                         }
                     }
                     .padding(.top)
+                    .padding(.horizontal)
                 }
 
                 Spacer()
@@ -81,6 +82,10 @@ struct EmealView: View {
 
 struct EmealView_Previews: PreviewProvider {
     static var previews: some View {
-        EmealView()
+        let settings = Settings()
+
+        return EmealView()
+            .environmentObject(OpenMensaService(settings: settings))
+            .environmentObject(settings)
     }
 }
