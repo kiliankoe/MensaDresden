@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  MensaDresden
-//
-//  Created by Kilian Koeltzsch on 30.09.19.
-//  Copyright © 2019 Kilian Koeltzsch. All rights reserved.
-//
-
 import UIKit
 import SwiftUI
 
