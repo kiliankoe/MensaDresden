@@ -49,6 +49,8 @@
 		39CD5B13234E60D100435E71 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B12234E60D100435E71 /* ShareSheetView.swift */; };
 		39CD5B19234F778400435E71 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B18234F778400435E71 /* WebView.swift */; };
 		39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */; };
+		39E215812358E29D00F5EBE9 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E215802358E29D00F5EBE9 /* UserLocation.swift */; };
+		39E215842358E37300F5EBE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39E215862358E37300F5EBE9 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,9 @@
 		39CD5B12234E60D100435E71 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		39CD5B18234F778400435E71 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeedbackView.swift; sourceTree = "<group>"; };
+		39E215802358E29D00F5EBE9 /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		39E215852358E37300F5EBE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		39E215872358E37700F5EBE9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,17 +161,17 @@
 				39281C5F234241B900E4EFB5 /* SceneDelegate.swift */,
 				396FC3AF235378C1007B97F3 /* AppView.swift */,
 				39BEEB72234BB0350081B9AE /* HostingController.swift */,
-				394D9D022343EFD4005F076C /* InfoView.swift */,
 				396FC3E02357A19D007B97F3 /* Extensions */,
 				39A1418B23481B4D00FEE789 /* Shared */,
 				39281C89234292C100E4EFB5 /* API */,
 				39281C8423428CAA00E4EFB5 /* CanteenList */,
 				394D9D0423454E77005F076C /* SettingsView */,
-				39A141962348EEEE00FEE789 /* Emeal */,
+				39A141962348EEEE00FEE789 /* EmealView */,
 				39281C7D23427F8400E4EFB5 /* MealList */,
 				39281C63234241BC00E4EFB5 /* Assets.xcassets */,
 				39281C68234241BC00E4EFB5 /* LaunchScreen.storyboard */,
 				39281C6B234241BC00E4EFB5 /* Info.plist */,
+				39E215862358E37300F5EBE9 /* InfoPlist.strings */,
 				39281C65234241BC00E4EFB5 /* Preview Content */,
 				39281C76234247C100E4EFB5 /* Localizable.strings */,
 			);
@@ -226,6 +231,7 @@
 				396FC3E32357B257007B97F3 /* FavoriteCanteensSetting.swift */,
 				396FC3E72357B6E4007B97F3 /* IngredientsAllergensSetting.swift */,
 				39A141902348813D00FEE789 /* Settings.swift */,
+				394D9D022343EFD4005F076C /* InfoView.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -266,18 +272,19 @@
 				39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */,
 				39CD5B12234E60D100435E71 /* ShareSheetView.swift */,
 				39CD5B18234F778400435E71 /* WebView.swift */,
+				39E215802358E29D00F5EBE9 /* UserLocation.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		39A141962348EEEE00FEE789 /* Emeal */ = {
+		39A141962348EEEE00FEE789 /* EmealView */ = {
 			isa = PBXGroup;
 			children = (
 				396C4AF023480E6E009A9F52 /* EmealView.swift */,
 				396FC3B423539145007B97F3 /* EmealCardView.swift */,
 				39A1419F2348F49700FEE789 /* Emeal.swift */,
 			);
-			path = Emeal;
+			path = EmealView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +387,7 @@
 				39281C74234247C100E4EFB5 /* Localizable.strings in Resources */,
 				39281C67234241BC00E4EFB5 /* Preview Assets.xcassets in Resources */,
 				39281C64234241BC00E4EFB5 /* Assets.xcassets in Resources */,
+				39E215842358E37300F5EBE9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +410,7 @@
 				39A141A02348F49700FEE789 /* Emeal.swift in Sources */,
 				39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */,
 				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,
+				39E215812358E29D00F5EBE9 /* UserLocation.swift in Sources */,
 				39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */,
 				39A1418F2348210000FEE789 /* BarButton.swift in Sources */,
 				39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */,
@@ -466,6 +475,15 @@
 				39281C77234247C200E4EFB5 /* de */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		39E215862358E37300F5EBE9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39E215852358E37300F5EBE9 /* en */,
+				39E215872358E37700F5EBE9 /* de */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

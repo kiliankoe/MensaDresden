@@ -73,9 +73,9 @@ struct EmealView: View {
                 label: { Image(systemName: "info.circle").imageScale(.large) }))
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear {
+        .onAppear(perform: { () -> Void in
             self.service.getTransactions()
-        }
+        })
     }
 }
 
