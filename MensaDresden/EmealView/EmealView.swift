@@ -15,11 +15,49 @@ struct EmealView: View {
         return formatter
     }()
 
+    var transactionList: some View {
+        List(service.transactions, id: \.id) { transaction in
+            VStack(alignment: .leading) {
+                Text(Self.transactionDateFormatter.string(from: transaction.date))
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                HStack {
+                    Text(transaction.location)
+                    Spacer()
+                    Text("\(transaction.amount, specifier: "%.2f")€")
+                }
+                ForEach(transaction.positions, id: \.id) { pos in
+                    HStack {
+                        Text(pos.name)
+                        Spacer()
+                        Text("\(pos.price, specifier: "%.2f")€")
+                    }
+                    .font(.caption)
+                }
+            }
+        }
+    }
+
+    var autoloadHint: some View {
+        VStack(alignment: .leading) {
+            Text("Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here.")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .padding(.bottom, 5)
+            NavigationLink(destination: WebView.autoload) {
+                Text("Autoload Information")
+                    .font(.caption)
+            }
+        }
+        .padding(.top)
+        .padding(.horizontal)
+    }
+
     var body: some View {
         NavigationView {
             VStack {
                 if NFCReaderSession.readingAvailable {
-                    EmealCardView(amount: emeal.currentBalance, lastTransaction: emeal.lastTransaction, lastScan: emeal.lastScan)
+                    EmealCardView(amount: 13.37, lastTransaction: 6, lastScan: Date())
                         .padding(.horizontal)
 
                     LargeButton(content: {
@@ -31,39 +69,9 @@ struct EmealView: View {
                 }
 
                 if settings.areAutoloadCredentialsAvailable {
-                    List(service.transactions, id: \.id) { transaction in
-                        VStack(alignment: .leading) {
-                            Text(Self.transactionDateFormatter.string(from: transaction.date))
-                                .font(.caption)
-                                .foregroundColor(.gray)
-                            HStack {
-                                Text(transaction.location)
-                                Spacer()
-                                Text("\(transaction.amount, specifier: "%.2f")€")
-                            }
-                            ForEach(transaction.positions, id: \.id) { pos in
-                                HStack {
-                                    Text(pos.name)
-                                    Spacer()
-                                    Text("\(pos.price, specifier: "%.2f")€")
-                                }
-                                .font(.caption)
-                            }
-                        }
-                    }
+                    transactionList
                 } else {
-                    VStack(alignment: .leading) {
-                        Text("Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here.")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                            .padding(.bottom, 5)
-                        NavigationLink(destination: WebView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!)) {
-                            Text("Autoload Information")
-                                .font(.caption)
-                        }
-                    }
-                    .padding(.top)
-                    .padding(.horizontal)
+                    autoloadHint
                 }
 
                 Spacer()
