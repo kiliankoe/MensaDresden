@@ -4,5 +4,5 @@
 
 Looking to see what's for lunch today?
 
-![Screenshots](https://user-images.githubusercontent.com/2625584/66002335-bf316b80-e4a3-11e9-8e11-954f6a2a0a4b.png)
+![Screenshots](https://user-images.githubusercontent.com/2625584/67089822-dc0ab600-f1a8-11e9-8076-1fb36ac3214c.png)
 
