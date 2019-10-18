@@ -34,7 +34,7 @@ struct SettingsView: View {
                     TextField("Cardnumber", text: settings.autoloadCardnumberBinding)
                         .textContentType(.username)
                     SecureField("Password", text: settings.autoloadPasswordBinding)
-                    NavigationLink(destination: WebView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!), label: { Text("Autoload Information") })
+                    NavigationLink(destination: WebView.autoload, label: { Text("Autoload Information") })
                 }
 
                 Section(footer: Text("🖖")) {
