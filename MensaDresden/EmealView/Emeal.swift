@@ -1,6 +1,7 @@
 import Foundation
 import Combine
 import CoreNFC
+import StoreKit
 
 // Huge thanks to Georg Sieber for a reference implementation of this at https://github.com/schorschii/MensaGuthaben-iOS
 
@@ -96,6 +97,10 @@ class Emeal: NSObject, ObservableObject, NFCTagReaderSessionDelegate {
                         }
 
                         session.invalidate()
+
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                            SKStoreReviewController.requestReview()
+                        }
                     }
                 }
             }
