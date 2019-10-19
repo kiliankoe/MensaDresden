@@ -57,7 +57,7 @@ struct EmealView: View {
         NavigationView {
             VStack {
                 if NFCReaderSession.readingAvailable {
-                    EmealCardView(amount: 13.37, lastTransaction: 6, lastScan: Date())
+                    EmealCardView(amount: emeal.currentBalance, lastTransaction: emeal.lastTransaction, lastScan: emeal.lastScan)
                         .padding(.horizontal)
 
                     LargeButton(content: {
