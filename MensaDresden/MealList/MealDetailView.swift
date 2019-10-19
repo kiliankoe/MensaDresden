@@ -82,8 +82,8 @@ struct FeedbackButton: View {
     var body: some View {
         NavigationLink(destination: WebView(url: feedbackURL).navigationBarTitle("Rate meal", displayMode: .inline)) {
             VStack(alignment: .leading) {
-                Text("Rate meal")
-                Text("Send feedback regarding this meal directly to the Studentenwerk.")
+                Text("meal.rate-title")
+                Text("meal.rate-description")
                     .foregroundColor(.primary)
                     .font(.caption)
             }

@@ -8,38 +8,38 @@ struct SettingsView: View {
             List {
                 if !settings.favoriteCanteens.isEmpty {
                     NavigationLink(destination: FavoriteCanteensSetting()) {
-                        Text("Favorite Canteens")
+                        Text("settings.favorite-canteens")
                     }
                 }
 
                 NavigationLink(destination: IngredientsAllergensSetting()) {
-                    Text("Ingredients & Allergens")
+                    Text("settings.ingredients-allergens")
                 }
 
-                Picker(selection: settings.canteenSortingBinding, label: Text("Canteen Sorting")) {
+                Picker(selection: settings.canteenSortingBinding, label: Text("settings.canteen-sorting")) {
                     ForEach(Settings.CanteenSorting.allCases, id: \.self) { sorting in
                         Text(LocalizedStringKey(sorting.rawValue)).tag(sorting)
                     }
                 }
 
-                Section(header: Text("Price Type")) {
-                    Picker(selection: settings.priceTypeBinding, label: Text("Price Type")) {
+                Section(header: Text("settings.price-type")) {
+                    Picker(selection: settings.priceTypeBinding, label: Text("settings.price-type")) {
                         ForEach(Settings.PriceType.allCases, id: \.self) { priceType in
                             Text(LocalizedStringKey(priceType.rawValue)).tag(priceType)
                         }
                     }.pickerStyle(SegmentedPickerStyle())
                 }
 
-                Section(header: Text("Using Autoload? Enter your credentials here to show all latest transactions on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers.")) {
-                    TextField("Cardnumber", text: settings.autoloadCardnumberBinding)
+                Section(header: Text("settings.autoload-description")) {
+                    TextField("settings.autoload-cardnumber", text: settings.autoloadCardnumberBinding)
                         .textContentType(.username)
-                    SecureField("Password", text: settings.autoloadPasswordBinding)
-                    NavigationLink(destination: WebView.autoload, label: { Text("Autoload Information") })
+                    SecureField("settings.autoload-password", text: settings.autoloadPasswordBinding)
+                    NavigationLink(destination: WebView.autoload, label: { Text("settings.autoload-information") })
                 }
 
                 Section(footer: Text("🖖")) {
                     NavigationLink(destination: InfoView()) {
-                        Text("About")
+                        Text("settings.about")
                     }
 //                    NavigationLink(destination: Text("Open Source Libraries")) {
 //                        Text("Open Source Libraries")
@@ -47,7 +47,7 @@ struct SettingsView: View {
                 }
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("Settings")
+            .navigationBarTitle("settings.nav")
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

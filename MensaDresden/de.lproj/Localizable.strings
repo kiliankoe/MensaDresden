@@ -1,51 +1,65 @@
-"Menu" = "Speiseplan";
-"Emeal" = "Emeal";
-"Settings" = "Einstellungen";
+// App/Tab View
+"tab.menu" = "Speiseplan";
+"tab.emeal" = "Emeal";
+"tab.settings" = "Einstellungen";
 
-"Canteens" = "Mensen";
-"Today" = "Heute";
-"Tomorrow" = "Morgen";
-"Image loading..." = "Bild wird geladen...";
+// iPad placeholder detail
+"ipad.bon-appetit" = "🍲 Guten Appetit!";
+"ipad.swipe-hint" = "Swipe von links um die Liste von Mensen zu sehen.";
 
-"Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!" = "Vielen Dank an Lucas Vogel, Georg Sieber, alle Mitwirkenden auf GitHub und die Beta-Tester für das fantastische Feedback!";
-"This app is open source on GitHub." = "Diese App ist open source auf GitHub.";
-"Feedback? Send me an E-Mail." = "Feedback? Schick' mir eine E-Mail.";
-"Want to help beta test this application?" = "Lust auf Beta-Versionen dieser App?";
-"Image Rights: " = "Bildrechte: ";
+// Canteen List
+"canteens.nav" = "Mensen";
 
-"🍲 Bon appétit!" = "🍲 Guten Appetit!";
-"Swipe from the left to open the list of canteens." = "Swipe von links um die Liste von Mensen zu sehen.";
+// Meals List
+"meals.date-today" = "Heute";
+"meals.date-tomorrow" = "Morgen";
 
-"Favorite Canteens" = "Lieblingsmensen";
-"Ingredients & Allergens" = "Zutaten & Allergene";
-"Price Type" = "Welchen Preis zahlst du?";
+// Meal Detail
+"meal.rate-title" = "Angebot bewerten";
+"meal.rate-description" = "Sende Feedback zur Mahlzeit direkt an das Studentenwerk.";
+
+// Emeal View
+"emeal.nfc-text" = "Halte deine Emeal Karte an dein Gerät.";
+"emeal.nfc-reading-error" = "Lesen der NFC Karte fehlgeschlagen.";
+"emeal.nfc-connection-error" = "Verbindungsfehler. Bitte versuche es erneut.";
+"emeal.balance" = "Guthaben";
+"emeal.last-transaction" = "Letzte Transaktion";
+"emeal.last-scanned" = "Zuletzt gescannt";
+"emeal.scan-button" = "Emeal scannen";
+"emeal.autoload-hint" = "Du nutzt Autoload? Trage deine Zugangsdaten in den App Einstellungen ein damit all deine letzten Transaktionen hier angezeigt werden.";
+"emeal.autoload-information" = "Informationen zu Autoload";
+"emeal.info" = "Falls dein Gerät NFC-Karten unterstützt, kannst du hier deine Emeal Karte einscannen. Auf der Karte gespeichert sind dein aktuelles Guthaben und der Betrag der letzten Transaktion.\n\nZusätzlich ist es für Autoload Nutzer möglich, über das Kartenservice Portal des Studentenwerks auf die Transaktionen der letzten 90 Tage zuzugreifen, die diese App auch für dich hier anzeigen kann. Aus technischen Gründen beim Studentenwerk sind diese Transaktionen zeitlich etwas verzögert und nicht direkt nach einer Zahlung auf dem aktuellsten Stand.\nLeider ist es nicht möglich aus den Daten des Kartenservices allein dein aktuelles Guthaben anzuzeigen, dies geht aktuell nur über die Emeal Karte selbst.\n\nIn Zukunft wird die App diese beiden Datenquellen vereinen und bei bestehendem Autoload Login mit einmaliger Angabe oder Scan von deinem Guthaben dieses automatisch aufgrund der vergangenen Transaktionen berechnen.";
+
+// Settings
+"settings.nav" = "Einstellungen";
+"settings.favorite-canteens" = "Lieblingsmensen";
+"settings.favorite-canteens-description" = "Deine Lieblingsmensen. Tippe auf das Herz im Speiseplan einer Mensa oder bearbeite die Liste hier um Mensen zu löschen oder umzusortieren.";
+"settings.ingredients-allergens" = "Zutaten & Allergene";
+"settings.ingredients-description" = "Wähle Zutaten ab, die du nicht zur dir nehmen möchtest. Mahlzeiten, die diese Zutaten enthalten, werden in der Liste ausgegraut dargestellt.";
+"settings.allergens-description" = "Gleiches Spiel für Allergene. Ist etwas dabei, was du nicht in deinem Essen haben möchtest?";
+"settings.price-type" = "Welchen Preis zahlst du?";
 "student" = "Student";
 "employee" = "Mitarbeiter";
-"Canteen Sorting" = "Mensa Reihenfolge";
+"settings.canteen-sorting" = "Mensa Reihenfolge";
 "default" = "Standard";
 "distance" = "Entfernung";
 "alphabetical" = "Alphabetisch";
-"Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order." = "Deine Lieblingsmensen. Tippe auf das Herz im Speiseplan einer Mensa oder bearbeite die Liste hier um Mensen zu löschen oder umzusortieren.";
-"Using Autoload? Enter your credentials here to show all latest transactions on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers." = "Du benutzt Autoload? Trage hier deine Zugangsdaten ein um alle letzten Transaktionen auf der Emeal Seite anzuzeigen. Deine Zugangsdaten werden sicher nur auf diesem Gerät gespeichert und ausschließlich zur Authentifizierung an Server des Studentenwerks übertragen.";
-"Cardnumber" = "Kartennummer";
-"Password" = "Passwort";
-"Autoload Information" = "Informationen zu Autoload";
-"Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out." = "Wähle Zutaten ab, die du nicht zur dir nehmen möchtest. Mahlzeiten, die diese Zutaten enthalten, werden in der Liste ausgegraut dargestellt.";
-"Same goes for allergens. Uncheck anything you don't want in your food." = "Gleiches Spiel für Allergene. Ist etwas dabei, was du nicht in deinem Essen haben möchtest?";
+"settings.autoload-description" = "Du benutzt Autoload? Trage hier deine Zugangsdaten ein um alle letzten Transaktionen auf der Emeal Seite anzuzeigen. Deine Zugangsdaten werden sicher nur auf diesem Gerät gespeichert und ausschließlich zur Authentifizierung an Server des Studentenwerks übertragen.";
+"settings.autoload-cardnumber" = "Kartennummer";
+"settings.autoload-password" = "Passwort";
+"settings.autoload-information" = "Informationen zu Autoload";
+"settings.about" = "Über";
 
-"Hold your Emeal card to your device." = "Halte deine Emeal Karte an dein Gerät.";
-"Unable to read NFC tag." = "Lesen der NFC Karte fehlgeschlagen.";
-"Connection error. Please try again." = "Verbindungsfehler. Bitte versuche es erneut.";
-"Emeal recognized, but decoding has not yet been implemented." = "Emeal erkannt, die Dekodierung ist allerdings noch nicht komplett implementiert.";
-"Balance" = "Guthaben";
-"Last Transaction" = "Letzte Transaktion";
-"Scan Mensa Card" = "Emeal scannen";
-"Last scanned" = "Zuletzt gescannt";
-"Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here." = "Du nutzt Autoload? Trage deine Zugangsdaten in den App Einstellungen ein damit all deine letzten Transaktionen hier angezeigt werden.";
+// Info View
+"info.thanks" = "Vielen Dank an Lucas Vogel, Georg Sieber, alle Mitwirkenden auf GitHub und die Beta-Tester für das fantastische Feedback!";
+"info.opensource" = "Diese App ist open source auf GitHub.";
+"info.email" = "Feedback? Schick' mir eine E-Mail.";
+"info.testflight" = "Lust auf Beta-Versionen dieser App?";
+"info.image-rights" = "Bildrechte: ";
+"info.icon" = "Icon: ";
+"info.nounproject" = "Eddy Wong von The Noun Project";
 
-"Rate meal" = "Angebot bewerten";
-"Send feedback regarding this meal directly to the Studentenwerk." = "Sende Feedback zur Mahlzeit direkt an das Studentenwerk.";
-
+// Meal Information
 "vegan" = "vegan";
 "vegetarian" = "vegetarisch";
 
@@ -68,7 +82,3 @@
 "sulfite" = "Sulfit/Schwefeldioxid";
 "lupin" = "Lupine";
 "molluscs" = "Weichtiere";
-
-"About" = "Über";
-
-"emeal.info" = "Falls dein Gerät NFC-Karten unterstützt, kannst du hier deine Emeal Karte einscannen. Auf der Karte gespeichert sind dein aktuelles Guthaben und der Betrag der letzten Transaktion.\n\nZusätzlich ist es für Autoload Nutzer möglich, über das Kartenservice Portal des Studentenwerks auf die Transaktionen der letzten 90 Tage zuzugreifen, die diese App auch für dich hier anzeigen kann. Aus technischen Gründen beim Studentenwerk sind diese Transaktionen zeitlich etwas verzögert und nicht direkt nach einer Zahlung auf dem aktuellsten Stand.\nLeider ist es nicht möglich aus den Daten des Kartenservices allein dein aktuelles Guthaben anzuzeigen, dies geht aktuell nur über die Emeal Karte selbst.\n\nIn Zukunft wird die App diese beiden Datenquellen vereinen und bei bestehendem Autoload Login mit einmaliger Angabe oder Scan von deinem Guthaben dieses automatisch aufgrund der vergangenen Transaktionen berechnen.";

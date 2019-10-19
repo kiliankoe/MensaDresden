@@ -7,7 +7,7 @@ struct AppView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "bag")
-                        Text("Menu")
+                        Text("tab.menu")
                     }
                 }
 
@@ -15,7 +15,7 @@ struct AppView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "creditcard")
-                        Text("Emeal")
+                        Text("tab.emeal")
                     }
                 }
 
@@ -23,7 +23,7 @@ struct AppView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "gear")
-                        Text("Settings")
+                        Text("tab.settings")
                     }
                 }
         }

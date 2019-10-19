@@ -30,10 +30,10 @@ struct InfoView: View {
             }.padding(.bottom)
 
             VStack(alignment: .leading) {
-                Text("Image Rights: ").bold() + Text("Studentenwerk Dresden")
-                Text("Icon: ").bold() + Text("Eddy Wong from the Noun Project")
+                Text("info.image-rights").bold() + Text("Studentenwerk Dresden")
+                Text("info.icon").bold() + Text("info.nounproject")
 
-                Text("Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!")
+                Text("info.thanks")
                     .font(.caption)
                     .padding(.top)
             }
@@ -47,7 +47,7 @@ struct InfoView: View {
                     label: {
                         HStack {
                             Image(systemName: "desktopcomputer")
-                            Text("This app is open source on GitHub.")
+                            Text("info.opensource")
                         }
                 })
 
@@ -58,7 +58,7 @@ struct InfoView: View {
                     label: {
                         HStack {
                             Image(systemName: "envelope")
-                            Text("Feedback? Send me an E-Mail.")
+                            Text("info.email")
                         }
                 })
 
@@ -69,7 +69,7 @@ struct InfoView: View {
                     label: {
                         HStack {
                             Image(systemName: "ant")
-                            Text("Want to help beta test this application?")
+                            Text("info.testflight")
                         }
                 })
             }.padding(.top)

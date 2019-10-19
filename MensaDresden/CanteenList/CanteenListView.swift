@@ -49,12 +49,12 @@ struct CanteenListView: View {
                         CanteenCell(canteen: canteen)
                     }
                 }
-                .navigationBarTitle("Canteens")
+                .navigationBarTitle("canteens.nav")
                 VStack {
-                    Text("🍲 Bon appétit!")
+                    Text("ipad.bon-appetit")
                         .font(.title)
                     if !deviceOrientation.isLandscape {
-                        Text("Swipe from the left to open the list of canteens.")
+                        Text("ipad.swipe-hint")
                     }
                 }
             }

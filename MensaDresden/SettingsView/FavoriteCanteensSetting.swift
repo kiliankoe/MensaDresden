@@ -15,7 +15,7 @@ struct FavoriteCanteensSetting: View {
 
     var body: some View {
         List {
-            Section(footer: Text("Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order.")) {
+            Section(footer: Text("settings.favorite-canteens-description")) {
                 ForEach(settings.favoriteCanteens, id: \.self) { favorite in
                     Text(favorite)
                 }

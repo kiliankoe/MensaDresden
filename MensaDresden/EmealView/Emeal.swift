@@ -29,7 +29,7 @@ class Emeal: NSObject, ObservableObject, NFCTagReaderSessionDelegate {
 
     func readCard() {
         readerSession = NFCTagReaderSession(pollingOption: .iso14443, delegate: self)
-        readerSession?.alertMessage = NSLocalizedString("Hold your Emeal card to your device.", comment: "")
+        readerSession?.alertMessage = NSLocalizedString("emeal.nfc-text", comment: "")
         readerSession?.begin()
     }
 
@@ -41,19 +41,19 @@ class Emeal: NSObject, ObservableObject, NFCTagReaderSessionDelegate {
 
     func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) {
         guard let tag = tags.first else {
-            session.invalidate(errorMessage: NSLocalizedString("Unable to read NFC tag.", comment: ""))
+            session.invalidate(errorMessage: NSLocalizedString("emeal.nfc-reading-error", comment: ""))
             return
         }
 
         session.connect(to: tag) { error in
             guard error == nil else {
-                session.invalidate(errorMessage: NSLocalizedString("Connection error. Please try again.", comment: ""))
+                session.invalidate(errorMessage: NSLocalizedString("emeal.nfc-connection-error", comment: ""))
                 print(error!.localizedDescription)
                 return
             }
 
             guard case .miFare(let miFareTag) = tag else {
-                session.invalidate(errorMessage: NSLocalizedString("Connection error. Please try again.", comment: ""))
+                session.invalidate(errorMessage: NSLocalizedString("emeal.nfc-connection-error", comment: ""))
                 return
             }
 

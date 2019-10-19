@@ -1,51 +1,65 @@
-"Menu" = "Menu";
-"Emeal" = "Emeal";
-"Settings" = "Settings";
+// App/Tab View
+"tab.menu" = "Menu";
+"tab.emeal" = "Emeal";
+"tab.settings" = "Settings";
 
-"Canteens" = "Canteens";
-"Today" = "Today";
-"Tomorrow" = "Tomorrow";
-"Image loading..." = "Image loading...";
+// iPad placeholder detail
+"ipad.bon-appetit" = "🍲 Bon appétit!";
+"ipad.swipe-hint" = "Swipe from the left to open the list of canteens.";
 
-"Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!" = "Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!";
-"This app is open source on GitHub." = "This app is open source on GitHub.";
-"Feedback? Send me an E-Mail." = "Feedback? Send me an E-Mail.";
-"Want to help beta test this application?" = "Want to help beta test this application?";
-"Image Rights: " = "Image Rights: ";
+// Canteen List
+"canteens.nav" = "Canteens";
 
-"🍲 Bon appétit!" = "🍲 Bon appétit!";
-"Swipe from the left to open the list of canteens." = "Swipe from the left to open the list of canteens.";
+// Meals List
+"meals.date-today" = "Today";
+"meals.date-tomorrow" = "Tomorrow";
 
-"Favorite Canteens" = "Favorite Canteens";
-"Ingredients & Allergens" = "Ingredients & Allergens";
-"Price Type" = "Which price are you paying?";
+// Meal Detail
+"meal.rate-title" = "Rate meal";
+"meal.rate-description" = "Send feedback regarding this meal directly to the Studentenwerk.";
+
+// Emeal View
+"emeal.nfc-text" = "Hold your Emeal card to your device.";
+"emeal.nfc-reading-error" = "Unable to read NFC tag.";
+"emeal.nfc-connection-error" = "Connection error. Please try again.";
+"emeal.balance" = "Balance";
+"emeal.last-transaction" = "Last Transaction";
+"emeal.last-scanned" = "Last scanned";
+"emeal.scan-button" = "Scan Emeal";
+"emeal.autoload-hint" = "Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here.";
+"emeal.autoload-information" = "Autoload Information";
+"emeal.info" = "If your device supports NFC cards, you can scan your Emeal card here. The card stores information on your current balance and the latest transaction amount.\n\nAdditionally users of the Autoload feature can see the latest 90 days of transactions in the Cardservice Portal from the Studentenwerk, which this app can also show here. For technical reasons on the Studentenwerk side these are delayed a bit and not shown instantly after paying.\nUnfortunately it's not possible to access your current balance through this data, this is only possible directly via the card.\n\nIn the future the app will combine both of these data sources (if available) and use a single data point of your balance to calculate it henceforth based on your transaction history.";
+
+// Settings
+"settings.nav" = "Settings";
+"settings.favorite-canteens" = "Favorite Canteens";
+"settings.favorite-canteens-description" = "Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order.";
+"settings.ingredients-allergens" = "Ingredients & Allergens";
+"settings.ingredients-description" = "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out.";
+"settings.allergens-description" = "Same goes for allergens. Uncheck anything you don't want in your food.";
+"settings.price-type" = "Which price are you paying?";
 "student" = "Student";
 "employee" = "Employee";
-"Canteen Sorting" = "Canteen Sorting";
+"settings.canteen-sorting" = "Canteen Sorting";
 "default" = "Default";
 "distance" = "Distance";
 "alphabetical" = "Alphabetical";
-"Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order." = "Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order.";
-"Using Autoload? Enter your credentials here to show all latest transactions on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers." = "Using Autoload? Enter your credentials here to show all latest transactions on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers for authentification purposes.";
-"Cardnumber" = "Cardnumber";
-"Password" = "Password";
-"Autoload Information" = "Autoload Information";
-"Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out." = "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out.";
-"Same goes for allergens. Uncheck anything you don't want in your food." = "Same goes for allergens. Uncheck anything you don't want in your food.";
+"settings.autoload-description" = "Using Autoload? Enter your credentials here to show all latest transactions on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers for authentification purposes.";
+"settings.autoload-cardnumber" = "Cardnumber";
+"settings.autoload-password" = "Password";
+"settings.autoload-information" = "Autoload Information";
+"settings.about" = "About";
 
-"Hold your Emeal card to your device." = "Hold your Emeal card to your device.";
-"Unable to read NFC tag." = "Unable to read NFC tag.";
-"Connection error. Please try again." = "Connection error. Please try again.";
-"Emeal recognized, but decoding has not yet been implemented." = "Emeal recognized, but decoding has not yet been implemented.";
-"Balance" = "Balance";
-"Last Transaction" = "Last Transaction";
-"Last scanned" = "Last scanned";
-"Scan Mensa Card" = "Scan Emeal";
-"Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here." = "Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here.";
+// Info View
+"info.thanks" = "Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!";
+"info.opensource" = "This app is open source on GitHub.";
+"info.email" = "Feedback? Send me an E-Mail.";
+"info.testflight" = "Want to help beta test this application?";
+"info.image-rights" = "Image Rights: ";
+"info.icon" = "Icon: ";
+"info.nounproject" = "Eddy Wong from The Noun Project";
 
-"Rate meal" = "Rate meal";
-"Send feedback regarding this meal directly to the Studentenwerk." = "Send feedback regarding this meal directly to the Studentenwerk.";
-
+// Meal Information
 "vegan" = "vegan";
 "vegetarian" = "vegetarian";
 
@@ -68,7 +82,3 @@
 "sulfite" = "Sulfite";
 "lupin" = "Lupin";
 "molluscs" = "Molluscs";
-
-"About" = "About";
-
-"emeal.info" = "If your device supports NFC cards, you can scan your Emeal card here. The card stores information on your current balance and the latest transaction amount.\n\nAdditionally users of the Autoload feature can see the latest 90 days of transactions in the Cardservice Portal from the Studentenwerk, which this app can also show here. For technical reasons on the Studentenwerk side these are delayed a bit and not shown instantly after paying.\nUnfortunately it's not possible to access your current balance through this data, this is only possible directly via the card.\n\nIn the future the app will combine both of these data sources (if available) and use a single data point of your balance to calculate it henceforth based on your transaction history.";

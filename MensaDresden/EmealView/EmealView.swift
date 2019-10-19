@@ -40,12 +40,12 @@ struct EmealView: View {
 
     var autoloadHint: some View {
         VStack(alignment: .leading) {
-            Text("Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here.")
+            Text("emeal.autoload-hint")
                 .font(.caption)
                 .foregroundColor(.gray)
                 .padding(.bottom, 5)
             NavigationLink(destination: WebView.autoload) {
-                Text("Autoload Information")
+                Text("emeal.autoload-information")
                     .font(.caption)
             }
         }
@@ -61,7 +61,7 @@ struct EmealView: View {
                         .padding(.horizontal)
 
                     LargeButton(content: {
-                        Text("Scan Mensa Card")
+                        Text("emeal.scan-button")
                     }) {
                         self.emeal.readCard()
                     }
