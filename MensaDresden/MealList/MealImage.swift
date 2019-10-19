@@ -30,6 +30,7 @@ struct MealImage: View {
                 .clipShape(RoundedRectangle(cornerRadius: self.roundedCorners ? 8 : 0))
         }, loadingView: {
             self.placeholderImage
+                .opacity(0.5)
         }))
     }
 }
