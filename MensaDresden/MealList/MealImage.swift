@@ -13,6 +13,7 @@ struct MealImage: View {
             .resizable()
             .aspectRatio(contentMode: contentMode)
             .frame(width: width)
+            .clipShape(RoundedRectangle(cornerRadius: self.roundedCorners ? 8 : 0))
     }
 
     var body: some View {
