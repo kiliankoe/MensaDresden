@@ -80,7 +80,7 @@ struct FeedbackButton: View {
     }
 
     var body: some View {
-        NavigationLink(destination: WebView(url: feedbackURL).navigationBarTitle("Rate meal", displayMode: .inline)) {
+        NavigationLink(destination: WebView(url: feedbackURL).navigationBarTitle("meal.rate-title", displayMode: .inline)) {
             VStack(alignment: .leading) {
                 Text("meal.rate-title")
                 Text("meal.rate-description")
