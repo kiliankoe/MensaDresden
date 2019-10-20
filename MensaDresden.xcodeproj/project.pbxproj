@@ -227,10 +227,10 @@
 		394D9D0423454E77005F076C /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
+				39A141902348813D00FEE789 /* Settings.swift */,
 				394D9D1E234560B4005F076C /* SettingsView.swift */,
 				396FC3E32357B257007B97F3 /* FavoriteCanteensSetting.swift */,
 				396FC3E72357B6E4007B97F3 /* IngredientsAllergensSetting.swift */,
-				39A141902348813D00FEE789 /* Settings.swift */,
 				394D9D022343EFD4005F076C /* InfoView.swift */,
 			);
 			path = SettingsView;
