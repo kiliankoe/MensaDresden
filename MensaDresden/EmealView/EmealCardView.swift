@@ -20,7 +20,7 @@ struct EmealCardView: View {
                 .shadow(radius: 10)
 
             VStack(alignment: .leading) {
-                Text("Balance")
+                Text("emeal.balance")
                     .font(Font.headline.smallCaps())
                     .foregroundColor(.white)
                 Text("\(amount, specifier: "%.2f")€")
@@ -28,7 +28,7 @@ struct EmealCardView: View {
                     .foregroundColor(.white)
                     .padding(.bottom, UIScreen.main.bounds.height * 0.02)
 
-                Text("Last Transaction")
+                Text("emeal.last-transaction")
                     .font(Font.subheadline.smallCaps())
                     .foregroundColor(.white)
                 Text("\(lastTransaction, specifier: "%.2f")€")
@@ -36,7 +36,7 @@ struct EmealCardView: View {
                     .foregroundColor(.white)
 
                 if lastScan != nil {
-                    Text("Last scanned")
+                    Text("emeal.last-scanned")
                         .font(Font.caption.smallCaps())
                         .foregroundColor(.white)
                         .padding(.top, UIScreen.main.bounds.height * 0.01)
@@ -73,7 +73,7 @@ struct EmealCardView2: View {
 
     var balanceText: some View {
         VStack(alignment: .leading) {
-            Text("Balance")
+            Text("emeal.balance")
                 .font(Font.headline.smallCaps())
                 .foregroundColor(.white)
             Text("\(amount, specifier: "%.2f")€")
@@ -85,7 +85,7 @@ struct EmealCardView2: View {
 
     var lastTransactionText: some View {
         VStack(alignment: .leading) {
-            Text("Last Transaction")
+            Text("emeal.last-transaction")
                 .font(Font.subheadline.smallCaps())
                 .foregroundColor(.white)
             Text("\(lastTransaction, specifier: "%.2f")€")
