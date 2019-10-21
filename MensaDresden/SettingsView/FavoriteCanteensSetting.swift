@@ -23,6 +23,7 @@ struct FavoriteCanteensSetting: View {
                 .onDelete(perform: deleteFavorite(at:))
             }
         }
+        .navigationBarTitle("settings.favorite-canteens", displayMode: .inline)
         .navigationBarItems(trailing: EditButton())
     }
 }
