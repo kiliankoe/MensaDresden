@@ -5,23 +5,19 @@ struct IngredientsAllergensSetting: View {
     @EnvironmentObject var settings: Settings
 
     var body: some View {
-        List {
+        Form {
             Section(header: Text("settings.ingredients-description")) {
                 ForEach(Ingredient.allCases, id: \.self) { ingredient in
-                    HStack {
+                    Toggle(isOn: self.settings.ingredientBlacklist.binding(for: ingredient)) {
                         Text(LocalizedStringKey(String(describing: ingredient)))
-                        Spacer()
-                        Toggle(isOn: self.settings.ingredientBlacklist.binding(for: ingredient), label: { EmptyView() })
                     }
                 }
             }
 
             Section(header: Text("settings.allergens-description")) {
                 ForEach(Allergen.allCases, id: \.self) { allergen in
-                    HStack {
+                    Toggle(isOn: self.settings.allergenBlacklist.binding(for: allergen)) {
                         Text(LocalizedStringKey(String(describing: allergen)))
-                        Spacer()
-                        Toggle(isOn: self.settings.allergenBlacklist.binding(for: allergen), label: { EmptyView() })
                     }
                 }
             }
