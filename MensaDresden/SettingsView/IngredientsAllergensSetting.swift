@@ -22,6 +22,7 @@ struct IngredientsAllergensSetting: View {
                 }
             }
         }
+        .navigationBarTitle("settings.ingredients-allergens", displayMode: .inline)
     }
 }
 
