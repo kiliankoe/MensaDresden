@@ -40,6 +40,12 @@ struct MealListView_Previews: PreviewProvider {
     static let service = OpenMensaService(settings: Self.settings)
 
     static var previews: some View {
-        MealListView(service: service, canteen: Canteen.example)
+        let settings = Settings()
+
+        return NavigationView {
+            MealListView(service: service, canteen: Canteen.example)
+        }
+        .environmentObject(OpenMensaService(settings: settings))
+        .environmentObject(settings)
     }
 }
