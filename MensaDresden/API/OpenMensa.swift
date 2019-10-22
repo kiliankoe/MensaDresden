@@ -79,10 +79,12 @@ class OpenMensaService: ObservableObject {
             date = Date.tomorrow
         }
 
+        var request = URLRequest(url: URL(string: "canteens/\(id)/days/\(dateFormatter.string(from: date))/meals", relativeTo: baseURL)!)
+        request.addValue(Locale.preferredLanguages.joined(separator: ", "), forHTTPHeaderField: "Accept-Language")
+
         self.request?.cancel()
         self.request = URLSession.shared
-            .dataTaskPublisher(for: URL(string: "canteens/\(id)/days/\(dateFormatter.string(from: date))/meals", relativeTo: baseURL)!)
-//            .dataTaskPublisher(for: URL(string: "canteens/\(id)/days/2019-10-07/meals", relativeTo: baseURL)!)
+            .dataTaskPublisher(for: request)
             .map { $0.data }
             .decode(type: [Meal].self, decoder: JSONDecoder())
             .replaceError(with: [])
