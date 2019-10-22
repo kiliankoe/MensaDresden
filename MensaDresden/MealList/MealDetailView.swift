@@ -37,7 +37,6 @@ struct MealDetailView: View {
                 .padding(.horizontal)
                 .padding(.bottom)
 
-
                 Text(meal.name)
                     .font(.title)
                     .lineLimit(5)
