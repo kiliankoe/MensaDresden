@@ -8,17 +8,10 @@ struct EmealView: View {
 
     @ObservedObject var emeal = Emeal()
 
-    static var transactionDateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter
-    }()
-
     var transactionList: some View {
         List(service.transactions, id: \.id) { transaction in
             VStack(alignment: .leading) {
-                Text(Self.transactionDateFormatter.string(from: transaction.date))
+                Text(Formatter.string(for: transaction.date, dateStyle: .medium, timeStyle: .short))
                     .font(.caption)
                     .foregroundColor(.gray)
                 HStack {
