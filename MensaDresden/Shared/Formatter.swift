@@ -30,6 +30,11 @@ enum Formatter {
             .localizedString(from: DateComponents(day: offset))
     }
 
+    static func string(forRelativeDate relativeDate: Date, to otherDate: Date, locale: Locale = .current) -> String {
+        relativeDateTimeFormatter(dateTimeStyle: .named, unitsStyle: .full, formattingContext: .beginningOfSentence, locale: locale)
+            .localizedString(for: relativeDate, relativeTo: otherDate)
+    }
+
     // MARK: Date Formatter
 
     private static func dateFormatter(format: DateFormat? = nil,

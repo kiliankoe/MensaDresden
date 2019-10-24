@@ -45,7 +45,7 @@ struct CanteenListView: View {
         NavigationView {
             Group {
                 List(canteens) { canteen in
-                    NavigationLink(destination: MealListView(service: self.service, canteen: canteen)) {
+                    NavigationLink(destination: MealListView(canteen: canteen)) {
                         CanteenCell(canteen: canteen)
                     }
                 }

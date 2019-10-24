@@ -1,22 +1,21 @@
 import SwiftUI
 
 struct MealListView: View {
-    @ObservedObject var service: OpenMensaService
     @State var canteen: Canteen
 
+    @EnvironmentObject var service: OpenMensaService
     @EnvironmentObject var settings: Settings
 
     var body: some View {
         VStack {
-            HStack {
-                Picker("Date", selection: $service.day) {
-                    Text(Formatter.stringForRelativeDate(offsetFromTodayBy: 0)).tag(Day.today)
-                    Text(Formatter.stringForRelativeDate(offsetFromTodayBy: 1)).tag(Day.tomorrow)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding(.leading, 20)
-                .padding(.trailing, 20)
+            Picker("Date", selection: $service.day) {
+                Text(Formatter.stringForRelativeDate(offsetFromTodayBy: 0)).tag(Date.today)
+                Text(Formatter.stringForRelativeDate(offsetFromTodayBy: 1)).tag(Date.tomorrow)
             }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding(.leading, 20)
+            .padding(.trailing, 20)
+
             List(service.meals[canteen.id] ?? []) { meal in
                 NavigationLink(destination: MealDetailView(meal: meal)) {
                     MealCell(meal: meal)
@@ -25,12 +24,16 @@ struct MealListView: View {
             .navigationBarTitle(canteen.name)
         }
         .navigationBarItems(trailing:
-            BarButtonButton(
-                view: settings.favoriteCanteens.contains(canteen.name) ? AnyView(Image(systemName: "heart.fill").foregroundColor(.red)) : AnyView(Image(systemName: "heart")),
-                action: {
-                    self.settings.toggleFavorite(canteen: self.canteen.name)
-                }
-            )
+            HStack {
+                BarButtonNavigationLink(destination: DatePickerView(canteen: canteen), image: Image(systemName: "calendar"))
+                    .padding(.trailing, 10)
+                BarButtonButton(
+                    view: settings.favoriteCanteens.contains(canteen.name) ? AnyView(Image(systemName: "heart.fill").foregroundColor(.red)) : AnyView(Image(systemName: "heart")),
+                    action: {
+                        self.settings.toggleFavorite(canteen: self.canteen.name)
+                    }
+                )
+            }
         )
         .onAppear {
             self.service.fetchMeals(for: self.canteen.id, on: self.service.day)
@@ -51,7 +54,7 @@ struct MealListView_Previews: PreviewProvider {
         ]
 
         return NavigationView {
-            MealListView(service: service, canteen: Canteen.example)
+            MealListView(canteen: Canteen.example)
         }
         .environmentObject(OpenMensaService(settings: settings))
         .environmentObject(settings)

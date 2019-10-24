@@ -2,20 +2,6 @@ import Foundation
 import Combine
 import EmealKit
 
-enum Day: Int {
-    case today = 0
-    case tomorrow
-}
-
-extension Date {
-    static var today: Date {
-        Date()
-    }
-
-    static var tomorrow: Date {
-        Date().addingTimeInterval(Double(24 * 3600))
-    }
-}
 
 class OpenMensaService: ObservableObject {
     var settings: Settings
@@ -55,22 +41,15 @@ class OpenMensaService: ObservableObject {
 
     // FIXME: This is a weird hack and far from the ideal solution.
     var lastCanteen: Int?
-    var day: Day = .today {
+    var day: Date = .today {
         didSet {
             guard let lastCanteen = lastCanteen else { return }
             fetchMeals(for: lastCanteen, on: day)
         }
     }
 
-    func fetchMeals(for id: Int, on day: Day) {
+    func fetchMeals(for id: Int, on date: Date) {
         lastCanteen = id
-        var date = Date.today
-        switch day {
-        case .today:
-            break
-        case .tomorrow:
-            date = Date.tomorrow
-        }
 
         let dateString = Formatter.string(for: date, format: .yearMonthDay, locale: Locale(identifier: "en_US"))
         var request = URLRequest(url: URL(string: "canteens/\(id)/days/\(dateString)/meals", relativeTo: baseURL)!)
