@@ -10,10 +10,6 @@
 // Canteen List
 "canteens.nav" = "Canteens";
 
-// Meals List
-"meals.date-today" = "Today";
-"meals.date-tomorrow" = "Tomorrow";
-
 // Meal Detail
 "meal.rate-title" = "Rate meal";
 "meal.rate-description" = "Send feedback regarding this meal directly to the Studentenwerk.";

@@ -51,6 +51,7 @@
 		39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */; };
 		39E215812358E29D00F5EBE9 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E215802358E29D00F5EBE9 /* UserLocation.swift */; };
 		39E215842358E37300F5EBE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39E215862358E37300F5EBE9 /* InfoPlist.strings */; };
+		39FC09D82361AFEE008D8AB0 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC09D72361AFEE008D8AB0 /* Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		39E215802358E29D00F5EBE9 /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		39E215852358E37300F5EBE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		39E215872358E37700F5EBE9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		39FC09D72361AFEE008D8AB0 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 				39CD5B12234E60D100435E71 /* ShareSheetView.swift */,
 				39CD5B18234F778400435E71 /* WebView.swift */,
 				39E215802358E29D00F5EBE9 /* UserLocation.swift */,
+				39FC09D72361AFEE008D8AB0 /* Formatter.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39FC09D82361AFEE008D8AB0 /* Formatter.swift in Sources */,
 				39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */,
 				39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */,
 				39A141A02348F49700FEE789 /* Emeal.swift in Sources */,

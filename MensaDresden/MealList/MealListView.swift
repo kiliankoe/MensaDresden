@@ -10,8 +10,8 @@ struct MealListView: View {
         VStack {
             HStack {
                 Picker("Date", selection: $service.day) {
-                    Text("meals.date-today").tag(Day.today)
-                    Text("meals.date-tomorrow").tag(Day.tomorrow)
+                    Text(Formatter.stringForRelativeDate(offsetBy: 0)).tag(Day.today)
+                    Text(Formatter.stringForRelativeDate(offsetBy: 1)).tag(Day.tomorrow)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding(.leading, 20)

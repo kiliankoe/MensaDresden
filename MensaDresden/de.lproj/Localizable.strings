@@ -10,10 +10,6 @@
 // Canteen List
 "canteens.nav" = "Mensen";
 
-// Meals List
-"meals.date-today" = "Heute";
-"meals.date-tomorrow" = "Morgen";
-
 // Meal Detail
 "meal.rate-title" = "Angebot bewerten";
 "meal.rate-description" = "Sende Feedback zur Mahlzeit direkt an das Studentenwerk.";
