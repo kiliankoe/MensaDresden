@@ -26,6 +26,14 @@ struct PriceLabel: View {
 
 struct PriceLabel_Previews: PreviewProvider {
     static var previews: some View {
-        PriceLabel(price: 2.8)
+        Group {
+            PriceLabel(price: nil)
+            PriceLabel(price: 2.8)
+            PriceLabel(price: 15)
+            PriceLabel(price: -1.5)
+            PriceLabel(price: 1337)
+        }
+        .padding()
+        .previewLayout(.sizeThatFits)
     }
 }
