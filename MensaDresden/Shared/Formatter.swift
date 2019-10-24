@@ -13,4 +13,17 @@ enum Formatter {
             .localizedString(from: DateComponents(day: offset))
             .capitalized(with: locale)
     }
+
+    static func string(for date: Date, format: DateFormat, locale: Locale = .current) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = locale
+        formatter.dateFormat = format.rawValue
+        return formatter.string(from: date)
+    }
+}
+
+extension Formatter {
+    enum DateFormat: String {
+        case yearMonthDay = "yyyy-MM-dd"
+    }
 }

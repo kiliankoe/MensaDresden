@@ -53,13 +53,6 @@ class OpenMensaService: ObservableObject {
             .assign(to: \.canteens, on: self)
     }
 
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US")
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter
-    }()
-
     // FIXME: This is a weird hack and far from the ideal solution.
     var lastCanteen: Int?
     var day: Day = .today {
@@ -79,7 +72,8 @@ class OpenMensaService: ObservableObject {
             date = Date.tomorrow
         }
 
-        var request = URLRequest(url: URL(string: "canteens/\(id)/days/\(dateFormatter.string(from: date))/meals", relativeTo: baseURL)!)
+        let dateString = Formatter.string(for: date, format: .yearMonthDay, locale: Locale(identifier: "en_US"))
+        var request = URLRequest(url: URL(string: "canteens/\(id)/days/\(dateString)/meals", relativeTo: baseURL)!)
         request.addValue(Locale.preferredLanguages.joined(separator: ", "), forHTTPHeaderField: "Accept-Language")
 
         self.request?.cancel()
