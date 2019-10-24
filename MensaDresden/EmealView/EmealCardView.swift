@@ -5,13 +5,6 @@ struct EmealCardView: View {
     var lastTransaction: Double
     var lastScan: Date?
 
-    var dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter
-    }()
-
     var body: some View {
         ZStack(alignment: .leading) {
             Image("emeal_empty")
@@ -40,7 +33,7 @@ struct EmealCardView: View {
                         .font(Font.caption.smallCaps())
                         .foregroundColor(.white)
                         .padding(.top, UIScreen.main.bounds.height * 0.01)
-                    Text(dateFormatter.string(from: lastScan!))
+                    Text(Formatter.string(for: lastScan!, dateStyle: .medium, timeStyle: .short))
                         .font(.subheadline)
                         .foregroundColor(.white)
                 }
