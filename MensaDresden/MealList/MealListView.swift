@@ -45,10 +45,16 @@ struct MealListView_Previews: PreviewProvider {
     static var previews: some View {
         let settings = Settings()
 
+        service.meals[1] = [
+            Meal(id: 1, name: "Mahlzeit 1", notes: [], prices: Meal.Prices(students: 1.5, employees: 1.5), category: "Kategorie", image: Meal.placeholderImageURL, url: Meal.placeholderImageURL),
+            Meal(id: 2, name: "Mahlzeit 2", notes: [], prices: Meal.Prices(students: 1.5, employees: 1.5), category: "Kategorie", image: Meal.placeholderImageURL, url: Meal.placeholderImageURL),
+        ]
+
         return NavigationView {
             MealListView(service: service, canteen: Canteen.example)
         }
         .environmentObject(OpenMensaService(settings: settings))
         .environmentObject(settings)
+        .accentColor(.green)
     }
 }
