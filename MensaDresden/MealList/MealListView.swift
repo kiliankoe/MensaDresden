@@ -24,11 +24,14 @@ struct MealListView: View {
             }
             .navigationBarTitle(canteen.name)
         }
-        .navigationBarItems(trailing: BarButtonButton(
-            view: settings.favoriteCanteens.contains(canteen.name) ? AnyView(Image(systemName: "heart.fill").foregroundColor(.red)) : AnyView(Image(systemName: "heart")),
-            action: {
-                self.settings.toggleFavorite(canteen: self.canteen.name)
-            }))
+        .navigationBarItems(trailing:
+            BarButtonButton(
+                view: settings.favoriteCanteens.contains(canteen.name) ? AnyView(Image(systemName: "heart.fill").foregroundColor(.red)) : AnyView(Image(systemName: "heart")),
+                action: {
+                    self.settings.toggleFavorite(canteen: self.canteen.name)
+                }
+            )
+        )
         .onAppear {
             self.service.fetchMeals(for: self.canteen.id, on: self.service.day)
         }
