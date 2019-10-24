@@ -4,15 +4,8 @@ struct PriceLabel: View {
     var price: Double?
     var priceText: String? {
         guard let price = price else { return nil }
-        return PriceLabel.priceFormatter.string(from: price as NSNumber)
+        return Formatter.priceString(for: price)
     }
-
-    static let priceFormatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.locale = Locale(identifier: "de_DE")
-        formatter.numberStyle = .currency
-        return formatter
-    }()
 
     var body: AnyView {
         if let priceText = priceText {

@@ -47,4 +47,21 @@ enum Formatter {
         let formatter = dateFormatter(dateStyle: dateStyle, timeStyle: timeStyle, locale: locale)
         return formatter.string(from: date)
     }
+
+    // MARK: Number Formatter
+
+    private static func numberFormatter(style: NumberFormatter.Style, currencyCode: String? = nil, locale: Locale) -> NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = style
+        if let currencyCode = currencyCode {
+            formatter.currencyCode = currencyCode
+        }
+        formatter.locale = locale
+        return formatter
+    }
+
+    static func priceString(for value: Double, locale: Locale = .current) -> String? {
+        let formatter = numberFormatter(style: .currency, currencyCode: "EUR", locale: locale)
+        return formatter.string(from: value as NSNumber)
+    }
 }
