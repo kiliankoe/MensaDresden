@@ -5,17 +5,29 @@ enum DateFormat: String {
 }
 
 enum Formatter {
-    static private var relativeDateFormatter: RelativeDateTimeFormatter = {
-        let formatter = RelativeDateTimeFormatter()
-        formatter.dateTimeStyle = .named
-        formatter.unitsStyle = .full
-        return formatter
-    }()
+    // MARK: Relative Date Formatter
 
-    static func stringForRelativeDate(offsetBy offset: Int, locale: Locale = .current) -> String {
-        relativeDateFormatter
+    static private func relativeDateTimeFormatter(dateTimeStyle: RelativeDateTimeFormatter.DateTimeStyle? = nil,
+                                                  unitsStyle: RelativeDateTimeFormatter.UnitsStyle? = nil,
+                                                  formattingContext: RelativeDateTimeFormatter.Context? = nil,
+                                                  locale: Locale) -> RelativeDateTimeFormatter {
+        let formatter = RelativeDateTimeFormatter()
+        if let dateTimeStyle = dateTimeStyle {
+            formatter.dateTimeStyle = dateTimeStyle
+        }
+        if let unitsStyle = unitsStyle {
+            formatter.unitsStyle = unitsStyle
+        }
+        if let formattingContext = formattingContext {
+            formatter.formattingContext = formattingContext
+        }
+        formatter.locale = locale
+        return formatter
+    }
+
+    static func stringForRelativeDate(offsetFromTodayBy offset: Int, locale: Locale = .current) -> String {
+        relativeDateTimeFormatter(dateTimeStyle: .named, unitsStyle: .full, formattingContext: .beginningOfSentence, locale: locale)
             .localizedString(from: DateComponents(day: offset))
-            .capitalized(with: locale)
     }
 
     // MARK: Date Formatter
