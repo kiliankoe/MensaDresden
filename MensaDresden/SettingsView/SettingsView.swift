@@ -41,9 +41,6 @@ struct SettingsView: View {
                     NavigationLink(destination: InfoView()) {
                         Text("settings.about")
                     }
-//                    NavigationLink(destination: Text("Open Source Libraries")) {
-//                        Text("Open Source Libraries")
-//                    }
                 }
             }
             .listStyle(GroupedListStyle())
