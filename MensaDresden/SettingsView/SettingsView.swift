@@ -54,5 +54,6 @@ struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
             .environmentObject(Settings())
+            .previewLayout(.fixed(width: 375, height: 1000))
     }
 }
