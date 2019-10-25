@@ -4,7 +4,7 @@ struct DatePickerView: View {
 
     var canteen: Canteen
 
-    var currentThreeWeeks: [Date] {
+    var currentTwoWeeks: [Date] {
         let calendar = Calendar(identifier: .gregorian)
         guard let thisMonday = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: Date())) else {
             return []
@@ -22,7 +22,7 @@ struct DatePickerView: View {
     }
 
     var body: some View {
-        List(currentThreeWeeks) { date in
+        List(currentTwoWeeks) { date in
             NavigationLink(destination: CustomDateMealListView(canteen: self.canteen, selectedDate: date)) {
                 if date.isToday {
                     Text(self.string(for: date))
