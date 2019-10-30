@@ -94,7 +94,11 @@ class OpenMensaService: ObservableObject {
         Cardservice.login(username: cardnumber, password: password) { result in
             guard let service = try? result.get() else { return }
 
-            let threeMonthsAgo = Date().addingTimeInterval(-90 * 24 * 3600)
+            let calendar = Calendar(identifier: .gregorian)
+            guard let threeMonthsAgo = calendar.date(byAdding: .month, value: -3, to: Date()) else {
+                return
+            }
+
             service.transactions(begin: threeMonthsAgo, end: Date()) { result in
                 guard let transactions = try? result.get() else { return }
                 self.transactions = transactions.reversed()

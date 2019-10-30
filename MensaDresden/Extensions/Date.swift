@@ -12,7 +12,13 @@ extension Date {
     }
 
     static var tomorrow: Date {
-        Calendar(identifier: .gregorian).startOfDay(for: Date().addingTimeInterval(24 * 3600))
+        let calendar = Calendar(identifier: .gregorian)
+        guard let tomorrow = calendar.date(byAdding: .day, value: 1, to: today) else {
+            // I don't believe this can fail, but I still don't want to crash in that case.
+            // Let's go for super weird behavior instead \o/
+            return today
+        }
+        return Calendar(identifier: .gregorian).startOfDay(for: tomorrow)
     }
 
     var isToday: Bool {
