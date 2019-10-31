@@ -35,7 +35,7 @@ struct DatePickerView: View {
                 }
             }
         }
-        .navigationBarTitle(Text(""), displayMode: .inline)
+        .navigationBarTitle(Text(canteen.name), displayMode: .inline)
     }
 }
 
