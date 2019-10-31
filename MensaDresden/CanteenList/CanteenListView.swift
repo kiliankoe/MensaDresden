@@ -1,6 +1,4 @@
 import SwiftUI
-import MapKit
-import CoreNFC
 
 struct CanteenListView: View {
     @EnvironmentObject var service: OpenMensaService
