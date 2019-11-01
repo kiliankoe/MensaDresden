@@ -37,6 +37,10 @@
 		396FC3E22357A1A9007B97F3 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3E12357A1A9007B97F3 /* Transaction.swift */; };
 		396FC3E42357B257007B97F3 /* FavoriteCanteensSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3E32357B257007B97F3 /* FavoriteCanteensSetting.swift */; };
 		396FC3E82357B6E4007B97F3 /* IngredientsAllergensSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3E72357B6E4007B97F3 /* IngredientsAllergensSetting.swift */; };
+		398B34E0236B343F00C10D9B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34DF236B343F00C10D9B /* ActivityIndicator.swift */; };
+		398B34E2236CB95900C10D9B /* LoadingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E1236CB95900C10D9B /* LoadingResult.swift */; };
+		398B34E4236CC6B500C10D9B /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E3236CC6B500C10D9B /* MealList.swift */; };
+		398B34E8236CDE7D00C10D9B /* LoadingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E7236CDE7D00C10D9B /* LoadingListView.swift */; };
 		39A0C940236227F70029FA35 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A0C93F236227F70029FA35 /* DatePickerView.swift */; };
 		39A0C9442362341B0029FA35 /* CustomDateMealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A0C9432362341B0029FA35 /* CustomDateMealListView.swift */; };
 		39A0C94623623B9E0029FA35 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A0C94523623B9E0029FA35 /* Date.swift */; };
@@ -98,6 +102,10 @@
 		396FC3E12357A1A9007B97F3 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		396FC3E32357B257007B97F3 /* FavoriteCanteensSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCanteensSetting.swift; sourceTree = "<group>"; };
 		396FC3E72357B6E4007B97F3 /* IngredientsAllergensSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsAllergensSetting.swift; sourceTree = "<group>"; };
+		398B34DF236B343F00C10D9B /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		398B34E1236CB95900C10D9B /* LoadingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingResult.swift; sourceTree = "<group>"; };
+		398B34E3236CC6B500C10D9B /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
+		398B34E7236CDE7D00C10D9B /* LoadingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingListView.swift; sourceTree = "<group>"; };
 		39A0C93F236227F70029FA35 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		39A0C9432362341B0029FA35 /* CustomDateMealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateMealListView.swift; sourceTree = "<group>"; };
 		39A0C94523623B9E0029FA35 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -197,6 +205,7 @@
 		39281C7D23427F8400E4EFB5 /* MealList */ = {
 			isa = PBXGroup;
 			children = (
+				398B34E3236CC6B500C10D9B /* MealList.swift */,
 				39281C7823424CEA00E4EFB5 /* MealListView.swift */,
 				39A0C93F236227F70029FA35 /* DatePickerView.swift */,
 				39A0C9432362341B0029FA35 /* CustomDateMealListView.swift */,
@@ -221,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				39281C8A234292CD00E4EFB5 /* OpenMensa.swift */,
+				398B34E1236CB95900C10D9B /* LoadingResult.swift */,
 				39281C8C234297E000E4EFB5 /* Meal.swift */,
 				39281C8E2342985900E4EFB5 /* Canteen.swift */,
 			);
@@ -285,6 +295,8 @@
 				39CD5B18234F778400435E71 /* WebView.swift */,
 				39E215802358E29D00F5EBE9 /* UserLocation.swift */,
 				39FC09D72361AFEE008D8AB0 /* Formatter.swift */,
+				398B34DF236B343F00C10D9B /* ActivityIndicator.swift */,
+				398B34E7236CDE7D00C10D9B /* LoadingListView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -421,6 +433,7 @@
 				39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */,
 				39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */,
 				39A141A02348F49700FEE789 /* Emeal.swift in Sources */,
+				398B34E0236B343F00C10D9B /* ActivityIndicator.swift in Sources */,
 				39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */,
 				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,
 				39E215812358E29D00F5EBE9 /* UserLocation.swift in Sources */,
@@ -431,8 +444,10 @@
 				39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */,
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39A141912348813D00FEE789 /* Settings.swift in Sources */,
+				398B34E8236CDE7D00C10D9B /* LoadingListView.swift in Sources */,
 				396FC3E42357B257007B97F3 /* FavoriteCanteensSetting.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal.swift in Sources */,
+				398B34E2236CB95900C10D9B /* LoadingResult.swift in Sources */,
 				39CD5B19234F778400435E71 /* WebView.swift in Sources */,
 				39A141932348EBC000FEE789 /* BlacklistBinding.swift in Sources */,
 				394D9D032343EFD4005F076C /* InfoView.swift in Sources */,
@@ -441,6 +456,7 @@
 				394D9D1F234560B4005F076C /* SettingsView.swift in Sources */,
 				39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */,
 				39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */,
+				398B34E4236CC6B500C10D9B /* MealList.swift in Sources */,
 				39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */,
 				396FC3B0235378C1007B97F3 /* AppView.swift in Sources */,
 				39281C60234241B900E4EFB5 /* SceneDelegate.swift in Sources */,

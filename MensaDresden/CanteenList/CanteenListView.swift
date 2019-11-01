@@ -1,15 +1,15 @@
 import SwiftUI
 
 struct CanteenListView: View {
-    @EnvironmentObject var service: OpenMensaService
+    @EnvironmentObject var store: OMStore
     @EnvironmentObject var deviceOrientation: DeviceOrientation
     @EnvironmentObject var settings: Settings
 
     @ObservedObject var userLocation = UserLocation.shared
 
-    var canteens: [Canteen] {
-        let favorites = service.canteens.filter { settings.favoriteCanteens.contains($0.name) }
-        var nonFavorites = service.canteens.filter { !settings.favoriteCanteens.contains($0.name) }
+    func sort(canteens: [Canteen]) -> [Canteen] {
+        let favorites = canteens.filter { settings.favoriteCanteens.contains($0.name) }
+        var nonFavorites = canteens.filter { !settings.favoriteCanteens.contains($0.name) }
 
         let sortedFavorites = favorites.sorted { (lhs, rhs) in
             // Force Unwrap should be safe here, since the list was just filtered based on favorites.
@@ -42,11 +42,18 @@ struct CanteenListView: View {
     var body: some View {
         NavigationView {
             Group {
-                List(canteens) { canteen in
-                    NavigationLink(destination: MealListView(canteen: canteen)) {
-                        CanteenCell(canteen: canteen)
-                    }
-                }
+                LoadingListView(result: store.canteens,
+                                noDataMessage: "canteens.no-data",
+                                retryAction: { self.store.loadCanteens() },
+                                showRetryOnNoData: true,
+                                listView: { canteens in
+                                    List(self.sort(canteens: canteens)) { canteen in
+                                        NavigationLink(destination: MealListView(canteen: canteen)) {
+                                            CanteenCell(canteen: canteen)
+                                        }
+                                    }
+                                }
+                )
                 .navigationBarTitle("canteens.nav")
                 VStack {
                     Text("ipad.bon-appetit")
@@ -57,9 +64,6 @@ struct CanteenListView: View {
                 }
             }
         }
-        .onAppear {
-            self.service.fetchCanteens()
-        }
     }
 }
 
@@ -69,6 +73,6 @@ struct ContentView_Previews: PreviewProvider {
 
         return CanteenListView()
             .environmentObject(settings)
-            .environmentObject(OpenMensaService(settings: settings))
+            .environmentObject(OMStore(settings: settings))
     }
 }

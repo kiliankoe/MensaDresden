@@ -3,33 +3,10 @@ import Combine
 import CoreNFC
 
 struct EmealView: View {
-    @EnvironmentObject var service: OpenMensaService
+    @EnvironmentObject var store: OMStore
     @EnvironmentObject var settings: Settings
 
     @ObservedObject var emeal = Emeal()
-
-    var transactionList: some View {
-        List(service.transactions, id: \.id) { transaction in
-            VStack(alignment: .leading) {
-                Text(Formatter.string(for: transaction.date, dateStyle: .medium, timeStyle: .short))
-                    .font(.caption)
-                    .foregroundColor(.gray)
-                HStack {
-                    Text(transaction.location)
-                    Spacer()
-                    Text("\(transaction.amount, specifier: "%.2f")€")
-                }
-                ForEach(transaction.positions, id: \.id) { pos in
-                    HStack {
-                        Text(pos.name)
-                        Spacer()
-                        Text("\(pos.price, specifier: "%.2f")€")
-                    }
-                    .font(.caption)
-                }
-            }
-        }
-    }
 
     var autoloadHint: some View {
         VStack(alignment: .leading) {
@@ -62,7 +39,32 @@ struct EmealView: View {
                 }
 
                 if settings.areAutoloadCredentialsAvailable {
-                    transactionList
+                    LoadingListView(result: store.transactions(),
+                                    noDataMessage: "emeal.no-transactions",
+                                    retryAction: { self.store.loadTransactions() },
+                                    listView: { transactions in
+                                        List(transactions, id: \.id) { transaction in
+                                            VStack(alignment: .leading) {
+                                                Text(Formatter.string(for: transaction.date, dateStyle: .medium, timeStyle: .short))
+                                                    .font(.caption)
+                                                    .foregroundColor(.gray)
+                                                HStack {
+                                                    Text(transaction.location)
+                                                    Spacer()
+                                                    Text("\(transaction.amount, specifier: "%.2f")€")
+                                                }
+                                                ForEach(transaction.positions, id: \.id) { pos in
+                                                    HStack {
+                                                        Text(pos.name)
+                                                        Spacer()
+                                                        Text("\(pos.price, specifier: "%.2f")€")
+                                                    }
+                                                    .font(.caption)
+                                                }
+                                            }
+                                        }
+                                    }
+                    )
                 } else {
                     autoloadHint
                 }
@@ -75,9 +77,6 @@ struct EmealView: View {
                 label: { Image(systemName: "info.circle").imageScale(.large) }))
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear(perform: { () -> Void in
-            self.service.getTransactions()
-        })
     }
 }
 
@@ -86,7 +85,7 @@ struct EmealView_Previews: PreviewProvider {
         let settings = Settings()
 
         return EmealView()
-            .environmentObject(OpenMensaService(settings: settings))
+            .environmentObject(OMStore(settings: settings))
             .environmentObject(settings)
     }
 }

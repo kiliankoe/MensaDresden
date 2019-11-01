@@ -9,6 +9,11 @@
 
 // Canteen List
 "canteens.nav" = "Mensen";
+"canteens.no-data" = "Keine Mensen beim Studentenwerk gefunden 🤔";
+
+// Meal List
+"meals.no-meals-%@" = "%@ gibt's leider nichts zu essen.";
+"meals.weekend" = "Schönes Wochenende 🏖";
 
 // Meal Detail
 "meal.rate-title" = "Angebot bewerten";
@@ -24,6 +29,7 @@
 "emeal.scan-button" = "Emeal scannen";
 "emeal.autoload-hint" = "Du nutzt Autoload? Trage deine Zugangsdaten in den App Einstellungen ein damit all deine letzten Transaktionen hier angezeigt werden.";
 "emeal.autoload-information" = "Informationen zu Autoload";
+"emeal.no-transactions" = "Keine Transaktionen in den letzten 90 Tagen.";
 "emeal.info" = "Falls dein Gerät NFC-Karten unterstützt, kannst du hier deine Emeal Karte einscannen. Auf der Karte gespeichert sind dein aktuelles Guthaben und der Betrag der letzten Transaktion.\n\nZusätzlich ist es für Autoload Nutzer möglich, über das Kartenservice Portal des Studentenwerks auf die Transaktionen der letzten 90 Tage zuzugreifen, die diese App auch für dich hier anzeigen kann. Aus technischen Gründen beim Studentenwerk sind diese Transaktionen zeitlich etwas verzögert und nicht direkt nach einer Zahlung auf dem aktuellsten Stand.\nLeider ist es nicht möglich aus den Daten des Kartenservices allein dein aktuelles Guthaben anzuzeigen, dies geht aktuell nur über die Emeal Karte selbst.\n\nIn Zukunft wird die App diese beiden Datenquellen vereinen und bei bestehendem Autoload Login mit einmaliger Angabe oder Scan von deinem Guthaben dieses automatisch aufgrund der vergangenen Transaktionen berechnen.";
 
 // Settings
@@ -54,6 +60,9 @@
 "info.image-rights" = "Bildrechte: ";
 "info.icon" = "Icon: ";
 "info.nounproject" = "Eddy Wong von The Noun Project";
+
+// Loading List
+"list.try-again" = "Versuche es noch einmal.";
 
 // Meal Information
 "vegan" = "vegan";

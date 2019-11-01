@@ -12,12 +12,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let settings = Settings()
             let deviceOrientation = DeviceOrientation(isLandscape: window.windowScene?.interfaceOrientation.isLandscape ?? false)
 
-            let service = OpenMensaService(settings: settings)
+            let store = OMStore(settings: settings)
             
             let appView = AppView()
                 .environmentObject(settings)
                 .environmentObject(deviceOrientation)
-                .environmentObject(service)
+                .environmentObject(store)
 
             if settings.canteenSorting == Settings.CanteenSorting.distance.rawValue {
                 UserLocation.shared.start()
