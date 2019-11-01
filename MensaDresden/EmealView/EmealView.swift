@@ -72,9 +72,6 @@ struct EmealView: View {
                 Spacer()
             }
             .navigationBarTitle("Emeal")
-            .navigationBarItems(trailing: NavigationLink(
-                destination: ScrollView { Text("emeal.info").padding() },
-                label: { Image(systemName: "info.circle").imageScale(.large) }))
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

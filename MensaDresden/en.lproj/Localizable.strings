@@ -30,7 +30,6 @@
 "emeal.autoload-hint" = "Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here.";
 "emeal.autoload-information" = "Autoload Information";
 "emeal.no-transactions" = "No transactions in the last 90 days.";
-"emeal.info" = "If your device supports NFC cards, you can scan your Emeal card here. The card stores information on your current balance and the latest transaction amount.\n\nAdditionally users of the Autoload feature can see the latest 90 days of transactions in the Cardservice Portal from the Studentenwerk, which this app can also show here. For technical reasons on the Studentenwerk side these are delayed a bit and not shown instantly after paying.\nUnfortunately it's not possible to access your current balance through this data, this is only possible directly via the card.\n\nIn the future the app will combine both of these data sources (if available) and use a single data point of your balance to calculate it henceforth based on your transaction history.";
 
 // Settings
 "settings.nav" = "Settings";
