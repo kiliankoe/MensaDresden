@@ -26,9 +26,10 @@ struct MealListView: View {
 
             MealList(canteen: canteen, selectedDate: selectedDate)
         }
+        .navigationBarTitle(canteen.name)
         .navigationBarItems(trailing:
             HStack {
-                BarButtonNavigationLink(destination: DatePickerView(canteen: canteen), image: Image(systemName: "calendar"))
+                BarButtonButton(view: Image(systemName: "calendar"), action: { self.showingDatePickerView.toggle() })
                     .padding(.trailing, 10)
                 BarButtonButton(
                     view: settings.favoriteCanteens.contains(canteen.name) ? AnyView(Image(systemName: "heart.fill").foregroundColor(.red)) : AnyView(Image(systemName: "heart")),
@@ -38,6 +39,15 @@ struct MealListView: View {
                 )
             }
         )
+        .sheet(isPresented: $showingDatePickerView) {
+            NavigationView {
+                DatePickerView(canteen: self.canteen)
+            }
+            // Is this a bug that this is necessary? Shouldn't the environment be global?
+            .environmentObject(self.store)
+            .environmentObject(self.settings)
+            .accentColor(.green)
+        }
     }
 }
 
