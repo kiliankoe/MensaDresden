@@ -9,7 +9,7 @@ enum Formatter {
 
     static private func relativeDateTimeFormatter(dateTimeStyle: RelativeDateTimeFormatter.DateTimeStyle? = nil,
                                                   unitsStyle: RelativeDateTimeFormatter.UnitsStyle? = nil,
-                                                  formattingContext: RelativeDateTimeFormatter.Context? = nil,
+                                                  formattingContext: RelativeDateTimeFormatter.Context?,
                                                   locale: Locale) -> RelativeDateTimeFormatter {
         let formatter = RelativeDateTimeFormatter()
         if let dateTimeStyle = dateTimeStyle {
@@ -25,13 +25,13 @@ enum Formatter {
         return formatter
     }
 
-    static func stringForRelativeDate(offsetFromTodayBy offset: Int, locale: Locale = .current) -> String {
-        relativeDateTimeFormatter(dateTimeStyle: .named, unitsStyle: .full, formattingContext: .beginningOfSentence, locale: locale)
+    static func stringForRelativeDate(offsetFromTodayBy offset: Int, context: RelativeDateTimeFormatter.Context? = nil, locale: Locale = .current) -> String {
+        relativeDateTimeFormatter(dateTimeStyle: .named, unitsStyle: .full, formattingContext: context, locale: locale)
             .localizedString(from: DateComponents(day: offset))
     }
 
-    static func string(forRelativeDate relativeDate: Date, to otherDate: Date, locale: Locale = .current) -> String {
-        relativeDateTimeFormatter(dateTimeStyle: .named, unitsStyle: .full, formattingContext: .beginningOfSentence, locale: locale)
+    static func string(forRelativeDate relativeDate: Date, to otherDate: Date, context: RelativeDateTimeFormatter.Context? = nil, locale: Locale = .current) -> String {
+        relativeDateTimeFormatter(dateTimeStyle: .named, unitsStyle: .full, formattingContext: context, locale: locale)
             .localizedString(for: relativeDate, relativeTo: otherDate)
     }
 

@@ -13,8 +13,8 @@ struct MealListView: View {
     var body: some View {
         VStack {
             Picker("", selection: $selectedDate) {
-                Text(Formatter.stringForRelativeDate(offsetFromTodayBy: 0)).tag(Date.today)
-                Text(Formatter.stringForRelativeDate(offsetFromTodayBy: 1)).tag(Date.tomorrow)
+                Text(Formatter.stringForRelativeDate(offsetFromTodayBy: 0, context: .beginningOfSentence)).tag(Date.today)
+                Text(Formatter.stringForRelativeDate(offsetFromTodayBy: 1, context: .beginningOfSentence)).tag(Date.tomorrow)
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(.leading, 20)
