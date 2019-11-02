@@ -12,7 +12,9 @@
 "canteens.no-data" = "Keine Mensen beim Studentenwerk gefunden 🤔";
 
 // Meal List
-"meals.no-meals-%@" = "%@ gibt's leider nichts zu essen.";
+"meals.no-meals-today" = "Heute gibt's leider nichts zu essen.";
+"meals.no-meals-tomorrow" = "Morgen gibt's leider nichts zu essen.";
+"meals.no-meals-other" = "An diesem Tag gibt's leider nichts zu essen.";
 "meals.weekend" = "Schönes Wochenende 🏖";
 
 // Meal Detail
