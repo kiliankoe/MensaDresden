@@ -8,11 +8,7 @@ struct MealListView: View {
 
     @State var showingDatePickerView = false
 
-    @State var selectedDate: Date = .today {
-        didSet {
-            store.loadMeals(for: canteen.id, on: selectedDate)
-        }
-    }
+    @State var selectedDate: Date = .today
 
     var body: some View {
         VStack {
