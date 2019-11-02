@@ -44,6 +44,11 @@ struct MealListView: View {
             .environmentObject(self.settings)
             .accentColor(.green)
         }
+        .onAppear {
+            if self.selectedDate < Date.today {
+                self.selectedDate = .today
+            }
+        }
     }
 }
 
