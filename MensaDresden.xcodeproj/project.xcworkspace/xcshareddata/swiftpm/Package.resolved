@@ -5,9 +5,9 @@
         "package": "EmealKit",
         "repositoryURL": "https://github.com/kiliankoe/EmealKit",
         "state": {
-          "branch": "master",
-          "revision": "1457c8e0a879d6eccbb458cdb74583f729a901e2",
-          "version": null
+          "branch": null,
+          "revision": "e4f392051ef81dff2db617bf4f16cd720d89ff18",
+          "version": "0.4.0"
         }
       },
       {
@@ -23,9 +23,9 @@
         "package": "KeychainItem",
         "repositoryURL": "https://github.com/objcio/keychain-item",
         "state": {
-          "branch": "master",
+          "branch": null,
           "revision": "563fc973ee4c1fcdea646630f847a241025da3c4",
-          "version": null
+          "version": "0.1.0"
         }
       },
       {

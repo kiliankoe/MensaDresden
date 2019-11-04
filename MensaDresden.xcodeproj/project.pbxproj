@@ -780,16 +780,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/objcio/keychain-item";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
 			};
 		};
 		396FC3DD23578793007B97F3 /* XCRemoteSwiftPackageReference "EmealKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kiliankoe/EmealKit";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
 			};
 		};
 		39CD5B0F234E590300435E71 /* XCRemoteSwiftPackageReference "HTMLString" */ = {
