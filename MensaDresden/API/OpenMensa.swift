@@ -21,8 +21,10 @@ class OMStore: ObservableObject {
         }
     }
 
+    var cancellable: AnyCancellable?
+
     func loadCanteens() {
-        _ = URLSession.shared
+        cancellable = URLSession.shared
             .dataTaskPublisher(for: URL(string: "canteens", relativeTo: Self.baseURL)!)
             .map { $0.data }
             .decode(type: [Canteen].self, decoder: JSONDecoder())
@@ -82,7 +84,7 @@ class OMStore: ObservableObject {
         var request = URLRequest(url: URL(string: "canteens/\(canteen)/days/\(dateString)/meals", relativeTo: Self.baseURL)!)
         request.addValue(Locale.preferredLanguages.joined(separator: ", "), forHTTPHeaderField: "Accept-Language")
 
-        _ = URLSession.shared
+        cancellable = URLSession.shared
             .dataTaskPublisher(for: request)
             .map { $0.data }
             .decode(type: [Meal].self, decoder: JSONDecoder())
