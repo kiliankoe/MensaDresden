@@ -10,8 +10,7 @@ jobs:
     - name: Prerequisites
       run: |
         brew install swiftlint
-        gem install cocoapods xcpretty
-        pod install
+        gem install xcpretty
     - name: Build
       run: |
         set -o pipefail
