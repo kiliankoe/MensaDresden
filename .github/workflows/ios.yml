@@ -1,0 +1,21 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build_and_test:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Prerequisites
+      run: |
+        brew install swiftlint
+        gem install xcpretty
+    - name: Build
+      run: |
+        set -o pipefail
+        xcodebuild -project MensaDresden.xcodeproj -scheme MensaDresden -destination 'platform=iOS Simulator,name=iPhone 11' build | xcpretty --color
+    - name: Test
+      run: |
+        set -o pipefail
+        xcodebuild -project MensaDresden.xcodeproj -scheme MensaDresden -destination 'platform=iOS Simulator,name=iPhone 11' test | xcpretty --color --test
