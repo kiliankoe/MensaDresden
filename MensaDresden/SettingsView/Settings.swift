@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 import Combine
 import KeychainItem
+import EmealKit
 
 class Settings: ObservableObject {
     var objectWillChange = ObservableObjectPublisher()

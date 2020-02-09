@@ -6,13 +6,13 @@
         "repositoryURL": "https://github.com/kiliankoe/EmealKit",
         "state": {
           "branch": null,
-          "revision": "e4f392051ef81dff2db617bf4f16cd720d89ff18",
-          "version": "0.4.0"
+          "revision": "317e692c5aa5d71a9c7c8f176698a6833c495ed9",
+          "version": "0.6.2"
         }
       },
       {
         "package": "HTMLString",
-        "repositoryURL": "https://github.com/alexaubry/HTMLString",
+        "repositoryURL": "https://github.com/alexaubry/HTMLString.git",
         "state": {
           "branch": null,
           "revision": "373048cc4084dd7481c86e3bee41612eff93b14d",
@@ -30,7 +30,7 @@
       },
       {
         "package": "Regex",
-        "repositoryURL": "https://github.com/sharplet/Regex",
+        "repositoryURL": "https://github.com/sharplet/Regex.git",
         "state": {
           "branch": null,
           "revision": "a819aed0e9555268c29a62500fe6fb781ae7f57d",

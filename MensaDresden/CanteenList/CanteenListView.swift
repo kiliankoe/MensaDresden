@@ -1,4 +1,5 @@
 import SwiftUI
+import EmealKit
 
 struct CanteenListView: View {
     @EnvironmentObject var store: OMStore

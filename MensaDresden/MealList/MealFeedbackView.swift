@@ -1,4 +1,5 @@
 import SwiftUI
+import EmealKit
 
 struct MealFeedbackView: View {
     var meal: Meal

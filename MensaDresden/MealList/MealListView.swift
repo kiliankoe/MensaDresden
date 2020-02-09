@@ -1,4 +1,5 @@
 import SwiftUI
+import EmealKit
 
 struct MealListView: View {
     @State var canteen: Canteen

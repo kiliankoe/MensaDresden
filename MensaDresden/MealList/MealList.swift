@@ -1,4 +1,5 @@
 import SwiftUI
+import EmealKit
 
 struct MealList: View {
     @EnvironmentObject var store: OMStore

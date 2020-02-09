@@ -24,16 +24,9 @@ class OMStore: ObservableObject {
     var cancellable: AnyCancellable?
 
     func loadCanteens() {
-        cancellable = URLSession.shared
-            .dataTaskPublisher(for: URL(string: "canteens", relativeTo: Self.baseURL)!)
-            .map { $0.data }
-            .decode(type: [Canteen].self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
+        cancellable = EmealKit.Canteen.allPublisher()
             .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
+                if case let .failure(error) = completion {
                     self.canteens = .failure(error)
                 }
             }, receiveValue: { canteens in
@@ -84,17 +77,10 @@ class OMStore: ObservableObject {
         var request = URLRequest(url: URL(string: "canteens/\(canteen)/days/\(dateString)/meals", relativeTo: Self.baseURL)!)
         request.addValue(Locale.preferredLanguages.joined(separator: ", "), forHTTPHeaderField: "Accept-Language")
 
-        cancellable = URLSession.shared
-            .dataTaskPublisher(for: request)
-            .map { $0.data }
-            .decode(type: [Meal].self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
+        cancellable = Meal.publisherFor(canteen: canteen, on: date)
             .sink(receiveCompletion: { completion in
-                switch completion {
-                case .failure(let error):
+                if case let .failure(error) = completion {
                     self.save(result: .failure(error), for: canteen, on: date)
-                case .finished:
-                    break
                 }
             }, receiveValue: { meals in
                 if meals.isEmpty {

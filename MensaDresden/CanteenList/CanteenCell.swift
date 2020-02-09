@@ -1,5 +1,6 @@
 import SwiftUI
 import MapKit
+import EmealKit
 
 struct CanteenCell: View {
     var canteen: Canteen

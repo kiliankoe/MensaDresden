@@ -1,5 +1,6 @@
 import SwiftUI
 import RemoteImage
+import EmealKit
 
 struct MealDetailView: View {
     var meal: Meal

@@ -20,20 +20,18 @@
 		39281C83234282C100E4EFB5 /* MealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C82234282C100E4EFB5 /* MealImage.swift */; };
 		39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C872342910600E4EFB5 /* CanteenCell.swift */; };
 		39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8A234292CD00E4EFB5 /* OpenMensa.swift */; };
-		39281C8D234297E000E4EFB5 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal.swift */; };
-		39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8E2342985900E4EFB5 /* Canteen.swift */; };
+		39281C8D234297E000E4EFB5 /* Meal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal+Extensions.swift */; };
+		39281C8F2342985900E4EFB5 /* Canteen+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8E2342985900E4EFB5 /* Canteen+Example.swift */; };
 		39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 39281CD12343CFB400E4EFB5 /* RemoteImage */; };
 		394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D002343D0C9005F076C /* MealDetailView.swift */; };
 		394D9D032343EFD4005F076C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D022343EFD4005F076C /* InfoView.swift */; };
-		394D9D0923454FC0005F076C /* Regex in Frameworks */ = {isa = PBXBuildFile; productRef = 394D9D0823454FC0005F076C /* Regex */; };
-		394D9D1923455051005F076C /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D1823455051005F076C /* APITests.swift */; };
-		394D9D1A234550E6005F076C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal.swift */; };
+		394D9D1A234550E6005F076C /* Meal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal+Extensions.swift */; };
 		394D9D1F234560B4005F076C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D1E234560B4005F076C /* SettingsView.swift */; };
+		3965DDEA23F0244800C9C75C /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3965DDE923F0244800C9C75C /* EmealKit */; };
 		396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C4AF023480E6E009A9F52 /* EmealView.swift */; };
 		396FC3B0235378C1007B97F3 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3AF235378C1007B97F3 /* AppView.swift */; };
 		396FC3B523539145007B97F3 /* EmealCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3B423539145007B97F3 /* EmealCardView.swift */; };
 		396FC3BC2353BF60007B97F3 /* KeychainItem in Frameworks */ = {isa = PBXBuildFile; productRef = 396FC3BB2353BF60007B97F3 /* KeychainItem */; };
-		396FC3DF23578793007B97F3 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = 396FC3DE23578793007B97F3 /* EmealKit */; };
 		396FC3E22357A1A9007B97F3 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3E12357A1A9007B97F3 /* Transaction.swift */; };
 		396FC3E42357B257007B97F3 /* FavoriteCanteensSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3E32357B257007B97F3 /* FavoriteCanteensSetting.swift */; };
 		396FC3E82357B6E4007B97F3 /* IngredientsAllergensSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3E72357B6E4007B97F3 /* IngredientsAllergensSetting.swift */; };
@@ -52,7 +50,6 @@
 		39A141A02348F49700FEE789 /* Emeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1419F2348F49700FEE789 /* Emeal.swift */; };
 		39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */; };
 		39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB72234BB0350081B9AE /* HostingController.swift */; };
-		39CD5B11234E590300435E71 /* HTMLString in Frameworks */ = {isa = PBXBuildFile; productRef = 39CD5B10234E590300435E71 /* HTMLString */; };
 		39CD5B13234E60D100435E71 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B12234E60D100435E71 /* ShareSheetView.swift */; };
 		39CD5B19234F778400435E71 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B18234F778400435E71 /* WebView.swift */; };
 		39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */; };
@@ -88,13 +85,12 @@
 		39281C82234282C100E4EFB5 /* MealImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealImage.swift; sourceTree = "<group>"; };
 		39281C872342910600E4EFB5 /* CanteenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanteenCell.swift; sourceTree = "<group>"; };
 		39281C8A234292CD00E4EFB5 /* OpenMensa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMensa.swift; sourceTree = "<group>"; };
-		39281C8C234297E000E4EFB5 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		39281C8E2342985900E4EFB5 /* Canteen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canteen.swift; sourceTree = "<group>"; };
+		39281C8C234297E000E4EFB5 /* Meal+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+Extensions.swift"; sourceTree = "<group>"; };
+		39281C8E2342985900E4EFB5 /* Canteen+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Canteen+Example.swift"; sourceTree = "<group>"; };
 		394D9D002343D0C9005F076C /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		394D9D022343EFD4005F076C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		394D9D0E23455039005F076C /* MensaDresdenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MensaDresdenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		394D9D1223455039005F076C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		394D9D1823455051005F076C /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		394D9D1E234560B4005F076C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		396C4AF023480E6E009A9F52 /* EmealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmealView.swift; sourceTree = "<group>"; };
 		396FC3AF235378C1007B97F3 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -132,11 +128,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				394D9D0923454FC0005F076C /* Regex in Frameworks */,
-				39CD5B11234E590300435E71 /* HTMLString in Frameworks */,
+				3965DDEA23F0244800C9C75C /* EmealKit in Frameworks */,
 				39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */,
 				396FC3BC2353BF60007B97F3 /* KeychainItem in Frameworks */,
-				396FC3DF23578793007B97F3 /* EmealKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,8 +225,8 @@
 			children = (
 				39281C8A234292CD00E4EFB5 /* OpenMensa.swift */,
 				398B34E1236CB95900C10D9B /* LoadingResult.swift */,
-				39281C8C234297E000E4EFB5 /* Meal.swift */,
-				39281C8E2342985900E4EFB5 /* Canteen.swift */,
+				39281C8C234297E000E4EFB5 /* Meal+Extensions.swift */,
+				39281C8E2342985900E4EFB5 /* Canteen+Example.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -259,7 +253,6 @@
 		394D9D0F23455039005F076C /* MensaDresdenTests */ = {
 			isa = PBXGroup;
 			children = (
-				394D9D1823455051005F076C /* APITests.swift */,
 				394D9D1223455039005F076C /* Info.plist */,
 			);
 			path = MensaDresdenTests;
@@ -329,10 +322,8 @@
 			name = MensaDresden;
 			packageProductDependencies = (
 				39281CD12343CFB400E4EFB5 /* RemoteImage */,
-				394D9D0823454FC0005F076C /* Regex */,
-				39CD5B10234E590300435E71 /* HTMLString */,
 				396FC3BB2353BF60007B97F3 /* KeychainItem */,
-				396FC3DE23578793007B97F3 /* EmealKit */,
+				3965DDE923F0244800C9C75C /* EmealKit */,
 			);
 			productName = MensaDresden;
 			productReference = 39281C5A234241B900E4EFB5 /* Mensa Dresden.app */;
@@ -387,10 +378,8 @@
 			mainGroup = 39281C51234241B900E4EFB5;
 			packageReferences = (
 				39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */,
-				394D9D0723454FC0005F076C /* XCRemoteSwiftPackageReference "Regex" */,
-				39CD5B0F234E590300435E71 /* XCRemoteSwiftPackageReference "HTMLString" */,
 				396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */,
-				396FC3DD23578793007B97F3 /* XCRemoteSwiftPackageReference "EmealKit" */,
+				3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */,
 			);
 			productRefGroup = 39281C5B234241B900E4EFB5 /* Products */;
 			projectDirPath = "";
@@ -438,7 +427,7 @@
 				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,
 				39E215812358E29D00F5EBE9 /* UserLocation.swift in Sources */,
 				39A0C94623623B9E0029FA35 /* Date.swift in Sources */,
-				39281C8F2342985900E4EFB5 /* Canteen.swift in Sources */,
+				39281C8F2342985900E4EFB5 /* Canteen+Example.swift in Sources */,
 				39A1418F2348210000FEE789 /* BarButton.swift in Sources */,
 				39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */,
 				39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */,
@@ -446,7 +435,7 @@
 				39A141912348813D00FEE789 /* Settings.swift in Sources */,
 				398B34E8236CDE7D00C10D9B /* LoadingListView.swift in Sources */,
 				396FC3E42357B257007B97F3 /* FavoriteCanteensSetting.swift in Sources */,
-				39281C8D234297E000E4EFB5 /* Meal.swift in Sources */,
+				39281C8D234297E000E4EFB5 /* Meal+Extensions.swift in Sources */,
 				398B34E2236CB95900C10D9B /* LoadingResult.swift in Sources */,
 				39CD5B19234F778400435E71 /* WebView.swift in Sources */,
 				39A141932348EBC000FEE789 /* BlacklistBinding.swift in Sources */,
@@ -476,8 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				394D9D1A234550E6005F076C /* Meal.swift in Sources */,
-				394D9D1923455051005F076C /* APITests.swift in Sources */,
+				394D9D1A234550E6005F076C /* Meal+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,12 +756,12 @@
 				kind = branch;
 			};
 		};
-		394D9D0723454FC0005F076C /* XCRemoteSwiftPackageReference "Regex" */ = {
+		3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sharplet/Regex";
+			repositoryURL = "https://github.com/kiliankoe/EmealKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.0;
+				minimumVersion = 0.6.2;
 			};
 		};
 		396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */ = {
@@ -784,22 +772,6 @@
 				minimumVersion = 0.1.0;
 			};
 		};
-		396FC3DD23578793007B97F3 /* XCRemoteSwiftPackageReference "EmealKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kiliankoe/EmealKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.0;
-			};
-		};
-		39CD5B0F234E590300435E71 /* XCRemoteSwiftPackageReference "HTMLString" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/alexaubry/HTMLString";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -808,25 +780,15 @@
 			package = 39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */;
 			productName = RemoteImage;
 		};
-		394D9D0823454FC0005F076C /* Regex */ = {
+		3965DDE923F0244800C9C75C /* EmealKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 394D9D0723454FC0005F076C /* XCRemoteSwiftPackageReference "Regex" */;
-			productName = Regex;
+			package = 3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */;
+			productName = EmealKit;
 		};
 		396FC3BB2353BF60007B97F3 /* KeychainItem */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */;
 			productName = KeychainItem;
-		};
-		396FC3DE23578793007B97F3 /* EmealKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 396FC3DD23578793007B97F3 /* XCRemoteSwiftPackageReference "EmealKit" */;
-			productName = EmealKit;
-		};
-		39CD5B10234E590300435E71 /* HTMLString */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 39CD5B0F234E590300435E71 /* XCRemoteSwiftPackageReference "HTMLString" */;
-			productName = HTMLString;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
