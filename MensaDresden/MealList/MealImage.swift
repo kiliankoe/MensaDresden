@@ -21,18 +21,21 @@ struct MealImage: View {
             return AnyView(placeholderImage)
         }
 
-        return AnyView(RemoteImage(url: imageURL, errorView: { _ in
-            self.placeholderImage
-        }, imageView: { image in
-            image
-                .resizable()
-                .aspectRatio(contentMode: self.contentMode)
-                .frame(width: self.width, height: self.height)
-                .clipShape(RoundedRectangle(cornerRadius: self.roundedCorners ? 8 : 0))
-        }, loadingView: {
-            self.placeholderImage
-                .opacity(0.5)
-        }))
+        return AnyView(
+            RemoteImage(type: .url(imageURL),
+                        errorView: { _ in self.placeholderImage },
+                        imageView: { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: self.contentMode)
+                                .frame(width: self.width, height: self.height)
+                                .clipShape(RoundedRectangle(cornerRadius: self.roundedCorners ? 8 : 0))
+                        },
+                        loadingView: {
+                            self.placeholderImage
+                                .opacity(0.5)
+                        })
+        )
     }
 }
 
