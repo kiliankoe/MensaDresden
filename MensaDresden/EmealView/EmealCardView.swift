@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct EmealCardView: View {
-    var amount: Double
-    var lastTransaction: Double
-    var lastScan: Date?
+    @Binding var amount: Double
+    @Binding var lastTransaction: Double
+    @Binding var lastScan: Date?
 
     var body: some View {
         ZStack(alignment: .leading) {
@@ -112,11 +112,16 @@ extension Color {
 struct EmealCardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            EmealCardView(amount: 13.37, lastTransaction: 3.5, lastScan: Date())
+            EmealCardView(amount: .constant(13.37),
+                          lastTransaction: .constant(3.5),
+                          lastScan: .constant(Date()))
                 .previewLayout(.sizeThatFits)
-            EmealCardView(amount: 13.37, lastTransaction: 3.5, lastScan: nil)
+            EmealCardView(amount: .constant(13.37),
+                          lastTransaction: .constant(3.5),
+                          lastScan: .constant(nil))
             .previewLayout(.sizeThatFits)
-            EmealCardView2(amount: 13.37, lastTransaction: 3.5)
+            EmealCardView2(amount: 13.37,
+                           lastTransaction: 3.5)
                 .previewLayout(.sizeThatFits)
 //            EmealCardView(amount: 13.37, lastTransaction: 3.5, lastScan: Date())
 //                .previewDevice("iPhone SE")

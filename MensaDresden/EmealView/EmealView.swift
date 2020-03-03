@@ -6,7 +6,7 @@ struct EmealView: View {
     @EnvironmentObject var store: OMStore
     @EnvironmentObject var settings: Settings
 
-    @ObservedObject var emeal = Emeal()
+    @ObservedObject var emeal = ObservableEmeal()
 
     var autoloadHint: some View {
         VStack(alignment: .leading) {
@@ -27,13 +27,15 @@ struct EmealView: View {
         NavigationView {
             VStack {
                 if NFCReaderSession.readingAvailable {
-                    EmealCardView(amount: emeal.currentBalance, lastTransaction: emeal.lastTransaction, lastScan: emeal.lastScan)
+                    EmealCardView(amount: $emeal.currentBalance,
+                                  lastTransaction: $emeal.lastTransaction,
+                                  lastScan: $emeal.lastScanDate)
                         .padding(.horizontal)
 
                     LargeButton(content: {
                         Text("emeal.scan-button")
                     }) {
-                        self.emeal.readCard()
+                        self.emeal.beginNFCSession()
                     }
                     .padding(.horizontal)
                 }
