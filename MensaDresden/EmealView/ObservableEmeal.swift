@@ -4,40 +4,20 @@ import EmealKit
 import StoreKit
 
 class ObservableEmeal: ObservableObject, EmealDelegate {
-    var currentBalance: Double {
-        get {
-            UserDefaults.standard.double(forKey: "emeal.currentbalance")
-        }
-        set {
-            UserDefaults.standard.setValue(newValue, forKey: "emeal.currentbalance")
-            self.objectWillChange.send()
-        }
-    }
+    @UserDefault("emeal.currentbalance", defaultValue: 0)
+    var currentBalance: Double
 
-    var lastTransaction: Double {
-        get {
-            UserDefaults.standard.double(forKey: "emeal.lasttransaction")
-        }
-        set {
-            UserDefaults.standard.setValue(newValue, forKey: "emeal.lasttransaction")
-            self.objectWillChange.send()
-        }
-    }
+    @UserDefault("emeal.lasttransaction", defaultValue: 0)
+    var lastTransaction: Double
 
-    var lastScanDate: Date? {
-        get {
-            UserDefaults.standard.value(forKey: "emeal.lastscan") as? Date
-        }
-        set {
-            UserDefaults.standard.setValue(newValue, forKey: "emeal.lastscan")
-            self.objectWillChange.send()
-        }
-    }
+    @UserDefault("emeal.lastscan", defaultValue: nil)
+    var lastScanDate: Date?
 
     public func readData(currentBalance: Double, lastTransaction: Double) {
         self.currentBalance = currentBalance
         self.lastTransaction = lastTransaction
         self.lastScanDate = Date()
+        self.objectWillChange.send()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             SKStoreReviewController.requestReview()
