@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/sharplet/Regex.git",
         "state": {
           "branch": null,
-          "revision": "a819aed0e9555268c29a62500fe6fb781ae7f57d",
-          "version": "2.1.0"
+          "revision": "76c2b73d4281d77fc3118391877efd1bf972f515",
+          "version": "2.1.1"
         }
       },
       {
@@ -42,8 +42,17 @@
         "repositoryURL": "https://github.com/crelies/RemoteImage",
         "state": {
           "branch": "master",
-          "revision": "c6991c2257afe41d20cc351590117e604de7c0be",
+          "revision": "51ed9bf9b6cfee239b300b1bd5141bbfabb8fb91",
           "version": null
+        }
+      },
+      {
+        "package": "ViewInspector",
+        "repositoryURL": "https://github.com/nalexn/ViewInspector.git",
+        "state": {
+          "branch": null,
+          "revision": "ec943ed718cd293b95f17a2b81e8917d6ed70752",
+          "version": "0.3.8"
         }
       }
     ]
