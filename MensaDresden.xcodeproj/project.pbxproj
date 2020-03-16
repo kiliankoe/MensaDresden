@@ -47,7 +47,8 @@
 		39A141912348813D00FEE789 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141902348813D00FEE789 /* Settings.swift */; };
 		39A141932348EBC000FEE789 /* BlacklistBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141922348EBC000FEE789 /* BlacklistBinding.swift */; };
 		39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141942348EBEE00FEE789 /* UserDefault.swift */; };
-		39A141A02348F49700FEE789 /* ObservableEmeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A1419F2348F49700FEE789 /* ObservableEmeal.swift */; };
+		39A79148241FC50F0009CF03 /* NewsfeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A79147241FC50F0009CF03 /* NewsfeedView.swift */; };
+		39A7914A241FC96B0009CF03 /* ObservableEmeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A79149241FC96B0009CF03 /* ObservableEmeal.swift */; };
 		39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */; };
 		39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB72234BB0350081B9AE /* HostingController.swift */; };
 		39CD5B13234E60D100435E71 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B12234E60D100435E71 /* ShareSheetView.swift */; };
@@ -111,7 +112,8 @@
 		39A141922348EBC000FEE789 /* BlacklistBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklistBinding.swift; sourceTree = "<group>"; };
 		39A141942348EBEE00FEE789 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		39A141972348EF1D00FEE789 /* Mensa Dresden.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mensa Dresden.entitlements"; sourceTree = "<group>"; };
-		39A1419F2348F49700FEE789 /* ObservableEmeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableEmeal.swift; sourceTree = "<group>"; };
+		39A79147241FC50F0009CF03 /* NewsfeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedView.swift; sourceTree = "<group>"; };
+		39A79149241FC96B0009CF03 /* ObservableEmeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableEmeal.swift; sourceTree = "<group>"; };
 		39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOrientation.swift; sourceTree = "<group>"; };
 		39BEEB72234BB0350081B9AE /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		39CD5B12234E60D100435E71 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				394D9D0423454E77005F076C /* SettingsView */,
 				39A141962348EEEE00FEE789 /* EmealView */,
 				39281C7D23427F8400E4EFB5 /* MealList */,
+				39A79146241FC4FC0009CF03 /* Newsfeed */,
 				39281C63234241BC00E4EFB5 /* Assets.xcassets */,
 				39281C68234241BC00E4EFB5 /* LaunchScreen.storyboard */,
 				39281C6B234241BC00E4EFB5 /* Info.plist */,
@@ -299,9 +302,17 @@
 			children = (
 				396C4AF023480E6E009A9F52 /* EmealView.swift */,
 				396FC3B423539145007B97F3 /* EmealCardView.swift */,
-				39A1419F2348F49700FEE789 /* ObservableEmeal.swift */,
+				39A79149241FC96B0009CF03 /* ObservableEmeal.swift */,
 			);
 			path = EmealView;
+			sourceTree = "<group>";
+		};
+		39A79146241FC4FC0009CF03 /* Newsfeed */ = {
+			isa = PBXGroup;
+			children = (
+				39A79147241FC50F0009CF03 /* NewsfeedView.swift */,
+			);
+			path = Newsfeed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,8 +432,8 @@
 				39FC09D82361AFEE008D8AB0 /* Formatter.swift in Sources */,
 				39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */,
 				39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */,
-				39A141A02348F49700FEE789 /* ObservableEmeal.swift in Sources */,
 				398B34E0236B343F00C10D9B /* ActivityIndicator.swift in Sources */,
+				39A79148241FC50F0009CF03 /* NewsfeedView.swift in Sources */,
 				39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */,
 				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,
 				39E215812358E29D00F5EBE9 /* UserLocation.swift in Sources */,
@@ -434,6 +445,7 @@
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39A141912348813D00FEE789 /* Settings.swift in Sources */,
 				398B34E8236CDE7D00C10D9B /* LoadingListView.swift in Sources */,
+				39A7914A241FC96B0009CF03 /* ObservableEmeal.swift in Sources */,
 				396FC3E42357B257007B97F3 /* FavoriteCanteensSetting.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal+Extensions.swift in Sources */,
 				398B34E2236CB95900C10D9B /* LoadingResult.swift in Sources */,
@@ -641,7 +653,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2020.1;
+				MARKETING_VERSION = 2019.6;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = YES;
@@ -666,7 +678,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2020.1;
+				MARKETING_VERSION = 2019.6;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = YES;
@@ -761,7 +773,7 @@
 			repositoryURL = "https://github.com/kiliankoe/EmealKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.7.0;
+				minimumVersion = 0.6.2;
 			};
 		};
 		396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */ = {

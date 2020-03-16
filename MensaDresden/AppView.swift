@@ -19,6 +19,14 @@ struct AppView: View {
                     }
                 }
 
+            NewsfeedView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "bell")
+                        Text("tab.newsfeed")
+                    }
+                }
+
             SettingsView()
                 .tabItem {
                     VStack {

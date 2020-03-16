@@ -1,6 +1,7 @@
 // App/Tab View
 "tab.menu" = "Menu";
 "tab.emeal" = "Emeal";
+"tab.newsfeed" = "News";
 "tab.settings" = "Settings";
 
 // iPad placeholder detail
