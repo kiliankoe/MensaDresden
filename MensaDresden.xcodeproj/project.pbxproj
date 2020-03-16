@@ -773,7 +773,7 @@
 			repositoryURL = "https://github.com/kiliankoe/EmealKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.6.2;
+				minimumVersion = 0.7.0;
 			};
 		};
 		396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */ = {
