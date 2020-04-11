@@ -5,8 +5,6 @@ import EmealKit
 class OMStore: ObservableObject {
     static let baseURL = URL(string: "https://api.studentenwerk-dresden.de/openmensa/v2/")!
 
-    var objectWillChange = ObservableObjectPublisher()
-
     var settings: Settings
 
     init(settings: Settings) {
@@ -15,11 +13,8 @@ class OMStore: ObservableObject {
     }
 
     // MARK: Canteens
-    var canteens: LoadingResult<[Canteen]> = .loading {
-        didSet {
-            objectWillChange.send()
-        }
-    }
+    @Published
+    var canteens: LoadingResult<[Canteen]> = .loading
 
     var cancellable: AnyCancellable?
 
