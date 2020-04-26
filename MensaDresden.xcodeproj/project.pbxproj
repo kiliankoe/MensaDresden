@@ -104,6 +104,12 @@
 		398B34E1236CB95900C10D9B /* LoadingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingResult.swift; sourceTree = "<group>"; };
 		398B34E3236CC6B500C10D9B /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 		398B34E7236CDE7D00C10D9B /* LoadingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingListView.swift; sourceTree = "<group>"; };
+		3997DCC92455F0C900763C07 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3997DCCA2455F0C900763C07 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3997DCCB2455F0DE00763C07 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3997DCCC2455F0DE00763C07 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3997DCCD2455F83900763C07 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3997DCCE2455F83900763C07 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		39A0C93F236227F70029FA35 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		39A0C9432362341B0029FA35 /* CustomDateMealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateMealListView.swift; sourceTree = "<group>"; };
 		39A0C94523623B9E0029FA35 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -388,6 +394,9 @@
 				en,
 				Base,
 				de,
+				"zh-Hans",
+				ru,
+				ja,
 			);
 			mainGroup = 39281C51234241B900E4EFB5;
 			packageReferences = (
@@ -509,6 +518,9 @@
 			children = (
 				39281C75234247C100E4EFB5 /* en */,
 				39281C77234247C200E4EFB5 /* de */,
+				3997DCCA2455F0C900763C07 /* zh-Hans */,
+				3997DCCC2455F0DE00763C07 /* ru */,
+				3997DCCE2455F83900763C07 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -518,6 +530,9 @@
 			children = (
 				39E215852358E37300F5EBE9 /* en */,
 				39E215872358E37700F5EBE9 /* de */,
+				3997DCC92455F0C900763C07 /* zh-Hans */,
+				3997DCCB2455F0DE00763C07 /* ru */,
+				3997DCCD2455F83900763C07 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

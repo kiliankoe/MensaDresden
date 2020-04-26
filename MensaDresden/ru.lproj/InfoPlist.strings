@@ -1,0 +1,2 @@
+NSLocationWhenInUseUsageDescription = "Mensa Dresden использует ваше местоположение для сортировки столовых от самых близких к самым дальним.";
+NFCReaderUsageDescription = "Mensa Dresden использует NFC для считывания баланса карты Emeal.";

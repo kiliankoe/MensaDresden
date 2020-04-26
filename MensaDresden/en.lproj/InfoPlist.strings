@@ -1,2 +1,2 @@
 NSLocationWhenInUseUsageDescription = "Mensa Dresden uses your location to sort canteens from closest to furthest.";
-NFCReaderUsageDescription = "MensaDresden uses NFC to read your Emeal card's balance.";
+NFCReaderUsageDescription = "Mensa Dresden uses NFC to read your Emeal card's balance.";

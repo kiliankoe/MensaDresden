@@ -1,0 +1,92 @@
+// App/Tab View
+"tab.menu" = "メニュー";
+"tab.emeal" = "Emeal";
+"tab.newsfeed" = "ニュース";
+"tab.settings" = "設定";
+
+// iPad placeholder detail
+"ipad.bon-appetit" = "🍲 食欲をそそる!";
+"ipad.swipe-hint" = "左からスワイプするとカフェテリアの一覧が開きます。";
+
+// Canteen List
+"canteens.nav" = "缶詰";
+"canteens.no-data" = "カンテーンが見つからない 🤔 笑";
+
+// Meal List
+"meals.no-meals-today" = "今日のメニューは何もありません。";
+"meals.no-meals-tomorrow" = "明日のメニューは何もありません。";
+"meals.no-meals-other" = "この日のメニューは何もありません。";
+"meals.holiday" = "今日は %@! 📅";
+"meals.weekend" = "素敵な週末を 🏖";
+
+// Meal Detail
+"meal.rate-title" = "レートミール";
+"meal.rate-description" = "この食事に関するフィードバックを直接Studentenwerkに送ってください。";
+
+// Emeal View
+"emeal.nfc-text" = "Emealカードを端末にかざす。";
+"emeal.nfc-reading-error" = "NFCタグを読み取れません。";
+"emeal.nfc-connection-error" = "接続エラーです。もう一度お試しください。";
+"emeal.balance" = "口座残高";
+"emeal.last-transaction" = "最後の取引";
+"emeal.last-scanned" = "最終スキャン";
+"emeal.scan-button" = "スキャンEmeal";
+"emeal.autoload-hint" = "オートロードを使用していますか？アプリの設定で資格情報を入力すると、最近の取引はすべてここに表示されます。";
+"emeal.autoload-information" = "オートロード情報";
+"emeal.no-transactions" = "過去90日間の取引はありません。";
+
+// Settings
+"settings.nav" = "設定";
+"settings.favorite-canteens" = "お気に入りの缶詰";
+"settings.favorite-canteens-description" = "あなたのお気に入りの食堂。ここのリストを削除して再注文するには、トグルまたは編集するには、水筒のメニュー上のハートをタップします。";
+"settings.ingredients-allergens" = "成分とアレルゲン";
+"settings.ingredients-description" = "食べたくない食材を選択してください。それらが含まれていることが知られている食事はグレー表示されます。";
+"settings.allergens-description" = "アレルゲンも同じです。食べ物に入れたくないものはチェックを外しましょう。";
+"settings.price-type" = "どの価格を払っているのか？";
+"student" = "学生";
+"employee" = "従業員";
+"settings.canteen-sorting" = "キャンティーン割引";
+"default" = "デフォルト";
+"distance" = "距離";
+"alphabetical" = "アルファベット順";
+"settings.autoload-description" = "オートロードを使用していますか？ここに資格情報を入力すると、Emealページに最新の取引がすべて表示されます。あなたの資格情報はこのデバイスにのみ安全に保存され、認証のためにStudentenwerkのサーバーにのみ送信されます。";
+"settings.autoload-cardnumber" = "カード番号";
+"settings.autoload-password" = "パスワード";
+"settings.autoload-information" = "オートロード情報";
+"settings.about" = "について";
+
+// Info View
+"info.thanks" = "Lucas Vogel、Georg Sieber、すべての GitHub 貢献者、そしてベータテスターの皆さん、素晴らしいフィードバックをありがとうございました。";
+"info.opensource" = "このアプリはGitHubのオープンソースです。";
+"info.email" = "フィードバック？私にメールを送ってください。";
+"info.translate" = "あなたの言語でアプリを使用したいですか？";
+"info.image-rights" = "画像の権利。";
+"info.icon" = "アイコンです。";
+"info.nounproject" = "名詞プロジェクトからのEddy Wong";
+
+// Loading List
+"list.try-again" = "もう一度やってみてください。";
+
+// Meal Information
+"vegan" = "ビーガン";
+"vegetarian" = "ベジタリアン";
+
+"pork" = "豚肉";
+"beef" = "牛肉";
+"alcohol" = "アルコール";
+"garlic" = "ガーリック";
+
+"gluten" = "グルテン";
+"shellfish" = "貝類";
+"eggs" = "卵";
+"fish" = "魚類";
+"peanuts" = "ピーナッツ";
+"soy" = "大豆";
+"lactose" = "乳糖";
+"nuts" = "ナッツ";
+"celery" = "セロリ";
+"mustard" = "マスタード";
+"sesame" = "ゴマ";
+"sulfite" = "亜硫酸塩";
+"lupin" = "ルパン";
+"molluscs" = "軟体動物類";

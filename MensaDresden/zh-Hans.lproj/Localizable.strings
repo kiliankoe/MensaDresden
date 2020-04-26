@@ -1,0 +1,92 @@
+// App/Tab View
+"tab.menu" = "菜单";
+"tab.emeal" = "Emeal";
+"tab.newsfeed" = "新闻中心";
+"tab.settings" = "设置";
+
+// iPad placeholder detail
+"ipad.bon-appetit" = "🍲 好胃口！";
+"ipad.swipe-hint" = "从左边扫一扫就能打开食堂列表。";
+
+// Canteen List
+"canteens.nav" = "食堂";
+"canteens.no-data" = "未发现食堂🤔。";
+
+// Meal List
+"meals.no-meals-today" = "今天的菜单上没有什么东西。";
+"meals.no-meals-tomorrow" = "明天的菜单上没有什么东西。";
+"meals.no-meals-other" = "这一天的菜单上没有什么东西。";
+"meals.holiday" = "今天是 %@！📅";
+"meals.weekend" = "祝你周末愉快 🏖。";
+
+// Meal Detail
+"meal.rate-title" = "饭菜价格";
+"meal.rate-description" = "请将有关此餐的反馈意见直接发到学生服务部。";
+
+// Emeal View
+"emeal.nfc-text" = "拿着你的Emeal卡到你的设备上。";
+"emeal.nfc-reading-error" = "无法读取NFC标签。";
+"emeal.nfc-connection-error" = "连接错误。请再次尝试。";
+"emeal.balance" = "帐户余额";
+"emeal.last-transaction" = "最后交易";
+"emeal.last-scanned" = "卡片最后一次扫描";
+"emeal.scan-button" = "扫瞄麦片";
+"emeal.autoload-hint" = "正在使用自动加载？在应用程序的设置中输入您的凭证，您最近的所有交易都会显示在这里。";
+"emeal.autoload-information" = "自动加载信息";
+"emeal.no-transactions" = "过去90天内没有交易。";
+
+// Settings
+"settings.nav" = "设置";
+"settings.favorite-canteens" = "最喜欢的食堂";
+"settings.favorite-canteens-description" = "你喜欢的食堂。轻点食堂菜单上的心，可以在这里切换或编辑列表中的食堂菜单，进行删除和重新排序。";
+"settings.ingredients-allergens" = "成分和过敏原";
+"settings.ingredients-description" = "取消选择任何您不想吃的食材。已知含有这些食材的餐点会被灰色化。";
+"settings.allergens-description" = "过敏原也是如此。取消勾选任何你不想要的食物。";
+"settings.price-type" = "你要付出哪种代价？";
+"student" = "学生";
+"employee" = "员工";
+"settings.canteen-sorting" = "食堂折扣";
+"default" = "默认值";
+"distance" = "距離";
+"alphabetical" = "按字母顺序排列";
+"settings.autoload-description" = "正在使用自动加载？请在此输入您的凭证，以显示 Emeal 页面上的所有最新交易。您的凭证仅安全地保存在此设备上，并只发送给 Studentenwerk 服务器用于自动验证。";
+"settings.autoload-cardnumber" = "卡号";
+"settings.autoload-password" = "密码";
+"settings.autoload-information" = "自动加载信息";
+"settings.about" = "关于我们";
+
+// Info View
+"info.thanks" = "非常感谢Lucas Vogel、Georg Sieber、所有GitHub的贡献者和beta测试者们的巨大反馈!";
+"info.opensource" = "这个应用是GitHub上的开源应用。";
+"info.email" = "反馈？给我发邮件。";
+"info.translate" = "你想用你的语言使用APP？";
+"info.image-rights" = "形象权。";
+"info.icon" = "图标。";
+"info.nounproject" = "名词计划中的Eddy Wong";
+
+// Loading List
+"list.try-again" = "再试一次。";
+
+// Meal Information
+"vegan" = "素食者";
+"vegetarian" = "素食者";
+
+"pork" = "猪肉";
+"beef" = "牛肉";
+"alcohol" = "酒精";
+"garlic" = "大蒜";
+
+"gluten" = "麸质";
+"shellfish" = "贝类";
+"eggs" = "鸡蛋";
+"fish" = "鱼类";
+"peanuts" = "花生";
+"soy" = "大豆";
+"lactose" = "乳糖";
+"nuts" = "坚果";
+"celery" = "芹菜";
+"mustard" = "芥末";
+"sesame" = "芝麻";
+"sulfite" = "亚硫酸盐";
+"lupin" = "卢平";
+"molluscs" = "软体动物";
