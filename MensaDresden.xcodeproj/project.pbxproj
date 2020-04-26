@@ -39,6 +39,7 @@
 		398B34E2236CB95900C10D9B /* LoadingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E1236CB95900C10D9B /* LoadingResult.swift */; };
 		398B34E4236CC6B500C10D9B /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E3236CC6B500C10D9B /* MealList.swift */; };
 		398B34E8236CDE7D00C10D9B /* LoadingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E7236CDE7D00C10D9B /* LoadingListView.swift */; };
+		3997DCC82455931600763C07 /* SwiftyHolidays in Frameworks */ = {isa = PBXBuildFile; productRef = 3997DCC72455931600763C07 /* SwiftyHolidays */; };
 		39A0C940236227F70029FA35 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A0C93F236227F70029FA35 /* DatePickerView.swift */; };
 		39A0C9442362341B0029FA35 /* CustomDateMealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A0C9432362341B0029FA35 /* CustomDateMealListView.swift */; };
 		39A0C94623623B9E0029FA35 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A0C94523623B9E0029FA35 /* Date.swift */; };
@@ -131,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3965DDEA23F0244800C9C75C /* EmealKit in Frameworks */,
+				3997DCC82455931600763C07 /* SwiftyHolidays in Frameworks */,
 				39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */,
 				396FC3BC2353BF60007B97F3 /* KeychainItem in Frameworks */,
 			);
@@ -335,6 +337,7 @@
 				39281CD12343CFB400E4EFB5 /* RemoteImage */,
 				396FC3BB2353BF60007B97F3 /* KeychainItem */,
 				3965DDE923F0244800C9C75C /* EmealKit */,
+				3997DCC72455931600763C07 /* SwiftyHolidays */,
 			);
 			productName = MensaDresden;
 			productReference = 39281C5A234241B900E4EFB5 /* Mensa Dresden.app */;
@@ -391,6 +394,7 @@
 				39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */,
 				396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */,
 				3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */,
+				3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */,
 			);
 			productRefGroup = 39281C5B234241B900E4EFB5 /* Products */;
 			projectDirPath = "";
@@ -784,6 +788,14 @@
 				minimumVersion = 0.1.0;
 			};
 		};
+		3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MaxHaertwig/SwiftyHolidays";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -801,6 +813,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */;
 			productName = KeychainItem;
+		};
+		3997DCC72455931600763C07 /* SwiftyHolidays */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */;
+			productName = SwiftyHolidays;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

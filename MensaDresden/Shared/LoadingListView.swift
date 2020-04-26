@@ -3,7 +3,7 @@ import SwiftUI
 struct LoadingListView<ListValues, ListView: View>: View {
     var result: LoadingResult<ListValues>
     var noDataMessage: LocalizedStringKey
-    var noDataSubtitle: LocalizedStringKey? = nil
+    var noDataSubtitle: String? = nil
     var retryAction: () -> Void
     var showRetryOnNoData = false
     var listView: (ListValues) -> ListView

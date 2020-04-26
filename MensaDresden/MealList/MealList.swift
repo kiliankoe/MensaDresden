@@ -1,5 +1,6 @@
 import SwiftUI
 import EmealKit
+import SwiftyHolidays
 
 struct MealList: View {
     @EnvironmentObject var store: OMStore
@@ -18,10 +19,13 @@ struct MealList: View {
         }
     }
 
-    var noDataSubtitle: LocalizedStringKey? {
+    var noDataSubtitle: String? {
+        if let holiday = selectedDate.getHoliday(in: .germany(state: .saxony)) {
+            return String(format: NSLocalizedString("meals.holiday", comment: ""), holiday.name)
+        }
         guard selectedDate.isWeekend else { return nil }
         guard selectedDate == .today || selectedDate == .tomorrow else { return nil }
-        return "meals.weekend"
+        return NSLocalizedString("meals.weekend", comment: "")
     }
 
     var body: some View {

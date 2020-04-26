@@ -16,6 +16,7 @@
 "meals.no-meals-today" = "There's nothing on the menu for today.";
 "meals.no-meals-tomorrow" = "There's nothing on the menu for tomorrow.";
 "meals.no-meals-other" = "There's nothing on the menu for this day.";
+"meals.holiday" = "It's %@! 📅";
 "meals.weekend" = "Have a nice weekend 🏖";
 
 // Meal Detail
