@@ -64,15 +64,17 @@ struct InfoView: View {
 
                 Button(
                     action: {
-                        UIApplication.shared.open(URL(string: "https://testflight.apple.com/join/xE99ppRh")!)
+                        UIApplication.shared.open(URL(string: "https://poeditor.com/join/project/qAgTstzLia")!)
                     },
                     label: {
                         HStack {
-                            Image(systemName: "ant")
-                            Text("info.testflight")
+                            Image(systemName: "doc.text.magnifyingglass")
+                            Text("info.translate")
                         }
                 })
-            }.padding(.top)
+            }
+            .padding(.horizontal)
+            .padding(.top)
 
             Spacer()
         }
