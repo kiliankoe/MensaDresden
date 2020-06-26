@@ -25,7 +25,6 @@
 		39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 39281CD12343CFB400E4EFB5 /* RemoteImage */; };
 		394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D002343D0C9005F076C /* MealDetailView.swift */; };
 		394D9D032343EFD4005F076C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D022343EFD4005F076C /* InfoView.swift */; };
-		394D9D1A234550E6005F076C /* Meal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal+Extensions.swift */; };
 		394D9D1F234560B4005F076C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D1E234560B4005F076C /* SettingsView.swift */; };
 		3965DDEA23F0244800C9C75C /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3965DDE923F0244800C9C75C /* EmealKit */; };
 		396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C4AF023480E6E009A9F52 /* EmealView.swift */; };
@@ -60,16 +59,6 @@
 		39FC09D82361AFEE008D8AB0 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC09D72361AFEE008D8AB0 /* Formatter.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		394D9D1323455039005F076C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 39281C52234241B900E4EFB5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 39281C59234241B900E4EFB5;
-			remoteInfo = MensaDresden;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		39281C5A234241B900E4EFB5 /* Mensa Dresden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mensa Dresden.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39281C5D234241B900E4EFB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,8 +80,6 @@
 		39281C8E2342985900E4EFB5 /* Canteen+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Canteen+Example.swift"; sourceTree = "<group>"; };
 		394D9D002343D0C9005F076C /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		394D9D022343EFD4005F076C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
-		394D9D0E23455039005F076C /* MensaDresdenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MensaDresdenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		394D9D1223455039005F076C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		394D9D1E234560B4005F076C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		396C4AF023480E6E009A9F52 /* EmealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmealView.swift; sourceTree = "<group>"; };
 		396FC3AF235378C1007B97F3 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -144,13 +131,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		394D9D0B23455039005F076C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -158,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				39281C5C234241B900E4EFB5 /* MensaDresden */,
-				394D9D0F23455039005F076C /* MensaDresdenTests */,
 				39281C5B234241B900E4EFB5 /* Products */,
 				39281CC0234318F400E4EFB5 /* Frameworks */,
 			);
@@ -168,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				39281C5A234241B900E4EFB5 /* Mensa Dresden.app */,
-				394D9D0E23455039005F076C /* MensaDresdenTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,14 +239,6 @@
 			path = SettingsView;
 			sourceTree = "<group>";
 		};
-		394D9D0F23455039005F076C /* MensaDresdenTests */ = {
-			isa = PBXGroup;
-			children = (
-				394D9D1223455039005F076C /* Info.plist */,
-			);
-			path = MensaDresdenTests;
-			sourceTree = "<group>";
-		};
 		394D9D1D23455C99005F076C /* MealCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,24 +319,6 @@
 			productReference = 39281C5A234241B900E4EFB5 /* Mensa Dresden.app */;
 			productType = "com.apple.product-type.application";
 		};
-		394D9D0D23455039005F076C /* MensaDresdenTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 394D9D1523455039005F076C /* Build configuration list for PBXNativeTarget "MensaDresdenTests" */;
-			buildPhases = (
-				394D9D0A23455039005F076C /* Sources */,
-				394D9D0B23455039005F076C /* Frameworks */,
-				394D9D0C23455039005F076C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				394D9D1423455039005F076C /* PBXTargetDependency */,
-			);
-			name = MensaDresdenTests;
-			productName = MensaDresdenTests;
-			productReference = 394D9D0E23455039005F076C /* MensaDresdenTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -379,10 +331,6 @@
 				TargetAttributes = {
 					39281C59234241B900E4EFB5 = {
 						CreatedOnToolsVersion = 11.0;
-					};
-					394D9D0D23455039005F076C = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 39281C59234241B900E4EFB5;
 					};
 				};
 			};
@@ -410,7 +358,6 @@
 			projectRoot = "";
 			targets = (
 				39281C59234241B900E4EFB5 /* MensaDresden */,
-				394D9D0D23455039005F076C /* MensaDresdenTests */,
 			);
 		};
 /* End PBXProject section */
@@ -425,13 +372,6 @@
 				39281C67234241BC00E4EFB5 /* Preview Assets.xcassets in Resources */,
 				39281C64234241BC00E4EFB5 /* Assets.xcassets in Resources */,
 				39E215842358E37300F5EBE9 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		394D9D0C23455039005F076C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,23 +426,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		394D9D0A23455039005F076C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				394D9D1A234550E6005F076C /* Meal+Extensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		394D9D1423455039005F076C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 39281C59234241B900E4EFB5 /* MensaDresden */;
-			targetProxy = 394D9D1323455039005F076C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		39281C68234241BC00E4EFB5 /* LaunchScreen.storyboard */ = {
@@ -706,46 +630,6 @@
 			};
 			name = Release;
 		};
-		394D9D1623455039005F076C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HU85FER47E;
-				INFOPLIST_FILE = MensaDresdenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresdenTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mensa Dresden.app/Mensa Dresden";
-			};
-			name = Debug;
-		};
-		394D9D1723455039005F076C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HU85FER47E;
-				INFOPLIST_FILE = MensaDresdenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresdenTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mensa Dresden.app/Mensa Dresden";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -763,15 +647,6 @@
 			buildConfigurations = (
 				39281C6F234241BC00E4EFB5 /* Debug */,
 				39281C70234241BC00E4EFB5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		394D9D1523455039005F076C /* Build configuration list for PBXNativeTarget "MensaDresdenTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				394D9D1623455039005F076C /* Debug */,
-				394D9D1723455039005F076C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
