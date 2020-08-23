@@ -85,15 +85,16 @@ class Settings: ObservableObject {
 
     @UserDefault("userDiet", defaultValue: DietType.all.rawValue)
     var userDiet: DietType.RawValue
-
-    var userDietBinding = Binding<String>(
-        get: {
-            UserDefaults.standard.string(forKey: "userDiet") ?? DietType.all.rawValue
-        },
-        set: {
-            UserDefaults.standard.setValue($0, forKey: "userDiet")
-        }
-    )
+    var userDietBinding: Binding<String> {
+        Binding<String>(
+            get: {
+                self.userDiet
+            },
+            set: {
+                self.userDiet = $0
+            }
+        )
+    }
 
 
     var ingredientBlacklist = BlacklistBinding<Ingredient>(userDefaultsKey: "ingredientBlacklist") {
