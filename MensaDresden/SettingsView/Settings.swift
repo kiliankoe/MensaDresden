@@ -73,6 +73,29 @@ class Settings: ObservableObject {
 
     // MARK: Ingredients & Allergens
 
+    enum DietType: String, CaseIterable, Identifiable {
+        case all
+        case vegetarian
+        case vegan
+
+        var id: String {
+            self.rawValue
+        }
+    }
+
+    @UserDefault("userDiet", defaultValue: DietType.all.rawValue)
+    var userDiet: DietType.RawValue
+
+    var userDietBinding = Binding<String>(
+        get: {
+            UserDefaults.standard.string(forKey: "userDiet") ?? DietType.all.rawValue
+        },
+        set: {
+            UserDefaults.standard.setValue($0, forKey: "userDiet")
+        }
+    )
+
+
     var ingredientBlacklist = BlacklistBinding<Ingredient>(userDefaultsKey: "ingredientBlacklist") {
         didSet {
             self.objectWillChange.send()

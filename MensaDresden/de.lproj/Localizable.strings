@@ -39,9 +39,11 @@
 "settings.nav" = "Einstellungen";
 "settings.favorite-canteens" = "Lieblingsmensen";
 "settings.favorite-canteens-description" = "Deine Lieblingsmensen. Tippe auf das Herz im Speiseplan einer Mensa oder bearbeite die Liste hier um Mensen zu löschen oder umzusortieren.";
-"settings.ingredients-allergens" = "Zutaten & Allergene";
-"settings.ingredients-description" = "Wähle Zutaten ab, die du nicht zur dir nehmen möchtest. Mahlzeiten, die diese Zutaten enthalten, werden in der Liste ausgegraut dargestellt.";
-"settings.allergens-description" = "Gleiches Spiel für Allergene. Ist etwas dabei, was du nicht in deinem Essen haben möchtest?";
+"settings.ingredients-allergens.title" = "Zutaten & Allergene";
+"settings.user-diet" = "Ernährungsweise";
+"settings.ingredients" = "Zutaten";
+"settings.allergens" = "Allergene";
+"settings.ingredients-description" = "Wähle aus, ob du eine bestimmte Ernährungsweise verfolgst oder bestimmte Zutaten oder Allergene nicht zu dir nehmen möchtest. Diese Optionen werden als Filter genutzt und für dich unpassende Mahlzeiten im Speiseplan ausgegraut dargestellt. Die Angaben zur Ernährungsweise sind leider etwas lückenhaft. So kann es vereinzelt vorkommen, dass vegetarische und vegane Speisen nicht als solche markiert sind.\nBitte achte vor dem Kauf der Mahlzeit jedoch nochmal genau auf die gelisteten Zutaten in der Mensa, auf die Angaben hier in der App sollte man sich natürlich nicht komplett verlassen.";
 "settings.price-type" = "Welchen Preis zahlst du?";
 "student" = "Student";
 "employee" = "Mitarbeiter";
@@ -67,9 +69,10 @@
 // Loading List
 "list.try-again" = "Versuche es noch einmal.";
 
-// Meal Information
-"vegan" = "vegan";
+// Diet
+"all" = "alles";
 "vegetarian" = "vegetarisch";
+"vegan" = "vegan";
 
 "pork" = "Schweinefleisch";
 "beef" = "Rindfleisch";

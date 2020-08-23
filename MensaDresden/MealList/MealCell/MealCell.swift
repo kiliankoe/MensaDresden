@@ -7,6 +7,24 @@ struct MealCell: View {
 
     @EnvironmentObject var settings: Settings
 
+    var passesFilters: Bool {
+        let diet = Settings.DietType(rawValue: settings.userDiet)!
+        switch diet {
+        case .vegan:
+            if !meal.diet.contains(.vegan) {
+                return false
+            }
+        case .vegetarian:
+            if !meal.diet.contains(.vegetarian) && !meal.diet.contains(.vegan) {
+                return false
+            }
+        case .all:
+            break
+        }
+        return !meal.contains(unwantedIngredients: settings.ingredientBlacklist.storage,
+                              unwantedAllergens: settings.allergenBlacklist.storage)
+    }
+
     var body: some View {
         HStack {
             MealImage(imageURL: meal.image, width: 130, height: 95, roundedCorners: true, contentMode: .fill)
@@ -47,7 +65,7 @@ struct MealCell: View {
                 }.padding(.top, 5)
             }
         }
-        .opacity(meal.contains(unwantedIngredients: settings.ingredientBlacklist.storage, unwantedAllergens: settings.allergenBlacklist.storage) ? 0.3 : 1.0)
+        .opacity(passesFilters ? 1.0 : 0.3)
     }
 }
 

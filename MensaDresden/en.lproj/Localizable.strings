@@ -39,9 +39,11 @@
 "settings.nav" = "Settings";
 "settings.favorite-canteens" = "Favorite Canteens";
 "settings.favorite-canteens-description" = "Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order.";
-"settings.ingredients-allergens" = "Ingredients & Allergens";
-"settings.ingredients-description" = "Deselect any ingredients you don't want to eat. Meals known to be containing them will be grayed out.";
-"settings.allergens-description" = "Same goes for allergens. Uncheck anything you don't want in your food.";
+"settings.ingredients-allergens.title" = "Ingredients & Allergens";
+"settings.user-diet" = "Diet";
+"settings.ingredients" = "Ingredients";
+"settings.allergens" = "Allergens";
+"settings.ingredients-description" = "Choose whether you follow a certain diet or do not want to ingest certain ingredients or allergens. These options are used as filters and meals that are unsuitable for you are grayed out in the menu. Unfortunately, the nutritional information is somewhat incomplete. It may happen that vegetarian and vegan dishes are not marked as such.\nBefore buying a meal, please pay attention to the ingredients listed in the mensa. You should not rely on the information listed in the app.";
 "settings.price-type" = "Which price are you paying?";
 "student" = "Student";
 "employee" = "Employee";
@@ -67,9 +69,10 @@
 // Loading List
 "list.try-again" = "Try again.";
 
-// Meal Information
-"vegan" = "vegan";
+// Diet
+"all" = "everything";
 "vegetarian" = "vegetarian";
+"vegan" = "vegan";
 
 "pork" = "Pork";
 "beef" = "Beef";

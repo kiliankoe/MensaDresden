@@ -39,9 +39,11 @@
 "settings.nav" = "设置";
 "settings.favorite-canteens" = "最喜欢的食堂";
 "settings.favorite-canteens-description" = "你喜欢的食堂。轻点食堂菜单上的心，可以在这里切换或编辑列表中的食堂菜单，进行删除和重新排序。";
-"settings.ingredients-allergens" = "成分和过敏原";
-"settings.ingredients-description" = "取消选择任何您不想吃的食材。已知含有这些食材的餐点会被灰色化。";
-"settings.allergens-description" = "过敏原也是如此。取消勾选任何你不想要的食物。";
+"settings.ingredients-allergens.title" = "成分和过敏原";
+"settings.user-diet" = "营养学";
+"settings.ingredients" = "成分";
+"settings.allergens" = "过敏原";
+"settings.ingredients-description" = "选择您是遵循某种饮食习惯还是不想摄入某些成分或过敏原。这些选项是作为过滤器使用的，不适合你的餐品会在菜单中被灰化。遗憾的是，营养信息有些不完整。可能会出现素食和纯素菜没有标明的情况。\n在买饭之前，请先查看食堂列出的食材，当然，不能完全依赖APP中这里给出的信息。";
 "settings.price-type" = "你要付出哪种代价？";
 "student" = "学生";
 "employee" = "员工";
@@ -67,9 +69,10 @@
 // Loading List
 "list.try-again" = "再试一次。";
 
-// Meal Information
-"vegan" = "素食者";
-"vegetarian" = "素食者";
+// Diet
+"all" = "一切";
+"vegetarian" = "素食";
+"vegan" = "纯素";
 
 "pork" = "猪肉";
 "beef" = "牛肉";

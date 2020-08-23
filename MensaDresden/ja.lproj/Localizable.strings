@@ -39,9 +39,11 @@
 "settings.nav" = "設定";
 "settings.favorite-canteens" = "お気に入りの缶詰";
 "settings.favorite-canteens-description" = "あなたのお気に入りの食堂。ここのリストを削除して再注文するには、トグルまたは編集するには、水筒のメニュー上のハートをタップします。";
-"settings.ingredients-allergens" = "成分とアレルゲン";
-"settings.ingredients-description" = "食べたくない食材を選択してください。それらが含まれていることが知られている食事はグレー表示されます。";
-"settings.allergens-description" = "アレルゲンも同じです。食べ物に入れたくないものはチェックを外しましょう。";
+"settings.ingredients-allergens.title" = "成分とアレルゲン";
+"settings.user-diet" = "ダイエット";
+"settings.ingredients" = "材料";
+"settings.allergens" = "アレルゲン";
+"settings.ingredients-description" = "特定の食事を守るか、特定の成分やアレルゲンを摂取したくないかを選択します。これらのオプションはフィルターとして使用され、あなたに適さない食事はメニューでグレーアウトされます。残念ながら、栄養情報にはやや不備があります。ベジタリアンやビーガンの料理には、そのような表示がないことがあります。\n食事を購入する前には、カフェテリアに掲載されている食材を確認してください。 もちろん、アプリ内のここに記載されている情報を完全に鵜呑みにしてはいけません。";
 "settings.price-type" = "どの価格を払っているのか？";
 "student" = "学生";
 "employee" = "従業員";
@@ -67,9 +69,10 @@
 // Loading List
 "list.try-again" = "もう一度やってみてください。";
 
-// Meal Information
-"vegan" = "ビーガン";
+// Diet
+"all" = "すべて";
 "vegetarian" = "ベジタリアン";
+"vegan" = "ビーガン";
 
 "pork" = "豚肉";
 "beef" = "牛肉";
