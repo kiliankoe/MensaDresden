@@ -44,7 +44,7 @@
 "settings.ingredients" = "Ingredients";
 "settings.allergens" = "Allergens";
 "settings.ingredients-description" = "Choose whether you follow a certain diet or do not want to ingest certain ingredients or allergens. These options are used as filters and meals that are unsuitable for you are grayed out in the menu. Unfortunately, the nutritional information is somewhat incomplete. It may happen that vegetarian and vegan dishes are not marked as such.\nBefore buying a meal, please pay attention to the ingredients listed in the mensa. You should not rely on the information listed in the app.";
-"settings.price-type" = "Which price are you paying?";
+"settings.price-type" = "Meal Price";
 "student" = "Student";
 "employee" = "Employee";
 "settings.canteen-sorting" = "Canteen Sorting";
@@ -59,11 +59,10 @@
 
 // Info View
 "info.thanks" = "Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!";
-"info.opensource" = "This app is open source on GitHub.";
-"info.email" = "Feedback? Send me an E-Mail.";
-"info.translate" = "You want to use the app in your language?";
-"info.image-rights" = "Image Rights: ";
-"info.icon" = "Icon: ";
+"info.email" = "Send Feedback";
+"info.translate" = "Contribute Translations";
+"info.image-rights" = "Image Rights";
+"info.icon" = "Icon";
 "info.nounproject" = "Eddy Wong from The Noun Project";
 
 // Loading List

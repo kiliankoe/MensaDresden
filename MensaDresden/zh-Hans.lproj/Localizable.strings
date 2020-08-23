@@ -44,7 +44,7 @@
 "settings.ingredients" = "成分";
 "settings.allergens" = "过敏原";
 "settings.ingredients-description" = "选择您是遵循某种饮食习惯还是不想摄入某些成分或过敏原。这些选项是作为过滤器使用的，不适合你的餐品会在菜单中被灰化。遗憾的是，营养信息有些不完整。可能会出现素食和纯素菜没有标明的情况。\n在买饭之前，请先查看食堂列出的食材，当然，不能完全依赖APP中这里给出的信息。";
-"settings.price-type" = "你要付出哪种代价？";
+"settings.price-type" = "饭钱";
 "student" = "学生";
 "employee" = "员工";
 "settings.canteen-sorting" = "食堂折扣";
@@ -59,11 +59,10 @@
 
 // Info View
 "info.thanks" = "非常感谢Lucas Vogel、Georg Sieber、所有GitHub的贡献者和beta测试者们的巨大反馈!";
-"info.opensource" = "这个应用是GitHub上的开源应用。";
-"info.email" = "反馈？给我发邮件。";
-"info.translate" = "你想用你的语言使用APP？";
-"info.image-rights" = "形象权。";
-"info.icon" = "图标。";
+"info.email" = "发送反馈";
+"info.translate" = "提供翻译";
+"info.image-rights" = "形象权";
+"info.icon" = "图标";
 "info.nounproject" = "名词计划中的Eddy Wong";
 
 // Loading List

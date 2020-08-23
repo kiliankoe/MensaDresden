@@ -3,20 +3,38 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var settings: Settings
 
+    var shortVersion: String {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+    }
+
+    var version: String {
+        Bundle.main.infoDictionary?["CFBundleVersion"] as! String
+    }
+
     var body: some View {
         NavigationView {
             List {
                 if !settings.favoriteCanteens.isEmpty {
                     NavigationLink(destination: FavoriteCanteensSetting()) {
-                        Text("settings.favorite-canteens")
+                        HStack {
+                            Image(systemName: "star")
+                            Text("settings.favorite-canteens")
+                        }
                     }
                 }
 
                 NavigationLink(destination: IngredientsAllergensSetting()) {
-                    Text("settings.ingredients-allergens")
+                    HStack {
+                        Image(systemName: "leaf")
+                        Text("settings.ingredients-allergens.title")
+                    }
                 }
 
-                Picker(selection: settings.canteenSortingBinding, label: Text("settings.canteen-sorting")) {
+                Picker(selection: settings.canteenSortingBinding,
+                       label: HStack {
+                        Image(systemName: "list.number")
+                        Text("settings.canteen-sorting")
+                       }) {
                     ForEach(Settings.CanteenSorting.allCases, id: \.self) { sorting in
                         Text(LocalizedStringKey(sorting.rawValue)).tag(sorting)
                     }
@@ -30,16 +48,48 @@ struct SettingsView: View {
                     }.pickerStyle(SegmentedPickerStyle())
                 }
 
-                Section(header: Text("settings.autoload-description")) {
+                Section(header: Text("Autoload")) {
                     TextField("settings.autoload-cardnumber", text: settings.autoloadCardnumberBinding)
                         .textContentType(.username)
                     SecureField("settings.autoload-password", text: settings.autoloadPasswordBinding)
-                    NavigationLink(destination: WebView.autoload, label: { Text("settings.autoload-information") })
+                    
+                    Text("settings.autoload-description")
+                        .font(.caption)
+                    NavigationLink(destination: WebView.autoload,
+                        label: {
+                            HStack {
+                                Image(systemName: "info.circle")
+                                Text("settings.autoload-information")
+                            }
+                        })
                 }
 
-                Section(footer: Text("🖖")) {
+                Section(footer: Text("✌️")) {
+                    Button {
+                        UIApplication.shared.open(URL(string: "mailto:mensadresden@kilian.io?subject=Feedback%20\(shortVersion)%20(\(version))")!)
+                    } label: {
+                        HStack {
+                            Image(systemName: "envelope")
+                            Text("info.email")
+                        }
+                    }
+                    .buttonStyle(PlainButtonStyle())
+
+//                    Button {
+//                        UIApplication.shared.open(URL(string: "https://poeditor.com/join/project/qAgTstzLia")!)
+//                    } label: {
+//                        HStack {
+//                            Image(systemName: "text.quote")
+//                            Text("info.translate")
+//                        }
+//                    }
+//                    .buttonStyle(PlainButtonStyle())
+
                     NavigationLink(destination: InfoView()) {
-                        Text("settings.about")
+                        HStack {
+                            Image(systemName: "questionmark.circle")
+                            Text("settings.about")
+                        }
                     }
                 }
             }

@@ -19,62 +19,30 @@ struct InfoView: View {
                 .shadow(radius: 10)
 
             Text("Mensa Dresden")
-                .font(.system(.title, design: .rounded))
-            HStack(spacing: 5) {
-                Text("Version \(shortVersion)")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                Text("Build \(version)")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-            }.padding(.bottom)
+                .font(.largeTitle)
+                .fontWeight(.medium)
+
+            Text("\(shortVersion) (\(version))")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+                .padding(.bottom)
 
             VStack(alignment: .leading) {
-                Text("info.image-rights").bold() + Text("Studentenwerk Dresden")
-                Text("info.icon").bold() + Text("info.nounproject")
+                Text("info.image-rights")
+                    .font(.caption)
+                    .bold()
+                Text("Studentenwerk Dresden")
+                    .padding(.bottom, 10)
+
+                Text("info.icon")
+                    .font(.caption)
+                    .bold()
+                Text("info.nounproject")
+                    .padding(.bottom, 30)
 
                 Text("info.thanks")
-                    .font(.caption)
-                    .padding(.top)
             }
             .padding(.horizontal)
-
-            VStack(alignment: .leading) {
-                Button(
-                    action: {
-                        UIApplication.shared.open(URL(string: "https://github.com/kiliankoe/MensaDresden")!)
-                    },
-                    label: {
-                        HStack {
-                            Image(systemName: "desktopcomputer")
-                            Text("info.opensource")
-                        }
-                })
-
-                Button(
-                    action: {
-                        UIApplication.shared.open(URL(string: "mailto:me@kilian.io?subject=Mensa%20Dresden")!)
-                    },
-                    label: {
-                        HStack {
-                            Image(systemName: "envelope")
-                            Text("info.email")
-                        }
-                })
-
-                Button(
-                    action: {
-                        UIApplication.shared.open(URL(string: "https://poeditor.com/join/project/qAgTstzLia")!)
-                    },
-                    label: {
-                        HStack {
-                            Image(systemName: "doc.text.magnifyingglass")
-                            Text("info.translate")
-                        }
-                })
-            }
-            .padding(.horizontal)
-            .padding(.top)
 
             Spacer()
         }

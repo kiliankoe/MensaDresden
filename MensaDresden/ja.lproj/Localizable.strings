@@ -44,7 +44,7 @@
 "settings.ingredients" = "材料";
 "settings.allergens" = "アレルゲン";
 "settings.ingredients-description" = "特定の食事を守るか、特定の成分やアレルゲンを摂取したくないかを選択します。これらのオプションはフィルターとして使用され、あなたに適さない食事はメニューでグレーアウトされます。残念ながら、栄養情報にはやや不備があります。ベジタリアンやビーガンの料理には、そのような表示がないことがあります。\n食事を購入する前には、カフェテリアに掲載されている食材を確認してください。 もちろん、アプリ内のここに記載されている情報を完全に鵜呑みにしてはいけません。";
-"settings.price-type" = "どの価格を払っているのか？";
+"settings.price-type" = "食事代";
 "student" = "学生";
 "employee" = "従業員";
 "settings.canteen-sorting" = "キャンティーン割引";
@@ -59,11 +59,10 @@
 
 // Info View
 "info.thanks" = "Lucas Vogel、Georg Sieber、すべての GitHub 貢献者、そしてベータテスターの皆さん、素晴らしいフィードバックをありがとうございました。";
-"info.opensource" = "このアプリはGitHubのオープンソースです。";
-"info.email" = "フィードバック？私にメールを送ってください。";
-"info.translate" = "あなたの言語でアプリを使用したいですか？";
-"info.image-rights" = "画像の権利。";
-"info.icon" = "アイコンです。";
+"info.email" = "フィードバックを送る";
+"info.translate" = "翻訳を投稿する";
+"info.image-rights" = "画像の権利";
+"info.icon" = "アイコンです";
 "info.nounproject" = "名詞プロジェクトからのEddy Wong";
 
 // Loading List
