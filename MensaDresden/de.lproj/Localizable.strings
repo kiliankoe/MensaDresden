@@ -22,6 +22,7 @@
 // Meal Detail
 "meal.rate-title" = "Angebot bewerten";
 "meal.rate-description" = "Sende Feedback zur Mahlzeit direkt an das Studentenwerk.";
+"meal.dinner" = "Abendangebot";
 
 // Emeal View
 "emeal.nfc-text" = "Halte deine Emeal Karte an dein Gerät.";

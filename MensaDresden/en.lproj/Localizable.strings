@@ -22,6 +22,7 @@
 // Meal Detail
 "meal.rate-title" = "Rate meal";
 "meal.rate-description" = "Send feedback regarding this meal directly to the Studentenwerk.";
+"meal.dinner" = "Dinner";
 
 // Emeal View
 "emeal.nfc-text" = "Hold your Emeal card to your device.";

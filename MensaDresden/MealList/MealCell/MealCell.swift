@@ -25,53 +25,84 @@ struct MealCell: View {
                               unwantedAllergens: settings.allergenBlacklist.storage)
     }
 
-    var body: some View {
-        HStack {
-            MealImage(imageURL: meal.image, width: 130, height: 95, roundedCorners: true, contentMode: .fill)
-                .frame(width: 130, height: 95)
+    private var isPlaceholder: Bool {
+        meal.imageIsPlaceholder && meal.emoji == nil
+    }
 
-            VStack(alignment: .leading) {
-                HStack {
+    var body: some View {
+        HStack(spacing: 8) {
+            ZStack(alignment: .bottomLeading) {
+                MealImage(meal: meal,
+                          width: 130,
+                          height: 95,
+                          roundedCorners: true,
+                          contentMode: .fill)
+                    .frame(width: 130, height: 95)
+                if settings.priceTypeIsStudent {
+                    PriceLabel(price: meal.prices?.students, shadow: 2)
+                        .padding(.bottom, 4)
+                } else {
+                    PriceLabel(price: meal.prices?.employees, shadow: 2)
+                        .padding(.bottom, 4)
+                }
+            }
+            .clipShape(RoundedRectangle(cornerRadius: isPlaceholder ? 0 : 8))
+
+            VStack(alignment: .leading, spacing: 4) {
                     Text(meal.category)
                         .font(Font.caption.smallCaps())
                         .foregroundColor(.gray)
-                    Spacer()
-                    ForEach(meal.diet, id: \.self) { diet in
-                        Text(LocalizedStringKey(String(describing: diet)))
-                            .font(Font.caption.smallCaps())
-                            .bold()
-                            .foregroundColor(.green)
-                            .lineLimit(1)
-                    }
-                }
 
                 Text(meal.name)
-                    .lineLimit(3)
-                    .padding(.top, 1)
-                    .layoutPriority(1)
+                    .if(!passesFilters) {
+                        $0.strikethrough()
+                    }
+                    .lineLimit(5)
+
+                ForEach(meal.diet, id: \.self) { diet in
+                    Text(LocalizedStringKey(String(describing: diet)))
+                        .font(Font.caption.smallCaps())
+                        .bold()
+                        .foregroundColor(.green)
+                        .lineLimit(1)
+                }
 
                 HStack {
-                    if settings.priceTypeIsStudent {
-                        PriceLabel(price: meal.prices?.students)
-                    } else {
-                        PriceLabel(price: meal.prices?.employees)
+                    ForEach(meal.ingredients, id: \.rawValue) { ingredient in
+                        Text(ingredient.emoji)
+                            .font(.system(size: 20))
+                            .accessibility(label: Text(LocalizedStringKey(ingredient.rawValue)))
                     }
-
                     if meal.isDinner {
                         Spacer()
                         Image(systemName: "moon.fill")
                             .font(.headline)
                             .foregroundColor(.yellow)
+                            .accessibility(label: Text("meal.dinner"))
                     }
                 }.padding(.top, 5)
             }
         }
-        .opacity(passesFilters ? 1.0 : 0.3)
+        .opacity(passesFilters ? 1.0 : 0.5)
     }
 }
 
 struct MealCell_Previews: PreviewProvider {
     static var previews: some View {
-        MealCell(meal: Meal.example)
+        Group {
+            MealCell(meal: Meal.examples[0])
+
+            MealCell(meal: Meal.examples[1])
+                .background(Color.black)
+                .environment(\.colorScheme, .dark)
+
+            MealCell(meal: Meal.examples[2])
+                .environment(\.sizeCategory, .extraSmall)
+
+            MealCell(meal: Meal.examples[1])
+                .environment(\.sizeCategory, .extraExtraExtraLarge)
+        }
+        .environmentObject(Settings())
+        .previewLayout(.sizeThatFits)
     }
 }

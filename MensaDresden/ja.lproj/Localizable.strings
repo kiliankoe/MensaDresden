@@ -22,6 +22,7 @@
 // Meal Detail
 "meal.rate-title" = "レートミール";
 "meal.rate-description" = "この食事に関するフィードバックを直接Studentenwerkに送ってください。";
+"meal.dinner" = "晩飯";
 
 // Emeal View
 "emeal.nfc-text" = "Emealカードを端末にかざす。";

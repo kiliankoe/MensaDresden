@@ -3,7 +3,7 @@ import RemoteImage
 import EmealKit
 
 struct MealImage: View {
-    var imageURL: URL
+    var meal: Meal
     var width: CGFloat
     var height: CGFloat?
     var roundedCorners: Bool
@@ -14,7 +14,6 @@ struct MealImage: View {
             .resizable()
             .aspectRatio(contentMode: contentMode)
             .frame(width: width)
-            .clipShape(RoundedRectangle(cornerRadius: self.roundedCorners ? 8 : 0))
     }
 
     var loadingImage: some View {
@@ -25,7 +24,6 @@ struct MealImage: View {
                 .blur(radius: 5, opaque: true)
                 .opacity(0.5)
                 .frame(width: width, height: height)
-                .clipShape(RoundedRectangle(cornerRadius: self.roundedCorners ? 8 : 0))
             ProgressView()
         }
     }
@@ -34,16 +32,22 @@ struct MealImage: View {
         image
             .resizable()
             .aspectRatio(contentMode: self.contentMode)
-            .frame(width: self.width, height: self.height)
-            .clipShape(RoundedRectangle(
-                        cornerRadius: self.roundedCorners ? 8 : 0))
+            .frame(width: self.width)
     }
 
     var body: some View {
-        if imageURL == Meal.placeholderImageURL {
+        if meal.imageIsPlaceholder, let emoji = meal.emoji {
+            ZStack {
+                Color.gray.opacity(0.1)
+                Text(emoji)
+                    .font(.system(size: 80))
+            }
+            .frame(maxHeight: 400)
+            .accessibility(hidden: true)
+        } else if meal.imageIsPlaceholder {
             placeholderImage
         } else {
-            RemoteImage(type: .url(imageURL),
+            RemoteImage(type: .url(meal.image),
                         errorView: { _ in placeholderImage },
                         imageView: mealImage,
                         loadingView: { loadingImage })
@@ -53,7 +57,7 @@ struct MealImage: View {
 
 struct MealImage_Previews: PreviewProvider {
     static var previews: some View {
-        MealImage(imageURL: URL(string: "https://bilderspeiseplan.studentenwerk-dresden.de/m15/202008/247506.jpg")!,
+        MealImage(meal: Meal.examples[0],
                   width: 400,
                   height: 300,
                   roundedCorners: true,

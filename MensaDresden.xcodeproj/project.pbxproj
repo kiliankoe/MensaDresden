@@ -26,7 +26,9 @@
 		394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D002343D0C9005F076C /* MealDetailView.swift */; };
 		394D9D032343EFD4005F076C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D022343EFD4005F076C /* InfoView.swift */; };
 		394D9D1F234560B4005F076C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D1E234560B4005F076C /* SettingsView.swift */; };
+		395F98A524FFED7C00740176 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395F98A424FFED7C00740176 /* View.swift */; };
 		3965DDEA23F0244800C9C75C /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3965DDE923F0244800C9C75C /* EmealKit */; };
+		3969E12E24FFAE0C00036C69 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3969E12D24FFAE0C00036C69 /* Color.swift */; };
 		396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C4AF023480E6E009A9F52 /* EmealView.swift */; };
 		396FC3B0235378C1007B97F3 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3AF235378C1007B97F3 /* AppView.swift */; };
 		396FC3B523539145007B97F3 /* EmealCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3B423539145007B97F3 /* EmealCardView.swift */; };
@@ -80,6 +82,8 @@
 		394D9D002343D0C9005F076C /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		394D9D022343EFD4005F076C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		394D9D1E234560B4005F076C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		395F98A424FFED7C00740176 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		3969E12D24FFAE0C00036C69 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		396C4AF023480E6E009A9F52 /* EmealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmealView.swift; sourceTree = "<group>"; };
 		396FC3AF235378C1007B97F3 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		396FC3B423539145007B97F3 /* EmealCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmealCardView.swift; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 			children = (
 				396FC3E12357A1A9007B97F3 /* Transaction.swift */,
 				39A0C94523623B9E0029FA35 /* Date.swift */,
+				3969E12D24FFAE0C00036C69 /* Color.swift */,
+				395F98A424FFED7C00740176 /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 				39281C8F2342985900E4EFB5 /* Canteen+Example.swift in Sources */,
 				39A1418F2348210000FEE789 /* BarButton.swift in Sources */,
 				39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */,
+				395F98A524FFED7C00740176 /* View.swift in Sources */,
 				39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */,
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39A141912348813D00FEE789 /* Settings.swift in Sources */,
@@ -402,6 +409,7 @@
 				39CD5B19234F778400435E71 /* WebView.swift in Sources */,
 				39A141932348EBC000FEE789 /* BlacklistBinding.swift in Sources */,
 				394D9D032343EFD4005F076C /* InfoView.swift in Sources */,
+				3969E12E24FFAE0C00036C69 /* Color.swift in Sources */,
 				396FC3B523539145007B97F3 /* EmealCardView.swift in Sources */,
 				39281C83234282C100E4EFB5 /* MealImage.swift in Sources */,
 				394D9D1F234560B4005F076C /* SettingsView.swift in Sources */,

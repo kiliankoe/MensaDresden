@@ -88,7 +88,7 @@ struct RatingPicker: View {
 struct MealFeedbackView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            MealFeedbackView(meal: Meal.example)
+            MealFeedbackView(meal: Meal.examples[0])
         }
     }
 }

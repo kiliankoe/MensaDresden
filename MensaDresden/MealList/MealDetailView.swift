@@ -95,7 +95,7 @@ struct FeedbackButton: View {
 struct MealDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            MealDetailView(meal: Meal.example)
+            MealDetailView(meal: Meal.examples[0])
         }
     }
 }

@@ -22,6 +22,7 @@
 // Meal Detail
 "meal.rate-title" = "饭菜价格";
 "meal.rate-description" = "请将有关此餐的反馈意见直接发到学生服务部。";
+"meal.dinner" = "晚餐";
 
 // Emeal View
 "emeal.nfc-text" = "拿着你的Emeal卡到你的设备上。";
