@@ -42,27 +42,25 @@ struct CanteenListView: View {
 
     var body: some View {
         NavigationView {
-            Group {
-                LoadingListView(result: store.canteens,
-                                noDataMessage: "canteens.no-data",
-                                retryAction: { self.store.loadCanteens() },
-                                showRetryOnNoData: true,
-                                listView: { canteens in
-                                    List(self.sort(canteens: canteens)) { canteen in
-                                        NavigationLink(destination: MealListView(canteen: canteen)) {
-                                            CanteenCell(canteen: canteen)
-                                        }
+            LoadingListView(result: store.canteens,
+                            noDataMessage: "canteens.no-data",
+                            retryAction: { self.store.loadCanteens() },
+                            showRetryOnNoData: true,
+                            listView: { canteens in
+                                List(self.sort(canteens: canteens)) { canteen in
+                                    NavigationLink(destination: MealListView(canteen: canteen)) {
+                                        CanteenCell(canteen: canteen)
                                     }
-                                    .listStyle(PlainListStyle())
                                 }
-                )
-                .navigationBarTitle("canteens.nav")
-                VStack {
-                    Text("ipad.bon-appetit")
-                        .font(.title)
-                    if !deviceOrientation.isLandscape {
-                        Text("ipad.swipe-hint")
-                    }
+                                .listStyle(PlainListStyle())
+                            }
+            )
+            .navigationBarTitle("canteens.nav")
+            VStack {
+                Text("ipad.bon-appetit")
+                    .font(.title)
+                if !deviceOrientation.isLandscape {
+                    Text("ipad.swipe-hint")
                 }
             }
         }
