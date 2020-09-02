@@ -21,7 +21,7 @@ struct MealListView: View {
             .padding(.leading, 20)
             .padding(.trailing, 20)
 
-            MealList(canteen: canteen, selectedDate: selectedDate)
+            MealList(canteen: canteen, selectedDate: $selectedDate)
         }
         .navigationBarTitle(canteen.name)
         .navigationBarItems(trailing:

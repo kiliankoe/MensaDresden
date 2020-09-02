@@ -12,7 +12,7 @@ struct CustomDateMealListView: View {
     }
 
     var body: some View {
-        MealList(canteen: canteen, selectedDate: selectedDate)
+        MealList(canteen: canteen, selectedDate: .constant(selectedDate))
             .navigationBarTitle(Text(navigationTitle), displayMode: .inline)
     }
 }
