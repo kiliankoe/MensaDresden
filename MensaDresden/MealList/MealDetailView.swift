@@ -7,7 +7,6 @@ struct MealDetailView: View {
 
     @EnvironmentObject var settings: Settings
 
-    @State private var showingShareSheet = false
 
     var body: some View {
         ScrollView {
@@ -63,11 +62,12 @@ struct MealDetailView: View {
                     .padding(.vertical)
             }
         }
-        // FIXME: This is far from ideal, but is the best thing I can currently come up with.
-        .sheet(isPresented: $showingShareSheet, content: { ShareSheet(sharing: [self.meal.activityItem]) })
         .navigationBarTitle(Text(""), displayMode: .inline)
         .navigationBarItems(trailing: BarButtonButton(view: Image(systemName: "square.and.arrow.up"), action: {
-            self.showingShareSheet.toggle()
+            let activityItems = [self.meal.activityItem]
+            let activityVC = UIActivityViewController(activityItems: activityItems,
+                                                      applicationActivities: nil)
+            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
         }))
     }
 }

@@ -51,7 +51,6 @@
 		39A7914A241FC96B0009CF03 /* ObservableEmeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A79149241FC96B0009CF03 /* ObservableEmeal.swift */; };
 		39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */; };
 		39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB72234BB0350081B9AE /* HostingController.swift */; };
-		39CD5B13234E60D100435E71 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B12234E60D100435E71 /* ShareSheetView.swift */; };
 		39CD5B19234F778400435E71 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B18234F778400435E71 /* WebView.swift */; };
 		39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */; };
 		39E215812358E29D00F5EBE9 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E215802358E29D00F5EBE9 /* UserLocation.swift */; };
@@ -110,7 +109,6 @@
 		39A79149241FC96B0009CF03 /* ObservableEmeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableEmeal.swift; sourceTree = "<group>"; };
 		39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOrientation.swift; sourceTree = "<group>"; };
 		39BEEB72234BB0350081B9AE /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
-		39CD5B12234E60D100435E71 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		39CD5B18234F778400435E71 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeedbackView.swift; sourceTree = "<group>"; };
 		39E215802358E29D00F5EBE9 /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 				39A141922348EBC000FEE789 /* BlacklistBinding.swift */,
 				39A141942348EBEE00FEE789 /* UserDefault.swift */,
 				39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */,
-				39CD5B12234E60D100435E71 /* ShareSheetView.swift */,
 				39CD5B18234F778400435E71 /* WebView.swift */,
 				39E215802358E29D00F5EBE9 /* UserLocation.swift */,
 				39FC09D72361AFEE008D8AB0 /* Formatter.swift */,
@@ -420,7 +417,6 @@
 				396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */,
 				39281C62234241B900E4EFB5 /* CanteenListView.swift in Sources */,
 				396FC3E22357A1A9007B97F3 /* Transaction.swift in Sources */,
-				39CD5B13234E60D100435E71 /* ShareSheetView.swift in Sources */,
 				39A0C9442362341B0029FA35 /* CustomDateMealListView.swift in Sources */,
 				39281C7923424CEA00E4EFB5 /* MealListView.swift in Sources */,
 			);
