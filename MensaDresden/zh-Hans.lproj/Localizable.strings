@@ -21,8 +21,9 @@
 
 // Meal Detail
 "meal.rate-title" = "饭菜价格";
-"meal.rate-description" = "请将有关此餐的反馈意见直接发到学生服务部。";
+"meal.rate-description" = "直接向大学生服务部发送反馈信息。";
 "meal.dinner" = "晚餐";
+"meal.ingredient-warning" = "这顿饭可能不符合您的饮食偏好。";
 
 // Emeal View
 "emeal.nfc-text" = "拿着你的Emeal卡到你的设备上。";

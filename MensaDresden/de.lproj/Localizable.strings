@@ -20,9 +20,10 @@
 "meals.weekend" = "Schönes Wochenende 🏖";
 
 // Meal Detail
-"meal.rate-title" = "Angebot bewerten";
-"meal.rate-description" = "Sende Feedback zur Mahlzeit direkt an das Studentenwerk.";
+"meal.rate-title" = "Mahlzeit bewerten";
+"meal.rate-description" = "Sende Feedback direkt an das Studentenwerk.";
 "meal.dinner" = "Abendangebot";
+"meal.ingredient-warning" = "Diese Mahlzeit entspricht möglicherweise nicht deinen Ernährungseinstellungen.";
 
 // Emeal View
 "emeal.nfc-text" = "Halte deine Emeal Karte an dein Gerät.";

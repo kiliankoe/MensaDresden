@@ -21,8 +21,9 @@
 
 // Meal Detail
 "meal.rate-title" = "Тарифный обед";
-"meal.rate-description" = "Отправьте отзыв об этом обеде прямо в Studentenwerk.";
+"meal.rate-description" = "Отправляйте отзывы непосредственно в Studentenwerk..";
 "meal.dinner" = "ужин";
+"meal.ingredient-warning" = "Эта еда может не соответствовать вашим диетическим предпочтениям.";
 
 // Emeal View
 "emeal.nfc-text" = "Держите карточку с едой на устройстве.";

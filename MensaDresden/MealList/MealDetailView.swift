@@ -7,18 +7,44 @@ struct MealDetailView: View {
 
     @EnvironmentObject var settings: Settings
 
+    var passesFilters: Bool {
+        let diet = Settings.DietType(rawValue: settings.userDiet)!
+        switch diet {
+        case .vegan:
+            if !meal.diet.contains(.vegan) {
+                return false
+            }
+        case .vegetarian:
+            if !meal.diet.contains(.vegetarian) && !meal.diet.contains(.vegan) {
+                return false
+            }
+        case .all:
+            break
+        }
+        return !meal.contains(unwantedIngredients: settings.ingredientBlacklist.storage,
+                              unwantedAllergens: settings.allergenBlacklist.storage)
+    }
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
-                MealImage(imageURL: meal.image, width: UIScreen.main.bounds.width, roundedCorners: false, contentMode: .fit)
-                    .padding(.bottom)
+            VStack(alignment: .leading, spacing: 15) {
+                ZStack(alignment: .bottomLeading) {
+                    MealImage(meal: meal, width: UIScreen.main.bounds.width, roundedCorners: false, contentMode: .fit)
+                    if settings.priceTypeIsStudent {
+                        PriceLabel(price: meal.prices?.students, shadow: 2)
+                            .padding(.bottom, 10)
+                    } else {
+                        PriceLabel(price: meal.prices?.employees, shadow: 2)
+                            .padding(.bottom, 10)
+                    }
+                }
 
                 HStack {
                     if meal.isDinner {
                         Image(systemName: "moon.fill")
                             .font(.headline)
                             .foregroundColor(.yellow)
+                            .accessibility(label: Text("meal.dinner"))
                     }
                     Text(meal.category)
                         .font(Font.headline.smallCaps())
@@ -35,21 +61,26 @@ struct MealDetailView: View {
                     }
                 }
                 .padding(.horizontal)
-                .padding(.bottom)
 
                 Text(meal.name)
                     .font(.title)
-                    .lineLimit(5)
-                    .layoutPriority(1)
                     .padding(.horizontal)
 
+                if !passesFilters {
+                    Text("meal.ingredient-warning")
+                        .font(.headline)
+                        .foregroundColor(.red)
+                        .padding(.horizontal)
+                }
+
                 HStack {
-                    if settings.priceTypeIsStudent {
-                        PriceLabel(price: meal.prices?.students)
-                    } else {
-                        PriceLabel(price: meal.prices?.employees)
+                    ForEach(meal.ingredients, id: \.rawValue) { ingredient in
+                        Text(ingredient.emoji)
+                            .font(.system(size: 30))
+                            .accessibility(label: Text(LocalizedStringKey(ingredient.rawValue)))
                     }
-                }.padding()
+                }
+                .padding(.horizontal)
 
                 VStack(alignment: .leading) {
                     ForEach(meal.notes, id: \.self) { note in
@@ -59,7 +90,7 @@ struct MealDetailView: View {
                 }.padding(.horizontal)
 
                 FeedbackButton(meal: meal)
-                    .padding(.vertical)
+                    .padding([.bottom, .horizontal])
             }
         }
         .navigationBarTitle(Text(""), displayMode: .inline)
@@ -81,13 +112,33 @@ struct FeedbackButton: View {
 
     var body: some View {
         NavigationLink(destination: WebView(url: feedbackURL).navigationBarTitle("meal.rate-title", displayMode: .inline)) {
-            VStack(alignment: .leading) {
-                Text("meal.rate-title")
-                Text("meal.rate-description")
-                    .foregroundColor(.primary)
+            HStack {
+                Spacer()
+                
+                VStack(alignment: .center, spacing: 3) {
+                    if #available(iOS 14, *) {
+                        Label("meal.rate-title", systemImage: "hand.thumbsup.fill")
+                            .font(.headline)
+                    } else {
+                        HStack {
+                            Image(systemName: "hand.thumbsup.fill")
+                                .accessibility(hidden: true)
+                            Text("meal.rate-title")
+                                .font(.headline)
+                        }
+                    }
+                    Text("meal.rate-description")
                     .font(.caption)
+                }
+                .foregroundColor(.white)
+
+                Spacer()
             }
-            .padding(.horizontal)
+            .padding(8)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .foregroundColor(.emealGreen)
+            )
         }
     }
 }
@@ -96,6 +147,8 @@ struct MealDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             MealDetailView(meal: Meal.examples[0])
+                .environmentObject(Settings())
         }
+        .accentColor(.green)
     }
 }
