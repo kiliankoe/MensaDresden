@@ -7,6 +7,7 @@ struct AppView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "bag")
+                            .accessibility(hidden: true)
                         Text("tab.menu")
                     }
                 }
@@ -15,6 +16,7 @@ struct AppView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "creditcard")
+                            .accessibility(hidden: true)
                         Text("tab.emeal")
                     }
                 }
@@ -23,6 +25,7 @@ struct AppView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "bell")
+                            .accessibility(hidden: true)
                         Text("tab.newsfeed")
                     }
                 }
@@ -31,6 +34,7 @@ struct AppView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "gear")
+                            .accessibility(hidden: true)
                         Text("tab.settings")
                     }
                 }
