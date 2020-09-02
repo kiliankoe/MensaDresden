@@ -5,8 +5,6 @@ import KeychainItem
 import EmealKit
 
 class Settings: ObservableObject {
-    var objectWillChange = ObservableObjectPublisher()
-
     // MARK: Favorites
 
     @UserDefault("favoriteCanteens", defaultValue: [])
@@ -68,6 +66,7 @@ class Settings: ObservableObject {
                 UserLocation.shared.stop()
             }
             self.canteenSorting = val.rawValue
+            self.objectWillChange.send()
         })
     }
 

@@ -3,14 +3,10 @@ import CoreLocation
 import Combine
 
 class UserLocation: NSObject, ObservableObject {
-    var objectWillChange = ObservableObjectPublisher()
     var manager: CLLocationManager
 
-    var lastLocation: CLLocation? {
-        didSet {
-            objectWillChange.send()
-        }
-    }
+    @Published
+    var lastLocation: CLLocation?
 
     func distance(from other: CLLocationCoordinate2D) -> CLLocationDistance? {
         let otherLocation = CLLocation(latitude: other.latitude, longitude: other.longitude)
