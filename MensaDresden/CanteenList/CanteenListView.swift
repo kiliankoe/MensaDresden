@@ -53,6 +53,7 @@ struct CanteenListView: View {
                                             CanteenCell(canteen: canteen)
                                         }
                                     }
+                                    .listStyle(PlainListStyle())
                                 }
                 )
                 .navigationBarTitle("canteens.nav")
