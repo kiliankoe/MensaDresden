@@ -59,7 +59,7 @@ class Settings: ObservableObject {
     var canteenSortingBinding: Binding<CanteenSorting> {
         return Binding<CanteenSorting>(
         get: {
-            CanteenSorting(rawValue: self.canteenSorting)!
+            CanteenSorting(rawValue: self.canteenSorting) ?? .default
         },
         set: { val in
             if val == .distance {
