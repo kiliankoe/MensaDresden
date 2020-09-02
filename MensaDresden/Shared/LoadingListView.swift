@@ -14,7 +14,7 @@ struct LoadingListView<ListValues, ListView: View>: View {
             return AnyView(
                 VStack {
                     Spacer()
-                    ActivityIndicator()
+                    ProgressView()
                     Spacer()
                 }
             )

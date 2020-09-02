@@ -26,7 +26,7 @@ struct MealImage: View {
                 .opacity(0.5)
                 .frame(width: width, height: height)
                 .clipShape(RoundedRectangle(cornerRadius: self.roundedCorners ? 8 : 0))
-            ActivityIndicator()
+            ProgressView()
         }
     }
 
