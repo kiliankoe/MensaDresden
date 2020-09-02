@@ -29,9 +29,11 @@ struct LoadingListView<ListValues, ListView: View>: View {
                             Text(noDataSubtitle!)
                         }
                         if showRetryOnNoData {
-                            Button(action: {
-                                self.retryAction()
-                            }, label: { Text("list.try-again") })
+                            Button {
+                                retryAction()
+                            } label: {
+                                Text("list.try-again")
+                            }
                         }
                     }
                     .padding()
@@ -45,9 +47,11 @@ struct LoadingListView<ListValues, ListView: View>: View {
                     VStack {
                         Text(error.localizedDescription)
                             .padding(.bottom)
-                        Button(action: {
-                            self.retryAction()
-                        }, label: { Text("list.try-again") })
+                        Button {
+                            retryAction()
+                        } label: {
+                            Text("list.try-again")
+                        }
                     }
                     .padding()
                     Spacer()
