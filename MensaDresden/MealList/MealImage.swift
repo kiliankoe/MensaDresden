@@ -4,7 +4,7 @@ import EmealKit
 
 struct MealImage: View {
     var meal: Meal
-    var width: CGFloat
+    var width: CGFloat?
     var height: CGFloat?
     var roundedCorners: Bool
     var contentMode: ContentMode

@@ -29,7 +29,7 @@ struct MealDetailView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 15) {
                 ZStack(alignment: .bottomLeading) {
-                    MealImage(meal: meal, width: UIScreen.main.bounds.width, roundedCorners: false, contentMode: .fit)
+                    MealImage(meal: meal, roundedCorners: false, contentMode: .fit)
                     if settings.priceTypeIsStudent {
                         PriceLabel(price: meal.prices?.students, shadow: 2)
                             .padding(.bottom, 10)
