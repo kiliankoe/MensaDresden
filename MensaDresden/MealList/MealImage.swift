@@ -6,7 +6,6 @@ struct MealImage: View {
     var meal: Meal
     var width: CGFloat?
     var height: CGFloat?
-    var roundedCorners: Bool
     var contentMode: ContentMode
 
     var placeholderImage: some View {
@@ -60,7 +59,6 @@ struct MealImage_Previews: PreviewProvider {
         MealImage(meal: Meal.examples[0],
                   width: 400,
                   height: 300,
-                  roundedCorners: true,
                   contentMode: .fill)
             .padding()
             .previewLayout(.sizeThatFits)

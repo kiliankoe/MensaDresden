@@ -39,7 +39,7 @@ struct MealList: View {
                                retryAction: { self.store.loadMeals(for: self.canteen.id, on: self.selectedDate) },
                                listView: { meals in
                                     List(meals) { meal in
-                                        NavigationLink(destination: MealDetailView(meal: meal)) {
+                                        NavigationLink(destination: MealDetailContainerView(meal: meal)) {
                                             MealCell(meal: meal)
                                         }
                                     }

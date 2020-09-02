@@ -2,8 +2,8 @@ import SwiftUI
 import RemoteImage
 import EmealKit
 
-struct MealDetailView: View {
-    var meal: Meal
+struct MealDetailContainerView: View {
+    let meal: Meal
 
     @EnvironmentObject var settings: Settings
 
@@ -26,10 +26,115 @@ struct MealDetailView: View {
     }
 
     var body: some View {
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            MealDetailView(meal: meal, passesFilters: passesFilters)
+        default:
+            LargeMealDetailContainerView(meal: meal, passesFilters: passesFilters)
+        }
+    }
+}
+
+struct LargeMealDetailContainerView: View {
+    let meal: Meal
+
+    @EnvironmentObject var settings: Settings
+
+    let passesFilters: Bool
+
+    private var isPlaceholder: Bool {
+        meal.imageIsPlaceholder && meal.emoji == nil
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            HStack(alignment: .top) {
+                ZStack(alignment: .bottomLeading) {
+                    MealImage(meal: meal, contentMode: .fit)
+                    if settings.priceTypeIsStudent {
+                        PriceLabel(price: meal.prices?.students, shadow: 2)
+                            .padding(.bottom, 10)
+                    } else {
+                        PriceLabel(price: meal.prices?.employees, shadow: 2)
+                            .padding(.bottom, 10)
+                    }
+                }
+                .frame(width: 450)
+                .clipShape(RoundedRectangle(cornerRadius: isPlaceholder ? 0 : 15))
+                .padding()
+
+                VStack(alignment: .leading, spacing: 20) {
+                    HStack {
+                        if meal.isDinner {
+                            Image(systemName: "moon.fill")
+                                .font(.headline)
+                                .foregroundColor(.yellow)
+                                .accessibility(label: Text("meal.dinner"))
+                        }
+                        Text(meal.category)
+                            .font(Font.headline.smallCaps())
+                            .foregroundColor(.gray)
+
+                        Spacer()
+
+                        ForEach(meal.diet, id: \.self) { diet in
+                            Text(LocalizedStringKey(String(describing: diet)))
+                                .font(Font.headline.smallCaps())
+                                .bold()
+                                .foregroundColor(.green)
+                                .lineLimit(1)
+                        }
+                    }
+
+                    Text(meal.name)
+                        .font(.title)
+
+                    FeedbackButton(meal: meal)
+                }
+            }
+
+            if !passesFilters {
+                Text("meal.ingredient-warning")
+                    .font(.headline)
+                    .foregroundColor(.red)
+                    .padding(.horizontal)
+            }
+
+            HStack {
+                ForEach(meal.ingredients, id: \.rawValue) { ingredient in
+                    Text(ingredient.emoji)
+                        .font(.system(size: 50))
+                        .accessibility(label: Text(LocalizedStringKey(ingredient.rawValue)))
+                }
+            }
+            .padding(.horizontal)
+
+            VStack(alignment: .leading) {
+                ForEach(meal.notes, id: \.self) { note in
+                    Text(note)
+                        .font(.callout)
+                }
+            }
+            .padding(.horizontal)
+
+            Spacer()
+        }
+        .padding(.horizontal)
+    }
+}
+
+struct MealDetailView: View {
+    let meal: Meal
+
+    @EnvironmentObject var settings: Settings
+
+    let passesFilters: Bool
+
+    var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 15) {
                 ZStack(alignment: .bottomLeading) {
-                    MealImage(meal: meal, roundedCorners: false, contentMode: .fit)
+                    MealImage(meal: meal, contentMode: .fit)
                     if settings.priceTypeIsStudent {
                         PriceLabel(price: meal.prices?.students, shadow: 2)
                             .padding(.bottom, 10)
@@ -146,7 +251,8 @@ struct FeedbackButton: View {
 struct MealDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            MealDetailView(meal: Meal.examples[0])
+            EmptyView()
+            MealDetailContainerView(meal: Meal.examples[0])
                 .environmentObject(Settings())
         }
         .accentColor(.green)

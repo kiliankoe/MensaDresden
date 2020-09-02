@@ -35,7 +35,6 @@ struct MealCell: View {
                 MealImage(meal: meal,
                           width: 130,
                           height: 95,
-                          roundedCorners: true,
                           contentMode: .fill)
                     .frame(width: 130, height: 95)
                 if settings.priceTypeIsStudent {
