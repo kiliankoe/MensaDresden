@@ -51,7 +51,7 @@
 "default" = "Standard";
 "distance" = "Entfernung";
 "alphabetical" = "Alphabetisch";
-"settings.autoload-description" = "Du benutzt Autoload? Trage hier deine Zugangsdaten ein um alle letzten Transaktionen auf der Emeal Seite anzuzeigen. Deine Zugangsdaten werden verschlüsselt nur auf diesem Gerät gespeichert und ausschließlich zur Authentifizierung an Server des Studentenwerks übertragen.";
+"settings.autoload-description" = "Du benutzt Autoload? Trage hier deine Zugangsdaten ein um die Transaktionen der letzten 90 Tage auf der Emeal Seite anzuzeigen. Deine Zugangsdaten werden verschlüsselt nur auf diesem Gerät gespeichert und ausschließlich zur Authentifizierung an Server des Studentenwerks übertragen.";
 "settings.autoload-cardnumber" = "Kartennummer";
 "settings.autoload-password" = "Passwort";
 "settings.autoload-information" = "Informationen zu Autoload";

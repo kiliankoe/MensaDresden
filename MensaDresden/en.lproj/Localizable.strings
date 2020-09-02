@@ -51,7 +51,7 @@
 "default" = "Default";
 "distance" = "Distance";
 "alphabetical" = "Alphabetical";
-"settings.autoload-description" = "Using Autoload? Enter your credentials here to show all latest transactions on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers for authentification purposes.";
+"settings.autoload-description" = "Using Autoload? Enter your credentials here to show transactions of the last 90 days on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers for authentification purposes.";
 "settings.autoload-cardnumber" = "Cardnumber";
 "settings.autoload-password" = "Password";
 "settings.autoload-information" = "Autoload Information";
