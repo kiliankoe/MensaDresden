@@ -28,6 +28,7 @@ struct MealCell: View {
     var body: some View {
         HStack {
             MealImage(imageURL: meal.image, width: 130, height: 95, roundedCorners: true, contentMode: .fill)
+                .frame(width: 130, height: 95)
 
             VStack(alignment: .leading) {
                 HStack {
