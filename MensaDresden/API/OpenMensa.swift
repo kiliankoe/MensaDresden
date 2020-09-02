@@ -19,6 +19,7 @@ class OMStore: ObservableObject {
     var cancellable: AnyCancellable?
 
     func loadCanteens() {
+        canteens = .loading
         cancellable = EmealKit.Canteen.allPublisher()
             .sink(receiveCompletion: { completion in
                 if case let .failure(error) = completion {
