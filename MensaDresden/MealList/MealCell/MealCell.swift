@@ -82,6 +82,7 @@ struct MealCell: View {
                 }.padding(.top, 5)
             }
         }
+        .compositingGroup()
         .opacity(passesFilters ? 1.0 : 0.5)
     }
 }
