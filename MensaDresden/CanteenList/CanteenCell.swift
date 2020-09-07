@@ -3,7 +3,7 @@ import MapKit
 import EmealKit
 
 struct CanteenCell: View {
-    var canteen: Canteen
+    let canteen: Canteen
 
     @EnvironmentObject var settings: Settings
 
@@ -16,8 +16,8 @@ struct CanteenCell: View {
             ZStack(alignment: .bottomLeading) {
                 Image(canteen.name.replacingOccurrences(of: "/", with: ""))
                     .resizable()
+                    .frame(width: 130, height: 90)
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 130, height: 90, alignment: .trailing)
                     .cornerRadius(8)
                     .padding(.trailing, 2)
                 if isFavorite {
