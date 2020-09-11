@@ -662,8 +662,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/crelies/RemoteImage";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 		3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */ = {
