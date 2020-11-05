@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/kiliankoe/EmealKit",
         "state": {
           "branch": null,
-          "revision": "f9c0f68790dd48944cd7f24c5ea38df52192075f",
-          "version": "0.7.2"
+          "revision": "bb6e43b9468d28b85dea86304394f8d2f983c62d",
+          "version": "0.7.3"
         }
       },
       {
@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/nalexn/ViewInspector.git",
         "state": {
           "branch": null,
-          "revision": "ec943ed718cd293b95f17a2b81e8917d6ed70752",
-          "version": "0.3.8"
+          "revision": "e0034993014bdb491dc2733de7ba548ec14ae550",
+          "version": "0.5.0"
         }
       }
     ]
