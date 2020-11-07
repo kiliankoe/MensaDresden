@@ -8,7 +8,7 @@ Looking to see what's for lunch today?
 
 Want to help by translating the app into your language? Look [here](https://poeditor.com/join/project/qAgTstzLia), thank you!
 
-If you're interested in how this app communicates with the Studentenwerk Dresden server to fetch meal information, your AutoLoad transactions or how it reads your Emeal balance via NFC, check out [EmealKit](https://github.com/kiliankoe/emealkit).
+If you're interested in how this app communicates with the Studentenwerk Dresden server to fetch meal information, your recent Emeal transactions or how it reads your Emeal balance via NFC, check out [EmealKit](https://github.com/kiliankoe/emealkit).
 
 ![Screenshots](https://user-images.githubusercontent.com/2625584/67089822-dc0ab600-f1a8-11e9-8076-1fb36ac3214c.png)
 
