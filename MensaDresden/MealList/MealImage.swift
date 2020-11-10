@@ -12,7 +12,6 @@ struct MealImage: View {
         Image("meal_placeholder")
             .resizable()
             .aspectRatio(contentMode: contentMode)
-            .frame(width: width)
     }
 
     var loadingImage: some View {
@@ -35,16 +34,19 @@ struct MealImage: View {
     }
 
     var body: some View {
-        if meal.imageIsPlaceholder, let emoji = meal.emoji {
+        if meal.imageIsPlaceholder {
             ZStack {
                 Color.gray.opacity(0.1)
-                Text(emoji)
-                    .font(.system(size: 80))
+                if let emoji = meal.emoji {
+                    Text(emoji)
+                        .font(.system(size: 80))
+                } else {
+                    placeholderImage
+                        .frame(width: 100)
+                }
             }
-            .frame(maxHeight: 400)
+            .frame(maxHeight: 150)
             .accessibility(hidden: true)
-        } else if meal.imageIsPlaceholder {
-            placeholderImage
         } else {
             RemoteImage(type: .url(meal.image),
                         errorView: { _ in placeholderImage },

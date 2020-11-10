@@ -45,7 +45,7 @@ struct MealCell: View {
                         .padding(.bottom, 4)
                 }
             }
-            .clipShape(RoundedRectangle(cornerRadius: isPlaceholder ? 0 : 8))
+            .clipShape(RoundedRectangle(cornerRadius: 8))
 
             VStack(alignment: .leading, spacing: 4) {
                     Text(meal.category)
