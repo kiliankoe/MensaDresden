@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		391B9E44255ADA43000529A8 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B9E43255ADA43000529A8 /* CompassView.swift */; };
 		39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C5D234241B900E4EFB5 /* AppDelegate.swift */; };
 		39281C60234241B900E4EFB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C5F234241B900E4EFB5 /* SceneDelegate.swift */; };
 		39281C62234241B900E4EFB5 /* CanteenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C61234241B900E4EFB5 /* CanteenListView.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		391B9E43255ADA43000529A8 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		39281C5A234241B900E4EFB5 /* Mensa Dresden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mensa Dresden.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39281C5D234241B900E4EFB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39281C5F234241B900E4EFB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				39281C61234241B900E4EFB5 /* CanteenListView.swift */,
 				39281C872342910600E4EFB5 /* CanteenCell.swift */,
+				391B9E43255ADA43000529A8 /* CompassView.swift */,
 			);
 			path = CanteenList;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				396FC3B0235378C1007B97F3 /* AppView.swift in Sources */,
 				39281C60234241B900E4EFB5 /* SceneDelegate.swift in Sources */,
 				39A0C940236227F70029FA35 /* DatePickerView.swift in Sources */,
+				391B9E44255ADA43000529A8 /* CompassView.swift in Sources */,
 				396FC3E82357B6E4007B97F3 /* IngredientsAllergensSetting.swift in Sources */,
 				394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */,
 				396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */,

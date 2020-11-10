@@ -81,4 +81,21 @@ enum Formatter {
         let formatter = numberFormatter(style: .currency, currencyCode: "EUR", locale: locale)
         return formatter.string(from: value as NSNumber)
     }
+
+    // MARK: Measurement Formatter
+
+    private static func distanceFormatter(locale: Locale) -> MeasurementFormatter {
+        let formatter = MeasurementFormatter()
+        formatter.numberFormatter.usesSignificantDigits = true
+        formatter.numberFormatter.maximumSignificantDigits = 2
+        formatter.unitStyle = .short
+        formatter.unitOptions = .naturalScale
+        formatter.locale = locale
+        return formatter
+    }
+
+    static func distanceString<Unit>(for value: Measurement<Unit>, locale: Locale = .current) -> String {
+        let formatter = distanceFormatter(locale: locale)
+        return formatter.string(from: value)
+    }
 }
