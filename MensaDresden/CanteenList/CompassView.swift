@@ -3,30 +3,42 @@ import CoreLocation
 
 struct CompassView: View {
     @ObservedObject var userLocation = UserLocation.shared
-    var dest: CLLocationCoordinate2D
+
+    var compassHeading: Double {
+        userLocation.currentHeading?.magneticHeading ?? 0
+    }
+
+    var userPosition: CLLocationCoordinate2D {
+        userLocation.lastLocation?.coordinate ?? CLLocationCoordinate2D()
+    }
+
+    var destination: CLLocationCoordinate2D
+
+    var destinationBearing: Double {
+        let deltaL = destination.longitude.radians - userPosition.longitude.radians
+        let thetaB = destination.latitude.radians
+        let thetaA = userPosition.latitude.radians
+
+        let x = cos(thetaB) * sin(deltaL)
+        let y = cos(thetaA) * sin(thetaB) - sin(thetaA) * cos(thetaB) * cos(deltaL)
+        let bearing = atan2(x,y)
+
+        return bearing.degrees
+    }
+
+    var destinationHeading: Double {
+        destinationBearing - compassHeading
+    }
 
     init(towards: CLLocationCoordinate2D) {
-        self.dest = towards
-    }
-
-    private var bearing: Double {
-        guard let loc = userLocation.lastLocation?.coordinate else { return 0 }
-
-        let ΔL = loc.longitude - dest.longitude
-        let X = cos(dest.latitude.radians) * sin(ΔL.radians)
-        let Y = cos(loc.latitude.radians) * sin(dest.latitude.radians) - sin(loc.latitude.radians) * cos(dest.latitude.radians) * cos(ΔL.radians)
-        let bearing = atan2(X, Y)
-        return bearing
-    }
-
-    private var heading: Angle {
-        guard let userHeading = userLocation.currentHeading?.trueHeading else { return .zero }
-        return Angle(radians: bearing) - Angle(degrees: userHeading)
+        self.destination = towards
     }
 
     var body: some View {
-        Image(systemName: "arrow.up.circle")
-            .rotationEffect(heading)
+        VStack {
+            Image(systemName: "arrow.up.circle")
+                .rotationEffect(.degrees(destinationHeading))
+        }
     }
 }
 
@@ -41,6 +53,14 @@ struct CompassView_Previews: PreviewProvider {
 
 private extension Double {
     var radians: Double {
-        self * .pi / 180
+        Measurement(value: self, unit: UnitAngle.degrees)
+            .converted(to: .radians)
+            .value
+    }
+
+    var degrees: Double {
+        Measurement(value: self, unit: UnitAngle.radians)
+            .converted(to: .degrees)
+            .value
     }
 }

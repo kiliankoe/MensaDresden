@@ -96,6 +96,7 @@
 		398B34E1236CB95900C10D9B /* LoadingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingResult.swift; sourceTree = "<group>"; };
 		398B34E3236CC6B500C10D9B /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 		398B34E7236CDE7D00C10D9B /* LoadingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingListView.swift; sourceTree = "<group>"; };
+		3997A368255F232900B7BD78 /* mommsenstr.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = mommsenstr.gpx; path = Resources/mommsenstr.gpx; sourceTree = "<group>"; };
 		3997DCC92455F0C900763C07 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		3997DCCA2455F0C900763C07 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3997DCCB2455F0DE00763C07 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -141,6 +142,7 @@
 		39281C51234241B900E4EFB5 = {
 			isa = PBXGroup;
 			children = (
+				3997A368255F232900B7BD78 /* mommsenstr.gpx */,
 				39281C5C234241B900E4EFB5 /* MensaDresden */,
 				39281C5B234241B900E4EFB5 /* Products */,
 				39281CC0234318F400E4EFB5 /* Frameworks */,
