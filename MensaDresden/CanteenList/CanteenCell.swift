@@ -6,9 +6,22 @@ struct CanteenCell: View {
     let canteen: Canteen
 
     @EnvironmentObject var settings: Settings
+    @ObservedObject var userLocation = UserLocation.shared
 
     var isFavorite: Bool {
         settings.favoriteCanteens.contains(canteen.name)
+    }
+
+    var distance: Double? {
+        guard let userLocation = userLocation.lastLocation,
+              let canteenLocation = canteen.location
+        else { return nil }
+        return userLocation.distance(from: canteenLocation)
+    }
+
+    var formattedDistance: String {
+        guard let distance = distance else { return "" }
+        return Formatter.distanceString(for: Measurement<UnitLength>(value: distance, unit: .meters))
     }
 
     var body: some View {
@@ -37,6 +50,17 @@ struct CanteenCell: View {
                     .font(.subheadline)
                     .foregroundColor(.gray)
                     .lineLimit(3)
+                if settings.canteenSorting == Settings.CanteenSorting.distance.rawValue {
+                    HStack(spacing: 5) {
+                        if let canteenLocation = canteen.location {
+                            CompassView(towards: canteenLocation.coordinate)
+                        }
+                        Text(formattedDistance)
+                    }
+                    .foregroundColor(.gray)
+                    .font(.caption)
+                    .padding(.top, 5)
+                }
             }
         }
     }
