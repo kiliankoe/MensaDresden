@@ -2,7 +2,7 @@ import Foundation
 import CoreLocation
 import Combine
 
-class UserLocation: NSObject, ObservableObject {
+class LocationManager: NSObject, ObservableObject {
     var manager: CLLocationManager
 
     @Published
@@ -23,7 +23,7 @@ class UserLocation: NSObject, ObservableObject {
         manager.distanceFilter = 250
     }
 
-    static var shared = UserLocation()
+    static var shared = LocationManager()
 
     func start() {
         manager.requestWhenInUseAuthorization()
@@ -38,7 +38,7 @@ class UserLocation: NSObject, ObservableObject {
     }
 }
 
-extension UserLocation: CLLocationManagerDelegate {
+extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         lastLocation = locations.last
     }

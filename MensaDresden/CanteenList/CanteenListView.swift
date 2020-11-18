@@ -5,8 +5,7 @@ struct CanteenListView: View {
     @EnvironmentObject var store: OMStore
     @EnvironmentObject var deviceOrientation: DeviceOrientation
     @EnvironmentObject var settings: Settings
-
-    @ObservedObject var userLocation = UserLocation.shared
+    @EnvironmentObject var locationManager: LocationManager
 
     func sort(canteens: [Canteen]) -> [Canteen] {
         let favorites = canteens.filter { settings.favoriteCanteens.contains($0.name) }
@@ -22,7 +21,7 @@ struct CanteenListView: View {
         case Settings.CanteenSorting.alphabetical.rawValue:
             nonFavorites.sort { $0.name < $1.name }
         case Settings.CanteenSorting.distance.rawValue:
-            if let location = userLocation.lastLocation {
+            if let location = locationManager.lastLocation {
                 nonFavorites.sort { lhs, rhs in
                     guard let lhsLoc = lhs.location,
                         let rhsLoc = rhs.location else {

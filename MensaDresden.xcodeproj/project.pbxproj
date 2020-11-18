@@ -56,7 +56,7 @@
 		39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB72234BB0350081B9AE /* HostingController.swift */; };
 		39CD5B19234F778400435E71 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B18234F778400435E71 /* WebView.swift */; };
 		39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */; };
-		39E215812358E29D00F5EBE9 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E215802358E29D00F5EBE9 /* UserLocation.swift */; };
+		39E215812358E29D00F5EBE9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E215802358E29D00F5EBE9 /* LocationManager.swift */; };
 		39E215842358E37300F5EBE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39E215862358E37300F5EBE9 /* InfoPlist.strings */; };
 		39FC09D82361AFEE008D8AB0 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC09D72361AFEE008D8AB0 /* Formatter.swift */; };
 /* End PBXBuildFile section */
@@ -118,7 +118,7 @@
 		39BEEB72234BB0350081B9AE /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		39CD5B18234F778400435E71 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeedbackView.swift; sourceTree = "<group>"; };
-		39E215802358E29D00F5EBE9 /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		39E215802358E29D00F5EBE9 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		39E215852358E37300F5EBE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		39E215872358E37700F5EBE9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		39FC09D72361AFEE008D8AB0 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 				39A141942348EBEE00FEE789 /* UserDefault.swift */,
 				39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */,
 				39CD5B18234F778400435E71 /* WebView.swift */,
-				39E215802358E29D00F5EBE9 /* UserLocation.swift */,
+				39E215802358E29D00F5EBE9 /* LocationManager.swift */,
 				39FC09D72361AFEE008D8AB0 /* Formatter.swift */,
 				398B34DF236B343F00C10D9B /* ActivityIndicator.swift */,
 				398B34E7236CDE7D00C10D9B /* LoadingListView.swift */,
@@ -397,7 +397,7 @@
 				39A79148241FC50F0009CF03 /* NewsfeedView.swift in Sources */,
 				39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */,
 				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,
-				39E215812358E29D00F5EBE9 /* UserLocation.swift in Sources */,
+				39E215812358E29D00F5EBE9 /* LocationManager.swift in Sources */,
 				39A0C94623623B9E0029FA35 /* Date.swift in Sources */,
 				39281C8F2342985900E4EFB5 /* Canteen+Example.swift in Sources */,
 				39A1418F2348210000FEE789 /* BarButton.swift in Sources */,

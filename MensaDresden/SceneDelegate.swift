@@ -10,18 +10,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
 
             let settings = Settings()
+            if settings.canteenSorting == Settings.CanteenSorting.distance.rawValue {
+                LocationManager.shared.start()
+            }
+
             let deviceOrientation = DeviceOrientation(isLandscape: window.windowScene?.interfaceOrientation.isLandscape ?? false)
 
             let store = OMStore(settings: settings)
-            
+
             let appView = AppView()
                 .environmentObject(settings)
                 .environmentObject(deviceOrientation)
                 .environmentObject(store)
-
-            if settings.canteenSorting == Settings.CanteenSorting.distance.rawValue {
-                UserLocation.shared.start()
-            }
+                .environmentObject(LocationManager.shared)
 
             window.rootViewController = HostingController(rootView: appView)
             self.window = window

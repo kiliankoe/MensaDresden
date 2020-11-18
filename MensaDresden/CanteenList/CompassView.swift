@@ -2,14 +2,14 @@ import SwiftUI
 import CoreLocation
 
 struct CompassView: View {
-    @ObservedObject var userLocation = UserLocation.shared
+    @EnvironmentObject var locationManager: LocationManager
 
     var compassHeading: Double {
-        userLocation.currentHeading?.magneticHeading ?? 0
+        locationManager.currentHeading?.magneticHeading ?? 0
     }
 
     var userPosition: CLLocationCoordinate2D {
-        userLocation.lastLocation?.coordinate ?? CLLocationCoordinate2D()
+        locationManager.lastLocation?.coordinate ?? CLLocationCoordinate2D()
     }
 
     var destination: CLLocationCoordinate2D

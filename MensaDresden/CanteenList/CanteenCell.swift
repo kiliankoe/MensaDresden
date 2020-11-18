@@ -6,14 +6,14 @@ struct CanteenCell: View {
     let canteen: Canteen
 
     @EnvironmentObject var settings: Settings
-    @ObservedObject var userLocation = UserLocation.shared
+    @EnvironmentObject var locationManager: LocationManager
 
     var isFavorite: Bool {
         settings.favoriteCanteens.contains(canteen.name)
     }
 
     var distance: Double? {
-        guard let userLocation = userLocation.lastLocation,
+        guard let userLocation = locationManager.lastLocation,
               let canteenLocation = canteen.location
         else { return nil }
         return userLocation.distance(from: canteenLocation)

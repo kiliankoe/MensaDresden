@@ -61,9 +61,9 @@ class Settings: ObservableObject {
         },
         set: { val in
             if val == .distance {
-                UserLocation.shared.start()
+                LocationManager.shared.start()
             } else {
-                UserLocation.shared.stop()
+                LocationManager.shared.stop()
             }
             self.canteenSorting = val.rawValue
             self.objectWillChange.send()
