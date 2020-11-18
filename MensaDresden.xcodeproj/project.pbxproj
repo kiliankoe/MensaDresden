@@ -6,6 +6,20 @@
 	objectVersion = 52;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3903035C2561C6CC003080D9 /* Periphery */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3903035D2561C6CC003080D9 /* Build configuration list for PBXAggregateTarget "Periphery" */;
+			buildPhases = (
+				390303622561C6D2003080D9 /* Periphery */,
+			);
+			dependencies = (
+			);
+			name = Periphery;
+			productName = Periphery;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		391B9E44255ADA43000529A8 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B9E43255ADA43000529A8 /* CompassView.swift */; };
 		39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C5D234241B900E4EFB5 /* AppDelegate.swift */; };
@@ -333,10 +347,16 @@
 		39281C52234241B900E4EFB5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Kilian Koeltzsch";
 				TargetAttributes = {
+					3903035C2561C6CC003080D9 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					39281C59234241B900E4EFB5 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -366,6 +386,7 @@
 			projectRoot = "";
 			targets = (
 				39281C59234241B900E4EFB5 /* MensaDresden */,
+				3903035C2561C6CC003080D9 /* Periphery */,
 			);
 		};
 /* End PBXProject section */
@@ -384,6 +405,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		390303622561C6D2003080D9 /* Periphery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Periphery;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "periphery scan \\\n  --project \"MensaDresden.xcodeproj\" \\\n  --schemes \"MensaDresden\" \\\n  --targets \"MensaDresden\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		39281C56234241B900E4EFB5 /* Sources */ = {
@@ -474,6 +516,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3903035E2561C6CC003080D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU85FER47E;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3903035F2561C6CC003080D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU85FER47E;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		39281C6C234241BC00E4EFB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -643,6 +703,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3903035D2561C6CC003080D9 /* Build configuration list for PBXAggregateTarget "Periphery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3903035E2561C6CC003080D9 /* Debug */,
+				3903035F2561C6CC003080D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		39281C55234241B900E4EFB5 /* Build configuration list for PBXProject "MensaDresden" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
