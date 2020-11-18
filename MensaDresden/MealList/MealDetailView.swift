@@ -30,12 +30,12 @@ struct MealDetailContainerView: View {
         case .phone:
             MealDetailView(meal: meal, passesFilters: passesFilters)
         default:
-            LargeMealDetailContainerView(meal: meal, passesFilters: passesFilters)
+            LargeMealDetailView(meal: meal, passesFilters: passesFilters)
         }
     }
 }
 
-struct LargeMealDetailContainerView: View {
+struct LargeMealDetailView: View {
     let meal: Meal
 
     @EnvironmentObject var settings: Settings
