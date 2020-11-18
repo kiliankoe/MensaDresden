@@ -3,7 +3,10 @@ import CoreLocation
 import Combine
 
 class LocationManager: NSObject, ObservableObject {
-    var manager: CLLocationManager
+    private var manager: CLLocationManager
+
+    @Published
+    var authorizationStatus: CLAuthorizationStatus?
 
     @Published
     var lastLocation: CLLocation?
@@ -49,5 +52,9 @@ extension LocationManager: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         currentHeading = newHeading
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        authorizationStatus = status
     }
 }
