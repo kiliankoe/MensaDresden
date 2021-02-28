@@ -9,7 +9,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Prerequisites
       run: |
-        brew install swiftlint
         gem install xcpretty
     - name: Build
       run: |
