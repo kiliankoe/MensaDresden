@@ -14,7 +14,7 @@ jobs:
       run: |
         set -o pipefail
         xcodebuild -project MensaDresden.xcodeproj -scheme MensaDresden -destination 'platform=iOS Simulator,name=iPhone 12' build | xcpretty --color
-    - name: Test
-      run: |
-        set -o pipefail
-        xcodebuild -project MensaDresden.xcodeproj -scheme MensaDresden -destination 'platform=iOS Simulator,name=iPhone 12' test | xcpretty --color --test
+    # - name: Test
+    #   run: |
+    #     set -o pipefail
+    #     xcodebuild -project MensaDresden.xcodeproj -scheme MensaDresden -destination 'platform=iOS Simulator,name=iPhone 12' test | xcpretty --color --test
