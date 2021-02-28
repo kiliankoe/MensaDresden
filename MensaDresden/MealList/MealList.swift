@@ -8,9 +8,6 @@ struct MealList: View {
     var canteen: Canteen
     @Binding var selectedDate: Date
 
-    @State private var swipeStartPosition: CGPoint = .zero
-    @State private var isSwiping = false
-
     var noDataMessage: LocalizedStringKey {
         switch selectedDate {
         case .today:
@@ -32,41 +29,17 @@ struct MealList: View {
     }
 
     var body: some View {
-        let result = store.meals(for: canteen.id, on: selectedDate)
-        return LoadingListView(result: result,
-                               noDataMessage: noDataMessage,
-                               noDataSubtitle: noDataSubtitle,
-                               retryAction: { self.store.loadMeals(for: self.canteen.id, on: self.selectedDate) },
-                               listView: { meals in
-                                    List(meals) { meal in
-                                        NavigationLink(destination: MealDetailContainerView(meal: meal)) {
-                                            MealCell(meal: meal)
-                                        }
-                                    }
-                                    .gesture(DragGesture()
-                                                .onChanged { gesture in
-                                                    if isSwiping {
-                                                        swipeStartPosition = gesture.location
-                                                        isSwiping.toggle()
-                                                    }
-                                                }
-                                                .onEnded { gesture in
-                                                    let xDist = abs(gesture.location.x - swipeStartPosition.x)
-                                                    let yDist = abs(gesture.location.y - swipeStartPosition.y)
-                                                    if swipeStartPosition.x > gesture.location.x && yDist < xDist {
-                                                        if selectedDate == .today {
-                                                            selectedDate = .tomorrow
-                                                        }
-                                                    }
-                                                    else if swipeStartPosition.x < gesture.location.x && yDist < xDist {
-                                                        if selectedDate == .tomorrow {
-                                                            selectedDate = .today
-                                                        }
-                                                    }
-                                                    isSwiping.toggle()
-                                                }
-                                    )
-                               }
+        LoadingListView(result: store.meals(for: canteen.id, on: selectedDate),
+                        noDataMessage: noDataMessage,
+                        noDataSubtitle: noDataSubtitle,
+                        retryAction: { self.store.loadMeals(for: self.canteen.id, on: self.selectedDate) },
+                        listView: { meals in
+                             List(meals) { meal in
+                                 NavigationLink(destination: MealDetailContainerView(meal: meal)) {
+                                     MealCell(meal: meal)
+                                 }
+                             }
+                        }
         )
     }
 }

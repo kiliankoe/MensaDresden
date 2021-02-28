@@ -22,6 +22,15 @@ struct MealListView: View {
             .padding(.trailing, 20)
 
             MealList(canteen: canteen, selectedDate: $selectedDate)
+                .horizontalSwipeGesture {
+                    if selectedDate == .today {
+                        selectedDate = .tomorrow
+                    }
+                } onSwipeRight: {
+                    if selectedDate == .tomorrow {
+                        selectedDate = .today
+                    }
+                }
         }
         .navigationBarTitle(canteen.name)
         .navigationBarItems(trailing:
