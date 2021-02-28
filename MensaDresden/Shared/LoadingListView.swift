@@ -11,56 +11,48 @@ struct LoadingListView<ListValues, ListView: View>: View {
     var body: some View {
         switch result {
         case .loading:
-            return AnyView(
-                VStack {
-                    Spacer()
-                    ProgressView()
-                    Spacer()
-                }
-            )
+            VStack {
+                Spacer()
+                ProgressView()
+                Spacer()
+            }
         case .noData:
-            return AnyView(
+            VStack {
+                Spacer()
                 VStack {
-                    Spacer()
-                    VStack {
-                        Text(noDataMessage)
-                            .padding(.bottom)
-                        if noDataSubtitle != nil {
-                            Text(noDataSubtitle!)
-                        }
-                        if showRetryOnNoData {
-                            Button {
-                                retryAction()
-                            } label: {
-                                Text("list.try-again")
-                            }
-                        }
+                    Text(noDataMessage)
+                        .padding(.bottom)
+                    if noDataSubtitle != nil {
+                        Text(noDataSubtitle!)
                     }
-                    .padding()
-                    Spacer()
-                }
-            )
-        case .failure(let error):
-            return AnyView(
-                VStack {
-                    Spacer()
-                    VStack {
-                        Text(error.localizedDescription)
-                            .padding(.bottom)
+                    if showRetryOnNoData {
                         Button {
                             retryAction()
                         } label: {
                             Text("list.try-again")
                         }
                     }
-                    .padding()
-                    Spacer()
                 }
-            )
+                .padding()
+                Spacer()
+            }
+        case .failure(let error):
+            VStack {
+                Spacer()
+                VStack {
+                    Text(error.localizedDescription)
+                        .padding(.bottom)
+                    Button {
+                        retryAction()
+                    } label: {
+                        Text("list.try-again")
+                    }
+                }
+                .padding()
+                Spacer()
+            }
         case .success(let listValues):
-            return AnyView(
-                listView(listValues)
-            )
+            listView(listValues)
         }
     }
 }
