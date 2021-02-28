@@ -53,9 +53,6 @@ struct MealCell: View {
                         .foregroundColor(.gray)
 
                 Text(meal.name)
-                    .if(!passesFilters) {
-                        $0.strikethrough()
-                    }
                     .lineLimit(5)
 
                 ForEach(meal.diet, id: \.self) { diet in
