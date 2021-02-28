@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct InfoView: View {
+struct AboutView: View {
     var shortVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     }
@@ -62,7 +62,7 @@ struct InfoView: View {
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            InfoView()
+            AboutView()
         }
     }
 }

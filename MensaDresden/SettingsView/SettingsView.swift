@@ -85,7 +85,7 @@ struct SettingsView: View {
 //                    }
 //                    .buttonStyle(PlainButtonStyle())
 
-                    NavigationLink(destination: InfoView()) {
+                    NavigationLink(destination: AboutView()) {
                         HStack {
                             Image(systemName: "questionmark.circle")
                             Text("settings.about")
