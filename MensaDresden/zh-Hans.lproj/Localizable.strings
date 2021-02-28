@@ -60,6 +60,7 @@
 "settings.about" = "关于我们";
 
 // Info View
+"info.developed-by" = "由开发";
 "info.thanks" = "非常感谢Lucas Vogel、Georg Sieber、所有GitHub的贡献者和beta测试者们的巨大反馈!";
 "info.email" = "发送反馈";
 "info.translate" = "提供翻译";

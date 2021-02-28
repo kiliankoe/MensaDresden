@@ -60,6 +60,7 @@
 "settings.about" = "About";
 
 // Info View
+"info.developed-by" = "Developed by";
 "info.thanks" = "Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!";
 "info.email" = "Send Feedback";
 "info.translate" = "Contribute Translations";

@@ -28,6 +28,16 @@ struct InfoView: View {
                 .padding(.bottom)
 
             VStack(alignment: .leading) {
+                Text("info.developed-by")
+                    .font(.caption)
+                    .bold()
+                Button {
+                    UIApplication.shared.open(URL(string: "https://twitter.com/kiliankoe")!)
+                } label: {
+                    Text("Kilian Költzsch")
+                }
+                .padding(.bottom, 10)
+
                 Text("info.image-rights")
                     .font(.caption)
                     .bold()
