@@ -14,9 +14,15 @@ struct WebView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<WebView>) {}
+}
 
+extension WebView {
     static var autoload: some View {
         WebView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!)
             .navigationBarTitle("Autoload", displayMode: .inline)
+    }
+
+    static var newsfeed: some View {
+        WebView(url: URL(string: "https://www.studentenwerk-dresden.de/wirueberuns/aktuelles-uebersicht.html")!)
     }
 }
