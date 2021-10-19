@@ -65,6 +65,7 @@ struct EmealView: View {
                                                 }
                                             }
                                         }
+                                        .listStyle(PlainListStyle())
                                     }
                     )
                 } else {
