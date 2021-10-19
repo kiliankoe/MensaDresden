@@ -39,6 +39,7 @@ struct MealList: View {
                                      MealCell(meal: meal)
                                  }
                              }
+                             .listStyle(PlainListStyle())
                         }
         )
     }
