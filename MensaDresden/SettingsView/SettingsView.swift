@@ -49,9 +49,10 @@ struct SettingsView: View {
                 }
 
                 Section(header: Text("Autoload")) {
-                    TextField("settings.autoload-cardnumber", text: settings.autoloadCardnumberBinding)
+                    TextField(LocalizedStringKey("settings.autoload-cardnumber"), text: settings.autoloadCardnumberBinding, prompt: nil)
                         .textContentType(.username)
-                    SecureField("settings.autoload-password", text: settings.autoloadPasswordBinding)
+
+                    SecureField(LocalizedStringKey("settings.autoload-password"), text: settings.autoloadPasswordBinding, prompt: nil)
                     
                     Text("settings.autoload-description")
                         .font(.caption)
