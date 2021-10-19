@@ -8,16 +8,16 @@ extension Transaction {
 
     static var exampleValues: [Transaction] {
         [
-            Transaction(id: 0, date: Date(timeIntervalSince1970: 1571242020), location: "Mensa Wundtstraße", kind: .cardCharge, amount: 10, positions: [
+            Transaction(id: 0, date: Date(), location: "Mensa Wundtstraße", kind: .cardCharge, amount: 10, positions: [
                 Position(id: 0, name: "Aufwertung", price: 10)
             ]),
-            Transaction(id: 1, date: Date(timeIntervalSince1970: 1571242020), location: "Mensa Wundtstraße", kind: .sale, amount: 6, positions: [
+            Transaction(id: 1, date: Date(), location: "Mensa Wundtstraße", kind: .sale, amount: 6, positions: [
                 Position(id: 0, name: "Surfing Paradise", price: 6)
             ]),
-            Transaction(id: 2, date: Date(timeIntervalSince1970: 1571132100), location: "Alte Mensa", kind: .sale, amount: 3.7, positions: [
+            Transaction(id: 2, date: Date(), location: "Alte Mensa", kind: .sale, amount: 3.7, positions: [
                 Position(id: 0, name: "Sushi Menü", price: 3.7)
             ]),
-            Transaction(id: 3, date: Date(timeIntervalSince1970: 1571045400), location: "Alte Mensa", kind: .sale, amount: 3.74, positions: [
+            Transaction(id: 3, date: Date(), location: "Alte Mensa", kind: .sale, amount: 3.74, positions: [
                 Position(id: 0, name: "Pasta groß", price: 2.46),
                 Position(id: 1, name: "Waage kleine Schüssel HAM", price: 1.28)
             ])
