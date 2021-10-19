@@ -20,7 +20,7 @@
         }
       },
       {
-        "package": "KeychainItem",
+        "package": "keychain-item",
         "repositoryURL": "https://github.com/objcio/keychain-item",
         "state": {
           "branch": null,
