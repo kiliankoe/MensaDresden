@@ -6,7 +6,7 @@ struct BarButtonNavigationLink<DestinationView: View>: View {
 
     var body: some View {
         NavigationLink(destination: destination) {
-            image.font(.system(size: 22))
+            image
         }
     }
 }
@@ -16,7 +16,9 @@ struct BarButtonButton<ButtonView: View>: View {
     var action: () -> Void
 
     var body: some View {
-        Button(action: action, label: { view.font(.system(size: 22)) })
+        Button(action: action) {
+            view
+        }
     }
 }
 
