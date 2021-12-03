@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/kiliankoe/EmealKit",
         "state": {
           "branch": null,
-          "revision": "b018fb99b937743b17cfabf941437aed947dacff",
-          "version": "0.7.4"
+          "revision": "92f299454535ae41adf78f0b84f7a4a9100f6926",
+          "version": "0.7.6"
         }
       },
       {
@@ -20,7 +20,7 @@
         }
       },
       {
-        "package": "keychain-item",
+        "package": "KeychainItem",
         "repositoryURL": "https://github.com/objcio/keychain-item",
         "state": {
           "branch": null,
