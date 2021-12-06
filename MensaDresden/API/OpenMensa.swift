@@ -127,14 +127,14 @@ class OMStore: ObservableObject {
         Cardservice.login(username: cardnumber, password: password) { result in
             switch result {
             case .failure(let error):
-                // FIXME: The error here is an EmealKit.Error without a good localizedDescription.
-                self.save(result: .failure(error))
+                let wrappedError = CardserviceErrorWrapper(error: error)
+                self.save(result: .failure(wrappedError))
             case .success(let service):
                 service.transactions(begin: ninetyDaysAgo, end: Date()) { result in
                     switch result {
                     case .failure(let error):
-                        // FIXME: The error here is an EmealKit.Error without a good localizedDescription.
-                        self.save(result: .failure(error))
+                        let wrappedError = CardserviceErrorWrapper(error: error)
+                        self.save(result: .failure(wrappedError))
                     case .success(let transactions):
                         if transactions.isEmpty {
                             self.save(result: .noData)
@@ -144,6 +144,27 @@ class OMStore: ObservableObject {
                     }
                 }
             }
+        }
+    }
+}
+
+struct CardserviceErrorWrapper: LocalizedError {
+    var error: CardserviceError
+
+    var errorDescription: String? {
+        switch self.error {
+        case .network(_):
+            return NSLocalizedString("emeal.error.network", comment: "")
+        case .invalidURL:
+            return NSLocalizedString("emeal.error.invalid-url", comment: "")
+        case .authentication:
+            return NSLocalizedString("emeal.error.authentication", comment: "")
+        case .server(statusCode: _):
+            return NSLocalizedString("emeal.error.server", comment: "")
+        case .decoding(_):
+            return NSLocalizedString("emeal.error.decoding", comment: "")
+        case .feed(error: _):
+            return NSLocalizedString("emeal.error.unknown", comment: "")
         }
     }
 }

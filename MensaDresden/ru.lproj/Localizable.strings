@@ -36,6 +36,12 @@
 "emeal.autoload-hint" = "Используешь Autoload? Введите свои учетные данные в настройки приложения, и все последние транзакции будут отображаться здесь.";
 "emeal.autoload-information" = "Информация об Autoload";
 "emeal.no-transactions" = "Никаких операций за последние 90 дней.";
+"emeal.error.network" = "Ошибка сети";
+"emeal.error.invalid-url" = "Неверное имя пользователя";
+"emeal.error.authentication" = "Неверные данные для входа";
+"emeal.error.server" = "Ошибка сервера";
+"emeal.error.decoding" = "Не удалось прочитать данные";
+"emeal.error.unknown" = "Неизвестная ошибка";
 
 // Settings
 "settings.nav" = "Настройки";

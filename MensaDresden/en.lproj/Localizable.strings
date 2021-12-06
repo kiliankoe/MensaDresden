@@ -36,6 +36,12 @@
 "emeal.autoload-hint" = "Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here.";
 "emeal.autoload-information" = "Autoload Information";
 "emeal.no-transactions" = "No transactions in the last 90 days.";
+"emeal.error.network" = "Network error";
+"emeal.error.invalid-url" = "Invalid username";
+"emeal.error.authentication" = "Invalid login data";
+"emeal.error.server" = "Server error";
+"emeal.error.decoding" = "Failed to read data";
+"emeal.error.unknown" = "Unknown error";
 
 // Settings
 "settings.nav" = "Settings";

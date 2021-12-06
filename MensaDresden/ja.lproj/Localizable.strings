@@ -36,6 +36,12 @@
 "emeal.autoload-hint" = "オートロードを使用していますか？アプリの設定で資格情報を入力すると、最近の取引はすべてここに表示されます。";
 "emeal.autoload-information" = "オートロード情報";
 "emeal.no-transactions" = "過去90日間の取引はありません。";
+"emeal.error.network" = "ネットワークエラーです。";
+"emeal.error.invalid-url" = "無効なユーザー名";
+"emeal.error.authentication" = "無効なログインデータ";
+"emeal.error.server" = "サーバーエラー";
+"emeal.error.decoding" = "データの読み取りに失敗しました";
+"emeal.error.unknown" = "不明なエラーです";
 
 // Settings
 "settings.nav" = "設定";
