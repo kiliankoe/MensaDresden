@@ -6,7 +6,7 @@ struct AppView: View {
             CanteenListView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "bag")
+                        Image(systemName: "takeoutbag.and.cup.and.straw")
                             .accessibility(hidden: true)
                         Text("tab.menu")
                     }
