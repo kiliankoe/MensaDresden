@@ -37,11 +37,11 @@
 "emeal.autoload-information" = "Informationen zu Autoload";
 "emeal.no-transactions" = "Keine Transaktionen in den letzten 90 Tagen.";
 "emeal.error.network" = "Netzwerkfehler";
-"emeal.error.invalid-url" = "Ungültiger Nutzername";
-"emeal.error.authentication" = "Ungültige Logindaten";
-"emeal.error.server" = "Serverfehler";
-"emeal.error.decoding" = "Daten konnten nicht gelesen werden";
-"emeal.error.unknown" = "Unbekannter Fehler";
+"emeal.error.invalid-username" = "Ungültiger Benutzername";
+"emeal.error.server" = "%d Serverfehler";
+"emeal.error.decoding" = "Daten konnten nicht gelesen werden.";
+"emeal.error.no-card-details" = "Kein Emeal im Account gefunden.";
+"emeal.error.rate-limited" = "Zu viele Requests, bitte versuche es in einem Moment noch einmal.";
 
 // Settings
 "settings.nav" = "Einstellungen";
@@ -59,7 +59,7 @@
 "default" = "Standard";
 "distance" = "Entfernung";
 "alphabetical" = "Alphabetisch";
-"settings.autoload-description" = "Du benutzt Autoload? Trage hier deine Zugangsdaten ein um die Transaktionen der letzten 90 Tage auf der Emeal Seite anzuzeigen. Deine Zugangsdaten werden verschlüsselt nur auf diesem Gerät gespeichert und ausschließlich zur Authentifizierung an Server des Studentenwerks übertragen.";
+"settings.autoload-description" = "Du benutzt Autoload? Trage hier deine Zugangsdaten ein um die Transaktionen der letzten 90 Tage im Emeal Tab anzuzeigen. Deine Zugangsdaten werden verschlüsselt nur auf diesem Gerät gespeichert und ausschließlich zur Authentifizierung an Server des Studentenwerks übertragen.";
 "settings.autoload-cardnumber" = "Kartennummer";
 "settings.autoload-password" = "Passwort";
 "settings.autoload-information" = "Informationen zu Autoload";

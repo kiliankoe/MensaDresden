@@ -37,11 +37,11 @@
 "emeal.autoload-information" = "Autoload Information";
 "emeal.no-transactions" = "No transactions in the last 90 days.";
 "emeal.error.network" = "Network error";
-"emeal.error.invalid-url" = "Invalid username";
-"emeal.error.authentication" = "Invalid login data";
-"emeal.error.server" = "Server error";
-"emeal.error.decoding" = "Failed to read data";
-"emeal.error.unknown" = "Unknown error";
+"emeal.error.invalid-username" = "Invalid username";
+"emeal.error.server" = "%d Server error";
+"emeal.error.decoding" = "Failed to read data.";
+"emeal.error.no-card-details" = "No Emeal found in account.";
+"emeal.error.rate-limited" = "Too many requests. Try again in a moment.";
 
 // Settings
 "settings.nav" = "Settings";

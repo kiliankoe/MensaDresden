@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		391B94F827656B210071E678 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F727656B210071E678 /* L10n.swift */; };
 		391B9E44255ADA43000529A8 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B9E43255ADA43000529A8 /* CompassView.swift */; };
 		39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C5D234241B900E4EFB5 /* AppDelegate.swift */; };
 		39281C60234241B900E4EFB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C5F234241B900E4EFB5 /* SceneDelegate.swift */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		391B94F727656B210071E678 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = L10n.swift; path = MensaDresden/L10n.swift; sourceTree = SOURCE_ROOT; };
 		391B9E43255ADA43000529A8 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		39281C5A234241B900E4EFB5 /* Mensa Dresden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mensa Dresden.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39281C5D234241B900E4EFB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				39281C6B234241BC00E4EFB5 /* Info.plist */,
 				39E215862358E37300F5EBE9 /* InfoPlist.strings */,
 				39281C65234241BC00E4EFB5 /* Preview Content */,
+				391B94F727656B210071E678 /* L10n.swift */,
 				39281C76234247C100E4EFB5 /* Localizable.strings */,
 			);
 			path = MensaDresden;
@@ -461,6 +464,7 @@
 				39281C83234282C100E4EFB5 /* MealImage.swift in Sources */,
 				394D9D1F234560B4005F076C /* SettingsView.swift in Sources */,
 				39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */,
+				391B94F827656B210071E678 /* L10n.swift in Sources */,
 				39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */,
 				398B34E4236CC6B500C10D9B /* MealList.swift in Sources */,
 				39281C5E234241B900E4EFB5 /* AppDelegate.swift in Sources */,

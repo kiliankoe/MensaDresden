@@ -37,11 +37,11 @@
 "emeal.autoload-information" = "Информация об Autoload";
 "emeal.no-transactions" = "Никаких операций за последние 90 дней.";
 "emeal.error.network" = "Ошибка сети";
-"emeal.error.invalid-url" = "Неверное имя пользователя";
-"emeal.error.authentication" = "Неверные данные для входа";
-"emeal.error.server" = "Ошибка сервера";
-"emeal.error.decoding" = "Не удалось прочитать данные";
-"emeal.error.unknown" = "Неизвестная ошибка";
+"emeal.error.invalid-username" = "Неверное имя пользователя";
+"emeal.error.server" = "%d Ошибка сервера";
+"emeal.error.decoding" = "Не удалось считать данные.";
+"emeal.error.no-card-details" = "На счете не обнаружено ни одного емиля.";
+"emeal.error.rate-limited" = "Слишком много запросов. Повторите попытку через минуту.";
 
 // Settings
 "settings.nav" = "Настройки";
