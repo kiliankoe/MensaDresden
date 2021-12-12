@@ -179,8 +179,6 @@ internal enum L10n {
     internal static let autoloadPassword = L10n.tr("Localizable", "settings.autoload-password")
     /// Canteen Sorting
     internal static let canteenSorting = L10n.tr("Localizable", "settings.canteen-sorting")
-    /// Donate
-    internal static let donation = L10n.tr("Localizable", "settings.donation")
     /// Favorite Canteens
     internal static let favoriteCanteens = L10n.tr("Localizable", "settings.favorite-canteens")
     /// Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order.
