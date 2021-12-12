@@ -37,7 +37,7 @@
 "emeal.autoload-information" = "Информация об Autoload";
 "emeal.no-transactions" = "Никаких операций за последние 90 дней.";
 "emeal.error.network" = "Ошибка сети";
-"emeal.error.invalid-username" = "Неверное имя пользователя";
+"emeal.error.invalid-credentials" = "Неверное имя пользователя или пароль";
 "emeal.error.server" = "%d Ошибка сервера";
 "emeal.error.decoding" = "Не удалось считать данные.";
 "emeal.error.no-card-details" = "На счете не обнаружено ни одного емиля.";

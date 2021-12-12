@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		391B94F827656B210071E678 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F727656B210071E678 /* L10n.swift */; };
 		391B94FC2766296C0071E678 /* MensaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94FB2766296C0071E678 /* MensaApp.swift */; };
+		391B94FE27665AEB0071E678 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94FD27665AEB0071E678 /* Binding.swift */; };
 		391B9E44255ADA43000529A8 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B9E43255ADA43000529A8 /* CompassView.swift */; };
 		39281C62234241B900E4EFB5 /* CanteenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C61234241B900E4EFB5 /* CanteenListView.swift */; };
 		39281C64234241BC00E4EFB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39281C63234241BC00E4EFB5 /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		391B94F727656B210071E678 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = L10n.swift; path = MensaDresden/L10n.swift; sourceTree = SOURCE_ROOT; };
 		391B94FB2766296C0071E678 /* MensaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensaApp.swift; sourceTree = "<group>"; };
+		391B94FD27665AEB0071E678 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		391B9E43255ADA43000529A8 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		39281C5A234241B900E4EFB5 /* Mensa Dresden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mensa Dresden.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39281C61234241B900E4EFB5 /* CanteenListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanteenListView.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				39A0C94523623B9E0029FA35 /* Date.swift */,
 				3969E12D24FFAE0C00036C69 /* Color.swift */,
 				395F98A424FFED7C00740176 /* View.swift */,
+				391B94FD27665AEB0071E678 /* Binding.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				39FC09D82361AFEE008D8AB0 /* Formatter.swift in Sources */,
 				39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */,
 				39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */,
+				391B94FE27665AEB0071E678 /* Binding.swift in Sources */,
 				39A79148241FC50F0009CF03 /* NewsfeedView.swift in Sources */,
 				39281C8B234292CD00E4EFB5 /* OpenMensa.swift in Sources */,
 				39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */,

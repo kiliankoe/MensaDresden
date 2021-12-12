@@ -37,7 +37,7 @@
 "emeal.autoload-information" = "Informationen zu Autoload";
 "emeal.no-transactions" = "Keine Transaktionen in den letzten 90 Tagen.";
 "emeal.error.network" = "Netzwerkfehler";
-"emeal.error.invalid-username" = "Ungültiger Benutzername";
+"emeal.error.invalid-credentials" = "Ungültiger Benutzername oder Passwort";
 "emeal.error.server" = "%d Serverfehler";
 "emeal.error.decoding" = "Daten konnten nicht gelesen werden.";
 "emeal.error.no-card-details" = "Kein Emeal im Account gefunden.";

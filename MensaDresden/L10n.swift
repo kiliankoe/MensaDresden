@@ -94,8 +94,8 @@ internal enum L10n {
     internal enum Error {
       /// Failed to read data.
       internal static let decoding = L10n.tr("Localizable", "emeal.error.decoding")
-      /// Invalid username
-      internal static let invalidUsername = L10n.tr("Localizable", "emeal.error.invalid-username")
+      /// Invalid username or password
+      internal static let invalidCredentials = L10n.tr("Localizable", "emeal.error.invalid-credentials")
       /// Network error
       internal static let network = L10n.tr("Localizable", "emeal.error.network")
       /// No Emeal found in account.

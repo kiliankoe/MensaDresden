@@ -78,7 +78,7 @@ struct EmealView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
-            self.store.loadTransactions()
+            store.loadTransactions()
         }
     }
 }

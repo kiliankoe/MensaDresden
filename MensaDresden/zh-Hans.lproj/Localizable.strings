@@ -37,7 +37,7 @@
 "emeal.autoload-information" = "自动加载信息";
 "emeal.no-transactions" = "过去90天内没有交易。";
 "emeal.error.network" = "网络错误";
-"emeal.error.invalid-username" = "无效的用户名";
+"emeal.error.invalid-credentials" = "无效的用户名或密码";
 "emeal.error.server" = "%d 服务器错误";
 "emeal.error.decoding" = "读取数据失败。";
 "emeal.error.no-card-details" = "帐户中没有发现Emeal。";

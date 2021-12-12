@@ -37,7 +37,7 @@
 "emeal.autoload-information" = "オートロード情報";
 "emeal.no-transactions" = "過去90日間の取引はありません。";
 "emeal.error.network" = "ネットワークエラーです。";
-"emeal.error.invalid-username" = "無効なユーザー名";
+"emeal.error.invalid-credentials" = "ユーザー名またはパスワードが無効";
 "emeal.error.server" = "%d サーバー・エラー";
 "emeal.error.decoding" = "データの読み取りに失敗しました。";
 "emeal.error.no-card-details" = "アカウントにEmealが見つかりませんでした。";

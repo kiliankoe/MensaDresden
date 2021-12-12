@@ -20,7 +20,7 @@ extension LoadingResult where T: RandomAccessCollection & MutableCollection {
 
 struct CachedLoadingResult<T> {
     var lastRequested: Date?
-    var result: LoadingResult<T> = .loading
+    var result: LoadingResult<T>
 
     init(result: LoadingResult<T>) {
         self.lastRequested = Date()

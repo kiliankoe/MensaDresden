@@ -4,30 +4,6 @@ struct SettingsView: View {
     @EnvironmentObject var settings: Settings
     @EnvironmentObject var omStore: OMStore
 
-    var autoloadCardnumberBinding: Binding<String> {
-        Binding<String>(
-            get: {
-                settings.autoloadCardnumber ?? ""
-            },
-            set: { newValue in
-                settings.autoloadCardnumber = newValue
-                omStore.clearTransactionCache()
-            }
-        )
-    }
-
-    var autoloadPasswordBinding: Binding<String> {
-        Binding<String>(
-            get: {
-                settings.autoloadPassword ?? ""
-            },
-            set: { newValue in
-                settings.autoloadPassword = newValue
-                omStore.clearTransactionCache()
-            }
-        )
-    }
-
     var shortVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     }
@@ -74,10 +50,16 @@ struct SettingsView: View {
                 }
 
                 Section(header: Text("Autoload")) {
-                    TextField(LocalizedStringKey("settings.autoload-cardnumber"), text: autoloadCardnumberBinding, prompt: nil)
-                        .textContentType(.username)
+                    TextField(
+                        L10n.Settings.autoloadCardnumber,
+                        text: $settings.autoloadCardnumber.default("")
+                    )
+                    .textContentType(.username)
 
-                    SecureField(LocalizedStringKey("settings.autoload-password"), text: autoloadPasswordBinding, prompt: nil)
+                    SecureField(
+                        L10n.Settings.autoloadPassword,
+                        text: $settings.autoloadPassword.default("")
+                    )
                     
                     Text("settings.autoload-description")
                         .font(.caption)

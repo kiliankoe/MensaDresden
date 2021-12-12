@@ -92,14 +92,7 @@ class OMStore: ObservableObject {
     private var cachedTransactions: CachedLoadingResult<[EmealKit.Transaction]>?
 
     func transactions() -> LoadingResult<[EmealKit.Transaction]> {
-        guard let cached = cachedTransactions else {
-            loadTransactions()
-            return .loading
-        }
-        if cached.isOlder(than: 10*60) {
-            loadTransactions()
-        }
-        return cached.result
+        cachedTransactions?.result ?? .loading
     }
 
     private func save(result: LoadingResult<[EmealKit.Transaction]>) {
@@ -107,10 +100,6 @@ class OMStore: ObservableObject {
         DispatchQueue.main.async {
             self.objectWillChange.send()
         }
-    }
-
-    func clearTransactionCache() {
-        self.cachedTransactions = nil
     }
 
     func loadTransactions() {
@@ -160,7 +149,7 @@ struct CardserviceErrorWrapper: LocalizedError {
         case .network:
             return L10n.Emeal.Error.network
         case .invalidURL, .invalidLoginCredentials:
-            return L10n.Emeal.Error.invalidUsername
+            return L10n.Emeal.Error.invalidCredentials
         case .server(statusCode: let statusCode):
             return L10n.Emeal.Error.server(statusCode)
         case .decoding:
