@@ -112,27 +112,9 @@ class Settings: ObservableObject {
 
     @KeychainItem(account: "stuwedd.autoload.cardnumber")
     var autoloadCardnumber: String?
-    var autoloadCardnumberBinding: Binding<String> {
-        return Binding<String>(
-            get: {
-                self.autoloadCardnumber ?? ""
-            },
-            set: { val in
-                self.autoloadCardnumber = val
-            })
-    }
 
     @KeychainItem(account: "stuwedd.autoload.password")
     var autoloadPassword: String?
-    var autoloadPasswordBinding: Binding<String> {
-        return Binding<String>(
-            get: {
-                self.autoloadPassword ?? ""
-            },
-            set: { val in
-                self.autoloadPassword = val
-            })
-    }
 
     var areAutoloadCredentialsAvailable: Bool {
         switch (autoloadCardnumber, autoloadPassword) {

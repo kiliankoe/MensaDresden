@@ -2,6 +2,31 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var settings: Settings
+    @EnvironmentObject var omStore: OMStore
+
+    var autoloadCardnumberBinding: Binding<String> {
+        Binding<String>(
+            get: {
+                settings.autoloadCardnumber ?? ""
+            },
+            set: { newValue in
+                settings.autoloadCardnumber = newValue
+                omStore.clearTransactionCache()
+            }
+        )
+    }
+
+    var autoloadPasswordBinding: Binding<String> {
+        Binding<String>(
+            get: {
+                settings.autoloadPassword ?? ""
+            },
+            set: { newValue in
+                settings.autoloadPassword = newValue
+                omStore.clearTransactionCache()
+            }
+        )
+    }
 
     var shortVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
@@ -49,10 +74,10 @@ struct SettingsView: View {
                 }
 
                 Section(header: Text("Autoload")) {
-                    TextField(LocalizedStringKey("settings.autoload-cardnumber"), text: settings.autoloadCardnumberBinding, prompt: nil)
+                    TextField(LocalizedStringKey("settings.autoload-cardnumber"), text: autoloadCardnumberBinding, prompt: nil)
                         .textContentType(.username)
 
-                    SecureField(LocalizedStringKey("settings.autoload-password"), text: settings.autoloadPasswordBinding, prompt: nil)
+                    SecureField(LocalizedStringKey("settings.autoload-password"), text: autoloadPasswordBinding, prompt: nil)
                     
                     Text("settings.autoload-description")
                         .font(.caption)

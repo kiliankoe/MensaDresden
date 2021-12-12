@@ -109,6 +109,10 @@ class OMStore: ObservableObject {
         }
     }
 
+    func clearTransactionCache() {
+        self.cachedTransactions = nil
+    }
+
     func loadTransactions() {
         guard let cardnumber = settings.autoloadCardnumber, let password = settings.autoloadPassword else {
             return
