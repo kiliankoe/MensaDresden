@@ -25,7 +25,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NFCReaderUsageDescription</key>
-	<string>MensaDresden uses NFC to read your Emeal card&apos;s balance.</string>
+	<string>MensaDresden uses NFC to read your Emeal card's balance.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Mensa Dresden uses your location to sort canteens from closest to furthest.</string>
 	<key>UIApplicationSceneManifest</key>
