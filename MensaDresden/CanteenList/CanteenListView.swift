@@ -2,7 +2,7 @@ import SwiftUI
 import EmealKit
 
 struct CanteenListView: View {
-    @EnvironmentObject var store: OMStore
+    @EnvironmentObject var api: API
     @EnvironmentObject var deviceOrientation: DeviceOrientation
     @EnvironmentObject var settings: Settings
     @EnvironmentObject var locationManager: LocationManager
@@ -41,9 +41,9 @@ struct CanteenListView: View {
 
     var body: some View {
         NavigationView {
-            LoadingListView(result: store.canteens,
+            LoadingListView(result: api.canteens,
                             noDataMessage: "canteens.no-data",
-                            retryAction: { self.store.loadCanteens() },
+                            retryAction: { Task { await self.api.loadCanteens() } },
                             showRetryOnNoData: true,
                             listView: { canteens in
                                 List(self.sort(canteens: canteens)) { canteen in
@@ -72,6 +72,6 @@ struct ContentView_Previews: PreviewProvider {
 
         return CanteenListView()
             .environmentObject(settings)
-            .environmentObject(OMStore(settings: settings))
+            .environmentObject(API())
     }
 }

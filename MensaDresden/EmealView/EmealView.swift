@@ -3,7 +3,7 @@ import Combine
 import CoreNFC
 
 struct EmealView: View {
-    @EnvironmentObject var store: OMStore
+    @EnvironmentObject var api: API
     @EnvironmentObject var settings: Settings
 
     @ObservedObject var emeal = ObservableEmeal()
@@ -41,9 +41,9 @@ struct EmealView: View {
                 }
 
                 if settings.areAutoloadCredentialsAvailable {
-                    LoadingListView(result: store.transactions(),
+                    LoadingListView(result: api.transactions(),
                                     noDataMessage: "emeal.no-transactions",
-                                    retryAction: { self.store.loadTransactions() },
+                                    retryAction: { Task { await self.loadTransactions() } },
                                     listView: { transactions in
                                         List(transactions, id: \.id) { transaction in
                                             VStack(alignment: .leading) {
@@ -66,6 +66,9 @@ struct EmealView: View {
                                             }
                                         }
                                         .listStyle(PlainListStyle())
+                                        .refreshable {
+                                            await self.loadTransactions()
+                                        }
                                     }
                     )
                 } else {
@@ -77,9 +80,16 @@ struct EmealView: View {
             .navigationBarTitle("Emeal")
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear {
-            store.loadTransactions()
+        .task {
+            await loadTransactions()
         }
+    }
+
+    func loadTransactions() async {
+        guard let cardnumber = settings.autoloadCardnumber,
+              let password = settings.autoloadPassword
+        else { return }
+        await api.loadTransactions(cardnumber: cardnumber, password: password)
     }
 }
 
@@ -88,7 +98,7 @@ struct EmealView_Previews: PreviewProvider {
         let settings = Settings()
 
         return EmealView()
-            .environmentObject(OMStore(settings: settings))
+            .environmentObject(API())
             .environmentObject(settings)
     }
 }

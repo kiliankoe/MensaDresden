@@ -4,7 +4,7 @@ import EmealKit
 struct MealListView: View {
     @State var canteen: Canteen
 
-    @EnvironmentObject var store: OMStore
+    @EnvironmentObject var api: API
     @EnvironmentObject var settings: Settings
 
     @State var showingDatePickerView = false
@@ -50,7 +50,7 @@ struct MealListView: View {
                 DatePickerView(canteen: self.canteen)
             }
             // Is this a bug that this is necessary? Shouldn't the environment be global?
-            .environmentObject(self.store)
+            .environmentObject(self.api)
             .environmentObject(self.settings)
             .accentColor(.green)
         }
@@ -77,7 +77,7 @@ struct MealListView_Previews: PreviewProvider {
             MealListView(canteen: Canteen.example)
         }
         .environmentObject(settings)
-        .environmentObject(OMStore(settings: settings))
+        .environmentObject(API())
         .accentColor(.green)
     }
 }

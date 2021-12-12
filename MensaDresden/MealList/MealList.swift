@@ -3,7 +3,7 @@ import EmealKit
 import SwiftyHolidays
 
 struct MealList: View {
-    @EnvironmentObject var store: OMStore
+    @EnvironmentObject var api: API
 
     var canteen: Canteen
     @Binding var selectedDate: Date
@@ -29,10 +29,10 @@ struct MealList: View {
     }
 
     var body: some View {
-        LoadingListView(result: store.meals(for: canteen.id, on: selectedDate),
+        LoadingListView(result: api.meals(for: canteen.id, on: selectedDate),
                         noDataMessage: noDataMessage,
                         noDataSubtitle: noDataSubtitle,
-                        retryAction: { self.store.loadMeals(for: self.canteen.id, on: self.selectedDate) },
+                        retryAction: { Task { await self.api.loadMeals(for: self.canteen.id, on: self.selectedDate) } },
                         listView: { meals in
                              List(meals) { meal in
                                  NavigationLink(destination: MealDetailContainerView(meal: meal)) {
@@ -40,6 +40,9 @@ struct MealList: View {
                                  }
                              }
                              .listStyle(PlainListStyle())
+                             .refreshable {
+                                 await api.loadMeals(for: canteen.id, on: selectedDate)
+                             }
                         }
         )
     }

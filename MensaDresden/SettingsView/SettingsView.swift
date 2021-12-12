@@ -2,7 +2,6 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var settings: Settings
-    @EnvironmentObject var omStore: OMStore
 
     var shortVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String

@@ -1,28 +1,26 @@
 import Foundation
 
 enum LoadingResult<T> {
-    case success(T)
-    /// Request was a success, but there's no data to be shown (e.g. no meals for that day)
-    case noData
     case loading
-    case failure(Error)
-}
 
-extension LoadingResult where T: RandomAccessCollection & MutableCollection {
-    mutating func sort(by closure: (T.Element, T.Element) -> Bool) {
-        guard case LoadingResult.success(var elements) = self else {
-            return
+    case success(T)
+    case failure(Error)
+
+    init(from result: Result<T, Error>) {
+        switch result {
+        case .failure(let error):
+            self = .failure(error)
+        case .success(let value):
+            self = .success(value)
         }
-        elements.sort(by: closure)
-        self = .success(elements)
     }
 }
 
-struct CachedLoadingResult<T> {
+struct CachedResult<T> {
     var lastRequested: Date?
-    var result: LoadingResult<T>
+    var result: Result<T, Error>
 
-    init(result: LoadingResult<T>) {
+    init(result: Result<T, Error>) {
         self.lastRequested = Date()
         self.result = result
     }

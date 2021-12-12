@@ -5,7 +5,7 @@ struct MensaApp: App {
     private var settings: Settings
     private var deviceOrientation: DeviceOrientation
     private var locationManager: LocationManager
-    private var omStore: OMStore
+    private var api: API
 
     init() {
         self.settings = Settings()
@@ -17,8 +17,7 @@ struct MensaApp: App {
         self.deviceOrientation = DeviceOrientation(isLandscape: isLandscape ?? false)
 
         self.locationManager = LocationManager.shared
-
-        self.omStore = OMStore(settings: settings)
+        self.api = API()
     }
 
     var body: some Scene {
@@ -27,7 +26,7 @@ struct MensaApp: App {
                 .environmentObject(settings)
                 .environmentObject(deviceOrientation)
                 .environmentObject(locationManager)
-                .environmentObject(omStore)
+                .environmentObject(api)
         }
     }
 }

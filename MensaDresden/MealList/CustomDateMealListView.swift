@@ -2,8 +2,6 @@ import SwiftUI
 import EmealKit
 
 struct CustomDateMealListView: View {
-
-    @EnvironmentObject var store: OMStore
     @State var canteen: Canteen
     var selectedDate: Date
 
@@ -29,7 +27,6 @@ struct CustomDateMealListView_Previews: PreviewProvider {
         return NavigationView {
             CustomDateMealListView(canteen: Canteen.example, selectedDate: Date())
         }
-        .environmentObject(OMStore(settings: settings))
         .accentColor(.green)
     }
 }
