@@ -14,16 +14,15 @@ struct CanteenListView: View {
         case .success(let canteens):
             if searchQuery.isEmpty {
                 return api.canteens
-            } else {
-                let filtered = canteens
-                    .filter { canteen in
-                        if let possibleId = CanteenId.from(name: searchQuery) {
-                            return canteen.id == possibleId.rawValue
-                        }
-                        return canteen.name.localizedCaseInsensitiveContains(searchQuery) || canteen.address.localizedCaseInsensitiveContains(searchQuery)
-                    }
-                return .success(filtered)
             }
+            let filtered = canteens
+                .filter { canteen in
+                    if let possibleId = CanteenId.from(name: searchQuery) {
+                        return canteen.id == possibleId.rawValue
+                    }
+                    return canteen.name.localizedCaseInsensitiveContains(searchQuery) || canteen.address.localizedCaseInsensitiveContains(searchQuery)
+                }
+            return .success(filtered)
         default:
             return api.canteens
         }
