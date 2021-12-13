@@ -7,6 +7,28 @@ struct CanteenListView: View {
     @EnvironmentObject var settings: Settings
     @EnvironmentObject var locationManager: LocationManager
 
+    @State private var searchQuery = ""
+
+    var filteredCanteens: LoadingResult<[Canteen]> {
+        switch api.canteens {
+        case .success(let canteens):
+            if searchQuery.isEmpty {
+                return api.canteens
+            } else {
+                let filtered = canteens
+                    .filter { canteen in
+                        if let possibleId = CanteenId.from(name: searchQuery) {
+                            return canteen.id == possibleId.rawValue
+                        }
+                        return canteen.name.localizedCaseInsensitiveContains(searchQuery) || canteen.address.localizedCaseInsensitiveContains(searchQuery)
+                    }
+                return .success(filtered)
+            }
+        default:
+            return api.canteens
+        }
+    }
+
     func sort(canteens: [Canteen]) -> [Canteen] {
         let favorites = canteens.filter { settings.favoriteCanteens.contains($0.name) }
         var nonFavorites = canteens.filter { !settings.favoriteCanteens.contains($0.name) }
@@ -41,7 +63,7 @@ struct CanteenListView: View {
 
     var body: some View {
         NavigationView {
-            LoadingListView(result: api.canteens,
+            LoadingListView(result: filteredCanteens,
                             noDataMessage: "canteens.no-data",
                             retryAction: { Task { await self.api.loadCanteens() } },
                             showRetryOnNoData: true,
@@ -55,6 +77,7 @@ struct CanteenListView: View {
                             }
             )
             .navigationBarTitle("canteens.nav")
+            .searchable(text: $searchQuery)
             VStack {
                 Text("ipad.bon-appetit")
                     .font(.title)
