@@ -76,6 +76,34 @@ struct CanteenListView: View {
                             }
             )
             .navigationBarTitle("canteens.nav")
+            .toolbar {
+                ToolbarItem {
+                    Menu(
+                        content: {
+                            Button(action: {
+                                settings.canteenSortingBinding.wrappedValue = .default
+                            }) {
+                                Label(L10n.default, systemImage: "list.bullet")
+                            }
+
+                            Button(action: {
+                                settings.canteenSortingBinding.wrappedValue = .distance
+                            }) {
+                                Label(L10n.distance, systemImage: "location")
+                            }
+
+                            Button(action: {
+                                settings.canteenSortingBinding.wrappedValue = .alphabetical
+                            }) {
+                                Label(L10n.alphabetical, systemImage: "abc")
+                            }
+                        },
+                        label: {
+                            Image(systemName: "arrow.up.arrow.down")
+                        }
+                    )
+                }
+            }
             .searchable(text: $searchQuery)
             VStack {
                 Text("ipad.bon-appetit")
