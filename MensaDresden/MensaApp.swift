@@ -9,6 +9,11 @@ struct MensaApp: App {
 
     init() {
         self.settings = Settings()
+
+        if CommandLine.arguments.contains("--uitesting") {
+            self.settings.resetAll()
+        }
+
         if settings.canteenSorting == Settings.CanteenSorting.distance.rawValue {
             LocationManager.shared.start()
         }

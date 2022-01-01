@@ -32,4 +32,8 @@ class BlacklistBinding<T> where T: Equatable, T: RawRepresentable {
             }
         )
     }
+
+    func reset() {
+        self.storage = []
+    }
 }

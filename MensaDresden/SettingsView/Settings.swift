@@ -126,4 +126,15 @@ class Settings: ObservableObject {
             return true
         }
     }
+
+    func resetAll() {
+        self.favoriteCanteens = []
+        self.priceType = PriceType.student.rawValue
+        self.canteenSorting = CanteenSorting.default.rawValue
+        self.userDiet = DietType.all.rawValue
+        self.ingredientBlacklist.reset()
+        self.allergenBlacklist.reset()
+        self.autoloadCardnumber = nil
+        self.autoloadPassword = nil
+    }
 }
