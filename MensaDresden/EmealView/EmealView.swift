@@ -23,10 +23,21 @@ struct EmealView: View {
         .padding(.horizontal)
     }
 
+    var shouldShowEmealView: Bool {
+        #if targetEnvironment(simulator)
+            return true
+        #else
+        if NFCReaderSession.readingAvailable {
+            return true
+        }
+        return false
+        #endif
+    }
+
     var body: some View {
         NavigationView {
             VStack {
-                if NFCReaderSession.readingAvailable {
+                if shouldShowEmealView {
                     EmealCardView(amount: $emeal.currentBalance,
                                   lastTransaction: $emeal.lastTransaction,
                                   lastScan: $emeal.lastScanDate)
