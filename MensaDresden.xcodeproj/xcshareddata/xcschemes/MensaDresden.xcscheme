@@ -33,7 +33,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "xcrun simctl status_bar booted override \&#10;    --time &quot;9:41 AM&quot; \&#10;    --dataNetwork wifi \&#10;    --wifiMode active \&#10;    --wifiBars 3 \&#10;    --cellularMode notSupported \&#10;    --batteryState discharging \&#10;    --batteryLevel 100&#10;">
+               scriptText = "#xcrun simctl status_bar booted override \&#10;#    --time &quot;9:41 AM&quot; \&#10;#    --dataNetwork wifi \&#10;#    --wifiMode active \&#10;#    --wifiBars 3 \&#10;#    --cellularMode notSupported \&#10;#    --batteryState discharging \&#10;#    --batteryLevel 100&#10;">
             </ActionContent>
          </ExecutionAction>
       </PreActions>
@@ -42,7 +42,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "xcrun simctl status_bar booted clear&#10;">
+               scriptText = "#xcrun simctl status_bar booted clear&#10;">
             </ActionContent>
          </ExecutionAction>
       </PostActions>
@@ -64,6 +64,16 @@
                BlueprintIdentifier = "39FAEBF62781113E0035776F"
                BuildableName = "UITests.xctest"
                BlueprintName = "UITests"
+               ReferencedContainer = "container:MensaDresden.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "39FAEC092781E6350035776F"
+               BuildableName = "Screenshots.xctest"
+               BlueprintName = "Screenshots"
                ReferencedContainer = "container:MensaDresden.xcodeproj">
             </BuildableReference>
          </TestableReference>

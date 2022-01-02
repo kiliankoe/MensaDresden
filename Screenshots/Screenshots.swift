@@ -1,12 +1,8 @@
 import XCTest
 
-class GenerateScreenshots: XCTestCase {
+class Screenshots: XCTestCase {
 
     var app: XCUIApplication!
-
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
-        true
-    }
 
     override func setUpWithError() throws {
         continueAfterFailure = false
@@ -24,17 +20,18 @@ class GenerateScreenshots: XCTestCase {
     }
 
     func testTakeScreenshots() throws {
+        setupSnapshot(app)
         app.launch()
-        takeScreenshot("Menu", app)
+
+        app.staticTexts["Alte Mensa"].tap()
+        Thread.sleep(forTimeInterval: 1)
+        snapshot("01_Menu")
 
         app.navigate(to: .emeal)
-        takeScreenshot("Emeal", app)
-    }
+        snapshot("02_Emeal")
 
-    private func takeScreenshot(_ name: String, _ app: XCUIApplication) {
-        let attachment = XCTAttachment(screenshot: app.screenshot())
-        attachment.name = name
-        attachment.lifetime = .keepAlways
-        self.add(attachment)
+        app.navigate(to: .menu)
+        app.goBack()
+        snapshot("03_Canteens")
     }
 }

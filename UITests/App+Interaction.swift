@@ -2,15 +2,15 @@ import Foundation
 import XCTest
 
 extension XCUIApplication {
-    enum Tab: String {
-        case menu = "Menu"
-        case emeal = "Emeal"
-        case news = "News"
-        case settings = "Settings"
+    enum Tab: Int {
+        case menu = 0
+        case emeal = 1
+        case news = 2
+        case settings = 3
     }
 
     func navigate(to tab: Tab) {
-        self.tabBars.buttons[tab.rawValue].tap()
+        self.tabBars.buttons.element(boundBy: tab.rawValue).tap()
     }
 
     func goBack() {
