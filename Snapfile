@@ -1,13 +1,5 @@
 # A list of devices you want to take the screenshots from
 devices([
-#   "iPhone 8",
-#   "iPhone 8 Plus",
-#   "iPhone SE",
-#   "iPhone X",
-#   "iPad Pro (12.9-inch)",
-#   "iPad Pro (9.7-inch)",
-#   "Apple TV 1080p",
-#   "Apple Watch Series 6 - 44mm"
     "iPhone 13 Pro",
     "iPhone 8 Plus",
     # "iPad Pro (12.9-inch) (5th generation)"
@@ -19,7 +11,6 @@ languages([
   "ja",
   "ru",
   "zh-Hans"
-  # ["pt", "pt_BR"] # Portuguese with Brazilian locale
 ])
 
 # The name of the scheme which contains the UI Tests

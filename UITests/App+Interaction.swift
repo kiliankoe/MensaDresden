@@ -21,6 +21,23 @@ extension XCUIApplication {
         XCUIApplication().coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.02)).tap()
     }
 
+    func selectCanteen(_ idx: Int) {
+        self.tables.children(matching: .cell).element(boundBy: idx).tap()
+    }
+
+    enum DateControl: Int {
+        case today = 0
+        case tomorrow = 1
+    }
+
+    func selectDate(_ date: DateControl) {
+        self.segmentedControls.buttons.element(boundBy: date.rawValue).tap()
+    }
+
+    func selectMeal(_ idx: Int) {
+        self.tables.children(matching: .cell).element(boundBy: idx).tap()
+    }
+
     func favoriteCanteen() {
         self.navigationBars.buttons.element(boundBy: 2).tap()
     }
