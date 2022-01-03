@@ -35,10 +35,9 @@ struct CompassView: View {
     }
 
     var body: some View {
-        VStack {
-            Image(systemName: "arrow.up.circle")
-                .rotationEffect(.degrees(destinationHeading))
-        }
+        Image(systemName: "arrow.up.circle")
+            .font(.system(size: 15))
+            .rotationEffect(.degrees(destinationHeading))
     }
 }
 
