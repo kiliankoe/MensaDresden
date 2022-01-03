@@ -23,7 +23,7 @@ class Screenshots: XCTestCase {
         setupSnapshot(app)
         app.launch()
 
-        app.staticTexts["Alte Mensa"].tap()
+        app.staticTexts["Mensa Reichenbachstraße"].tap()
         Thread.sleep(forTimeInterval: 1) // Make sure meals are loaded
         snapshot("01_Menu")
 
@@ -32,7 +32,7 @@ class Screenshots: XCTestCase {
 
         app.navigate(to: .menu)
         app.goBack()
-        app.staticTexts["MiO - Mensa im Osten"].tap()
+        app.staticTexts["Mensa Reichenbachstraße"].tap()
         app.selectMeal(0)
         snapshot("03_Meal")
 
