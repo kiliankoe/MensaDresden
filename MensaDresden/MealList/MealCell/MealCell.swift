@@ -52,7 +52,7 @@ struct MealCell: View {
                         .font(Font.caption.smallCaps())
                         .foregroundColor(.gray)
 
-                Text(meal.name)
+                Text(meal.allergenStrippedTitle)
                     .lineLimit(5)
 
                 ForEach(meal.diet, id: \.self) { diet in

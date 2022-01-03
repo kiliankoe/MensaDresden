@@ -167,7 +167,7 @@ struct MealDetailView: View {
                 }
                 .padding(.horizontal)
 
-                Text(meal.name)
+                Text(meal.allergenStrippedTitle)
                     .font(.title)
                     .padding(.horizontal)
 
@@ -193,6 +193,11 @@ struct MealDetailView: View {
                             .font(.caption)
                     }
                 }.padding(.horizontal)
+
+                Text(meal.name)
+                    .font(.caption)
+                    .padding(.bottom)
+                    .padding(.horizontal)
 
                 FeedbackButton(meal: meal)
                     .padding([.bottom, .horizontal])

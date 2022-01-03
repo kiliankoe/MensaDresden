@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3918AD422782FD2A00B82373 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3918AD412782FD2A00B82373 /* Meal.swift */; };
 		391B94F827656B210071E678 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F727656B210071E678 /* L10n.swift */; };
 		391B94FA276574E40071E678 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F9276574E40071E678 /* API.swift */; };
 		391B94FC2766296C0071E678 /* MensaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94FB2766296C0071E678 /* MensaApp.swift */; };
@@ -86,6 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3918AD412782FD2A00B82373 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		391B94F727656B210071E678 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = L10n.swift; path = MensaDresden/L10n.swift; sourceTree = SOURCE_ROOT; };
 		391B94F9276574E40071E678 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		391B94FB2766296C0071E678 /* MensaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensaApp.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				3969E12D24FFAE0C00036C69 /* Color.swift */,
 				395F98A424FFED7C00740176 /* View.swift */,
 				391B94FD27665AEB0071E678 /* Binding.swift */,
+				3918AD412782FD2A00B82373 /* Meal.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				39A1418F2348210000FEE789 /* BarButton.swift in Sources */,
 				39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */,
 				395F98A524FFED7C00740176 /* View.swift in Sources */,
+				3918AD422782FD2A00B82373 /* Meal.swift in Sources */,
 				39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */,
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39A141912348813D00FEE789 /* Settings.swift in Sources */,
