@@ -83,7 +83,7 @@ class API: ObservableObject {
 
     func loadTransactions(cardnumber: String, password: String) async {
         if cardnumber == "appledemo" && password == "appledemo" {
-            cache(result: .success(Transaction.exampleValues))
+            cache(result: .success(Transaction.exampleValues.reversed()))
             return
         }
 
@@ -93,7 +93,7 @@ class API: ObservableObject {
         do {
             let card = try await Cardservice.login(username: cardnumber, password: password)
             let transactions = try await card.transactions(begin: ninetyDaysAgo)
-            cache(result: .success(transactions))
+            cache(result: .success(transactions.reversed()))
         } catch {
             guard let cardserviceError = error as? CardserviceError else {
                 print("Unexpected error type, this shouldn't happen: \(error)")
