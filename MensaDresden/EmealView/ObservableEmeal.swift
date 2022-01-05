@@ -20,7 +20,9 @@ class ObservableEmeal: ObservableObject, EmealDelegate {
         self.objectWillChange.send()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            SKStoreReviewController.requestReview()
+            if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                SKStoreReviewController.requestReview(in: scene)
+           }
         }
     }
 

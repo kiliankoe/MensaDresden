@@ -208,7 +208,9 @@ struct MealDetailView: View {
             let activityItems = [self.meal.activityItem]
             let activityVC = UIActivityViewController(activityItems: activityItems,
                                                       applicationActivities: nil)
-            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+            
+            let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene)
+            windowScene?.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
         }))
     }
 }
