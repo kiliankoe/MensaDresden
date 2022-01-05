@@ -44,8 +44,8 @@ struct MensaApp: App {
         if settings.canteenSorting == Settings.CanteenSorting.distance.rawValue {
             LocationManager.shared.start()
         }
-
-        let isLandscape = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation.isLandscape
+        let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene)
+        let isLandscape = windowScene?.interfaceOrientation.isLandscape
         self.deviceOrientation = DeviceOrientation(isLandscape: isLandscape ?? false)
 
         self.locationManager = LocationManager.shared
