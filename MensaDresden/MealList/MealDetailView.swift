@@ -86,7 +86,7 @@ struct LargeMealDetailView: View {
                         }
                     }
 
-                    Text(meal.name)
+                    Text(meal.allergenStrippedTitle)
                         .font(.title)
 
                     FeedbackButton(meal: meal)
@@ -116,6 +116,10 @@ struct LargeMealDetailView: View {
                 }
             }
             .padding(.horizontal)
+
+            Text(meal.name)
+                .font(.caption)
+                .padding(.horizontal)
 
             Spacer()
         }
