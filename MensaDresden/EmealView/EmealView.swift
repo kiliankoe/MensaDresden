@@ -47,6 +47,7 @@ struct EmealView: View {
                         Text("emeal.scan-button")
                     }) {
                         self.emeal.beginNFCSession()
+                        Analytics.send(.scannedEmeal)
                     }
                     .padding(.horizontal)
                 }
@@ -54,7 +55,10 @@ struct EmealView: View {
                 if settings.areAutoloadCredentialsAvailable {
                     LoadingListView(result: api.transactions(),
                                     noDataMessage: "emeal.no-transactions",
-                                    retryAction: { Task { await self.loadTransactions() } },
+                                    retryAction: {
+                                        Task { await self.loadTransactions() }
+                                        Analytics.send(.retriedAutoloadTransactions)
+                                    },
                                     listView: { transactions in
                                         List(transactions, id: \.id) { transaction in
                                             VStack(alignment: .leading) {
@@ -79,6 +83,7 @@ struct EmealView: View {
                                         .listStyle(PlainListStyle())
                                         .refreshable {
                                             await self.loadTransactions()
+                                            Analytics.send(.refreshedAutoloadTransactions)
                                         }
                                     }
                     )

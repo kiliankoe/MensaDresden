@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390B777427E211E600DEF4E3 /* TelemetryClient in Frameworks */ = {isa = PBXBuildFile; productRef = 390B777327E211E600DEF4E3 /* TelemetryClient */; };
+		390B777627E21B6100DEF4E3 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B777527E21B6100DEF4E3 /* Analytics.swift */; };
 		3918AD422782FD2A00B82373 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3918AD412782FD2A00B82373 /* Meal.swift */; };
 		391B94F827656B210071E678 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F727656B210071E678 /* L10n.swift */; };
 		391B94FA276574E40071E678 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F9276574E40071E678 /* API.swift */; };
@@ -87,6 +89,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		390B777527E21B6100DEF4E3 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		3918AD412782FD2A00B82373 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		391B94F727656B210071E678 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = L10n.swift; path = MensaDresden/L10n.swift; sourceTree = SOURCE_ROOT; };
 		391B94F9276574E40071E678 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -163,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				390B777427E211E600DEF4E3 /* TelemetryClient in Frameworks */,
 				3965DDEA23F0244800C9C75C /* EmealKit in Frameworks */,
 				3997DCC82455931600763C07 /* SwiftyHolidays in Frameworks */,
 				39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */,
@@ -333,6 +337,7 @@
 				39FC09D72361AFEE008D8AB0 /* Formatter.swift */,
 				398B34E7236CDE7D00C10D9B /* LoadingListView.swift */,
 				393E72C825EBB9FA009BD729 /* HorizontalSwipeGesture.swift */,
+				390B777527E21B6100DEF4E3 /* Analytics.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				396FC3BB2353BF60007B97F3 /* KeychainItem */,
 				3965DDE923F0244800C9C75C /* EmealKit */,
 				3997DCC72455931600763C07 /* SwiftyHolidays */,
+				390B777327E211E600DEF4E3 /* TelemetryClient */,
 			);
 			productName = MensaDresden;
 			productReference = 39281C5A234241B900E4EFB5 /* Mensa Dresden.app */;
@@ -480,6 +486,7 @@
 				396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */,
 				3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */,
 				3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */,
+				390B777227E211E600DEF4E3 /* XCRemoteSwiftPackageReference "SwiftClient" */,
 			);
 			productRefGroup = 39281C5B234241B900E4EFB5 /* Products */;
 			projectDirPath = "";
@@ -555,6 +562,7 @@
 				3969E12E24FFAE0C00036C69 /* Color.swift in Sources */,
 				396FC3B523539145007B97F3 /* EmealCardView.swift in Sources */,
 				39281C83234282C100E4EFB5 /* MealImage.swift in Sources */,
+				390B777627E21B6100DEF4E3 /* Analytics.swift in Sources */,
 				394D9D1F234560B4005F076C /* SettingsView.swift in Sources */,
 				39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */,
 				391B94F827656B210071E678 /* L10n.swift in Sources */,
@@ -931,6 +939,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		390B777227E211E600DEF4E3 /* XCRemoteSwiftPackageReference "SwiftClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TelemetryDeck/SwiftClient";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/crelies/RemoteImage";
@@ -966,6 +982,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		390B777327E211E600DEF4E3 /* TelemetryClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 390B777227E211E600DEF4E3 /* XCRemoteSwiftPackageReference "SwiftClient" */;
+			productName = TelemetryClient;
+		};
 		39281CD12343CFB400E4EFB5 /* RemoteImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */;

@@ -13,6 +13,16 @@ extension Binding {
         )
     }
 
+    func didSet(_ didSet: @escaping (Value) -> Void) -> Binding<Value> {
+        Binding(
+            get: { wrappedValue },
+            set: { newValue in
+                self.wrappedValue = newValue
+                didSet(newValue)
+            }
+        )
+    }
+
 //    func sideEffect(_ sideEffect: @escaping (Value) -> Void) -> Binding<Value> {
 //        Binding<Value>(
 //            get: {

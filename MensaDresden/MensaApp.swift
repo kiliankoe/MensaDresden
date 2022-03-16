@@ -50,6 +50,18 @@ struct MensaApp: App {
 
         self.locationManager = LocationManager.shared
         self.api = API()
+
+        Analytics.setup()
+
+        Analytics.send(.currentSettings, with: [
+            "settingsFavoritedCanteensCount": String(self.settings.favoriteCanteens.count),
+            "settingsHasAutoloadCredentials": String(self.settings.autoloadCardnumber != nil),
+            "settingsCanteenSortingMode": self.settings.canteenSorting,
+            "settingsUserDiet": self.settings.userDiet,
+            "settingsPriceType": self.settings.priceType,
+            "settingsHasChangedIngredientList": String(UserDefaults.standard.object(forKey: "ingredientBlacklist") != nil),
+            "settingsHasChangedAllergenList": String(UserDefaults.standard.object(forKey: "allergenBlacklist") != nil)
+        ])
     }
 
     var body: some Scene {

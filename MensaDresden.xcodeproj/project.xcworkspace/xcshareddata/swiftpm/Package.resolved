@@ -1,70 +1,77 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "EmealKit",
-        "repositoryURL": "https://github.com/kiliankoe/EmealKit",
-        "state": {
-          "branch": null,
-          "revision": "e755faa2c9273e1a7bc8bdab77fdd1f7efa347ba",
-          "version": "0.9.1"
-        }
-      },
-      {
-        "package": "HTMLString",
-        "repositoryURL": "https://github.com/alexaubry/HTMLString.git",
-        "state": {
-          "branch": null,
-          "revision": "373048cc4084dd7481c86e3bee41612eff93b14d",
-          "version": "5.0.0"
-        }
-      },
-      {
-        "package": "KeychainItem",
-        "repositoryURL": "https://github.com/objcio/keychain-item",
-        "state": {
-          "branch": null,
-          "revision": "563fc973ee4c1fcdea646630f847a241025da3c4",
-          "version": "0.1.0"
-        }
-      },
-      {
-        "package": "Regex",
-        "repositoryURL": "https://github.com/sharplet/Regex.git",
-        "state": {
-          "branch": null,
-          "revision": "76c2b73d4281d77fc3118391877efd1bf972f515",
-          "version": "2.1.1"
-        }
-      },
-      {
-        "package": "RemoteImage",
-        "repositoryURL": "https://github.com/crelies/RemoteImage",
-        "state": {
-          "branch": null,
-          "revision": "2dca7774a57eaa0797cf288a98bf6ea516469b49",
-          "version": "2.0.3"
-        }
-      },
-      {
-        "package": "SwiftyHolidays",
-        "repositoryURL": "https://github.com/MaxHaertwig/SwiftyHolidays",
-        "state": {
-          "branch": null,
-          "revision": "ac07aba771a789b3ab7123826a6b807c2059d083",
-          "version": "1.0.0"
-        }
-      },
-      {
-        "package": "ViewInspector",
-        "repositoryURL": "https://github.com/nalexn/ViewInspector.git",
-        "state": {
-          "branch": null,
-          "revision": "de7490741d4c09f23a0508fa869cb54f0da27e70",
-          "version": "0.5.1"
-        }
+  "pins" : [
+    {
+      "identity" : "emealkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kiliankoe/EmealKit",
+      "state" : {
+        "revision" : "e755faa2c9273e1a7bc8bdab77fdd1f7efa347ba",
+        "version" : "0.9.1"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "htmlstring",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/alexaubry/HTMLString.git",
+      "state" : {
+        "revision" : "373048cc4084dd7481c86e3bee41612eff93b14d",
+        "version" : "5.0.0"
+      }
+    },
+    {
+      "identity" : "keychain-item",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/objcio/keychain-item",
+      "state" : {
+        "revision" : "563fc973ee4c1fcdea646630f847a241025da3c4",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "regex",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sharplet/Regex.git",
+      "state" : {
+        "revision" : "76c2b73d4281d77fc3118391877efd1bf972f515",
+        "version" : "2.1.1"
+      }
+    },
+    {
+      "identity" : "remoteimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/crelies/RemoteImage",
+      "state" : {
+        "revision" : "2dca7774a57eaa0797cf288a98bf6ea516469b49",
+        "version" : "2.0.3"
+      }
+    },
+    {
+      "identity" : "swiftclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TelemetryDeck/SwiftClient",
+      "state" : {
+        "revision" : "fb518b5acb02aa6ca41be7018bb1619aaef3dc13",
+        "version" : "1.1.6"
+      }
+    },
+    {
+      "identity" : "swiftyholidays",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MaxHaertwig/SwiftyHolidays",
+      "state" : {
+        "revision" : "ac07aba771a789b3ab7123826a6b807c2059d083",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "viewinspector",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nalexn/ViewInspector.git",
+      "state" : {
+        "revision" : "de7490741d4c09f23a0508fa869cb54f0da27e70",
+        "version" : "0.5.1"
+      }
+    }
+  ],
+  "version" : 2
 }

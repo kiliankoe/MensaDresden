@@ -124,6 +124,12 @@ struct LargeMealDetailView: View {
             Spacer()
         }
         .padding(.horizontal)
+        .onAppear {
+            Analytics.send(.openedMealDetailView, with: [
+                "mealID": String(meal.id),
+                "mealName": meal.name
+            ])
+        }
     }
 }
 
@@ -215,19 +221,42 @@ struct MealDetailView: View {
             
             let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene)
             windowScene?.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+
+            Analytics.send(.openedMealShareSheet, with: [
+                "mealID": String(meal.id),
+                "mealName": meal.name
+            ])
         }))
+        .onAppear {
+            Analytics.send(.openedMealDetailView, with: [
+                "mealID": String(meal.id),
+                "mealName": meal.name
+            ])
+        }
     }
 }
 
 struct FeedbackButton: View {
     var meal: Meal
 
+    @State private var webviewIsActive: Bool = false
+
     var feedbackURL: URL {
         URL(string: "https://www.studentenwerk-dresden.de/kontakt.html?bereich=mensen&page=mensen_luk&thema=luk&eid=\(meal.id)")!
     }
 
     var body: some View {
-        NavigationLink(destination: WebView(url: feedbackURL).navigationBarTitle("meal.rate-title", displayMode: .inline)) {
+        NavigationLink(
+            destination: WebView(url: feedbackURL).navigationBarTitle("meal.rate-title", displayMode: .inline),
+            isActive: $webviewIsActive.didSet { isActive in
+                if isActive {
+                    Analytics.send(.openedMealFeedback, with: [
+                        "mealID": String(meal.id),
+                        "mealName": meal.name
+                    ])
+                }
+            }
+        ) {
             HStack {
                 Spacer()
                 

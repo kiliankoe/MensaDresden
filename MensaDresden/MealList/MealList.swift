@@ -32,7 +32,10 @@ struct MealList: View {
         LoadingListView(result: api.meals(for: canteen.id, on: selectedDate),
                         noDataMessage: noDataMessage,
                         noDataSubtitle: noDataSubtitle,
-                        retryAction: { Task { await self.api.loadMeals(for: self.canteen.id, on: self.selectedDate) } },
+                        retryAction: {
+                            Task { await self.api.loadMeals(for: self.canteen.id, on: self.selectedDate) }
+                            Analytics.send(.retriedMealData)
+                        },
                         listView: { meals in
                              List(meals) { meal in
                                  NavigationLink(destination: MealDetailContainerView(meal: meal)) {
@@ -42,9 +45,15 @@ struct MealList: View {
                              .listStyle(PlainListStyle())
                              .refreshable {
                                  await api.loadMeals(for: canteen.id, on: selectedDate)
+                                 Analytics.send(.refreshedMealData)
                              }
                         }
         )
+        .onAppear {
+            Analytics.send(.openedMealList, with: [
+                "canteen": self.canteen.name
+            ])
+        }
     }
 }
 

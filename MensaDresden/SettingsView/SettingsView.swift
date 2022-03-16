@@ -52,6 +52,7 @@ struct SettingsView: View {
                     TextField(
                         L10n.Settings.autoloadCardnumber,
                         text: $settings.autoloadCardnumber.default("")
+                            .didSet { _ in Analytics.send(.setAutoloadCredentials) }
                     )
                     .textContentType(.username)
 

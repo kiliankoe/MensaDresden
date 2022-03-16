@@ -23,6 +23,7 @@ class API: ObservableObject {
             self.canteens = .success(canteens)
         } catch {
             self.canteens = .failure(error)
+            Analytics.send(.apiFailedCanteenLoading)
         }
     }
 
@@ -47,6 +48,10 @@ class API: ObservableObject {
             cache(result: .success(meals), for: canteenId, on: date)
         } catch {
             cache(result: .failure(error), for: canteenId, on: date)
+            Analytics.send(.apiFailedMealLoading, with: [
+                "canteenID": String(canteenId),
+                "date": Formatter.string(for: date, format: .yearMonthDay)
+            ])
         }
     }
 
@@ -95,6 +100,10 @@ class API: ObservableObject {
             let transactions = try await card.transactions(begin: ninetyDaysAgo)
             cache(result: .success(transactions.reversed()))
         } catch {
+            Analytics.send(.apiFailedAutoloadTransactionsLoading, with: [
+                "error": String(describing: error)
+            ])
+
             guard let cardserviceError = error as? CardserviceError else {
                 print("Unexpected error type, this shouldn't happen: \(error)")
                 return
