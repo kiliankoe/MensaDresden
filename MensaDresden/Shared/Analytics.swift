@@ -39,7 +39,7 @@ enum Analytics: String {
     case changedUserDiet
     case changedIngredients
     case changedAllergens
-    case setAutoloadCredentials
+    case setAutoloadCredentials // not used right now
 
     // API
     case apiFailedCanteenLoading
