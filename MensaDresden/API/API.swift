@@ -23,7 +23,9 @@ class API: ObservableObject {
             self.canteens = .success(canteens)
         } catch {
             self.canteens = .failure(error)
-            Analytics.send(.apiFailedCanteenLoading)
+            Analytics.send(.apiFailedCanteenLoading, with: [
+                "error": String(describing: error)
+            ])
         }
     }
 
@@ -50,7 +52,8 @@ class API: ObservableObject {
             cache(result: .failure(error), for: canteenId, on: date)
             Analytics.send(.apiFailedMealLoading, with: [
                 "canteenID": String(canteenId),
-                "date": Formatter.string(for: date, format: .yearMonthDay)
+                "date": Formatter.string(for: date, format: .yearMonthDay),
+                "error": String(describing: error)
             ])
         }
     }
