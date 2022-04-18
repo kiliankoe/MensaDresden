@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AppView: View {
     var body: some View {
-        let tabView = TabView {
+        TabView {
             CanteenListView()
                 .tabItem {
                     VStack {
@@ -40,11 +40,6 @@ struct AppView: View {
                 }
         }
         .accentColor(.green)
-
-        if #available(iOS 13.4, *) {
-            return AnyView(tabView)
-        }
-        return AnyView(tabView.edgesIgnoringSafeArea(.top))
     }
 }
 
