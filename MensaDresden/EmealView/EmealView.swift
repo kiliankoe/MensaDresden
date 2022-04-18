@@ -57,7 +57,6 @@ struct EmealView: View {
                                     noDataMessage: "emeal.no-transactions",
                                     retryAction: {
                                         Task { await self.loadTransactions() }
-                                        Analytics.send(.retriedAutoloadTransactions)
                                     },
                                     listView: { transactions in
                                         List(transactions, id: \.id) { transaction in
@@ -83,7 +82,6 @@ struct EmealView: View {
                                         .listStyle(PlainListStyle())
                                         .refreshable {
                                             await self.loadTransactions()
-                                            Analytics.send(.refreshedAutoloadTransactions)
                                         }
                                     }
                     )

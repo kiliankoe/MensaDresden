@@ -11,9 +11,6 @@ struct AppView: View {
                         Text("tab.menu")
                     }
                 }
-                .onAppear {
-                    Analytics.send(.openedTabMenu)
-                }
 
             EmealView()
                 .tabItem {
@@ -22,9 +19,6 @@ struct AppView: View {
                             .accessibility(hidden: true)
                         Text("tab.emeal")
                     }
-                }
-                .onAppear {
-                    Analytics.send(.openedTabEmeal)
                 }
 
             NewsfeedView()
@@ -35,9 +29,6 @@ struct AppView: View {
                         Text("tab.newsfeed")
                     }
                 }
-                .onAppear {
-                    Analytics.send(.openedTabNews)
-                }
 
             SettingsView()
                 .tabItem {
@@ -46,9 +37,6 @@ struct AppView: View {
                             .accessibility(hidden: true)
                         Text("tab.settings")
                     }
-                }
-                .onAppear {
-                    Analytics.send(.openedTabSettings)
                 }
         }
         .accentColor(.green)

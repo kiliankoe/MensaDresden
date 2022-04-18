@@ -15,11 +15,7 @@ struct MealListView: View {
         VStack {
             Picker(
                 "",
-                selection: $selectedDate.didSet { date in
-                    Analytics.send(.selectedPickerDay, with: [
-                        "day": date.isToday ? "today" : "tomorrow"
-                    ])
-                }
+                selection: $selectedDate
             ) {
                 Text(Formatter.stringForRelativeDate(offsetFromTodayBy: 0, context: .beginningOfSentence)).tag(Date.today)
                 Text(Formatter.stringForRelativeDate(offsetFromTodayBy: 1, context: .beginningOfSentence)).tag(Date.tomorrow)
@@ -46,9 +42,6 @@ struct MealListView: View {
                     view: Image(systemName: "calendar"),
                     action: {
                         self.showingDatePickerView.toggle()
-                        Analytics.send(.openedCalendarDatePicker, with: [
-                            "canteenName": self.canteen.name
-                        ])
                     }
                 )
                 .padding(.trailing, 10)
@@ -56,10 +49,6 @@ struct MealListView: View {
                     view: settings.favoriteCanteens.contains(canteen.name) ? AnyView(Image(systemName: "heart.fill").foregroundColor(.red)) : AnyView(Image(systemName: "heart")),
                     action: {
                         self.settings.toggleFavorite(canteen: self.canteen.name)
-                        Analytics.send(.toggledCanteenFavorite, with: [
-                            "canteenName": self.canteen.name,
-                            "isFavorited": String(settings.favoriteCanteens.contains(canteen.name))
-                        ])
                     }
                 )
             }

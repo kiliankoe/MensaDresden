@@ -34,7 +34,6 @@ struct MealList: View {
                         noDataSubtitle: noDataSubtitle,
                         retryAction: {
                             Task { await self.api.loadMeals(for: self.canteen.id, on: self.selectedDate) }
-                            Analytics.send(.retriedMealData)
                         },
                         listView: { meals in
                              List(meals) { meal in
@@ -45,7 +44,6 @@ struct MealList: View {
                              .listStyle(PlainListStyle())
                              .refreshable {
                                  await api.loadMeals(for: canteen.id, on: selectedDate)
-                                 Analytics.send(.refreshedMealData)
                              }
                         }
         )

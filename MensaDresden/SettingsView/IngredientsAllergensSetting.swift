@@ -36,9 +36,6 @@ struct IngredientsAllergensSetting: View {
             }
         }
         .navigationBarTitle("settings.ingredients-allergens.title", displayMode: .inline)
-        .onAppear {
-            Analytics.send(.openedIngredientsAndAllergensSetting)
-        }
     }
 }
 

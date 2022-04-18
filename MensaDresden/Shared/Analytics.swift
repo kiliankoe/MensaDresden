@@ -3,43 +3,8 @@ import TelemetryClient
 
 enum Analytics: String {
     case currentSettings
-
-    // Navigation
-    case openedTabMenu
-    case openedTabEmeal
-    case openedTabNews
-    case openedTabSettings
-
-    // Meal List
     case openedMealList
-    case selectedPickerDay
-    case openedCalendarDatePicker
-    case toggledCanteenFavorite
-    case retriedMealData
-    case refreshedMealData
-
-    // Meal Detail
-    case openedMealDetailView
-    case openedMealShareSheet
-    case openedMealFeedback
-
-    // Emeal View
     case scannedEmeal
-    case retriedAutoloadTransactions
-    case refreshedAutoloadTransactions
-
-    // SettingsView
-    case openedAboutView
-    case openedFavoriteCanteensSetting
-    case openedIngredientsAndAllergensSetting
-    case openedCanteenSortingSetting // not used right now
-
-    // Settings
-    case changedCanteenSortingMode
-    case changedUserDiet
-    case changedIngredients
-    case changedAllergens
-    case setAutoloadCredentials // not used right now
 
     // API
     case apiFailedCanteenLoading

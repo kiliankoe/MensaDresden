@@ -26,8 +26,5 @@ struct FavoriteCanteensSetting: View {
         .listStyle(GroupedListStyle())
         .navigationBarTitle("settings.favorite-canteens", displayMode: .inline)
         .navigationBarItems(trailing: EditButton())
-        .onAppear {
-            Analytics.send(.openedFavoriteCanteensSetting)
-        }
     }
 }

@@ -56,9 +56,6 @@ struct AboutView: View {
 
             Spacer()
         }
-        .onAppear {
-            Analytics.send(.openedAboutView)
-        }
     }
 }
 

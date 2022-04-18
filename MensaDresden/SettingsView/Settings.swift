@@ -67,9 +67,6 @@ class Settings: ObservableObject {
             }
             self.canteenSorting = val.rawValue
             self.objectWillChange.send()
-            Analytics.send(.changedCanteenSortingMode, with: [
-                "sortingMode": val.rawValue
-            ])
         })
     }
 
@@ -94,9 +91,6 @@ class Settings: ObservableObject {
             },
             set: {
                 self.userDiet = $0
-                Analytics.send(.changedUserDiet, with: [
-                    "diet": $0
-                ])
             }
         )
     }
@@ -105,14 +99,12 @@ class Settings: ObservableObject {
     var ingredientBlacklist = BlacklistBinding<Ingredient>(userDefaultsKey: "ingredientBlacklist") {
         didSet {
             self.objectWillChange.send()
-            Analytics.send(.changedIngredients)
         }
     }
 
     var allergenBlacklist = BlacklistBinding<Allergen>(userDefaultsKey: "allergenBlacklist") {
         didSet {
             self.objectWillChange.send()
-            Analytics.send(.changedAllergens)
         }
     }
 
