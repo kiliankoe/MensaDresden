@@ -24,7 +24,6 @@
 		39281C7923424CEA00E4EFB5 /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C7823424CEA00E4EFB5 /* MealListView.swift */; };
 		39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C7E23427F9B00E4EFB5 /* MealCell.swift */; };
 		39281C812342823800E4EFB5 /* PriceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C802342823800E4EFB5 /* PriceLabel.swift */; };
-		39281C83234282C100E4EFB5 /* MealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C82234282C100E4EFB5 /* MealImage.swift */; };
 		39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C872342910600E4EFB5 /* CanteenCell.swift */; };
 		39281C8D234297E000E4EFB5 /* Meal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal+Extensions.swift */; };
 		39281C8F2342985900E4EFB5 /* Canteen+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8E2342985900E4EFB5 /* Canteen+Example.swift */; };
@@ -69,6 +68,44 @@
 		39FAEC182781E6830035776F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FAEC172781E6830035776F /* SnapshotHelper.swift */; };
 		39FAEC192781EE800035776F /* App+Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FAEC022781171D0035776F /* App+Interaction.swift */; };
 		39FC09D82361AFEE008D8AB0 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC09D72361AFEE008D8AB0 /* Formatter.swift */; };
+		EF9EF4DA2811504300E7EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4D92811504300E7EE19 /* Assets.xcassets */; };
+		EF9EF4E02811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EF9EF4E72811504300E7EE19 /* MensaDresdenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF4E62811504300E7EE19 /* MensaDresdenApp.swift */; };
+		EF9EF4E92811504300E7EE19 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF4E82811504300E7EE19 /* ComplicationController.swift */; };
+		EF9EF4EB2811504300E7EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4EA2811504300E7EE19 /* Assets.xcassets */; };
+		EF9EF4EE2811504300E7EE19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4ED2811504300E7EE19 /* Preview Assets.xcassets */; };
+		EF9EF4F22811504300E7EE19 /* MensaDresdenWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EF9EF4D72811504200E7EE19 /* MensaDresdenWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EF9EF4FD281151A300E7EE19 /* CanteenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF4FC281151A300E7EE19 /* CanteenListView.swift */; };
+		EF9EF5012811521400E7EE19 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = EF9EF5002811521400E7EE19 /* EmealKit */; };
+		EF9EF5022811524D00E7EE19 /* LoadingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E1236CB95900C10D9B /* LoadingResult.swift */; };
+		EF9EF5042811524D00E7EE19 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F9276574E40071E678 /* API.swift */; };
+		EF9EF5052811524D00E7EE19 /* Canteen+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8E2342985900E4EFB5 /* Canteen+Example.swift */; };
+		EF9EF5062811525200E7EE19 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E215802358E29D00F5EBE9 /* LocationManager.swift */; };
+		EF9EF507281152D500E7EE19 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141902348813D00FEE789 /* Settings.swift */; };
+		EF9EF5092811532D00E7EE19 /* KeychainItem in Frameworks */ = {isa = PBXBuildFile; productRef = EF9EF5082811532D00E7EE19 /* KeychainItem */; };
+		EF9EF50A2811534B00E7EE19 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141942348EBEE00FEE789 /* UserDefault.swift */; };
+		EF9EF50B2811535B00E7EE19 /* BlacklistBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141922348EBC000FEE789 /* BlacklistBinding.swift */; };
+		EF9EF50C281153E600E7EE19 /* LoadingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E7236CDE7D00C10D9B /* LoadingListView.swift */; };
+		EF9EF50D281153F600E7EE19 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F727656B210071E678 /* L10n.swift */; };
+		EF9EF50F2811540000E7EE19 /* TelemetryClient in Frameworks */ = {isa = PBXBuildFile; productRef = EF9EF50E2811540000E7EE19 /* TelemetryClient */; };
+		EF9EF5102811546700E7EE19 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B777527E21B6100DEF4E3 /* Analytics.swift */; };
+		EF9EF5112811547C00E7EE19 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC09D72361AFEE008D8AB0 /* Formatter.swift */; };
+		EF9EF5122811549C00E7EE19 /* CardserviceErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B9500276674F60071E678 /* CardserviceErrorWrapper.swift */; };
+		EF9EF5132811552200E7EE19 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3E12357A1A9007B97F3 /* Transaction.swift */; };
+		EF9EF5162811561900E7EE19 /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF5152811561900E7EE19 /* MealListView.swift */; };
+		EF9EF5172811564C00E7EE19 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A0C94523623B9E0029FA35 /* Date.swift */; };
+		EF9EF5182811565200E7EE19 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3918AD412782FD2A00B82373 /* Meal.swift */; };
+		EF9EF5192811565700E7EE19 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3969E12D24FFAE0C00036C69 /* Color.swift */; };
+		EF9EF51A2811565C00E7EE19 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395F98A424FFED7C00740176 /* View.swift */; };
+		EF9EF51B2811565F00E7EE19 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94FD27665AEB0071E678 /* Binding.swift */; };
+		EF9EF51D281156E500E7EE19 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF51C281156E500E7EE19 /* MealList.swift */; };
+		EF9EF51F2811578000E7EE19 /* SwiftyHolidays in Frameworks */ = {isa = PBXBuildFile; productRef = EF9EF51E2811578000E7EE19 /* SwiftyHolidays */; };
+		EF9EF5212811586700E7EE19 /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF5202811586700E7EE19 /* MealCell.swift */; };
+		EF9EF522281158AA00E7EE19 /* Meal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal+Extensions.swift */; };
+		EF9EF5242811597000E7EE19 /* PriceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF5232811597000E7EE19 /* PriceLabel.swift */; };
+		EF9EF52628115AE100E7EE19 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF52528115AE100E7EE19 /* AppView.swift */; };
+		EFF0399628117E060054C3E9 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF0399528117E060054C3E9 /* MealDetailView.swift */; };
+		EFF0399C281180690054C3E9 /* MealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF0399B281180690054C3E9 /* MealImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +123,46 @@
 			remoteGlobalIDString = 39281C59234241B900E4EFB5;
 			remoteInfo = MensaDresden;
 		};
+		EF9EF4E12811504300E7EE19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39281C52234241B900E4EFB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF9EF4DE2811504300E7EE19;
+			remoteInfo = "MensaDresdenWatch WatchKit Extension";
+		};
+		EF9EF4F02811504300E7EE19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39281C52234241B900E4EFB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF9EF4D62811504200E7EE19;
+			remoteInfo = MensaDresdenWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF9EF4F62811504300E7EE19 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EF9EF4E02811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF9EF4FA2811504300E7EE19 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				EF9EF4F22811504300E7EE19 /* MensaDresdenWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		390B777527E21B6100DEF4E3 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
@@ -108,7 +184,6 @@
 		39281C7823424CEA00E4EFB5 /* MealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListView.swift; sourceTree = "<group>"; };
 		39281C7E23427F9B00E4EFB5 /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
 		39281C802342823800E4EFB5 /* PriceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLabel.swift; sourceTree = "<group>"; };
-		39281C82234282C100E4EFB5 /* MealImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealImage.swift; sourceTree = "<group>"; };
 		39281C872342910600E4EFB5 /* CanteenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanteenCell.swift; sourceTree = "<group>"; };
 		39281C8C234297E000E4EFB5 /* Meal+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+Extensions.swift"; sourceTree = "<group>"; };
 		39281C8E2342985900E4EFB5 /* Canteen+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Canteen+Example.swift"; sourceTree = "<group>"; };
@@ -159,6 +234,22 @@
 		39FAEC0C2781E6350035776F /* Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshots.swift; sourceTree = "<group>"; };
 		39FAEC172781E6830035776F /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		39FC09D72361AFEE008D8AB0 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		EF9EF4D72811504200E7EE19 /* MensaDresdenWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MensaDresdenWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF9EF4D92811504300E7EE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MensaDresdenWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF9EF4E62811504300E7EE19 /* MensaDresdenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensaDresdenApp.swift; sourceTree = "<group>"; };
+		EF9EF4E82811504300E7EE19 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		EF9EF4EA2811504300E7EE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF9EF4ED2811504300E7EE19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF9EF4EF2811504300E7EE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF9EF4FC281151A300E7EE19 /* CanteenListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanteenListView.swift; sourceTree = "<group>"; };
+		EF9EF5152811561900E7EE19 /* MealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListView.swift; sourceTree = "<group>"; };
+		EF9EF51C281156E500E7EE19 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
+		EF9EF5202811586700E7EE19 /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
+		EF9EF5232811597000E7EE19 /* PriceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLabel.swift; sourceTree = "<group>"; };
+		EF9EF52528115AE100E7EE19 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		EFF0399528117E060054C3E9 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		EFF0399B281180690054C3E9 /* MealImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +279,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF9EF4DC2811504300E7EE19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9EF5012811521400E7EE19 /* EmealKit in Frameworks */,
+				EF9EF51F2811578000E7EE19 /* SwiftyHolidays in Frameworks */,
+				EF9EF50F2811540000E7EE19 /* TelemetryClient in Frameworks */,
+				EF9EF5092811532D00E7EE19 /* KeychainItem in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -198,6 +300,8 @@
 				39281C5C234241B900E4EFB5 /* MensaDresden */,
 				39FAEBF82781113E0035776F /* UITests */,
 				39FAEC0B2781E6350035776F /* Screenshots */,
+				EF9EF4D82811504200E7EE19 /* MensaDresdenWatch */,
+				EF9EF4E32811504300E7EE19 /* MensaDresdenWatch WatchKit Extension */,
 				39281C5B234241B900E4EFB5 /* Products */,
 				39281CC0234318F400E4EFB5 /* Frameworks */,
 			);
@@ -209,6 +313,8 @@
 				39281C5A234241B900E4EFB5 /* Mensa Dresden.app */,
 				39FAEBF72781113E0035776F /* UITests.xctest */,
 				39FAEC0A2781E6350035776F /* Screenshots.xctest */,
+				EF9EF4D72811504200E7EE19 /* MensaDresdenWatch.app */,
+				EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,8 +334,8 @@
 				39A141962348EEEE00FEE789 /* EmealView */,
 				39281C7D23427F8400E4EFB5 /* MealList */,
 				39A79146241FC4FC0009CF03 /* Newsfeed */,
-				39281C63234241BC00E4EFB5 /* Assets.xcassets */,
 				39281C68234241BC00E4EFB5 /* LaunchScreen.storyboard */,
+				39281C63234241BC00E4EFB5 /* Assets.xcassets */,
 				39281C6B234241BC00E4EFB5 /* Info.plist */,
 				39E215862358E37300F5EBE9 /* InfoPlist.strings */,
 				39281C65234241BC00E4EFB5 /* Preview Content */,
@@ -253,8 +359,8 @@
 				398B34E3236CC6B500C10D9B /* MealList.swift */,
 				39281C7823424CEA00E4EFB5 /* MealListView.swift */,
 				39A0C93F236227F70029FA35 /* DatePickerView.swift */,
+				EFF0399B281180690054C3E9 /* MealImage.swift */,
 				39A0C9432362341B0029FA35 /* CustomDateMealListView.swift */,
-				39281C82234282C100E4EFB5 /* MealImage.swift */,
 				394D9D002343D0C9005F076C /* MealDetailView.swift */,
 				39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */,
 				394D9D1D23455C99005F076C /* MealCell */,
@@ -379,6 +485,57 @@
 			path = Screenshots;
 			sourceTree = "<group>";
 		};
+		EF9EF4D82811504200E7EE19 /* MensaDresdenWatch */ = {
+			isa = PBXGroup;
+			children = (
+				EF9EF4D92811504300E7EE19 /* Assets.xcassets */,
+			);
+			path = MensaDresdenWatch;
+			sourceTree = "<group>";
+		};
+		EF9EF4E32811504300E7EE19 /* MensaDresdenWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF9EF4FB2811514000E7EE19 /* CanteenList */,
+				EF9EF514281155F900E7EE19 /* MealList */,
+				EF9EF4E82811504300E7EE19 /* ComplicationController.swift */,
+				EF9EF4E62811504300E7EE19 /* MensaDresdenApp.swift */,
+				EF9EF52528115AE100E7EE19 /* AppView.swift */,
+				EF9EF4EA2811504300E7EE19 /* Assets.xcassets */,
+				EF9EF4EF2811504300E7EE19 /* Info.plist */,
+				EF9EF4EC2811504300E7EE19 /* Preview Content */,
+			);
+			path = "MensaDresdenWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		EF9EF4EC2811504300E7EE19 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF9EF4ED2811504300E7EE19 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF9EF4FB2811514000E7EE19 /* CanteenList */ = {
+			isa = PBXGroup;
+			children = (
+				EF9EF4FC281151A300E7EE19 /* CanteenListView.swift */,
+			);
+			path = CanteenList;
+			sourceTree = "<group>";
+		};
+		EF9EF514281155F900E7EE19 /* MealList */ = {
+			isa = PBXGroup;
+			children = (
+				EF9EF5152811561900E7EE19 /* MealListView.swift */,
+				EF9EF51C281156E500E7EE19 /* MealList.swift */,
+				EFF0399528117E060054C3E9 /* MealDetailView.swift */,
+				EF9EF5202811586700E7EE19 /* MealCell.swift */,
+				EF9EF5232811597000E7EE19 /* PriceLabel.swift */,
+			);
+			path = MealList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -389,10 +546,12 @@
 				39281C56234241B900E4EFB5 /* Sources */,
 				39281C57234241B900E4EFB5 /* Frameworks */,
 				39281C58234241B900E4EFB5 /* Resources */,
+				EF9EF4FA2811504300E7EE19 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EF9EF4F12811504300E7EE19 /* PBXTargetDependency */,
 			);
 			name = MensaDresden;
 			packageProductDependencies = (
@@ -442,6 +601,46 @@
 			productReference = 39FAEC0A2781E6350035776F /* Screenshots.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		EF9EF4D62811504200E7EE19 /* MensaDresdenWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF9EF4F72811504300E7EE19 /* Build configuration list for PBXNativeTarget "MensaDresdenWatch" */;
+			buildPhases = (
+				EF9EF4D52811504200E7EE19 /* Resources */,
+				EF9EF4F62811504300E7EE19 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF9EF4E22811504300E7EE19 /* PBXTargetDependency */,
+			);
+			name = MensaDresdenWatch;
+			productName = MensaDresdenWatch;
+			productReference = EF9EF4D72811504200E7EE19 /* MensaDresdenWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		EF9EF4DE2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF9EF4F32811504300E7EE19 /* Build configuration list for PBXNativeTarget "MensaDresdenWatch WatchKit Extension" */;
+			buildPhases = (
+				EF9EF4DB2811504300E7EE19 /* Sources */,
+				EF9EF4DC2811504300E7EE19 /* Frameworks */,
+				EF9EF4DD2811504300E7EE19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MensaDresdenWatch WatchKit Extension";
+			packageProductDependencies = (
+				EF9EF5002811521400E7EE19 /* EmealKit */,
+				EF9EF5082811532D00E7EE19 /* KeychainItem */,
+				EF9EF50E2811540000E7EE19 /* TelemetryClient */,
+				EF9EF51E2811578000E7EE19 /* SwiftyHolidays */,
+			);
+			productName = "MensaDresdenWatch WatchKit Extension";
+			productReference = EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -451,7 +650,7 @@
 				KnownAssetTags = (
 					New,
 				);
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "Kilian Koeltzsch";
 				TargetAttributes = {
@@ -465,6 +664,12 @@
 					39FAEC092781E6350035776F = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 39281C59234241B900E4EFB5;
+					};
+					EF9EF4D62811504200E7EE19 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					EF9EF4DE2811504300E7EE19 = {
+						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
 			};
@@ -493,6 +698,8 @@
 			projectRoot = "";
 			targets = (
 				39281C59234241B900E4EFB5 /* MensaDresden */,
+				EF9EF4D62811504200E7EE19 /* MensaDresdenWatch */,
+				EF9EF4DE2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension */,
 				39FAEBF62781113E0035776F /* UITests */,
 				39FAEC092781E6350035776F /* Screenshots */,
 			);
@@ -526,6 +733,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF9EF4D52811504200E7EE19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9EF4DA2811504300E7EE19 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF9EF4DD2811504300E7EE19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9EF4EE2811504300E7EE19 /* Preview Assets.xcassets in Resources */,
+				EF9EF4EB2811504300E7EE19 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -543,6 +767,7 @@
 				39E215812358E29D00F5EBE9 /* LocationManager.swift in Sources */,
 				391B9501276674F60071E678 /* CardserviceErrorWrapper.swift in Sources */,
 				39A0C94623623B9E0029FA35 /* Date.swift in Sources */,
+				EFF0399C281180690054C3E9 /* MealImage.swift in Sources */,
 				39281C8F2342985900E4EFB5 /* Canteen+Example.swift in Sources */,
 				39A1418F2348210000FEE789 /* BarButton.swift in Sources */,
 				39A1418D23481B5F00FEE789 /* LargeButton.swift in Sources */,
@@ -561,7 +786,6 @@
 				394D9D032343EFD4005F076C /* AboutView.swift in Sources */,
 				3969E12E24FFAE0C00036C69 /* Color.swift in Sources */,
 				396FC3B523539145007B97F3 /* EmealCardView.swift in Sources */,
-				39281C83234282C100E4EFB5 /* MealImage.swift in Sources */,
 				390B777627E21B6100DEF4E3 /* Analytics.swift in Sources */,
 				394D9D1F234560B4005F076C /* SettingsView.swift in Sources */,
 				39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */,
@@ -602,6 +826,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF9EF4DB2811504300E7EE19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9EF5212811586700E7EE19 /* MealCell.swift in Sources */,
+				EF9EF50B2811535B00E7EE19 /* BlacklistBinding.swift in Sources */,
+				EF9EF4E72811504300E7EE19 /* MensaDresdenApp.swift in Sources */,
+				EF9EF5132811552200E7EE19 /* Transaction.swift in Sources */,
+				EFF0399628117E060054C3E9 /* MealDetailView.swift in Sources */,
+				EF9EF51B2811565F00E7EE19 /* Binding.swift in Sources */,
+				EF9EF50A2811534B00E7EE19 /* UserDefault.swift in Sources */,
+				EF9EF4FD281151A300E7EE19 /* CanteenListView.swift in Sources */,
+				EF9EF51A2811565C00E7EE19 /* View.swift in Sources */,
+				EF9EF4E92811504300E7EE19 /* ComplicationController.swift in Sources */,
+				EF9EF5062811525200E7EE19 /* LocationManager.swift in Sources */,
+				EF9EF5172811564C00E7EE19 /* Date.swift in Sources */,
+				EF9EF5042811524D00E7EE19 /* API.swift in Sources */,
+				EF9EF5182811565200E7EE19 /* Meal.swift in Sources */,
+				EF9EF51D281156E500E7EE19 /* MealList.swift in Sources */,
+				EF9EF5102811546700E7EE19 /* Analytics.swift in Sources */,
+				EF9EF507281152D500E7EE19 /* Settings.swift in Sources */,
+				EF9EF5162811561900E7EE19 /* MealListView.swift in Sources */,
+				EF9EF5192811565700E7EE19 /* Color.swift in Sources */,
+				EF9EF50C281153E600E7EE19 /* LoadingListView.swift in Sources */,
+				EF9EF50D281153F600E7EE19 /* L10n.swift in Sources */,
+				EF9EF52628115AE100E7EE19 /* AppView.swift in Sources */,
+				EF9EF522281158AA00E7EE19 /* Meal+Extensions.swift in Sources */,
+				EF9EF5112811547C00E7EE19 /* Formatter.swift in Sources */,
+				EF9EF5242811597000E7EE19 /* PriceLabel.swift in Sources */,
+				EF9EF5022811524D00E7EE19 /* LoadingResult.swift in Sources */,
+				EF9EF5122811549C00E7EE19 /* CardserviceErrorWrapper.swift in Sources */,
+				EF9EF5052811524D00E7EE19 /* Canteen+Example.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -614,6 +873,16 @@
 			isa = PBXTargetDependency;
 			target = 39281C59234241B900E4EFB5 /* MensaDresden */;
 			targetProxy = 39FAEC102781E6350035776F /* PBXContainerItemProxy */;
+		};
+		EF9EF4E22811504300E7EE19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF9EF4DE2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension */;
+			targetProxy = EF9EF4E12811504300E7EE19 /* PBXContainerItemProxy */;
+		};
+		EF9EF4F12811504300E7EE19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF9EF4D62811504200E7EE19 /* MensaDresdenWatch */;
+			targetProxy = EF9EF4F02811504300E7EE19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -779,7 +1048,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresden/Preview Content\"";
-				DEVELOPMENT_TEAM = HU85FER47E;
+				DEVELOPMENT_TEAM = QVU8H45PQ5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MensaDresden/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -788,7 +1057,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2022.6;
-				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
+				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -804,7 +1073,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresden/Preview Content\"";
-				DEVELOPMENT_TEAM = HU85FER47E;
+				DEVELOPMENT_TEAM = QVU8H45PQ5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MensaDresden/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -813,7 +1082,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2022.6;
-				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
+				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -897,6 +1166,126 @@
 			};
 			name = Release;
 		};
+		EF9EF4F42811504300E7EE19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 60;
+				DEVELOPMENT_ASSET_PATHS = "\"MensaDresdenWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = QVU8H45PQ5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MensaDresdenWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MensaDresdenWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = MensaDresdenWatch_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Kilian Koeltzsch. All rights reserved.";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2022.6;
+				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		EF9EF4F52811504300E7EE19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 60;
+				DEVELOPMENT_ASSET_PATHS = "\"MensaDresdenWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = QVU8H45PQ5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MensaDresdenWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MensaDresdenWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = MensaDresdenWatch_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Kilian Koeltzsch. All rights reserved.";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2022.6;
+				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		EF9EF4F82811504300E7EE19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 60;
+				DEVELOPMENT_TEAM = QVU8H45PQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = MensaDresdenWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = MensaDresdenWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.westermann.MensaDresden;
+				MARKETING_VERSION = 2022.6;
+				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		EF9EF4F92811504300E7EE19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 60;
+				DEVELOPMENT_TEAM = QVU8H45PQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = MensaDresdenWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = MensaDresdenWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.westermann.MensaDresden;
+				MARKETING_VERSION = 2022.6;
+				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -932,6 +1321,24 @@
 			buildConfigurations = (
 				39FAEC132781E6350035776F /* Debug */,
 				39FAEC142781E6350035776F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF9EF4F32811504300E7EE19 /* Build configuration list for PBXNativeTarget "MensaDresdenWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF9EF4F42811504300E7EE19 /* Debug */,
+				EF9EF4F52811504300E7EE19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF9EF4F72811504300E7EE19 /* Build configuration list for PBXNativeTarget "MensaDresdenWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF9EF4F82811504300E7EE19 /* Debug */,
+				EF9EF4F92811504300E7EE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1003,6 +1410,26 @@
 			productName = KeychainItem;
 		};
 		3997DCC72455931600763C07 /* SwiftyHolidays */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */;
+			productName = SwiftyHolidays;
+		};
+		EF9EF5002811521400E7EE19 /* EmealKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */;
+			productName = EmealKit;
+		};
+		EF9EF5082811532D00E7EE19 /* KeychainItem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */;
+			productName = KeychainItem;
+		};
+		EF9EF50E2811540000E7EE19 /* TelemetryClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 390B777227E211E600DEF4E3 /* XCRemoteSwiftPackageReference "SwiftClient" */;
+			productName = TelemetryClient;
+		};
+		EF9EF51E2811578000E7EE19 /* SwiftyHolidays */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */;
 			productName = SwiftyHolidays;

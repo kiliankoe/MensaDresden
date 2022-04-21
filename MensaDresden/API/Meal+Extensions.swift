@@ -63,6 +63,7 @@ extension Ingredient {
 
 // MARK: Activity Item
 
+#if !os(watchOS)
 extension Meal {
     var activityItem: ActivityItem {
         return ActivityItem(meal: self)
@@ -88,6 +89,7 @@ extension Meal {
         }
     }
 }
+#endif
 
 // MARK: Preview Data
 
