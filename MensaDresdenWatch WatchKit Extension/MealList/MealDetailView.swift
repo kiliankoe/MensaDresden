@@ -27,6 +27,36 @@ struct MealDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 15) {
+                MealImage(meal: meal, contentMode: .fit)
+            
+                HStack {
+                    ZStack(alignment: .bottomLeading) {
+                        if settings.priceTypeIsStudent {
+                            PriceLabel(price: meal.prices?.students, shadow: 2)
+                        } else {
+                            PriceLabel(price: meal.prices?.employees, shadow: 2)
+                        }
+                    }
+                    
+                    HStack {
+                        ForEach(meal.ingredients, id: \.rawValue) { ingredient in
+                            Text(ingredient.emoji)
+                                .font(.system(size: 30))
+                                .accessibility(label: Text(LocalizedStringKey(ingredient.rawValue)))
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+                
+                ForEach(meal.diet, id: \.self) { diet in
+                    Text(LocalizedStringKey(String(describing: diet)))
+                        .font(Font.caption.smallCaps())
+                        .bold()
+                        .foregroundColor(.green)
+                        .lineLimit(1)
+                        .padding(.horizontal)
+                }
+                
                 if meal.isDinner {
                     Image(systemName: "moon.fill")
                         .font(.headline)
@@ -34,21 +64,8 @@ struct MealDetailView: View {
                         .accessibility(label: Text("meal.dinner"))
                 }
 
-                ForEach(meal.diet, id: \.self) { diet in
-                    Text(LocalizedStringKey(String(describing: diet)))
-                        .padding(.horizontal)
-                }
-
                 Text(meal.allergenStrippedTitle)
                     .padding(.horizontal)
-                
-                ZStack(alignment: .bottomLeading) {
-                    if settings.priceTypeIsStudent {
-                        PriceLabel(price: meal.prices?.students, shadow: 2)
-                    } else {
-                        PriceLabel(price: meal.prices?.employees, shadow: 2)
-                    }
-                }
 
                 if !passesFilters {
                     Text("meal.ingredient-warning")
@@ -56,14 +73,6 @@ struct MealDetailView: View {
                         .padding(.horizontal)
                 }
 
-                HStack {
-                    ForEach(meal.ingredients, id: \.rawValue) { ingredient in
-                        Text(ingredient.emoji)
-                            .font(.system(size: 30))
-                            .accessibility(label: Text(LocalizedStringKey(ingredient.rawValue)))
-                    }
-                }
-                .padding(.horizontal)
 
                 VStack(alignment: .leading) {
                     ForEach(meal.notes, id: \.self) { note in
@@ -72,7 +81,7 @@ struct MealDetailView: View {
                     }
                 }.padding(.horizontal)
             }
-        }.navigationTitle(meal.category.uppercased())
+        }.navigationTitle(meal.category.uppercased()).navigationBarTitleDisplayMode(.inline)
     }
 }
 

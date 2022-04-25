@@ -14,6 +14,7 @@ struct MealListView: View {
     var body: some View {
         MealList(canteen: canteen, selectedDate: $selectedDate)
         .navigationTitle(canteen.name)
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             if self.selectedDate < Date.today {
                 self.selectedDate = .today

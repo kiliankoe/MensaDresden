@@ -1,5 +1,4 @@
 import SwiftUI
-import RemoteImage
 import EmealKit
 
 struct MealImage: View {
@@ -26,13 +25,6 @@ struct MealImage: View {
         }
     }
 
-    func mealImage(_ image: Image) -> some View {
-        image
-            .resizable()
-            .aspectRatio(contentMode: self.contentMode)
-            .frame(width: self.width)
-    }
-
     var body: some View {
         if meal.imageIsPlaceholder {
             ZStack {
@@ -48,10 +40,18 @@ struct MealImage: View {
             .frame(maxHeight: 150)
             .accessibility(hidden: true)
         } else {
-            RemoteImage(type: .url(meal.image),
-                        errorView: { _ in placeholderImage },
-                        imageView: mealImage,
-                        loadingView: { loadingImage })
+            AsyncImage(url: meal.image) { phase in
+                if let image = phase.image {
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: self.contentMode)
+                        .frame(width: self.width)
+                } else if phase.error != nil {
+                    placeholderImage
+                } else {
+                    loadingImage
+                }
+            }
         }
     }
 }

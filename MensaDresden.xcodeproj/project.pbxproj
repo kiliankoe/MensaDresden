@@ -68,6 +68,7 @@
 		39FAEC182781E6830035776F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FAEC172781E6830035776F /* SnapshotHelper.swift */; };
 		39FAEC192781EE800035776F /* App+Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FAEC022781171D0035776F /* App+Interaction.swift */; };
 		39FC09D82361AFEE008D8AB0 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC09D72361AFEE008D8AB0 /* Formatter.swift */; };
+		EF774C55281738D30047BB97 /* MealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF774C54281738D30047BB97 /* MealImage.swift */; };
 		EF9EF4DA2811504300E7EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4D92811504300E7EE19 /* Assets.xcassets */; };
 		EF9EF4E02811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EF9EF4E72811504300E7EE19 /* MensaDresdenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF4E62811504300E7EE19 /* MensaDresdenApp.swift */; };
@@ -234,6 +235,7 @@
 		39FAEC0C2781E6350035776F /* Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshots.swift; sourceTree = "<group>"; };
 		39FAEC172781E6830035776F /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		39FC09D72361AFEE008D8AB0 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		EF774C54281738D30047BB97 /* MealImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealImage.swift; sourceTree = "<group>"; };
 		EF9EF4D72811504200E7EE19 /* MensaDresdenWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MensaDresdenWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9EF4D92811504300E7EE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MensaDresdenWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -529,6 +531,7 @@
 			children = (
 				EF9EF5152811561900E7EE19 /* MealListView.swift */,
 				EF9EF51C281156E500E7EE19 /* MealList.swift */,
+				EF774C54281738D30047BB97 /* MealImage.swift */,
 				EFF0399528117E060054C3E9 /* MealDetailView.swift */,
 				EF9EF5202811586700E7EE19 /* MealCell.swift */,
 				EF9EF5232811597000E7EE19 /* PriceLabel.swift */,
@@ -846,6 +849,7 @@
 				EF9EF5182811565200E7EE19 /* Meal.swift in Sources */,
 				EF9EF51D281156E500E7EE19 /* MealList.swift in Sources */,
 				EF9EF5102811546700E7EE19 /* Analytics.swift in Sources */,
+				EF774C55281738D30047BB97 /* MealImage.swift in Sources */,
 				EF9EF507281152D500E7EE19 /* Settings.swift in Sources */,
 				EF9EF5162811561900E7EE19 /* MealListView.swift in Sources */,
 				EF9EF5192811565700E7EE19 /* Color.swift in Sources */,
