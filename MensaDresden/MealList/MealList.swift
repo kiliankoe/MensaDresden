@@ -47,11 +47,6 @@ struct MealList: View {
                              }
                         }
         )
-        .onAppear {
-            Analytics.send(.openedMealList, with: [
-                "canteen": self.canteen.name
-            ])
-        }
     }
 }
 

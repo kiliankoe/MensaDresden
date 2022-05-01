@@ -47,7 +47,6 @@ struct EmealView: View {
                         Text("emeal.scan-button")
                     }) {
                         self.emeal.beginNFCSession()
-                        Analytics.send(.scannedEmeal)
                     }
                     .padding(.horizontal)
                 }
