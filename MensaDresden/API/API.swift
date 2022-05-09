@@ -66,7 +66,7 @@ class API: ObservableObject {
     func meals(for canteenId: Int, on date: Date) -> LoadingResult<[Meal]> {
         #warning("This has the same bug as the transactions, multiple requests being fired.")
         let key = MealCacheKey(canteenId: canteenId, date: date)
-        guard let previousResult = cachedMeals[key] else {
+        guard var previousResult = cachedMeals[key] else {
             Task {
                 await loadMeals(for: canteenId, on: date)
             }
@@ -77,6 +77,44 @@ class API: ObservableObject {
                 await loadMeals(for: canteenId, on: date)
             }
         }
+
+        // Sort meals
+        let userDiet = UserDefaults.standard
+            .string(forKey: "userDiet")
+            .flatMap(Settings.DietType.init(rawValue:)) ?? .all
+        let unwantedIngredients = (UserDefaults.standard
+            .array(forKey: "ingredientBlacklist") as? [String])?
+            .compactMap { Ingredient(rawValue: $0) } ?? []
+        let unwantedAllergens = (UserDefaults.standard
+            .array(forKey: "allergenBlacklist") as? [String])?
+            .compactMap { Allergen(rawValue: $0) } ?? []
+
+        if case .success(let meals) = previousResult.result {
+            let sortedMeals = meals.sorted { lhs, rhs in
+                let lhsIsBad = lhs.isIncompatible(
+                    withDiet: userDiet,
+                    ingredients: unwantedIngredients,
+                    allergens: unwantedAllergens
+                )
+                let rhsIsBad = rhs.isIncompatible(
+                    withDiet: userDiet,
+                    ingredients: unwantedIngredients,
+                    allergens: unwantedAllergens
+                )
+
+                switch (lhsIsBad, rhsIsBad) {
+                case (true, true), (false, false):
+                    return lhs.allergenStrippedTitle < rhs.allergenStrippedTitle
+                case (true, false):
+                    return false
+                case (false, true):
+                    return true
+                }
+            }
+
+            previousResult.result = .success(sortedMeals)
+        }
+
         return LoadingResult(from: previousResult.result)
     }
 
