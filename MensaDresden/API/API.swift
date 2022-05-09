@@ -79,6 +79,15 @@ class API: ObservableObject {
         }
 
         // Sort meals
+        if case .success(let meals) = previousResult.result {
+            let sortedMeals = meals.sorted(by: Self.mealComparator())
+            previousResult.result = .success(sortedMeals)
+        }
+
+        return LoadingResult(from: previousResult.result)
+    }
+
+    private static func mealComparator() -> (Meal, Meal) -> Bool {
         let userDiet = UserDefaults.standard
             .string(forKey: "userDiet")
             .flatMap(Settings.DietType.init(rawValue:)) ?? .all
@@ -89,33 +98,38 @@ class API: ObservableObject {
             .array(forKey: "allergenBlacklist") as? [String])?
             .compactMap { Allergen(rawValue: $0) } ?? []
 
-        if case .success(let meals) = previousResult.result {
-            let sortedMeals = meals.sorted { lhs, rhs in
-                let lhsIsBad = lhs.isIncompatible(
-                    withDiet: userDiet,
-                    ingredients: unwantedIngredients,
-                    allergens: unwantedAllergens
-                )
-                let rhsIsBad = rhs.isIncompatible(
-                    withDiet: userDiet,
-                    ingredients: unwantedIngredients,
-                    allergens: unwantedAllergens
-                )
+        return { lhs, rhs in
+            let lhsIsBad = lhs.isIncompatible(
+                withDiet: userDiet,
+                ingredients: unwantedIngredients,
+                allergens: unwantedAllergens
+            )
+            let rhsIsBad = rhs.isIncompatible(
+                withDiet: userDiet,
+                ingredients: unwantedIngredients,
+                allergens: unwantedAllergens
+            )
 
-                switch (lhsIsBad, rhsIsBad) {
+            switch (lhsIsBad, rhsIsBad) {
+            case (true, true), (false, false):
+                let currentTime = Calendar.current.component(.hour, from: Date())
+
+                switch (lhs.isDinner, rhs.isDinner) {
                 case (true, true), (false, false):
+                    // Both are good/bad and both are dinner or not, so we're sorting based on name
                     return lhs.allergenStrippedTitle < rhs.allergenStrippedTitle
                 case (true, false):
-                    return false
+                    // Dinner should be at bottom before 3pm, at top after
+                    return currentTime > 15
                 case (false, true):
-                    return true
+                    return currentTime < 15
                 }
+            case (true, false):
+                return false
+            case (false, true):
+                return true
             }
-
-            previousResult.result = .success(sortedMeals)
         }
-
-        return LoadingResult(from: previousResult.result)
     }
 
     // MARK: Transactions
