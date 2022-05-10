@@ -31,6 +31,7 @@ struct MealImage: View {
             .resizable()
             .aspectRatio(contentMode: self.contentMode)
             .frame(width: self.width)
+            .accessibilityIgnoresInvertColors()
     }
 
     var body: some View {
@@ -40,6 +41,7 @@ struct MealImage: View {
                 if let emoji = meal.emoji {
                     Text(emoji)
                         .font(.system(size: 80))
+                        .accessibilityIgnoresInvertColors()
                 } else {
                     placeholderImage
                         .frame(width: 100)
