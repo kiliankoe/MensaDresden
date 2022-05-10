@@ -1,5 +1,4 @@
 import SwiftUI
-import RemoteImage
 import EmealKit
 
 struct MealCell: View {

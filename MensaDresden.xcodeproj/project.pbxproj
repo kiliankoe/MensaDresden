@@ -28,7 +28,6 @@
 		39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C872342910600E4EFB5 /* CanteenCell.swift */; };
 		39281C8D234297E000E4EFB5 /* Meal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal+Extensions.swift */; };
 		39281C8F2342985900E4EFB5 /* Canteen+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8E2342985900E4EFB5 /* Canteen+Example.swift */; };
-		39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 39281CD12343CFB400E4EFB5 /* RemoteImage */; };
 		393E72C925EBB9FA009BD729 /* HorizontalSwipeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393E72C825EBB9FA009BD729 /* HorizontalSwipeGesture.swift */; };
 		394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D002343D0C9005F076C /* MealDetailView.swift */; };
 		394D9D032343EFD4005F076C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D022343EFD4005F076C /* AboutView.swift */; };
@@ -171,7 +170,6 @@
 				3965DDEA23F0244800C9C75C /* EmealKit in Frameworks */,
 				395EA6D52829BE84002F8055 /* ImageViewerRemote in Frameworks */,
 				3997DCC82455931600763C07 /* SwiftyHolidays in Frameworks */,
-				39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */,
 				396FC3BC2353BF60007B97F3 /* KeychainItem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +396,6 @@
 			);
 			name = MensaDresden;
 			packageProductDependencies = (
-				39281CD12343CFB400E4EFB5 /* RemoteImage */,
 				396FC3BB2353BF60007B97F3 /* KeychainItem */,
 				3965DDE923F0244800C9C75C /* EmealKit */,
 				3997DCC72455931600763C07 /* SwiftyHolidays */,
@@ -485,7 +482,6 @@
 			);
 			mainGroup = 39281C51234241B900E4EFB5;
 			packageReferences = (
-				39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */,
 				396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */,
 				3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */,
 				3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */,
@@ -951,14 +947,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/crelies/RemoteImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		395EA6D32829BE84002F8055 /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Jake-Short/swiftui-image-viewer.git";
@@ -998,11 +986,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 390B777227E211E600DEF4E3 /* XCRemoteSwiftPackageReference "SwiftClient" */;
 			productName = TelemetryClient;
-		};
-		39281CD12343CFB400E4EFB5 /* RemoteImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */;
-			productName = RemoteImage;
 		};
 		395EA6D42829BE84002F8055 /* ImageViewerRemote */ = {
 			isa = XCSwiftPackageProductDependency;

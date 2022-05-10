@@ -37,15 +37,6 @@
       }
     },
     {
-      "identity" : "remoteimage",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/crelies/RemoteImage",
-      "state" : {
-        "revision" : "2dca7774a57eaa0797cf288a98bf6ea516469b49",
-        "version" : "2.0.3"
-      }
-    },
-    {
       "identity" : "swiftclient",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/TelemetryDeck/SwiftClient",
@@ -79,15 +70,6 @@
       "state" : {
         "revision" : "ccab89ad1cedb04f25dd4df1776dd8c8583b914a",
         "version" : "2.2.5"
-      }
-    },
-    {
-      "identity" : "viewinspector",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/nalexn/ViewInspector.git",
-      "state" : {
-        "revision" : "de7490741d4c09f23a0508fa869cb54f0da27e70",
-        "version" : "0.5.1"
       }
     }
   ],

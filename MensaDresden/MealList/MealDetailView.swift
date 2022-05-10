@@ -1,6 +1,5 @@
 import SwiftUI
 import EmealKit
-import RemoteImage
 import ImageViewerRemote
 
 struct MealDetailContainerView: View {
