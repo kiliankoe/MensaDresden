@@ -1,4 +1,5 @@
 import SwiftUI
+import os.log
 
 struct AppView: View {
     var body: some View {
@@ -40,6 +41,9 @@ struct AppView: View {
                 }
         }
         .accentColor(.green)
+        .onAppear {
+            Logger.breadcrumb.info("Appear AppView")
+        }
     }
 }
 

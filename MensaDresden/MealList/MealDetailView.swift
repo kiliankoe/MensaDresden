@@ -1,6 +1,7 @@
 import SwiftUI
 import EmealKit
 import ImageViewerRemote
+import os.log
 
 struct MealDetailContainerView: View {
     let meal: Meal
@@ -140,6 +141,9 @@ struct LargeMealDetailView: View {
             caption: Text(meal.allergenStrippedTitle),
             closeButtonTopRight: nil
         ))
+        .onAppear {
+            Logger.breadcrumb.info("Appear LargeMealDetailView for \(meal.id) \(meal.allergenStrippedTitle))")
+        }
     }
 }
 
@@ -248,6 +252,9 @@ struct MealDetailView: View {
             caption: nil,
             closeButtonTopRight: nil
         ))
+        .onAppear {
+            Logger.breadcrumb.info("Appear MealDetailView for \(meal.id) \(meal.allergenStrippedTitle)")
+        }
     }
 }
 

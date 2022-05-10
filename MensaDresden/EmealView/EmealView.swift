@@ -1,6 +1,7 @@
 import SwiftUI
 import Combine
 import CoreNFC
+import os.log
 
 struct EmealView: View {
     @EnvironmentObject var api: API
@@ -42,6 +43,8 @@ struct EmealView: View {
         else {
             return emeal.currentBalance
         }
+
+        Logger.breadcrumb.info("Transactions newer than last Emeal scan available, estimating Emeal balance")
 
         let newerTransactionsSum = transactions
             .filter { $0.date > lastScanDate }
@@ -115,6 +118,9 @@ struct EmealView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .task {
             await loadTransactions()
+        }
+        .onAppear {
+            Logger.breadcrumb.info("Appear EmealView")
         }
     }
 

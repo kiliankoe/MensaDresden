@@ -1,5 +1,6 @@
 import SwiftUI
 import EmealKit
+import os.log
 
 struct CustomDateMealListView: View {
     @State var canteen: Canteen
@@ -12,6 +13,9 @@ struct CustomDateMealListView: View {
     var body: some View {
         MealList(canteen: canteen, selectedDate: .constant(selectedDate))
             .navigationBarTitle(Text(navigationTitle), displayMode: .inline)
+            .onAppear {
+                Logger.breadcrumb.info("Appear CustomDateMealListView")
+            }
     }
 }
 

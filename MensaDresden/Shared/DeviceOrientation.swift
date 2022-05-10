@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import os.log
 
 class DeviceOrientation: ObservableObject {
     @Published var isLandscape: Bool
@@ -13,6 +14,7 @@ class DeviceOrientation: ObservableObject {
     @objc func onViewWillTransition(notification: Notification) {
         guard let size = notification.userInfo?["size"] as? CGSize else { return }
         isLandscape = size.width > size.height
+        Logger.deviceOrientation.info("Shifting orientation to \(self.isLandscape ? "landscape" : "portrait")")
     }
 }
 

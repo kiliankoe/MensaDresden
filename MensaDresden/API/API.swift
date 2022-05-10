@@ -1,5 +1,6 @@
 import Foundation
 import EmealKit
+import os.log
 
 @MainActor
 class API: ObservableObject {
@@ -17,11 +18,14 @@ class API: ObservableObject {
 
     /// Get a list of available canteens, stored in `API.canteens`. Observe that value for updates.
     func loadCanteens() async {
+        Logger.api.info("Loading canteens")
         self.canteens = .loading
         do {
             let canteens = try await Canteen.all()
+            Logger.api.info("Successfully loaded \(canteens.count) canteens")
             self.canteens = .success(canteens)
         } catch {
+            Logger.api.error("Failed loading canteens: \(String(describing: error))")
             self.canteens = .failure(error)
             Analytics.send(.apiFailedCanteenLoading, with: [
                 "error": String(describing: error)
@@ -45,10 +49,13 @@ class API: ObservableObject {
     }
 
     func loadMeals(for canteenId: Int, on date: Date) async {
+        Logger.api.info("Loading meals for canteen \(canteenId) on \(date)")
         do {
             let meals = try await Meal.for(canteen: canteenId, on: date)
+            Logger.api.info("Successfully loaded \(meals.count) meals")
             cache(result: .success(meals), for: canteenId, on: date)
         } catch {
+            Logger.api.error("Failed loading meals: \(String(describing: error))")
             cache(result: .failure(error), for: canteenId, on: date)
             Analytics.send(.apiFailedMealLoading, with: [
                 "canteenID": String(canteenId),
@@ -66,13 +73,16 @@ class API: ObservableObject {
     func meals(for canteenId: Int, on date: Date) -> LoadingResult<[Meal]> {
         #warning("This has the same bug as the transactions, multiple requests being fired.")
         let key = MealCacheKey(canteenId: canteenId, date: date)
+        Logger.api.info("Getting meals for canteen \(canteenId) on \(date)")
         guard var previousResult = cachedMeals[key] else {
             Task {
                 await loadMeals(for: canteenId, on: date)
             }
             return .loading
         }
+        Logger.api.info("Found previously cached result")
         if previousResult.isOlder(than: 2 * 60) {
+            Logger.api.info("Previously cached result is stale, reloading.")
             Task {
                 await loadMeals(for: canteenId, on: date)
             }
@@ -142,7 +152,9 @@ class API: ObservableObject {
     }
 
     func loadTransactions(cardnumber: String, password: String) async {
+        Logger.api.info("Loading transactions for \(cardnumber, privacy: .private)")
         if cardnumber == "appledemo" && password == "appledemo" {
+            Logger.api.info("Returning example transactions")
             cache(result: .success(Transaction.exampleValues.reversed()))
             return
         }
@@ -153,16 +165,15 @@ class API: ObservableObject {
         do {
             let card = try await Cardservice.login(username: cardnumber, password: password)
             let transactions = try await card.transactions(begin: ninetyDaysAgo)
+            Logger.api.info("Successfully loaded \(transactions.count) transactions")
             cache(result: .success(transactions.reversed()))
         } catch {
+            Logger.api.error("Failed loading transactions: \(String(describing: error))")
             Analytics.send(.apiFailedAutoloadTransactionsLoading, with: [
                 "error": String(describing: error)
             ])
 
-            guard let cardserviceError = error as? CardserviceError else {
-                print("Unexpected error type, this shouldn't happen: \(error)")
-                return
-            }
+            guard let cardserviceError = error as? CardserviceError else { return }
             let wrappedError = CardserviceErrorWrapper(error: cardserviceError)
             cache(result: .failure(wrappedError))
         }
@@ -171,6 +182,7 @@ class API: ObservableObject {
     /// Get a list of transactions.
     /// - Returns: List of transactions wrapped in a `LoadingResult`
     func transactions() -> LoadingResult<[Transaction]> {
+        Logger.api.info("Getting cached transactions")
         guard let result = cachedTransactions?.result else { return .loading }
         return LoadingResult(from: result)
     }

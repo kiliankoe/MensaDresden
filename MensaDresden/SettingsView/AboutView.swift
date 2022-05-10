@@ -1,4 +1,5 @@
 import SwiftUI
+import os.log
 
 struct AboutView: View {
     var shortVersion: String {
@@ -55,6 +56,9 @@ struct AboutView: View {
             .padding(.horizontal)
 
             Spacer()
+        }
+        .onAppear {
+            Logger.breadcrumb.info("Appear AboutView")
         }
     }
 }

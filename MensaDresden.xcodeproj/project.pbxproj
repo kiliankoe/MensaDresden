@@ -33,6 +33,7 @@
 		394D9D032343EFD4005F076C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D022343EFD4005F076C /* AboutView.swift */; };
 		394D9D1F234560B4005F076C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D1E234560B4005F076C /* SettingsView.swift */; };
 		395EA6D52829BE84002F8055 /* ImageViewerRemote in Frameworks */ = {isa = PBXBuildFile; productRef = 395EA6D42829BE84002F8055 /* ImageViewerRemote */; };
+		395EA6D7282A9CD3002F8055 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395EA6D6282A9CD3002F8055 /* Logger.swift */; };
 		395F98A524FFED7C00740176 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395F98A424FFED7C00740176 /* View.swift */; };
 		3965DDEA23F0244800C9C75C /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3965DDE923F0244800C9C75C /* EmealKit */; };
 		3969E12E24FFAE0C00036C69 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3969E12D24FFAE0C00036C69 /* Color.swift */; };
@@ -116,6 +117,7 @@
 		394D9D002343D0C9005F076C /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		394D9D022343EFD4005F076C /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		394D9D1E234560B4005F076C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		395EA6D6282A9CD3002F8055 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		395F98A424FFED7C00740176 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		3969E12D24FFAE0C00036C69 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		396C4AF023480E6E009A9F52 /* EmealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmealView.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				395F98A424FFED7C00740176 /* View.swift */,
 				391B94FD27665AEB0071E678 /* Binding.swift */,
 				3918AD412782FD2A00B82373 /* Meal.swift */,
+				395EA6D6282A9CD3002F8055 /* Logger.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				391B94FC2766296C0071E678 /* MensaApp.swift in Sources */,
 				396FC3B0235378C1007B97F3 /* AppView.swift in Sources */,
 				391B94FA276574E40071E678 /* API.swift in Sources */,
+				395EA6D7282A9CD3002F8055 /* Logger.swift in Sources */,
 				39A0C940236227F70029FA35 /* DatePickerView.swift in Sources */,
 				391B9E44255ADA43000529A8 /* CompassView.swift in Sources */,
 				396FC3E82357B6E4007B97F3 /* IngredientsAllergensSetting.swift in Sources */,
