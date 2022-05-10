@@ -42,6 +42,9 @@
 "emeal.error.decoding" = "Не удалось считать данные.";
 "emeal.error.no-card-details" = "На счете не обнаружено ни одного емиля.";
 "emeal.error.rate-limited" = "Слишком много запросов. Повторите попытку через минуту.";
+"emeal.estimation-explanation-title" = "Оценочный баланс";
+"emeal.estimation-explanation-ok-action" = "Хорошо";
+"emeal.estimation-explanation-text" = "Ваши операции автозагрузки были использованы для оценки баланса Emeal. Для получения достоверной информации вам следует отсканировать его снова.\n\nВаш последний отсканированный баланс составил %.2f€.";
 
 // Settings
 "settings.nav" = "Настройки";

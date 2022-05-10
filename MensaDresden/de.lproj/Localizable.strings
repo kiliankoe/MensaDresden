@@ -42,6 +42,9 @@
 "emeal.error.decoding" = "Daten konnten nicht gelesen werden.";
 "emeal.error.no-card-details" = "Kein Emeal im Account gefunden.";
 "emeal.error.rate-limited" = "Zu viele Requests, bitte versuche es in einem Moment noch einmal.";
+"emeal.estimation-explanation-title" = "Geschätztes Guthaben";
+"emeal.estimation-explanation-ok-action" = "Ok";
+"emeal.estimation-explanation-text" = "Deine Autoload-Transaktionen wurden genutzt um das aktuelle Guthaben deines Emeals zu schätzen. Um wirklich sicher zu gehen, solltest du ihn erneut scannen.\n\nDas zuletzt gescannte Guthaben betrug %.2f€.";
 
 // Settings
 "settings.nav" = "Einstellungen";

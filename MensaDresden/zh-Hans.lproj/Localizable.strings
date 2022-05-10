@@ -42,6 +42,9 @@
 "emeal.error.decoding" = "读取数据失败。";
 "emeal.error.no-card-details" = "帐户中没有发现Emeal。";
 "emeal.error.rate-limited" = "请求太多。稍后再试。";
+"emeal.estimation-explanation-title" = "估计余额";
+"emeal.estimation-explanation-ok-action" = "好的";
+"emeal.estimation-explanation-text" = "你的自动充值交易被用来估计你的Emeal余额。你应该再次扫描它以获得可靠的信息。\n\n你上次扫描的余额是%.2f€。";
 
 // Settings
 "settings.nav" = "设置";

@@ -42,6 +42,9 @@
 "emeal.error.decoding" = "データの読み取りに失敗しました。";
 "emeal.error.no-card-details" = "アカウントにEmealが見つかりませんでした。";
 "emeal.error.rate-limited" = "リクエストが多すぎます。しばらくしてからもう一度お試しください。";
+"emeal.estimation-explanation-title" = "概算残高";
+"emeal.estimation-explanation-ok-action" = "オッケー";
+"emeal.estimation-explanation-text" = "お客様のオートロード取引は、お客様のEmeal残高を推定するために使用されました。信頼できる情報を得るには、もう一度スキャンする必要があります。\n\n最後にスキャンした残高は%.2f€でした。";
 
 // Settings
 "settings.nav" = "設定";
