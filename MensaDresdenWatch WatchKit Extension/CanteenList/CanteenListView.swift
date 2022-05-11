@@ -44,19 +44,25 @@ struct CanteenListView: View {
 
     var body: some View {
         NavigationView {
-            LoadingListView(result: filteredCanteens,
-                            noDataMessage: "canteens.no-data",
-                            retryAction: { Task { await self.api.loadCanteens() } },
-                            showRetryOnNoData: true,
-                            listView: { canteens in
-                                List(self.sort(canteens: canteens)) { canteen in
-                                    NavigationLink(destination: MealListView(canteen: canteen)) {
-                                        Text(canteen.name)
+            List {
+                LoadingListView(result: filteredCanteens,
+                                noDataMessage: "canteens.no-data",
+                                retryAction: { Task { await self.api.loadCanteens() } },
+                                showRetryOnNoData: true,
+                                listView: { canteens in
+                                    ForEach(self.sort(canteens: canteens)) { canteen in
+                                        NavigationLink(destination: MealListView(canteen: canteen)) {
+                                            Text(canteen.name)
+                                        }
                                     }
                                 }
-                                .listStyle(PlainListStyle())
-                            }
-            )
+                )
+                
+                NavigationLink(destination: SettingsView()) {
+                    Text("settings.nav")
+                }
+            }
+                
         }
         .navigationTitle("canteens.nav")
     }

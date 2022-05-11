@@ -5,7 +5,6 @@ struct MealListView: View {
     @State var canteen: Canteen
 
     @EnvironmentObject var api: API
-    @EnvironmentObject var settings: Settings
 
     @State var showingDatePickerView = false
 

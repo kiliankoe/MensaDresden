@@ -68,6 +68,9 @@
 		39FAEC182781E6830035776F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FAEC172781E6830035776F /* SnapshotHelper.swift */; };
 		39FAEC192781EE800035776F /* App+Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FAEC022781171D0035776F /* App+Interaction.swift */; };
 		39FC09D82361AFEE008D8AB0 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC09D72361AFEE008D8AB0 /* Formatter.swift */; };
+		EF26D779282B9DC400D35E13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26D778282B9DC400D35E13 /* SettingsView.swift */; };
+		EF26D77D282B9DDE00D35E13 /* IngredientsAllergensSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26D77C282B9DDE00D35E13 /* IngredientsAllergensSetting.swift */; };
+		EF26D77E282B9F5600D35E13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39281C76234247C100E4EFB5 /* Localizable.strings */; };
 		EF774C55281738D30047BB97 /* MealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF774C54281738D30047BB97 /* MealImage.swift */; };
 		EF9EF4DA2811504300E7EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4D92811504300E7EE19 /* Assets.xcassets */; };
 		EF9EF4E02811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -235,6 +238,8 @@
 		39FAEC0C2781E6350035776F /* Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshots.swift; sourceTree = "<group>"; };
 		39FAEC172781E6830035776F /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		39FC09D72361AFEE008D8AB0 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		EF26D778282B9DC400D35E13 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		EF26D77C282B9DDE00D35E13 /* IngredientsAllergensSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsAllergensSetting.swift; sourceTree = "<group>"; };
 		EF774C54281738D30047BB97 /* MealImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealImage.swift; sourceTree = "<group>"; };
 		EF9EF4D72811504200E7EE19 /* MensaDresdenWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MensaDresdenWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9EF4D92811504300E7EE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -487,6 +492,15 @@
 			path = Screenshots;
 			sourceTree = "<group>";
 		};
+		EF26D777282B9DA600D35E13 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				EF26D778282B9DC400D35E13 /* SettingsView.swift */,
+				EF26D77C282B9DDE00D35E13 /* IngredientsAllergensSetting.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
 		EF9EF4D82811504200E7EE19 /* MensaDresdenWatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +512,7 @@
 		EF9EF4E32811504300E7EE19 /* MensaDresdenWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EF26D777282B9DA600D35E13 /* SettingsView */,
 				EF9EF4FB2811514000E7EE19 /* CanteenList */,
 				EF9EF514281155F900E7EE19 /* MealList */,
 				EF9EF4E82811504300E7EE19 /* ComplicationController.swift */,
@@ -749,6 +764,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF9EF4EE2811504300E7EE19 /* Preview Assets.xcassets in Resources */,
+				EF26D77E282B9F5600D35E13 /* Localizable.strings in Resources */,
 				EF9EF4EB2811504300E7EE19 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -848,6 +864,7 @@
 				EF9EF5042811524D00E7EE19 /* API.swift in Sources */,
 				EF9EF5182811565200E7EE19 /* Meal.swift in Sources */,
 				EF9EF51D281156E500E7EE19 /* MealList.swift in Sources */,
+				EF26D779282B9DC400D35E13 /* SettingsView.swift in Sources */,
 				EF9EF5102811546700E7EE19 /* Analytics.swift in Sources */,
 				EF774C55281738D30047BB97 /* MealImage.swift in Sources */,
 				EF9EF507281152D500E7EE19 /* Settings.swift in Sources */,
@@ -857,6 +874,7 @@
 				EF9EF50D281153F600E7EE19 /* L10n.swift in Sources */,
 				EF9EF52628115AE100E7EE19 /* AppView.swift in Sources */,
 				EF9EF522281158AA00E7EE19 /* Meal+Extensions.swift in Sources */,
+				EF26D77D282B9DDE00D35E13 /* IngredientsAllergensSetting.swift in Sources */,
 				EF9EF5112811547C00E7EE19 /* Formatter.swift in Sources */,
 				EF9EF5242811597000E7EE19 /* PriceLabel.swift in Sources */,
 				EF9EF5022811524D00E7EE19 /* LoadingResult.swift in Sources */,

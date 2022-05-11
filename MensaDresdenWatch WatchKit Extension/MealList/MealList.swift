@@ -4,6 +4,7 @@ import SwiftyHolidays
 
 struct MealList: View {
     @EnvironmentObject var api: API
+    @EnvironmentObject var settings: Settings
 
     var canteen: Canteen
     @Binding var selectedDate: Date
@@ -29,24 +30,30 @@ struct MealList: View {
     }
 
     var body: some View {
-        LoadingListView(result: api.meals(for: canteen.id, on: selectedDate),
-                        noDataMessage: noDataMessage,
-                        noDataSubtitle: noDataSubtitle,
-                        retryAction: {
-                            Task { await self.api.loadMeals(for: self.canteen.id, on: self.selectedDate) }
-                        },
-                        listView: { meals in
-                             List(meals) { meal in
-                                 NavigationLink(destination: MealDetailView(meal: meal)) {
-                                     MealCell(meal: meal)
+        List {
+            LoadingListView(result: api.meals(for: canteen.id, on: selectedDate),
+                            noDataMessage: noDataMessage,
+                            noDataSubtitle: noDataSubtitle,
+                            retryAction: {
+                                Task { await self.api.loadMeals(for: self.canteen.id, on: self.selectedDate) }
+                            },
+                            listView: { meals in
+                                 ForEach(meals) { meal in
+                                     NavigationLink(destination: MealDetailView(meal: meal)) {
+                                         MealCell(meal: meal)
+                                     }
                                  }
-                             }
-                             .listStyle(PlainListStyle())
-                             .refreshable {
-                                 await api.loadMeals(for: canteen.id, on: selectedDate)
-                             }
-                        }
-        )
+                            }
+            )
+            Button(action: {
+                self.settings.toggleFavorite(canteen: self.canteen.name)
+            }) {
+                Label("settings.favorite-canteens", systemImage:  settings.favoriteCanteens.contains(canteen.name) ? "heart.fill" : "heart")
+            }
+        }
+        .refreshable {
+            await api.loadMeals(for: canteen.id, on: selectedDate)
+        }
         .onAppear {
             Analytics.send(.openedMealList, with: [
                 "canteen": self.canteen.name
