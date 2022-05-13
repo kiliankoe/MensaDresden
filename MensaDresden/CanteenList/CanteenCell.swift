@@ -33,6 +33,7 @@ struct CanteenCell: View {
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(8)
                     .padding(.trailing, 2)
+                    .accessibilityIgnoresInvertColors()
                 if isFavorite {
                     Image(systemName: "heart.fill")
                         .foregroundColor(.red)

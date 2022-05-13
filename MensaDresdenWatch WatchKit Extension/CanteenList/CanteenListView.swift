@@ -52,7 +52,14 @@ struct CanteenListView: View {
                                 listView: { canteens in
                                     ForEach(self.sort(canteens: canteens)) { canteen in
                                         NavigationLink(destination: MealListView(canteen: canteen)) {
-                                            Text(canteen.name)
+                                            HStack {
+                                                Text(canteen.name)
+                                                if settings.favoriteCanteens.contains(canteen.name) {
+                                                    Spacer()
+                                                    Image(systemName: "heart.fill")
+                                                        .foregroundColor(.red)
+                                                }
+                                            }
                                         }
                                     }
                                 }

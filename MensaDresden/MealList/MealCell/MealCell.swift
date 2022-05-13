@@ -1,5 +1,4 @@
 import SwiftUI
-import RemoteImage
 import EmealKit
 
 struct MealCell: View {
@@ -68,6 +67,7 @@ struct MealCell: View {
                         Text(ingredient.emoji)
                             .font(.system(size: 20))
                             .accessibility(label: Text(LocalizedStringKey(ingredient.rawValue)))
+                            .accessibilityIgnoresInvertColors()
                     }
                     if meal.isDinner {
                         Spacer()

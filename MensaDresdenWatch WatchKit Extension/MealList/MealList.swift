@@ -48,16 +48,16 @@ struct MealList: View {
             Button(action: {
                 self.settings.toggleFavorite(canteen: self.canteen.name)
             }) {
-                Label("settings.favorite-canteens", systemImage:  settings.favoriteCanteens.contains(canteen.name) ? "heart.fill" : "heart")
+                HStack {
+                    Text("settings.favorite-canteens")
+                    Spacer()
+                    Image(systemName:  settings.favoriteCanteens.contains(canteen.name) ? "heart.fill" : "heart")
+                        .foregroundColor(.red)
+                }
             }
         }
         .refreshable {
             await api.loadMeals(for: canteen.id, on: selectedDate)
-        }
-        .onAppear {
-            Analytics.send(.openedMealList, with: [
-                "canteen": self.canteen.name
-            ])
         }
     }
 }

@@ -1,5 +1,6 @@
 import SwiftUI
 import EmealKit
+import os.log
 
 struct DatePickerView: View {
 
@@ -37,6 +38,9 @@ struct DatePickerView: View {
             }
         }
         .navigationBarTitle(Text(canteen.name), displayMode: .inline)
+        .onAppear {
+            Logger.breadcrumb.info("Appear DatePickerView")
+        }
     }
 }
 

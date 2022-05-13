@@ -77,6 +77,14 @@ internal enum L10n {
     internal static let autoloadInformation = L10n.tr("Localizable", "emeal.autoload-information")
     /// Balance
     internal static let balance = L10n.tr("Localizable", "emeal.balance")
+    /// Ok
+    internal static let estimationExplanationOkAction = L10n.tr("Localizable", "emeal.estimation-explanation-ok-action")
+    /// Your autoload transactions were used to estimate your Emeal balance. You should scan it again to get reliable information. Your last scanned balance was %.2f€.
+    internal static func estimationExplanationText(_ p1: Float) -> String {
+      return L10n.tr("Localizable", "emeal.estimation-explanation-text", p1)
+    }
+    /// Estimated Balance
+    internal static let estimationExplanationTitle = L10n.tr("Localizable", "emeal.estimation-explanation-title")
     /// Last scanned
     internal static let lastScanned = L10n.tr("Localizable", "emeal.last-scanned")
     /// Last Transaction

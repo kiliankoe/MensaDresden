@@ -42,6 +42,9 @@
 "emeal.error.decoding" = "Failed to read data.";
 "emeal.error.no-card-details" = "No Emeal found in account.";
 "emeal.error.rate-limited" = "Too many requests. Try again in a moment.";
+"emeal.estimation-explanation-title" = "Estimated Balance";
+"emeal.estimation-explanation-ok-action" = "Ok";
+"emeal.estimation-explanation-text" = "Your autoload transactions were used to estimate your Emeal balance. You should scan it again to get reliable information.\n\nYour last scanned balance was %.2f€.";
 
 // Settings
 "settings.nav" = "Settings";

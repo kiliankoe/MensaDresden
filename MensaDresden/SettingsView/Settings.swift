@@ -38,6 +38,7 @@ class Settings: ObservableObject {
             },
             set: { val in
                 self.priceType = val.rawValue
+                self.objectWillChange.send()
             })
     }
     var priceTypeIsStudent: Bool {
@@ -91,6 +92,7 @@ class Settings: ObservableObject {
             },
             set: {
                 self.userDiet = $0
+                self.objectWillChange.send()
             }
         )
     }

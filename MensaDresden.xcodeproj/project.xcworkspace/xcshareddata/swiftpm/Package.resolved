@@ -37,21 +37,21 @@
       }
     },
     {
-      "identity" : "remoteimage",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/crelies/RemoteImage",
-      "state" : {
-        "revision" : "2dca7774a57eaa0797cf288a98bf6ea516469b49",
-        "version" : "2.0.3"
-      }
-    },
-    {
       "identity" : "swiftclient",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/TelemetryDeck/SwiftClient",
       "state" : {
         "revision" : "fb518b5acb02aa6ca41be7018bb1619aaef3dc13",
         "version" : "1.1.6"
+      }
+    },
+    {
+      "identity" : "swiftui-image-viewer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Jake-Short/swiftui-image-viewer.git",
+      "state" : {
+        "revision" : "f61f298c0100c81dfb0c7908091e68aad12a892c",
+        "version" : "2.3.1"
       }
     },
     {
@@ -64,12 +64,12 @@
       }
     },
     {
-      "identity" : "viewinspector",
+      "identity" : "url-image",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/nalexn/ViewInspector.git",
+      "location" : "https://github.com/dmytro-anokhin/url-image.git",
       "state" : {
-        "revision" : "de7490741d4c09f23a0508fa869cb54f0da27e70",
-        "version" : "0.5.1"
+        "revision" : "ccab89ad1cedb04f25dd4df1776dd8c8583b914a",
+        "version" : "2.2.5"
       }
     }
   ],

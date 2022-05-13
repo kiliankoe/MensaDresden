@@ -1,5 +1,6 @@
 import SwiftUI
 import EmealKit
+import os.log
 
 struct CanteenListView: View {
     @EnvironmentObject var api: API
@@ -15,6 +16,7 @@ struct CanteenListView: View {
             if searchQuery.isEmpty {
                 return api.canteens
             }
+            Logger.breadcrumb.info("Filtering canteens based on query: \(searchQuery)")
             let filtered = canteens
                 .filter { canteen in
                     if let possibleId = CanteenId.from(name: searchQuery) {
@@ -112,6 +114,9 @@ struct CanteenListView: View {
                     Text("ipad.swipe-hint")
                 }
             }
+        }
+        .onAppear {
+            Logger.breadcrumb.info("Appear CanteenListView")
         }
     }
 }

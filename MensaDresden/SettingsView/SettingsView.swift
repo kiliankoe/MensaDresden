@@ -1,4 +1,5 @@
 import SwiftUI
+import os.log
 
 struct SettingsView: View {
     @EnvironmentObject var settings: Settings
@@ -104,6 +105,9 @@ struct SettingsView: View {
             .navigationBarTitle("settings.nav")
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .onAppear {
+            Logger.breadcrumb.info("Appear SettingsView")
+        }
     }
 }
 

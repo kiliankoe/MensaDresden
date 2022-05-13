@@ -1,5 +1,6 @@
 import SwiftUI
 import EmealKit
+import os.log
 
 struct MealListView: View {
     @State var canteen: Canteen
@@ -63,6 +64,7 @@ struct MealListView: View {
             .accentColor(.green)
         }
         .onAppear {
+            Logger.breadcrumb.info("Appear MealListView for \(canteen.name)")
             if self.selectedDate < Date.today {
                 self.selectedDate = .today
             }

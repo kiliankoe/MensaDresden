@@ -3,8 +3,6 @@ import TelemetryClient
 
 enum Analytics: String {
     case currentSettings
-    case openedMealList
-    case scannedEmeal
 
     // API
     case apiFailedCanteenLoading

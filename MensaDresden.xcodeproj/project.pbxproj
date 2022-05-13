@@ -27,13 +27,13 @@
 		39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C872342910600E4EFB5 /* CanteenCell.swift */; };
 		39281C8D234297E000E4EFB5 /* Meal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal+Extensions.swift */; };
 		39281C8F2342985900E4EFB5 /* Canteen+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8E2342985900E4EFB5 /* Canteen+Example.swift */; };
-		39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 39281CD12343CFB400E4EFB5 /* RemoteImage */; };
 		393E72C925EBB9FA009BD729 /* HorizontalSwipeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393E72C825EBB9FA009BD729 /* HorizontalSwipeGesture.swift */; };
 		394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D002343D0C9005F076C /* MealDetailView.swift */; };
 		394D9D032343EFD4005F076C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D022343EFD4005F076C /* AboutView.swift */; };
 		394D9D1F234560B4005F076C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D1E234560B4005F076C /* SettingsView.swift */; };
+		395EA6D52829BE84002F8055 /* ImageViewerRemote in Frameworks */ = {isa = PBXBuildFile; productRef = 395EA6D42829BE84002F8055 /* ImageViewerRemote */; };
+		395EA6D7282A9CD3002F8055 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395EA6D6282A9CD3002F8055 /* Logger.swift */; };
 		395F98A524FFED7C00740176 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395F98A424FFED7C00740176 /* View.swift */; };
-		3965DDEA23F0244800C9C75C /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3965DDE923F0244800C9C75C /* EmealKit */; };
 		3969E12E24FFAE0C00036C69 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3969E12D24FFAE0C00036C69 /* Color.swift */; };
 		396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C4AF023480E6E009A9F52 /* EmealView.swift */; };
 		396FC3B0235378C1007B97F3 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396FC3AF235378C1007B97F3 /* AppView.swift */; };
@@ -71,16 +71,17 @@
 		EF26D779282B9DC400D35E13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26D778282B9DC400D35E13 /* SettingsView.swift */; };
 		EF26D77D282B9DDE00D35E13 /* IngredientsAllergensSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26D77C282B9DDE00D35E13 /* IngredientsAllergensSetting.swift */; };
 		EF26D77E282B9F5600D35E13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39281C76234247C100E4EFB5 /* Localizable.strings */; };
+		EF516136282E42C100EF6074 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = EF516135282E42C100EF6074 /* EmealKit */; };
+		EF516138282E42CE00EF6074 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = EF516137282E42CE00EF6074 /* EmealKit */; };
+		EF516139282E42F200EF6074 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395EA6D6282A9CD3002F8055 /* Logger.swift */; };
 		EF774C55281738D30047BB97 /* MealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF774C54281738D30047BB97 /* MealImage.swift */; };
 		EF9EF4DA2811504300E7EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4D92811504300E7EE19 /* Assets.xcassets */; };
 		EF9EF4E02811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EF9EF4E72811504300E7EE19 /* MensaDresdenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF4E62811504300E7EE19 /* MensaDresdenApp.swift */; };
-		EF9EF4E92811504300E7EE19 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF4E82811504300E7EE19 /* ComplicationController.swift */; };
 		EF9EF4EB2811504300E7EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4EA2811504300E7EE19 /* Assets.xcassets */; };
 		EF9EF4EE2811504300E7EE19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4ED2811504300E7EE19 /* Preview Assets.xcassets */; };
 		EF9EF4F22811504300E7EE19 /* MensaDresdenWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EF9EF4D72811504200E7EE19 /* MensaDresdenWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EF9EF4FD281151A300E7EE19 /* CanteenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF4FC281151A300E7EE19 /* CanteenListView.swift */; };
-		EF9EF5012811521400E7EE19 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = EF9EF5002811521400E7EE19 /* EmealKit */; };
 		EF9EF5022811524D00E7EE19 /* LoadingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E1236CB95900C10D9B /* LoadingResult.swift */; };
 		EF9EF5042811524D00E7EE19 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F9276574E40071E678 /* API.swift */; };
 		EF9EF5052811524D00E7EE19 /* Canteen+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8E2342985900E4EFB5 /* Canteen+Example.swift */; };
@@ -195,6 +196,7 @@
 		394D9D002343D0C9005F076C /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		394D9D022343EFD4005F076C /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		394D9D1E234560B4005F076C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		395EA6D6282A9CD3002F8055 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		395F98A424FFED7C00740176 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		3969E12D24FFAE0C00036C69 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		396C4AF023480E6E009A9F52 /* EmealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmealView.swift; sourceTree = "<group>"; };
@@ -245,7 +247,6 @@
 		EF9EF4D92811504300E7EE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MensaDresdenWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9EF4E62811504300E7EE19 /* MensaDresdenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensaDresdenApp.swift; sourceTree = "<group>"; };
-		EF9EF4E82811504300E7EE19 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		EF9EF4EA2811504300E7EE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF9EF4ED2811504300E7EE19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF9EF4EF2811504300E7EE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -265,10 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				390B777427E211E600DEF4E3 /* TelemetryClient in Frameworks */,
-				3965DDEA23F0244800C9C75C /* EmealKit in Frameworks */,
+				395EA6D52829BE84002F8055 /* ImageViewerRemote in Frameworks */,
 				3997DCC82455931600763C07 /* SwiftyHolidays in Frameworks */,
-				39281CD22343CFB400E4EFB5 /* RemoteImage in Frameworks */,
 				396FC3BC2353BF60007B97F3 /* KeychainItem in Frameworks */,
+				EF516136282E42C100EF6074 /* EmealKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +291,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF9EF5012811521400E7EE19 /* EmealKit in Frameworks */,
+				EF516138282E42CE00EF6074 /* EmealKit in Frameworks */,
 				EF9EF51F2811578000E7EE19 /* SwiftyHolidays in Frameworks */,
 				EF9EF50F2811540000E7EE19 /* TelemetryClient in Frameworks */,
 				EF9EF5092811532D00E7EE19 /* KeychainItem in Frameworks */,
@@ -433,6 +434,7 @@
 				395F98A424FFED7C00740176 /* View.swift */,
 				391B94FD27665AEB0071E678 /* Binding.swift */,
 				3918AD412782FD2A00B82373 /* Meal.swift */,
+				395EA6D6282A9CD3002F8055 /* Logger.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -515,7 +517,6 @@
 				EF26D777282B9DA600D35E13 /* SettingsView */,
 				EF9EF4FB2811514000E7EE19 /* CanteenList */,
 				EF9EF514281155F900E7EE19 /* MealList */,
-				EF9EF4E82811504300E7EE19 /* ComplicationController.swift */,
 				EF9EF4E62811504300E7EE19 /* MensaDresdenApp.swift */,
 				EF9EF52528115AE100E7EE19 /* AppView.swift */,
 				EF9EF4EA2811504300E7EE19 /* Assets.xcassets */,
@@ -573,11 +574,11 @@
 			);
 			name = MensaDresden;
 			packageProductDependencies = (
-				39281CD12343CFB400E4EFB5 /* RemoteImage */,
 				396FC3BB2353BF60007B97F3 /* KeychainItem */,
-				3965DDE923F0244800C9C75C /* EmealKit */,
 				3997DCC72455931600763C07 /* SwiftyHolidays */,
 				390B777327E211E600DEF4E3 /* TelemetryClient */,
+				395EA6D42829BE84002F8055 /* ImageViewerRemote */,
+				EF516135282E42C100EF6074 /* EmealKit */,
 			);
 			productName = MensaDresden;
 			productReference = 39281C5A234241B900E4EFB5 /* Mensa Dresden.app */;
@@ -650,10 +651,10 @@
 			);
 			name = "MensaDresdenWatch WatchKit Extension";
 			packageProductDependencies = (
-				EF9EF5002811521400E7EE19 /* EmealKit */,
 				EF9EF5082811532D00E7EE19 /* KeychainItem */,
 				EF9EF50E2811540000E7EE19 /* TelemetryClient */,
 				EF9EF51E2811578000E7EE19 /* SwiftyHolidays */,
+				EF516137282E42CE00EF6074 /* EmealKit */,
 			);
 			productName = "MensaDresdenWatch WatchKit Extension";
 			productReference = EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */;
@@ -705,11 +706,11 @@
 			);
 			mainGroup = 39281C51234241B900E4EFB5;
 			packageReferences = (
-				39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */,
 				396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */,
-				3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */,
 				3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */,
 				390B777227E211E600DEF4E3 /* XCRemoteSwiftPackageReference "SwiftClient" */,
+				395EA6D32829BE84002F8055 /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */,
+				EF516134282E42C100EF6074 /* XCRemoteSwiftPackageReference "EmealKit" */,
 			);
 			productRefGroup = 39281C5B234241B900E4EFB5 /* Products */;
 			projectDirPath = "";
@@ -814,6 +815,7 @@
 				391B94FC2766296C0071E678 /* MensaApp.swift in Sources */,
 				396FC3B0235378C1007B97F3 /* AppView.swift in Sources */,
 				391B94FA276574E40071E678 /* API.swift in Sources */,
+				395EA6D7282A9CD3002F8055 /* Logger.swift in Sources */,
 				39A0C940236227F70029FA35 /* DatePickerView.swift in Sources */,
 				391B9E44255ADA43000529A8 /* CompassView.swift in Sources */,
 				396FC3E82357B6E4007B97F3 /* IngredientsAllergensSetting.swift in Sources */,
@@ -856,9 +858,9 @@
 				EFF0399628117E060054C3E9 /* MealDetailView.swift in Sources */,
 				EF9EF51B2811565F00E7EE19 /* Binding.swift in Sources */,
 				EF9EF50A2811534B00E7EE19 /* UserDefault.swift in Sources */,
+				EF516139282E42F200EF6074 /* Logger.swift in Sources */,
 				EF9EF4FD281151A300E7EE19 /* CanteenListView.swift in Sources */,
 				EF9EF51A2811565C00E7EE19 /* View.swift in Sources */,
-				EF9EF4E92811504300E7EE19 /* ComplicationController.swift in Sources */,
 				EF9EF5062811525200E7EE19 /* LocationManager.swift in Sources */,
 				EF9EF5172811564C00E7EE19 /* Date.swift in Sources */,
 				EF9EF5042811524D00E7EE19 /* API.swift in Sources */,
@@ -1078,7 +1080,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2022.6;
+				MARKETING_VERSION = 2022.8;
 				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = NO;
@@ -1103,7 +1105,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2022.6;
+				MARKETING_VERSION = 2022.8;
 				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = NO;
@@ -1376,20 +1378,12 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */ = {
+		395EA6D32829BE84002F8055 /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/crelies/RemoteImage";
+			repositoryURL = "https://github.com/Jake-Short/swiftui-image-viewer.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.0;
-			};
-		};
-		3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kiliankoe/EmealKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.7.0;
 			};
 		};
 		396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */ = {
@@ -1408,6 +1402,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		EF516134282E42C100EF6074 /* XCRemoteSwiftPackageReference "EmealKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kiliankoe/EmealKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1416,15 +1418,10 @@
 			package = 390B777227E211E600DEF4E3 /* XCRemoteSwiftPackageReference "SwiftClient" */;
 			productName = TelemetryClient;
 		};
-		39281CD12343CFB400E4EFB5 /* RemoteImage */ = {
+		395EA6D42829BE84002F8055 /* ImageViewerRemote */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 39281CD02343CFB400E4EFB5 /* XCRemoteSwiftPackageReference "RemoteImage" */;
-			productName = RemoteImage;
-		};
-		3965DDE923F0244800C9C75C /* EmealKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */;
-			productName = EmealKit;
+			package = 395EA6D32829BE84002F8055 /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */;
+			productName = ImageViewerRemote;
 		};
 		396FC3BB2353BF60007B97F3 /* KeychainItem */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1436,9 +1433,14 @@
 			package = 3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */;
 			productName = SwiftyHolidays;
 		};
-		EF9EF5002811521400E7EE19 /* EmealKit */ = {
+		EF516135282E42C100EF6074 /* EmealKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3965DDE823F0244800C9C75C /* XCRemoteSwiftPackageReference "EmealKit" */;
+			package = EF516134282E42C100EF6074 /* XCRemoteSwiftPackageReference "EmealKit" */;
+			productName = EmealKit;
+		};
+		EF516137282E42CE00EF6074 /* EmealKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF516134282E42C100EF6074 /* XCRemoteSwiftPackageReference "EmealKit" */;
 			productName = EmealKit;
 		};
 		EF9EF5082811532D00E7EE19 /* KeychainItem */ = {

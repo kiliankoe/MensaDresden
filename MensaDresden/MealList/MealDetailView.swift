@@ -1,6 +1,7 @@
 import SwiftUI
-import RemoteImage
 import EmealKit
+import ImageViewerRemote
+import os.log
 
 struct MealDetailContainerView: View {
     let meal: Meal
@@ -38,6 +39,8 @@ struct MealDetailContainerView: View {
 struct LargeMealDetailView: View {
     let meal: Meal
 
+    @State private var showingDetailView = false
+
     @EnvironmentObject var settings: Settings
 
     let passesFilters: Bool
@@ -51,6 +54,12 @@ struct LargeMealDetailView: View {
             HStack(alignment: .top) {
                 ZStack(alignment: .bottomLeading) {
                     MealImage(meal: meal, contentMode: .fit)
+                    .onTapGesture {
+                        if !meal.imageIsPlaceholder {
+                            self.showingDetailView.toggle()
+                        }
+                    }
+
                     if settings.priceTypeIsStudent {
                         PriceLabel(price: meal.prices?.students, shadow: 2)
                             .padding(.bottom, 10)
@@ -124,11 +133,24 @@ struct LargeMealDetailView: View {
             Spacer()
         }
         .padding(.horizontal)
+        .overlay(ImageViewerRemote(
+            imageURL: .constant(meal.image.absoluteString),
+            viewerShown: $showingDetailView,
+            aspectRatio: nil,
+            disableCache: nil,
+            caption: Text(meal.allergenStrippedTitle),
+            closeButtonTopRight: nil
+        ))
+        .onAppear {
+            Logger.breadcrumb.info("Appear LargeMealDetailView for \(meal.id) \(meal.allergenStrippedTitle))")
+        }
     }
 }
 
 struct MealDetailView: View {
     let meal: Meal
+
+    @State private var showingDetailView = false
 
     @EnvironmentObject var settings: Settings
 
@@ -139,6 +161,12 @@ struct MealDetailView: View {
             VStack(alignment: .leading, spacing: 15) {
                 ZStack(alignment: .bottomLeading) {
                     MealImage(meal: meal, contentMode: .fit)
+                    .onTapGesture {
+                        if !meal.imageIsPlaceholder {
+                            self.showingDetailView.toggle()
+                        }
+                    }
+
                     if settings.priceTypeIsStudent {
                         PriceLabel(price: meal.prices?.students, shadow: 2)
                             .padding(.bottom, 10)
@@ -216,6 +244,17 @@ struct MealDetailView: View {
             let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene)
             windowScene?.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
         }))
+        .overlay(ImageViewerRemote(
+            imageURL: .constant(meal.image.absoluteString),
+            viewerShown: $showingDetailView,
+            aspectRatio: nil,
+            disableCache: nil,
+            caption: nil,
+            closeButtonTopRight: nil
+        ))
+        .onAppear {
+            Logger.breadcrumb.info("Appear MealDetailView for \(meal.id) \(meal.allergenStrippedTitle)")
+        }
     }
 }
 
