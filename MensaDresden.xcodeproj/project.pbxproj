@@ -80,7 +80,7 @@
 		EF9EF4E72811504300E7EE19 /* MensaDresdenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF4E62811504300E7EE19 /* MensaDresdenApp.swift */; };
 		EF9EF4EB2811504300E7EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4EA2811504300E7EE19 /* Assets.xcassets */; };
 		EF9EF4EE2811504300E7EE19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4ED2811504300E7EE19 /* Preview Assets.xcassets */; };
-		EF9EF4F22811504300E7EE19 /* MensaDresdenWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EF9EF4D72811504200E7EE19 /* MensaDresdenWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EF9EF4F22811504300E7EE19 /* MensaDD.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EF9EF4D72811504200E7EE19 /* MensaDD.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EF9EF4FD281151A300E7EE19 /* CanteenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF4FC281151A300E7EE19 /* CanteenListView.swift */; };
 		EF9EF5022811524D00E7EE19 /* LoadingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E1236CB95900C10D9B /* LoadingResult.swift */; };
 		EF9EF5042811524D00E7EE19 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F9276574E40071E678 /* API.swift */; };
@@ -162,7 +162,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				EF9EF4F22811504300E7EE19 /* MensaDresdenWatch.app in Embed Watch Content */,
+				EF9EF4F22811504300E7EE19 /* MensaDD.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +243,7 @@
 		EF26D778282B9DC400D35E13 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EF26D77C282B9DDE00D35E13 /* IngredientsAllergensSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsAllergensSetting.swift; sourceTree = "<group>"; };
 		EF774C54281738D30047BB97 /* MealImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealImage.swift; sourceTree = "<group>"; };
-		EF9EF4D72811504200E7EE19 /* MensaDresdenWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MensaDresdenWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF9EF4D72811504200E7EE19 /* MensaDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MensaDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9EF4D92811504300E7EE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MensaDresdenWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9EF4E62811504300E7EE19 /* MensaDresdenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensaDresdenApp.swift; sourceTree = "<group>"; };
@@ -321,7 +321,7 @@
 				39281C5A234241B900E4EFB5 /* Mensa Dresden.app */,
 				39FAEBF72781113E0035776F /* UITests.xctest */,
 				39FAEC0A2781E6350035776F /* Screenshots.xctest */,
-				EF9EF4D72811504200E7EE19 /* MensaDresdenWatch.app */,
+				EF9EF4D72811504200E7EE19 /* MensaDD.app */,
 				EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */,
 			);
 			name = Products;
@@ -634,7 +634,7 @@
 			);
 			name = MensaDresdenWatch;
 			productName = MensaDresdenWatch;
-			productReference = EF9EF4D72811504200E7EE19 /* MensaDresdenWatch.app */;
+			productReference = EF9EF4D72811504200E7EE19 /* MensaDD.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		EF9EF4DE2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension */ = {
@@ -1081,7 +1081,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2022.8;
-				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -1106,7 +1106,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2022.8;
-				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -1202,7 +1202,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MensaDresdenWatch WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "MensaDresdenWatch WatchKit Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = MensaDD;
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = MensaDresdenWatch_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Kilian Koeltzsch. All rights reserved.";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -1211,8 +1211,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2022.6;
-				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden.watchkitapp.watchkitextension;
+				MARKETING_VERSION = 2022.8;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1235,7 +1235,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MensaDresdenWatch WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "MensaDresdenWatch WatchKit Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = MensaDD;
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = MensaDresdenWatch_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Kilian Koeltzsch. All rights reserved.";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -1244,8 +1244,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2022.6;
-				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden.watchkitapp.watchkitextension;
+				MARKETING_VERSION = 2022.8;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1268,12 +1268,11 @@
 				DEVELOPMENT_TEAM = QVU8H45PQ5;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = MensaDresdenWatch_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = MensaDresdenWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.westermann.MensaDresden;
-				MARKETING_VERSION = 2022.6;
-				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 2022.8;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp;
+				PRODUCT_NAME = MensaDD;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1295,12 +1294,11 @@
 				DEVELOPMENT_TEAM = QVU8H45PQ5;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = MensaDresdenWatch_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = MensaDresdenWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.westermann.MensaDresden;
-				MARKETING_VERSION = 2022.6;
-				PRODUCT_BUNDLE_IDENTIFIER = de.westermann.MensaDresden.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 2022.8;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp;
+				PRODUCT_NAME = MensaDD;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
