@@ -8,4 +8,5 @@ extension Logger {
     static let api = Logger(subsystem: subsystem, category: "API")
     static let locationManager = Logger(subsystem: subsystem, category: "LocationManager")
     static let deviceOrientation = Logger(subsystem: subsystem, category: "DeviceOrientation")
+    static let settings = Logger(subsystem: subsystem, category: "Settings")
 }

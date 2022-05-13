@@ -3,11 +3,34 @@ import SwiftUI
 import Combine
 import KeychainItem
 import EmealKit
+import os.log
 
 class Settings: ObservableObject {
+    init() {
+        Self.migrateSettingsToAppGroup()
+    }
+
+    private static func migrateSettingsToAppGroup() {
+        let defaults = [
+            "favoriteCanteens",
+            "priceType",
+            "canteenSorting",
+            "userDiet",
+            "ingredientBlacklist",
+            "allergenBlacklist"
+        ]
+
+        for key in defaults {
+            if let value = UserDefaults.standard.object(forKey: key) {
+                UserDefaults.mensaDresdenGroup.set(value, forKey: key)
+                Logger.settings.info("Migrated \(key) to app group defaults")
+            }
+        }
+    }
+
     // MARK: Favorites
 
-    @UserDefault("favoriteCanteens", defaultValue: [])
+    @UserDefault("favoriteCanteens", defaultValue: [], suite: .mensaDresdenGroup)
     var favoriteCanteens: [String] {
         didSet {
             self.objectWillChange.send()

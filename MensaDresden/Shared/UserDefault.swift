@@ -7,7 +7,7 @@ struct UserDefault<T> {
     let defaultValue: T
     let suite: UserDefaults
 
-    init(_ key: String, defaultValue: T, suite: UserDefaults = .standard) {
+    init(_ key: String, defaultValue: T, suite: UserDefaults = .mensaDresdenGroup) {
         self.key = key
         self.defaultValue = defaultValue
         self.suite = suite

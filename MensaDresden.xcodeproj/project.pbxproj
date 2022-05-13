@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		390B777427E211E600DEF4E3 /* TelemetryClient in Frameworks */ = {isa = PBXBuildFile; productRef = 390B777327E211E600DEF4E3 /* TelemetryClient */; };
 		390B777627E21B6100DEF4E3 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B777527E21B6100DEF4E3 /* Analytics.swift */; };
+		3912B7B9282E8184006C3354 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3912B7B8282E8184006C3354 /* UserDefaults.swift */; };
+		3912B7BA282E818B006C3354 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3912B7B8282E8184006C3354 /* UserDefaults.swift */; };
 		3918AD422782FD2A00B82373 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3918AD412782FD2A00B82373 /* Meal.swift */; };
 		391B94F827656B210071E678 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F727656B210071E678 /* L10n.swift */; };
 		391B94FA276574E40071E678 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F9276574E40071E678 /* API.swift */; };
@@ -171,6 +173,9 @@
 
 /* Begin PBXFileReference section */
 		390B777527E21B6100DEF4E3 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		3912B7B6282E807A006C3354 /* MensaDresdenWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MensaDresdenWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		3912B7B7282E8083006C3354 /* MensaDresdenWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MensaDresdenWatch.entitlements; sourceTree = "<group>"; };
+		3912B7B8282E8184006C3354 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		3918AD412782FD2A00B82373 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		391B94F727656B210071E678 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = L10n.swift; path = MensaDresden/L10n.swift; sourceTree = SOURCE_ROOT; };
 		391B94F9276574E40071E678 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -435,6 +440,7 @@
 				391B94FD27665AEB0071E678 /* Binding.swift */,
 				3918AD412782FD2A00B82373 /* Meal.swift */,
 				395EA6D6282A9CD3002F8055 /* Logger.swift */,
+				3912B7B8282E8184006C3354 /* UserDefaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -506,6 +512,7 @@
 		EF9EF4D82811504200E7EE19 /* MensaDresdenWatch */ = {
 			isa = PBXGroup;
 			children = (
+				3912B7B7282E8083006C3354 /* MensaDresdenWatch.entitlements */,
 				EF9EF4D92811504300E7EE19 /* Assets.xcassets */,
 			);
 			path = MensaDresdenWatch;
@@ -514,6 +521,7 @@
 		EF9EF4E32811504300E7EE19 /* MensaDresdenWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3912B7B6282E807A006C3354 /* MensaDresdenWatch WatchKit Extension.entitlements */,
 				EF26D777282B9DA600D35E13 /* SettingsView */,
 				EF9EF4FB2811514000E7EE19 /* CanteenList */,
 				EF9EF514281155F900E7EE19 /* MealList */,
@@ -817,6 +825,7 @@
 				391B94FA276574E40071E678 /* API.swift in Sources */,
 				395EA6D7282A9CD3002F8055 /* Logger.swift in Sources */,
 				39A0C940236227F70029FA35 /* DatePickerView.swift in Sources */,
+				3912B7B9282E8184006C3354 /* UserDefaults.swift in Sources */,
 				391B9E44255ADA43000529A8 /* CompassView.swift in Sources */,
 				396FC3E82357B6E4007B97F3 /* IngredientsAllergensSetting.swift in Sources */,
 				394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */,
@@ -855,6 +864,7 @@
 				EF9EF50B2811535B00E7EE19 /* BlacklistBinding.swift in Sources */,
 				EF9EF4E72811504300E7EE19 /* MensaDresdenApp.swift in Sources */,
 				EF9EF5132811552200E7EE19 /* Transaction.swift in Sources */,
+				3912B7BA282E818B006C3354 /* UserDefaults.swift in Sources */,
 				EFF0399628117E060054C3E9 /* MealDetailView.swift in Sources */,
 				EF9EF51B2811565F00E7EE19 /* Binding.swift in Sources */,
 				EF9EF50A2811534B00E7EE19 /* UserDefault.swift in Sources */,
@@ -1195,6 +1205,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "MensaDresdenWatch WatchKit Extension/MensaDresdenWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresdenWatch WatchKit Extension/Preview Content\"";
@@ -1228,6 +1239,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "MensaDresdenWatch WatchKit Extension/MensaDresdenWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresdenWatch WatchKit Extension/Preview Content\"";
@@ -1263,6 +1275,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = MensaDresdenWatch/MensaDresdenWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_TEAM = HU85FER47E;
@@ -1289,6 +1302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = MensaDresdenWatch/MensaDresdenWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_TEAM = HU85FER47E;
