@@ -60,6 +60,8 @@
 		39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB72234BB0350081B9AE /* HostingController.swift */; };
 		39CD5B19234F778400435E71 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B18234F778400435E71 /* WebView.swift */; };
 		39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */; };
+		39D0122828330DD300EBA1E4 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = 39D0122728330DD300EBA1E4 /* EmealKit */; };
+		39D0122A28330DDF00EBA1E4 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = 39D0122928330DDF00EBA1E4 /* EmealKit */; };
 		39E215812358E29D00F5EBE9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E215802358E29D00F5EBE9 /* LocationManager.swift */; };
 		39E215842358E37300F5EBE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39E215862358E37300F5EBE9 /* InfoPlist.strings */; };
 		39FAEBFA2781113E0035776F /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FAEBF92781113E0035776F /* UITests.swift */; };
@@ -71,8 +73,6 @@
 		EF26D779282B9DC400D35E13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26D778282B9DC400D35E13 /* SettingsView.swift */; };
 		EF26D77D282B9DDE00D35E13 /* IngredientsAllergensSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26D77C282B9DDE00D35E13 /* IngredientsAllergensSetting.swift */; };
 		EF26D77E282B9F5600D35E13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39281C76234247C100E4EFB5 /* Localizable.strings */; };
-		EF516136282E42C100EF6074 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = EF516135282E42C100EF6074 /* EmealKit */; };
-		EF516138282E42CE00EF6074 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = EF516137282E42CE00EF6074 /* EmealKit */; };
 		EF516139282E42F200EF6074 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395EA6D6282A9CD3002F8055 /* Logger.swift */; };
 		EF774C55281738D30047BB97 /* MealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF774C54281738D30047BB97 /* MealImage.swift */; };
 		EF9EF4DA2811504300E7EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4D92811504300E7EE19 /* Assets.xcassets */; };
@@ -269,7 +269,7 @@
 				395EA6D52829BE84002F8055 /* ImageViewerRemote in Frameworks */,
 				3997DCC82455931600763C07 /* SwiftyHolidays in Frameworks */,
 				396FC3BC2353BF60007B97F3 /* KeychainItem in Frameworks */,
-				EF516136282E42C100EF6074 /* EmealKit in Frameworks */,
+				39D0122828330DD300EBA1E4 /* EmealKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +291,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF516138282E42CE00EF6074 /* EmealKit in Frameworks */,
+				39D0122A28330DDF00EBA1E4 /* EmealKit in Frameworks */,
 				EF9EF51F2811578000E7EE19 /* SwiftyHolidays in Frameworks */,
 				EF9EF50F2811540000E7EE19 /* TelemetryClient in Frameworks */,
 				EF9EF5092811532D00E7EE19 /* KeychainItem in Frameworks */,
@@ -578,7 +578,7 @@
 				3997DCC72455931600763C07 /* SwiftyHolidays */,
 				390B777327E211E600DEF4E3 /* TelemetryClient */,
 				395EA6D42829BE84002F8055 /* ImageViewerRemote */,
-				EF516135282E42C100EF6074 /* EmealKit */,
+				39D0122728330DD300EBA1E4 /* EmealKit */,
 			);
 			productName = MensaDresden;
 			productReference = 39281C5A234241B900E4EFB5 /* Mensa Dresden.app */;
@@ -654,7 +654,7 @@
 				EF9EF5082811532D00E7EE19 /* KeychainItem */,
 				EF9EF50E2811540000E7EE19 /* TelemetryClient */,
 				EF9EF51E2811578000E7EE19 /* SwiftyHolidays */,
-				EF516137282E42CE00EF6074 /* EmealKit */,
+				39D0122928330DDF00EBA1E4 /* EmealKit */,
 			);
 			productName = "MensaDresdenWatch WatchKit Extension";
 			productReference = EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */;
@@ -710,7 +710,7 @@
 				3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */,
 				390B777227E211E600DEF4E3 /* XCRemoteSwiftPackageReference "SwiftClient" */,
 				395EA6D32829BE84002F8055 /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */,
-				EF516134282E42C100EF6074 /* XCRemoteSwiftPackageReference "EmealKit" */,
+				39D0122628330DD300EBA1E4 /* XCRemoteSwiftPackageReference "EmealKit" */,
 			);
 			productRefGroup = 39281C5B234241B900E4EFB5 /* Products */;
 			projectDirPath = "";
@@ -1070,7 +1070,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MensaDresden/Mensa Dresden.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 90;
+				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresden/Preview Content\"";
 				DEVELOPMENT_TEAM = HU85FER47E;
 				ENABLE_PREVIEWS = YES;
@@ -1095,7 +1095,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MensaDresden/Mensa Dresden.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 90;
+				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresden/Preview Content\"";
 				DEVELOPMENT_TEAM = HU85FER47E;
 				ENABLE_PREVIEWS = YES;
@@ -1196,7 +1196,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 90;
+				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresdenWatch WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = HU85FER47E;
 				ENABLE_PREVIEWS = YES;
@@ -1229,7 +1229,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 90;
+				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresdenWatch WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = HU85FER47E;
 				ENABLE_PREVIEWS = YES;
@@ -1264,7 +1264,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 90;
+				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_TEAM = HU85FER47E;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = MensaDresdenWatch_WatchKit_Extension;
@@ -1290,7 +1290,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 90;
+				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_TEAM = HU85FER47E;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = MensaDresdenWatch_WatchKit_Extension;
@@ -1400,7 +1400,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		EF516134282E42C100EF6074 /* XCRemoteSwiftPackageReference "EmealKit" */ = {
+		39D0122628330DD300EBA1E4 /* XCRemoteSwiftPackageReference "EmealKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kiliankoe/EmealKit.git";
 			requirement = {
@@ -1431,14 +1431,14 @@
 			package = 3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */;
 			productName = SwiftyHolidays;
 		};
-		EF516135282E42C100EF6074 /* EmealKit */ = {
+		39D0122728330DD300EBA1E4 /* EmealKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EF516134282E42C100EF6074 /* XCRemoteSwiftPackageReference "EmealKit" */;
+			package = 39D0122628330DD300EBA1E4 /* XCRemoteSwiftPackageReference "EmealKit" */;
 			productName = EmealKit;
 		};
-		EF516137282E42CE00EF6074 /* EmealKit */ = {
+		39D0122928330DDF00EBA1E4 /* EmealKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EF516134282E42C100EF6074 /* XCRemoteSwiftPackageReference "EmealKit" */;
+			package = 39D0122628330DD300EBA1E4 /* XCRemoteSwiftPackageReference "EmealKit" */;
 			productName = EmealKit;
 		};
 		EF9EF5082811532D00E7EE19 /* KeychainItem */ = {
