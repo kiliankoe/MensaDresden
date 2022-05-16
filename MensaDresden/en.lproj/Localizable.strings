@@ -44,7 +44,7 @@
 "emeal.error.rate-limited" = "Too many requests. Try again in a moment.";
 "emeal.estimation-explanation-title" = "Estimated Balance";
 "emeal.estimation-explanation-ok-action" = "Ok";
-"emeal.estimation-explanation-text" = "Your autoload transactions were used to estimate your Emeal balance. You should scan it again to get reliable information.\n\nYour last scanned balance was %.2f€.";
+"emeal.estimation-explanation-text" = "Your autoload transactions were used to estimate your Emeal balance. Transactions are only available for the last 90 days, if your last scan is older than that, a correct balance can't be shown here.\n\nYour last scanned balance was %.2f€.";
 
 // Settings
 "settings.nav" = "Settings";

@@ -49,8 +49,10 @@ struct EmealView: View {
         let newerTransactionsSum = transactions
             .filter { $0.date > lastScanDate }
             .reduce(0) { $0 + $1.amount }
-        
-        return emeal.currentBalance - newerTransactionsSum
+
+        // Emeal balances can't be negative, so we're not going below that. This should only occur if the last scan is
+        // over 90 days old (the max for old transactions) and an actual balance can't be calculated.
+        return max(emeal.currentBalance - newerTransactionsSum, 0)
     }
 
     var body: some View {

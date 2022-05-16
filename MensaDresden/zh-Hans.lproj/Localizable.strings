@@ -44,7 +44,7 @@
 "emeal.error.rate-limited" = "请求太多。稍后再试。";
 "emeal.estimation-explanation-title" = "估计余额";
 "emeal.estimation-explanation-ok-action" = "好的";
-"emeal.estimation-explanation-text" = "你的自动充值交易被用来估计你的Emeal余额。你应该再次扫描它以获得可靠的信息。\n\n你上次扫描的余额是%.2f€。";
+"emeal.estimation-explanation-text" = "你的自动充值交易被用来估计你的Emeal余额。交易只适用于过去90天，如果你最后一次扫描的时间比这个时间长，这里就不能显示正确的余额。\n\n你上次扫描的余额是%.2f€。";
 
 // Settings
 "settings.nav" = "设置";

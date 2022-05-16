@@ -44,7 +44,7 @@
 "emeal.error.rate-limited" = "Zu viele Requests, bitte versuche es in einem Moment noch einmal.";
 "emeal.estimation-explanation-title" = "Geschätztes Guthaben";
 "emeal.estimation-explanation-ok-action" = "Ok";
-"emeal.estimation-explanation-text" = "Deine Autoload-Transaktionen wurden genutzt um das aktuelle Guthaben deines Emeals zu schätzen. Um wirklich sicher zu gehen, solltest du ihn erneut scannen.\n\nDas zuletzt gescannte Guthaben betrug %.2f€.";
+"emeal.estimation-explanation-text" = "Deine Autoload-Transaktionen wurden genutzt um das aktuelle Guthaben deines Emeals zu schätzen. Transaktionen existieren nur für die letzten 90 Tage. Falls der letzte Emeal-Scan länger zurückliegt, kann kein korrektes Guthaben angezeigt werden.\n\nDas zuletzt gescannte Guthaben betrug %.2f€.";
 
 // Settings
 "settings.nav" = "Einstellungen";
