@@ -39,7 +39,11 @@ struct EmealView: View {
     // use those to calculate an estimated current balance.
     var emealBalance: Double {
         guard let lastScanDate = emeal.lastScanDate,
-              case .success(let transactions) = api.transactions()
+              case .success(let transactions) = api.transactions(),
+              let lastTransactionDate = transactions.last?.date,
+              // If the last scan is older than the oldest transaction, the estimation won't be correct anyways,
+              // so let's just not do it.
+              lastScanDate > lastTransactionDate
         else {
             return emeal.currentBalance
         }
@@ -52,7 +56,7 @@ struct EmealView: View {
 
         // Emeal balances can't be negative, so we're not going below that. This should only occur if the last scan is
         // over 90 days old (the max for old transactions) and an actual balance can't be calculated.
-        return max(emeal.currentBalance - newerTransactionsSum, 0)
+        return max(emeal.currentBalance + newerTransactionsSum, 0)
     }
 
     var body: some View {
