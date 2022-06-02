@@ -261,34 +261,24 @@ struct MealDetailView: View {
 struct FeedbackButton: View {
     var meal: Meal
 
-    @State private var webviewIsActive: Bool = false
+    @State private var isShowingFeedbackModal: Bool = false
 
     var feedbackURL: URL {
         URL(string: "https://www.studentenwerk-dresden.de/kontakt.html?bereich=mensen&page=mensen_luk&thema=luk&eid=\(meal.id)")!
     }
 
     var body: some View {
-        NavigationLink(
-            destination: WebView(url: feedbackURL).navigationBarTitle("meal.rate-title", displayMode: .inline),
-            isActive: $webviewIsActive
-        ) {
+        Button {
+            self.isShowingFeedbackModal.toggle()
+        } label: {
             HStack {
                 Spacer()
-                
+
                 VStack(alignment: .center, spacing: 3) {
-                    if #available(iOS 14, *) {
-                        Label("meal.rate-title", systemImage: "hand.thumbsup.fill")
-                            .font(.headline)
-                    } else {
-                        HStack {
-                            Image(systemName: "hand.thumbsup.fill")
-                                .accessibility(hidden: true)
-                            Text("meal.rate-title")
-                                .font(.headline)
-                        }
-                    }
+                    Label("meal.rate-title", systemImage: "hand.thumbsup.fill")
+                        .font(.headline)
                     Text("meal.rate-description")
-                    .font(.caption)
+                        .font(.caption)
                 }
                 .foregroundColor(.white)
 
@@ -299,6 +289,9 @@ struct FeedbackButton: View {
                 RoundedRectangle(cornerRadius: 8)
                     .foregroundColor(.emealGreen)
             )
+        }
+        .sheet(isPresented: $isShowingFeedbackModal) {
+            SafariView(url: feedbackURL)
         }
     }
 }
