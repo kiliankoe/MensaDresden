@@ -76,7 +76,7 @@ struct SettingsView: View {
                         self.showingAutoloadInformation.toggle()
                     }
                     .sheet(isPresented: $showingAutoloadInformation) {
-                        SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/wirueberuns/aktuelles-uebersicht.html")!)
+                        SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!)
                     }
                 }
 
