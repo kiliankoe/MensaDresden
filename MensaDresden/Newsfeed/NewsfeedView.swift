@@ -51,9 +51,7 @@ struct NewsItemView: View {
             }
 
             Spacer()
-            Image(systemName: "chevron.right")
-                .font(.footnote)
-                .foregroundColor(.gray)
+            DisclosureIndicator()
         }
         .onTapGesture {
             self.showingDetails.toggle()

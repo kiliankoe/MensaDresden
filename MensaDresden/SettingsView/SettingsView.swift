@@ -4,6 +4,8 @@ import os.log
 struct SettingsView: View {
     @EnvironmentObject var settings: Settings
 
+    @State private var showingAutoloadInformation = false
+
     var shortVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     }
@@ -63,13 +65,19 @@ struct SettingsView: View {
                     
                     Text("settings.autoload-description")
                         .font(.caption)
-                    NavigationLink(destination: WebView.autoload,
-                        label: {
-                            HStack {
-                                Image(systemName: "info.circle")
-                                Text("settings.autoload-information")
-                            }
-                        })
+                    HStack {
+                        Image(systemName: "info.circle")
+                        Text("settings.autoload-information")
+
+                        Spacer()
+                        DisclosureIndicator()
+                    }
+                    .onTapGesture {
+                        self.showingAutoloadInformation.toggle()
+                    }
+                    .sheet(isPresented: $showingAutoloadInformation) {
+                        SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/wirueberuns/aktuelles-uebersicht.html")!)
+                    }
                 }
 
                 Section(footer: Text("✌️")) {
