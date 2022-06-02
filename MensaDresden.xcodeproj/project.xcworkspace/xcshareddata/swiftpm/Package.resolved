@@ -64,12 +64,30 @@
       }
     },
     {
+      "identity" : "syndikit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/brightdigit/SyndiKit.git",
+      "state" : {
+        "revision" : "5022daf2379cd81f9bd80b6b60f4d1356ab0d256",
+        "version" : "0.2.0"
+      }
+    },
+    {
       "identity" : "url-image",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/dmytro-anokhin/url-image.git",
       "state" : {
         "revision" : "ccab89ad1cedb04f25dd4df1776dd8c8583b914a",
         "version" : "2.2.5"
+      }
+    },
+    {
+      "identity" : "xmlcoder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MaxDesiatov/XMLCoder",
+      "state" : {
+        "revision" : "f30119af03996939cc4f54e0bf0dda9f88a84da5",
+        "version" : "0.13.1"
       }
     }
   ],

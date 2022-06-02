@@ -6,6 +6,7 @@ struct MensaApp: App {
     private var deviceOrientation: DeviceOrientation
     private var locationManager: LocationManager
     private var api: API
+    private var feedparser: Feedparser
 
     init() {
         self.settings = Settings()
@@ -50,6 +51,7 @@ struct MensaApp: App {
 
         self.locationManager = LocationManager.shared
         self.api = API()
+        self.feedparser = Feedparser()
 
         Analytics.setup()
 
@@ -71,6 +73,7 @@ struct MensaApp: App {
                 .environmentObject(deviceOrientation)
                 .environmentObject(locationManager)
                 .environmentObject(api)
+                .environmentObject(feedparser)
         }
     }
 }

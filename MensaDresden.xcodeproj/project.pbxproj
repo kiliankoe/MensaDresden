@@ -47,6 +47,9 @@
 		398B34E2236CB95900C10D9B /* LoadingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E1236CB95900C10D9B /* LoadingResult.swift */; };
 		398B34E4236CC6B500C10D9B /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E3236CC6B500C10D9B /* MealList.swift */; };
 		398B34E8236CDE7D00C10D9B /* LoadingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398B34E7236CDE7D00C10D9B /* LoadingListView.swift */; };
+		398E077D2848BBCA004FFDFF /* SyndiKit in Frameworks */ = {isa = PBXBuildFile; productRef = 398E077C2848BBCA004FFDFF /* SyndiKit */; };
+		398E077F2848BBF0004FFDFF /* Feedparser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398E077E2848BBF0004FFDFF /* Feedparser.swift */; };
+		398E07812848C6CB004FFDFF /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398E07802848C6CB004FFDFF /* SafariView.swift */; };
 		3997DCC82455931600763C07 /* SwiftyHolidays in Frameworks */ = {isa = PBXBuildFile; productRef = 3997DCC72455931600763C07 /* SwiftyHolidays */; };
 		39A0C940236227F70029FA35 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A0C93F236227F70029FA35 /* DatePickerView.swift */; };
 		39A0C9442362341B0029FA35 /* CustomDateMealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A0C9432362341B0029FA35 /* CustomDateMealListView.swift */; };
@@ -213,6 +216,8 @@
 		398B34E1236CB95900C10D9B /* LoadingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingResult.swift; sourceTree = "<group>"; };
 		398B34E3236CC6B500C10D9B /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 		398B34E7236CDE7D00C10D9B /* LoadingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingListView.swift; sourceTree = "<group>"; };
+		398E077E2848BBF0004FFDFF /* Feedparser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedparser.swift; sourceTree = "<group>"; };
+		398E07802848C6CB004FFDFF /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		3997A368255F232900B7BD78 /* mommsenstr.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = mommsenstr.gpx; path = Resources/mommsenstr.gpx; sourceTree = "<group>"; };
 		3997DCC92455F0C900763C07 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		3997DCCA2455F0C900763C07 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -273,6 +278,7 @@
 				390B777427E211E600DEF4E3 /* TelemetryClient in Frameworks */,
 				395EA6D52829BE84002F8055 /* ImageViewerRemote in Frameworks */,
 				3997DCC82455931600763C07 /* SwiftyHolidays in Frameworks */,
+				398E077D2848BBCA004FFDFF /* SyndiKit in Frameworks */,
 				396FC3BC2353BF60007B97F3 /* KeychainItem in Frameworks */,
 				39D0122828330DD300EBA1E4 /* EmealKit in Frameworks */,
 			);
@@ -459,6 +465,7 @@
 				398B34E7236CDE7D00C10D9B /* LoadingListView.swift */,
 				393E72C825EBB9FA009BD729 /* HorizontalSwipeGesture.swift */,
 				390B777527E21B6100DEF4E3 /* Analytics.swift */,
+				398E07802848C6CB004FFDFF /* SafariView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -478,6 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				39A79147241FC50F0009CF03 /* NewsfeedView.swift */,
+				398E077E2848BBF0004FFDFF /* Feedparser.swift */,
 			);
 			path = Newsfeed;
 			sourceTree = "<group>";
@@ -587,6 +595,7 @@
 				390B777327E211E600DEF4E3 /* TelemetryClient */,
 				395EA6D42829BE84002F8055 /* ImageViewerRemote */,
 				39D0122728330DD300EBA1E4 /* EmealKit */,
+				398E077C2848BBCA004FFDFF /* SyndiKit */,
 			);
 			productName = MensaDresden;
 			productReference = 39281C5A234241B900E4EFB5 /* Mensa Dresden.app */;
@@ -719,6 +728,7 @@
 				390B777227E211E600DEF4E3 /* XCRemoteSwiftPackageReference "SwiftClient" */,
 				395EA6D32829BE84002F8055 /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */,
 				39D0122628330DD300EBA1E4 /* XCRemoteSwiftPackageReference "EmealKit" */,
+				398E077B2848BBCA004FFDFF /* XCRemoteSwiftPackageReference "SyndiKit" */,
 			);
 			productRefGroup = 39281C5B234241B900E4EFB5 /* Products */;
 			projectDirPath = "";
@@ -807,6 +817,7 @@
 				398B34E8236CDE7D00C10D9B /* LoadingListView.swift in Sources */,
 				39A7914A241FC96B0009CF03 /* ObservableEmeal.swift in Sources */,
 				396FC3E42357B257007B97F3 /* FavoriteCanteensSetting.swift in Sources */,
+				398E077F2848BBF0004FFDFF /* Feedparser.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal+Extensions.swift in Sources */,
 				398B34E2236CB95900C10D9B /* LoadingResult.swift in Sources */,
 				39CD5B19234F778400435E71 /* WebView.swift in Sources */,
@@ -830,6 +841,7 @@
 				396FC3E82357B6E4007B97F3 /* IngredientsAllergensSetting.swift in Sources */,
 				394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */,
 				396C4AF123480E6E009A9F52 /* EmealView.swift in Sources */,
+				398E07812848C6CB004FFDFF /* SafariView.swift in Sources */,
 				39281C62234241B900E4EFB5 /* CanteenListView.swift in Sources */,
 				396FC3E22357A1A9007B97F3 /* Transaction.swift in Sources */,
 				39A0C9442362341B0029FA35 /* CustomDateMealListView.swift in Sources */,
@@ -1406,6 +1418,14 @@
 				minimumVersion = 0.1.0;
 			};
 		};
+		398E077B2848BBCA004FFDFF /* XCRemoteSwiftPackageReference "SyndiKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/brightdigit/SyndiKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 		3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MaxHaertwig/SwiftyHolidays";
@@ -1439,6 +1459,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 396FC3BA2353BF60007B97F3 /* XCRemoteSwiftPackageReference "keychain-item" */;
 			productName = KeychainItem;
+		};
+		398E077C2848BBCA004FFDFF /* SyndiKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 398E077B2848BBCA004FFDFF /* XCRemoteSwiftPackageReference "SyndiKit" */;
+			productName = SyndiKit;
 		};
 		3997DCC72455931600763C07 /* SwiftyHolidays */ = {
 			isa = XCSwiftPackageProductDependency;
