@@ -23,6 +23,7 @@ struct NewsfeedView: View {
             )
             .navigationTitle(L10n.Tab.newsfeed)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .task {
             await feedparser.fetchNews()
         }

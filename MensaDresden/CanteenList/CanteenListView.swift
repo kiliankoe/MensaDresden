@@ -107,14 +107,8 @@ struct CanteenListView: View {
                 }
             }
             .searchable(text: $searchQuery)
-            VStack {
-                Text("ipad.bon-appetit")
-                    .font(.title)
-                if !deviceOrientation.isLandscape {
-                    Text("ipad.swipe-hint")
-                }
-            }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             Logger.breadcrumb.info("Appear CanteenListView")
         }
