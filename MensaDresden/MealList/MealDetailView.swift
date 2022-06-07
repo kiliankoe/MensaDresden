@@ -27,123 +27,7 @@ struct MealDetailContainerView: View {
     }
 
     var body: some View {
-        switch UIDevice.current.userInterfaceIdiom {
-        case .phone:
-            MealDetailView(meal: meal, passesFilters: passesFilters)
-        default:
-            LargeMealDetailView(meal: meal, passesFilters: passesFilters)
-        }
-    }
-}
-
-struct LargeMealDetailView: View {
-    let meal: Meal
-
-    @State private var showingDetailView = false
-
-    @EnvironmentObject var settings: Settings
-
-    let passesFilters: Bool
-
-    private var isPlaceholder: Bool {
-        meal.imageIsPlaceholder && meal.emoji == nil
-    }
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            HStack(alignment: .top) {
-                ZStack(alignment: .bottomLeading) {
-                    MealImage(meal: meal, contentMode: .fit)
-                    .onTapGesture {
-                        if !meal.imageIsPlaceholder {
-                            self.showingDetailView.toggle()
-                        }
-                    }
-
-                    if settings.priceTypeIsStudent {
-                        PriceLabel(price: meal.prices?.students, shadow: 2)
-                            .padding(.bottom, 10)
-                    } else {
-                        PriceLabel(price: meal.prices?.employees, shadow: 2)
-                            .padding(.bottom, 10)
-                    }
-                }
-                .frame(width: 450)
-                .clipShape(RoundedRectangle(cornerRadius: isPlaceholder ? 0 : 15))
-                .padding()
-
-                VStack(alignment: .leading, spacing: 20) {
-                    HStack {
-                        if meal.isDinner {
-                            Image(systemName: "moon.fill")
-                                .font(.headline)
-                                .foregroundColor(.yellow)
-                                .accessibility(label: Text("meal.dinner"))
-                        }
-                        Text(meal.category)
-                            .font(Font.headline.smallCaps())
-                            .foregroundColor(.gray)
-
-                        Spacer()
-
-                        ForEach(meal.diet, id: \.self) { diet in
-                            Text(LocalizedStringKey(String(describing: diet)))
-                                .font(Font.headline.smallCaps())
-                                .bold()
-                                .foregroundColor(.green)
-                                .lineLimit(1)
-                        }
-                    }
-
-                    Text(meal.allergenStrippedTitle)
-                        .font(.title)
-
-                    FeedbackButton(meal: meal)
-                }
-            }
-
-            if !passesFilters {
-                Text("meal.ingredient-warning")
-                    .font(.headline)
-                    .foregroundColor(.red)
-                    .padding(.horizontal)
-            }
-
-            HStack {
-                ForEach(meal.ingredients, id: \.rawValue) { ingredient in
-                    Text(ingredient.emoji)
-                        .font(.system(size: 50))
-                        .accessibility(label: Text(LocalizedStringKey(ingredient.rawValue)))
-                }
-            }
-            .padding(.horizontal)
-
-            VStack(alignment: .leading) {
-                ForEach(meal.notes, id: \.self) { note in
-                    Text(note)
-                        .font(.callout)
-                }
-            }
-            .padding(.horizontal)
-
-            Text(meal.name)
-                .font(.caption)
-                .padding(.horizontal)
-
-            Spacer()
-        }
-        .padding(.horizontal)
-        .overlay(ImageViewerRemote(
-            imageURL: .constant(meal.image.absoluteString),
-            viewerShown: $showingDetailView,
-            aspectRatio: nil,
-            disableCache: nil,
-            caption: Text(meal.allergenStrippedTitle),
-            closeButtonTopRight: nil
-        ))
-        .onAppear {
-            Logger.breadcrumb.info("Appear LargeMealDetailView for \(meal.id) \(meal.allergenStrippedTitle))")
-        }
+        MealDetailView(meal: meal, passesFilters: passesFilters)
     }
 }
 
@@ -240,7 +124,7 @@ struct MealDetailView: View {
             let activityItems = [self.meal.activityItem]
             let activityVC = UIActivityViewController(activityItems: activityItems,
                                                       applicationActivities: nil)
-            
+
             let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene)
             windowScene?.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
         }))
@@ -299,7 +183,6 @@ struct FeedbackButton: View {
 struct MealDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            EmptyView()
             MealDetailContainerView(meal: Meal.examples[0])
                 .environmentObject(Settings())
         }
