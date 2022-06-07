@@ -9,8 +9,6 @@ struct EmealView: View {
 
     @ObservedObject var emeal = ObservableEmeal()
 
-    @State private var isShowingAutoloadDetails = false
-
     var autoloadHint: some View {
         VStack(alignment: .leading) {
             Text("emeal.autoload-hint")
@@ -19,15 +17,12 @@ struct EmealView: View {
                 .padding(.bottom, 5)
 
             Button("emeal.autoload-information") {
-                self.isShowingAutoloadDetails.toggle()
+                SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!).present()
             }
             .font(.caption)
         }
         .padding(.top)
         .padding(.horizontal)
-        .sheet(isPresented: $isShowingAutoloadDetails) {
-            SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!)
-        }
     }
 
     var shouldShowEmealView: Bool {

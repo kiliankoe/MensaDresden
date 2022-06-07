@@ -4,8 +4,6 @@ import os.log
 struct SettingsView: View {
     @EnvironmentObject var settings: Settings
 
-    @State private var showingAutoloadInformation = false
-
     var shortVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     }
@@ -73,10 +71,7 @@ struct SettingsView: View {
                         DisclosureIndicator()
                     }
                     .onTapGesture {
-                        self.showingAutoloadInformation.toggle()
-                    }
-                    .sheet(isPresented: $showingAutoloadInformation) {
-                        SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!)
+                        SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!).present()
                     }
                 }
 

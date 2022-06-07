@@ -145,15 +145,13 @@ struct MealDetailView: View {
 struct FeedbackButton: View {
     var meal: Meal
 
-    @State private var isShowingFeedbackModal: Bool = false
-
     var feedbackURL: URL {
         URL(string: "https://www.studentenwerk-dresden.de/kontakt.html?bereich=mensen&page=mensen_luk&thema=luk&eid=\(meal.id)")!
     }
 
     var body: some View {
         Button {
-            self.isShowingFeedbackModal.toggle()
+            SafariView(url: feedbackURL).present()
         } label: {
             HStack {
                 Spacer()
@@ -173,9 +171,6 @@ struct FeedbackButton: View {
                 RoundedRectangle(cornerRadius: 8)
                     .foregroundColor(.emealGreen)
             )
-        }
-        .sheet(isPresented: $isShowingFeedbackModal) {
-            SafariView(url: feedbackURL)
         }
     }
 }

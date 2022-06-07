@@ -36,8 +36,6 @@ struct NewsfeedView: View {
 struct NewsItemView: View {
     let newsItem: NewsItem
 
-    @State private var showingDetails = false
-
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 5) {
@@ -55,10 +53,7 @@ struct NewsItemView: View {
             DisclosureIndicator()
         }
         .onTapGesture {
-            self.showingDetails.toggle()
-        }
-        .sheet(isPresented: $showingDetails) {
-            SafariView(url: newsItem.detailURL)
+            SafariView(url: newsItem.detailURL).present()
         }
     }
 }
