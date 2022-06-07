@@ -17,25 +17,31 @@ struct SettingsView: View {
             List {
                 if !settings.favoriteCanteens.isEmpty {
                     NavigationLink(destination: FavoriteCanteensSetting()) {
-                        HStack {
-                            Image(systemName: "star")
+                        Label {
                             Text("settings.favorite-canteens")
+                        } icon: {
+                            Image(systemName: "star")
                         }
                     }
                 }
 
                 NavigationLink(destination: IngredientsAllergensSetting()) {
-                    HStack {
-                        Image(systemName: "leaf")
+                    Label {
                         Text("settings.ingredients-allergens.title")
+                    } icon: {
+                        Image(systemName: "leaf")
                     }
                 }
 
-                Picker(selection: settings.canteenSortingBinding,
-                       label: HStack {
-                        Image(systemName: "list.number")
-                        Text("settings.canteen-sorting")
-                       }) {
+                Picker(
+                    selection: settings.canteenSortingBinding,
+                    label:
+                        Label {
+                            Text("settings.canteen-sorting")
+                        } icon: {
+                            Image(systemName: "list.number")
+                        }
+                ) {
                     ForEach(Settings.CanteenSorting.allCases, id: \.self) { sorting in
                         Text(LocalizedStringKey(sorting.rawValue)).tag(sorting)
                     }
@@ -63,12 +69,15 @@ struct SettingsView: View {
                     
                     Text("settings.autoload-description")
                         .font(.caption)
-                    HStack {
-                        Image(systemName: "info.circle")
-                        Text("settings.autoload-information")
 
-                        Spacer()
-                        DisclosureIndicator()
+                    Label {
+                        HStack {
+                            Text("settings.autoload-information")
+                            Spacer()
+                            DisclosureIndicator()
+                        }
+                    } icon: {
+                        Image(systemName: "info.circle")
                     }
                     .onTapGesture {
                         SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!).present()
@@ -79,29 +88,23 @@ struct SettingsView: View {
                     Button {
                         UIApplication.shared.open(URL(string: "mailto:mensadresden@kilian.io?subject=Feedback%20\(shortVersion)%20(\(version))")!)
                     } label: {
-                        HStack {
-                            Image(systemName: "envelope")
+                        Label {
                             Text("info.email")
+                        } icon: {
+                            Image(systemName: "envelope")
                         }
                     }
                     .buttonStyle(PlainButtonStyle())
 
-//                    Button {
-//                        UIApplication.shared.open(URL(string: "https://poeditor.com/join/project/qAgTstzLia")!)
-//                    } label: {
-//                        HStack {
-//                            Image(systemName: "text.quote")
-//                            Text("info.translate")
-//                        }
-//                    }
-//                    .buttonStyle(PlainButtonStyle())
-
                     NavigationLink(destination: AboutView()) {
-                        HStack {
-                            Image(systemName: "questionmark.circle")
+                        Label {
                             Text("settings.about")
+                        } icon: {
+                            Image(systemName: "questionmark.circle")
                         }
                     }
+
+
                 }
             }
             .listStyle(GroupedListStyle())
