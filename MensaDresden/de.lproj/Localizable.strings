@@ -68,6 +68,9 @@
 "settings.autoload-information" = "Informationen zu Autoload";
 "settings.about" = "Über";
 
+// Licenses
+"licenses.title" = "Lizenzen";
+
 // Info View
 "info.developed-by" = "Entwickelt von";
 "info.thanks" = "Vielen Dank an Lucas Vogel, Lars Westermann, Georg Sieber, alle Mitwirkenden auf GitHub und die Beta-Tester für das fantastische Feedback!";

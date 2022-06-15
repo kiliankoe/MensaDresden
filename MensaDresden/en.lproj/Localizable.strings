@@ -68,6 +68,9 @@
 "settings.autoload-information" = "Autoload Information";
 "settings.about" = "About";
 
+// Licenses
+"licenses.title" = "3rd Party Licenses";
+
 // Info View
 "info.developed-by" = "Developed by";
 "info.thanks" = "Huge thanks to Lucas Vogel, Lars Westermann, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!";

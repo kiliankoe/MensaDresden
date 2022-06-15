@@ -96,6 +96,14 @@ struct SettingsView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
 
+                    NavigationLink(destination: LicenseView()) {
+                        Label {
+                            Text(verbatim: L10n.Licenses.title)
+                        } icon: {
+                            Image(systemName: "book.closed")
+                        }
+                    }
+
                     NavigationLink(destination: AboutView()) {
                         Label {
                             Text("settings.about")

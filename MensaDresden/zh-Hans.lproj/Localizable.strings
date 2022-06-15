@@ -68,6 +68,9 @@
 "settings.autoload-information" = "自动加载信息";
 "settings.about" = "关于我们";
 
+// Licenses
+"licenses.title" = "第三方许可证";
+
 // Info View
 "info.developed-by" = "由开发";
 "info.thanks" = "非常感谢Lucas Vogel、Lars Westermann、Georg Sieber、所有GitHub的贡献者和beta测试者们的巨大反馈!";

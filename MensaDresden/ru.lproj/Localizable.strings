@@ -68,6 +68,9 @@
 "settings.autoload-information" = "Autoload Информация";
 "settings.about" = "О сайте";
 
+// Licenses
+"licenses.title" = "Лицензии третьих лиц";
+
 // Info View
 "info.developed-by" = "разработан";
 "info.thanks" = "Огромная благодарность Лукасу Фогелю, Ларсу Вестерманну, Георгу Зиберу, всем участникам GitHub и бета-тестерам за их замечательные отзывы!";

@@ -79,7 +79,9 @@ internal enum L10n {
     internal static let balance = L10n.tr("Localizable", "emeal.balance")
     /// Ok
     internal static let estimationExplanationOkAction = L10n.tr("Localizable", "emeal.estimation-explanation-ok-action")
-    /// Your autoload transactions were used to estimate your Emeal balance. You should scan it again to get reliable information. Your last scanned balance was %.2f€.
+    /// Your autoload transactions were used to estimate your Emeal balance. Transactions are only available for the last 90 days, if your last scan is older than that, a correct balance can't be shown here.
+    /// 
+    /// Your last scanned balance was %.2f€.
     internal static func estimationExplanationText(_ p1: Float) -> String {
       return L10n.tr("Localizable", "emeal.estimation-explanation-text", p1)
     }
@@ -128,7 +130,7 @@ internal enum L10n {
     internal static let imageRights = L10n.tr("Localizable", "info.image-rights")
     /// Eddy Wong from The Noun Project
     internal static let nounproject = L10n.tr("Localizable", "info.nounproject")
-    /// Huge thanks to Lucas Vogel, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!
+    /// Huge thanks to Lucas Vogel, Lars Westermann, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!
     internal static let thanks = L10n.tr("Localizable", "info.thanks")
     /// Contribute Translations
     internal static let translate = L10n.tr("Localizable", "info.translate")
@@ -139,6 +141,11 @@ internal enum L10n {
     internal static let bonAppetit = L10n.tr("Localizable", "ipad.bon-appetit")
     /// Swipe from the left to open the list of canteens.
     internal static let swipeHint = L10n.tr("Localizable", "ipad.swipe-hint")
+  }
+
+  internal enum Licenses {
+    /// 3rd Party Licenses
+    internal static let title = L10n.tr("Localizable", "licenses.title")
   }
 
   internal enum List {

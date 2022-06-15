@@ -68,6 +68,9 @@
 "settings.autoload-information" = "オートロード情報";
 "settings.about" = "について";
 
+// Licenses
+"licenses.title" = "サードパーティーライセンス";
+
 // Info View
 "info.developed-by" = "によって開発された";
 "info.thanks" = "Lucas Vogel、Lars Westermann、Georg Sieber、すべての GitHub 貢献者、そしてベータテスターの皆さん、素晴らしいフィードバックをありがとうございました。";
