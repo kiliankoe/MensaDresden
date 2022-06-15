@@ -71,11 +71,9 @@ struct SettingsView: View {
                         .font(.caption)
 
                     Label {
-                        HStack {
-                            Text("settings.autoload-information")
-                            Spacer()
-                            DisclosureIndicator()
-                        }
+                        Text("settings.autoload-information")
+                        Spacer()
+                        DisclosureIndicator()
                     } icon: {
                         Image(systemName: "info.circle")
                     }
@@ -90,6 +88,8 @@ struct SettingsView: View {
                     } label: {
                         Label {
                             Text("info.email")
+                            Spacer()
+                            DisclosureIndicator()
                         } icon: {
                             Image(systemName: "envelope")
                         }
