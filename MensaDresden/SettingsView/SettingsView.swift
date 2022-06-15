@@ -71,9 +71,12 @@ struct SettingsView: View {
                         .font(.caption)
 
                     Label {
-                        Text("settings.autoload-information")
-                        Spacer()
-                        DisclosureIndicator()
+                        HStack {
+                            Text("settings.autoload-information")
+                            Spacer()
+                            DisclosureIndicator()
+                        }
+                        .contentShape(Rectangle())
                     } icon: {
                         Image(systemName: "info.circle")
                     }
@@ -87,9 +90,12 @@ struct SettingsView: View {
                         UIApplication.shared.open(URL(string: "mailto:mensadresden@kilian.io?subject=Feedback%20\(shortVersion)%20(\(version))")!)
                     } label: {
                         Label {
-                            Text("info.email")
-                            Spacer()
-                            DisclosureIndicator()
+                            HStack {
+                                Text("info.email")
+                                Spacer()
+                                DisclosureIndicator()
+                            }
+                            .containerShape(Rectangle())
                         } icon: {
                             Image(systemName: "envelope")
                         }
@@ -111,8 +117,6 @@ struct SettingsView: View {
                             Image(systemName: "questionmark.circle")
                         }
                     }
-
-
                 }
             }
             .listStyle(GroupedListStyle())
