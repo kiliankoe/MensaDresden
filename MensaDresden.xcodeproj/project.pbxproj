@@ -1114,7 +1114,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2022.8;
+				MARKETING_VERSION = 2022.9;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = NO;
@@ -1139,7 +1139,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2022.8;
+				MARKETING_VERSION = 2022.9;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = NO;
@@ -1246,7 +1246,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2022.8;
+				MARKETING_VERSION = 2022.9;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1280,7 +1280,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2022.8;
+				MARKETING_VERSION = 2022.9;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1307,7 +1307,7 @@
 				IBSC_MODULE = MensaDresdenWatch_WatchKit_Extension;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = io.kilian.MensaDresden;
-				MARKETING_VERSION = 2022.8;
+				MARKETING_VERSION = 2022.9;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp;
 				PRODUCT_NAME = MensaDD;
 				SDKROOT = watchos;
@@ -1334,7 +1334,7 @@
 				IBSC_MODULE = MensaDresdenWatch_WatchKit_Extension;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = io.kilian.MensaDresden;
-				MARKETING_VERSION = 2022.8;
+				MARKETING_VERSION = 2022.9;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp;
 				PRODUCT_NAME = MensaDD;
 				SDKROOT = watchos;
