@@ -6,6 +6,6 @@ struct DisclosureIndicator: View {
         Image(systemName: "chevron.right")
             .font(.footnote)
             .foregroundColor(.secondary)
-            .opacity(0.5)
+            .opacity(0.6)
     }
 }
