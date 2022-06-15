@@ -25,10 +25,10 @@ class API: ObservableObject {
             Logger.api.info("Successfully loaded \(canteens.count) canteens")
             self.canteens = .success(canteens)
         } catch {
-            Logger.api.error("Failed loading canteens: \(String(describing: error))")
+            Logger.api.error("Failed loading canteens: \(error.localizedDescription)")
             self.canteens = .failure(error)
             Analytics.send(.apiFailedCanteenLoading, with: [
-                "error": String(describing: error)
+                "error": error.localizedDescription
             ])
         }
     }
