@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import os.log
 
 import EmealKit
 
@@ -23,6 +24,9 @@ struct LicenseView: View {
             }
         }
         .navigationTitle(L10n.Licenses.title)
+        .onAppear {
+            Logger.breadcrumb.info("Appear LicenseView")
+        }
     }
 }
 
