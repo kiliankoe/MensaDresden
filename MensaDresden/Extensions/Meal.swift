@@ -3,7 +3,7 @@ import EmealKit
 
 extension Meal {
     var allergenStrippedTitle: String {
-        self.name.replacingOccurrences(of: #" (\((?:[A-N]\d?(?:, )?)+\))"#, with: "", options: .regularExpression)
+        self.name.replacingOccurrences(of: #" ?(\((?:[A-N]\d?(?:, ?)?)+\))"#, with: "", options: .regularExpression)
     }
 
     func isIncompatible(withDiet diet: Settings.DietType, ingredients: [Ingredient], allergens: [Allergen]) -> Bool {
