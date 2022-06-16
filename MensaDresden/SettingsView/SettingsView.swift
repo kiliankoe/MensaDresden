@@ -86,21 +86,19 @@ struct SettingsView: View {
                 }
 
                 Section(footer: Text("✌️")) {
-                    Button {
-                        UIApplication.shared.open(URL(string: "mailto:mensadresden@kilian.io?subject=Feedback%20\(shortVersion)%20(\(version))")!)
-                    } label: {
-                        Label {
-                            HStack {
-                                Text("info.email")
-                                Spacer()
-                                DisclosureIndicator()
-                            }
-                            .containerShape(Rectangle())
-                        } icon: {
-                            Image(systemName: "envelope")
+                    Label {
+                        HStack {
+                            Text("info.email")
+                            Spacer()
+                            DisclosureIndicator()
                         }
+                        .contentShape(Rectangle())
+                    } icon: {
+                        Image(systemName: "envelope")
                     }
-                    .buttonStyle(PlainButtonStyle())
+                    .onTapGesture {
+                        UIApplication.shared.open(URL(string: "mailto:mensadresden@kilian.io?subject=Feedback%20\(shortVersion)%20(\(version))")!)
+                    }
 
                     NavigationLink(destination: LicenseView()) {
                         Label {
