@@ -44,6 +44,7 @@ struct CanteenCell: View {
                         .offset(x: 5, y: -5)
                 }
             }
+
             VStack(alignment: .leading) {
                 Text(canteen.name)
                     .font(.headline)
@@ -63,18 +64,30 @@ struct CanteenCell: View {
                     .padding(.top, 5)
                 }
             }
+
+            Spacer()
+            Image(systemName: "info.circle")
+                .foregroundColor(.accentColor)
+                .onTapGesture {
+                    SafariView(url: canteen.url).present()
+                }
         }
     }
 }
 
 struct CanteenCell_Previews: PreviewProvider {
     static var previews: some View {
-        CanteenCell(canteen: Canteen(id: 1,
-                                     name: "Alte Mensa",
-                                     city: "Dresden",
-                                     address: "Mommsenstr. 13, 01069 Dresden",
-                                     coordinates: [51.02696733929933, 13.726491630077364],
-                                     url: URL(string: "https://studentenwerk-dresden.de")!,
-                                     menu: URL(string: "https://studentenwerk-dresden.de")!))
+        CanteenCell(
+            canteen: Canteen(
+                id: 1,
+                name: "Alte Mensa",
+                city: "Dresden",
+                address: "Mommsenstr. 13, 01069 Dresden",
+                coordinates: [51.02696733929933, 13.726491630077364],
+                url: URL(string: "https://studentenwerk-dresden.de")!,
+                menu: URL(string: "https://studentenwerk-dresden.de")!
+            )
+        )
+        .environmentObject(Settings())
     }
 }
