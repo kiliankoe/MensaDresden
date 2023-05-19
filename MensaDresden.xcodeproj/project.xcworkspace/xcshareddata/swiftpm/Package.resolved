@@ -3,10 +3,10 @@
     {
       "identity" : "emealkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kiliankoe/EmealKit",
+      "location" : "https://github.com/kiliankoe/EmealKit.git",
       "state" : {
-        "revision" : "313ba36a9ba3f20652480b3e65521ac4314f85d9",
-        "version" : "0.9.2"
+        "revision" : "13f026e69d39d8d235733aa8b18c866c972a52a9",
+        "version" : "0.10.0"
       }
     },
     {

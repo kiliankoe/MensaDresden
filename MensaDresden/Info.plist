@@ -26,6 +26,10 @@
 	<true/>
 	<key>NFCReaderUsageDescription</key>
 	<string>MensaDresden uses NFC to read your Emeal card's balance.</string>
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>D2760000850100</string>
+	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Mensa Dresden uses your location to sort canteens from closest to furthest.</string>
 	<key>UIApplicationSceneManifest</key>
