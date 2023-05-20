@@ -3,6 +3,7 @@ import os.log
 
 struct SettingsView: View {
     @EnvironmentObject var settings: Settings
+    @State private var showingAutoloadDetails = false
 
     var shortVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
@@ -81,7 +82,7 @@ struct SettingsView: View {
                         Image(systemName: "info.circle")
                     }
                     .onTapGesture {
-                        SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!).present()
+                        showingAutoloadDetails.toggle()
                     }
                 }
 
@@ -123,6 +124,9 @@ struct SettingsView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             Logger.breadcrumb.info("Appear SettingsView")
+        }
+        .sheet(isPresented: $showingAutoloadDetails) {
+            SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!)
         }
     }
 }

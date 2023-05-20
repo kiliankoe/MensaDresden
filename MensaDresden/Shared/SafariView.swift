@@ -2,12 +2,12 @@ import Foundation
 import SafariServices
 import SwiftUI
 
-struct SafariView {
+struct SafariView: UIViewControllerRepresentable {
     let url: URL
 
-    func present() {
-        let safariView = SFSafariViewController(url: self.url)
-        let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene)
-        windowScene?.windows.first?.rootViewController?.present(safariView, animated: true, completion: nil)
+    func makeUIViewController(context: Context) -> SFSafariViewController {
+        return SFSafariViewController(url: url)
     }
+
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: Context) { }
 }

@@ -3,18 +3,22 @@ import os.log
 
 struct NewsfeedView: View {
     @EnvironmentObject private var feedparser: Feedparser
+    @State private var selectedDetail: URL? = nil
 
     var body: some View {
         NavigationView {
             LoadingListView(
                 result: feedparser.newsItems,
-                noDataMessage: "TODO",
+                noDataMessage: "",
                 retryAction: {
                     Task { await feedparser.fetchNews() }
                 },
                 listView: { newsItems in
                     List(newsItems) { item in
                         NewsItemView(newsItem: item)
+                            .onTapGesture {
+                                selectedDetail = item.detailURL
+                            }
                     }
                     .refreshable {
                         await feedparser.fetchNews()
@@ -23,7 +27,9 @@ struct NewsfeedView: View {
             )
             .navigationTitle(L10n.Tab.newsfeed)
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .sheet(item: $selectedDetail) { detailURL in
+            SafariView(url: detailURL)
+        }
         .task {
             await feedparser.fetchNews()
         }
@@ -48,12 +54,6 @@ struct NewsItemView: View {
                     .bold()
                 Text(newsItem.description)
             }
-
-            Spacer()
-            DisclosureIndicator()
-        }
-        .onTapGesture {
-            SafariView(url: newsItem.detailURL).present()
         }
     }
 }

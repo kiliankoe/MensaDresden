@@ -62,6 +62,7 @@
 		39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141942348EBEE00FEE789 /* UserDefault.swift */; };
 		39A79148241FC50F0009CF03 /* NewsfeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A79147241FC50F0009CF03 /* NewsfeedView.swift */; };
 		39A7914A241FC96B0009CF03 /* ObservableEmeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A79149241FC96B0009CF03 /* ObservableEmeal.swift */; };
+		39AEA5272A18AF0000A70B6E /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AEA5262A18AF0000A70B6E /* URL.swift */; };
 		39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */; };
 		39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB72234BB0350081B9AE /* HostingController.swift */; };
 		39CD5B19234F778400435E71 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B18234F778400435E71 /* WebView.swift */; };
@@ -240,6 +241,7 @@
 		39A141972348EF1D00FEE789 /* Mensa Dresden.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mensa Dresden.entitlements"; sourceTree = "<group>"; };
 		39A79147241FC50F0009CF03 /* NewsfeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedView.swift; sourceTree = "<group>"; };
 		39A79149241FC96B0009CF03 /* ObservableEmeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableEmeal.swift; sourceTree = "<group>"; };
+		39AEA5262A18AF0000A70B6E /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOrientation.swift; sourceTree = "<group>"; };
 		39BEEB72234BB0350081B9AE /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		39CD5B18234F778400435E71 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -455,6 +457,7 @@
 				3918AD412782FD2A00B82373 /* Meal.swift */,
 				395EA6D6282A9CD3002F8055 /* Logger.swift */,
 				3912B7B8282E8184006C3354 /* UserDefaults.swift */,
+				39AEA5262A18AF0000A70B6E /* URL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

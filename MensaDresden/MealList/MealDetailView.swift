@@ -149,9 +149,11 @@ struct FeedbackButton: View {
         URL(string: "https://www.studentenwerk-dresden.de/kontakt.html?bereich=mensen&page=mensen_luk&thema=luk&eid=\(meal.id)")!
     }
 
+    @State private var showingSafariView = false
+
     var body: some View {
         Button {
-            SafariView(url: feedbackURL).present()
+            showingSafariView.toggle()
         } label: {
             HStack {
                 Spacer()
@@ -171,6 +173,9 @@ struct FeedbackButton: View {
                 RoundedRectangle(cornerRadius: 8)
                     .foregroundColor(.emealGreen)
             )
+        }
+        .sheet(isPresented: $showingSafariView) {
+            SafariView(url: feedbackURL)
         }
     }
 }

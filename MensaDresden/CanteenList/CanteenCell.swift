@@ -8,6 +8,8 @@ struct CanteenCell: View {
     @EnvironmentObject var settings: Settings
     @EnvironmentObject var locationManager: LocationManager
 
+    @State private var showingSafari = false
+
     var isFavorite: Bool {
         settings.favoriteCanteens.contains(canteen.name)
     }
@@ -69,8 +71,11 @@ struct CanteenCell: View {
             Image(systemName: "info.circle")
                 .foregroundColor(.accentColor)
                 .onTapGesture {
-                    SafariView(url: canteen.url).present()
+                    showingSafari.toggle()
                 }
+        }
+        .sheet(isPresented: $showingSafari) {
+            SafariView(url: canteen.url)
         }
     }
 }

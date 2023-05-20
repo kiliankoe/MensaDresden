@@ -9,6 +9,8 @@ struct EmealView: View {
 
     @ObservedObject var emeal = ObservableEmeal()
 
+    @State private var showingSafari = false
+
     var autoloadHint: some View {
         VStack(alignment: .leading) {
             Text("emeal.autoload-hint")
@@ -17,12 +19,15 @@ struct EmealView: View {
                 .padding(.bottom, 5)
 
             Button("emeal.autoload-information") {
-                SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!).present()
+                showingSafari.toggle()
             }
             .font(.caption)
         }
         .padding(.top)
         .padding(.horizontal)
+        .sheet(isPresented: $showingSafari) {
+            SafariView(url: URL(string: "https://www.studentenwerk-dresden.de/mensen/emeal-autoload.html")!)
+        }
     }
 
     var shouldShowEmealView: Bool {
@@ -70,7 +75,7 @@ struct EmealView: View {
                         lastTransaction: emeal.lastTransaction,
                         lastScan: emeal.lastScanDate
                     )
-                    .padding(.horizontal)
+                    .padding()
 
                     LargeButton(content: {
                         Text("emeal.scan-button")
