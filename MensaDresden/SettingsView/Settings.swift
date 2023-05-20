@@ -4,13 +4,72 @@ import Combine
 import KeychainItem
 import EmealKit
 import os.log
+import KeychainAccess
 
-class Settings: ObservableObject {
-    init() {
-        Self.migrateSettingsToAppGroup()
+extension Keychain {
+    var autoloadCardnumber: String? {
+        get {
+            self["autoloadCardnumber"]
+        }
+        set {
+            self["autoloadCardnumber"] = newValue
+        }
     }
 
+    var autoloadPassword: String? {
+        get {
+            self["autoloadPassword"]
+        }
+        set {
+            self["autoloadPassword"] = newValue
+        }
+    }
+}
+
+class Settings: ObservableObject {
+    let keychain = Keychain(service: "io.kilian.mensadresden")
+
+    init() {
+        Self.migrateSettingsToAppGroup()
+
+        $autoloadCardnumber
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
+            .sink { [weak self] newValue in
+                if let newValue {
+                    self?.keychain.autoloadCardnumber = newValue
+                }
+            }
+            .store(in: &cancelSet)
+
+        $autoloadPassword
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
+            .sink { [weak self] newValue in
+                if let newValue {
+                    self?.keychain.autoloadPassword = newValue
+                }
+            }
+            .store(in: &cancelSet)
+
+        migrateAutoloadCredentials()
+
+        // Initialize UI with values from keychain
+        if let cardnumber = keychain.autoloadCardnumber {
+            self.autoloadCardnumber = cardnumber
+        }
+        if let password = keychain.autoloadPassword {
+            self.autoloadPassword = password
+        }
+    }
+
+    private var cancelSet: Set<AnyCancellable> = []
+
+    // MARK: Migrations
+
     private static func migrateSettingsToAppGroup() {
+        let migratedKey = "appSettingsMigratedToAppGroup"
+        defer { UserDefaults.standard.setValue(true, forKey: migratedKey) }
+        guard !UserDefaults.standard.bool(forKey: migratedKey) else { return }
+
         let defaults = [
             "favoriteCanteens",
             "priceType",
@@ -25,6 +84,20 @@ class Settings: ObservableObject {
                 UserDefaults.mensaDresdenGroup.set(value, forKey: key)
                 Logger.settings.info("Migrated \(key) to app group defaults")
             }
+        }
+    }
+
+    // Potentially migrate old credentials from old keychain wrapper
+    private func migrateAutoloadCredentials() {
+        let migratedKey = "autoloadCredentialsMigratedFromKeychainItem"
+        defer { UserDefaults.standard.setValue(true, forKey: migratedKey) }
+        guard !UserDefaults.standard.bool(forKey: migratedKey) else { return }
+
+        if let cardnumber = legacyAutoloadCardnumber {
+            self.keychain.autoloadCardnumber = cardnumber
+        }
+        if let password = legacyAutoloadPassword {
+            self.keychain.autoloadPassword = password
         }
     }
 
@@ -135,11 +208,15 @@ class Settings: ObservableObject {
 
     // MARK: Autoload
 
+    // These two are no longer used (KeychainItem behaves weirdly). They're sticking around to possibly be migrated
+    // using `migrateAutoloadCredentials()` above and will be removed at some point in the future.
     @KeychainItem(account: "stuwedd.autoload.cardnumber")
-    var autoloadCardnumber: String?
-
+    private var legacyAutoloadCardnumber: String?
     @KeychainItem(account: "stuwedd.autoload.password")
-    var autoloadPassword: String?
+    private var legacyAutoloadPassword: String?
+
+    @Published var autoloadCardnumber: String?
+    @Published var autoloadPassword: String?
 
     var areAutoloadCredentialsAvailable: Bool {
         switch (autoloadCardnumber, autoloadPassword) {
