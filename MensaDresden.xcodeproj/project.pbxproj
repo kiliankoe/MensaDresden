@@ -30,6 +30,7 @@
 		39281C8D234297E000E4EFB5 /* Meal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8C234297E000E4EFB5 /* Meal+Extensions.swift */; };
 		39281C8F2342985900E4EFB5 /* Canteen+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39281C8E2342985900E4EFB5 /* Canteen+Example.swift */; };
 		393E72C925EBB9FA009BD729 /* HorizontalSwipeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393E72C825EBB9FA009BD729 /* HorizontalSwipeGesture.swift */; };
+		394655EA2A18C54800157411 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 394655E92A18C54800157411 /* KeychainAccess */; };
 		394D9D012343D0C9005F076C /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D002343D0C9005F076C /* MealDetailView.swift */; };
 		394D9D032343EFD4005F076C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D022343EFD4005F076C /* AboutView.swift */; };
 		394D9D1F234560B4005F076C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D9D1E234560B4005F076C /* SettingsView.swift */; };
@@ -63,10 +64,10 @@
 		39A79148241FC50F0009CF03 /* NewsfeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A79147241FC50F0009CF03 /* NewsfeedView.swift */; };
 		39A7914A241FC96B0009CF03 /* ObservableEmeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A79149241FC96B0009CF03 /* ObservableEmeal.swift */; };
 		39AEA5272A18AF0000A70B6E /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AEA5262A18AF0000A70B6E /* URL.swift */; };
+		39AEA52A2A18B3E800A70B6E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 39AEA5292A18B3E800A70B6E /* KeychainAccess */; };
 		39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */; };
 		39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB72234BB0350081B9AE /* HostingController.swift */; };
 		39CD5B19234F778400435E71 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B18234F778400435E71 /* WebView.swift */; };
-		39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */; };
 		39D0122828330DD300EBA1E4 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = 39D0122728330DD300EBA1E4 /* EmealKit */; };
 		39D0122A28330DDF00EBA1E4 /* EmealKit in Frameworks */ = {isa = PBXBuildFile; productRef = 39D0122928330DDF00EBA1E4 /* EmealKit */; };
 		39DF7C7C284FF16400C7829D /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF7C7B284FF16400C7829D /* LicenseView.swift */; };
@@ -245,7 +246,6 @@
 		39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOrientation.swift; sourceTree = "<group>"; };
 		39BEEB72234BB0350081B9AE /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		39CD5B18234F778400435E71 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeedbackView.swift; sourceTree = "<group>"; };
 		39DF7C7B284FF16400C7829D /* LicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
 		39DF7C7D284FF58200C7829D /* LicenseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseData.swift; sourceTree = "<group>"; };
 		39E215802358E29D00F5EBE9 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -285,6 +285,7 @@
 			files = (
 				390B777427E211E600DEF4E3 /* TelemetryClient in Frameworks */,
 				395EA6D52829BE84002F8055 /* ImageViewerRemote in Frameworks */,
+				39AEA52A2A18B3E800A70B6E /* KeychainAccess in Frameworks */,
 				3997DCC82455931600763C07 /* SwiftyHolidays in Frameworks */,
 				398E077D2848BBCA004FFDFF /* SyndiKit in Frameworks */,
 				396FC3BC2353BF60007B97F3 /* KeychainItem in Frameworks */,
@@ -314,6 +315,7 @@
 				EF9EF51F2811578000E7EE19 /* SwiftyHolidays in Frameworks */,
 				EF9EF50F2811540000E7EE19 /* TelemetryClient in Frameworks */,
 				EF9EF5092811532D00E7EE19 /* KeychainItem in Frameworks */,
+				394655EA2A18C54800157411 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +391,6 @@
 				EFF0399B281180690054C3E9 /* MealImage.swift */,
 				39A0C9432362341B0029FA35 /* CustomDateMealListView.swift */,
 				394D9D002343D0C9005F076C /* MealDetailView.swift */,
-				39CD5B1A234F8D0C00435E71 /* MealFeedbackView.swift */,
 				394D9D1D23455C99005F076C /* MealCell */,
 			);
 			path = MealList;
@@ -608,6 +609,7 @@
 				395EA6D42829BE84002F8055 /* ImageViewerRemote */,
 				39D0122728330DD300EBA1E4 /* EmealKit */,
 				398E077C2848BBCA004FFDFF /* SyndiKit */,
+				39AEA5292A18B3E800A70B6E /* KeychainAccess */,
 			);
 			productName = MensaDresden;
 			productReference = 39281C5A234241B900E4EFB5 /* Mensa Dresden.app */;
@@ -684,6 +686,7 @@
 				EF9EF50E2811540000E7EE19 /* TelemetryClient */,
 				EF9EF51E2811578000E7EE19 /* SwiftyHolidays */,
 				39D0122928330DDF00EBA1E4 /* EmealKit */,
+				394655E92A18C54800157411 /* KeychainAccess */,
 			);
 			productName = "MensaDresdenWatch WatchKit Extension";
 			productReference = EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */;
@@ -741,6 +744,7 @@
 				395EA6D32829BE84002F8055 /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */,
 				39D0122628330DD300EBA1E4 /* XCRemoteSwiftPackageReference "EmealKit" */,
 				398E077B2848BBCA004FFDFF /* XCRemoteSwiftPackageReference "SyndiKit" */,
+				39AEA5282A18B3E700A70B6E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 39281C5B234241B900E4EFB5 /* Products */;
 			projectDirPath = "";
@@ -809,7 +813,6 @@
 			files = (
 				393E72C925EBB9FA009BD729 /* HorizontalSwipeGesture.swift in Sources */,
 				39FC09D82361AFEE008D8AB0 /* Formatter.swift in Sources */,
-				39CD5B1B234F8D0C00435E71 /* MealFeedbackView.swift in Sources */,
 				39BEEB73234BB0350081B9AE /* HostingController.swift in Sources */,
 				391B94FE27665AEB0071E678 /* Binding.swift in Sources */,
 				39A79148241FC50F0009CF03 /* NewsfeedView.swift in Sources */,
@@ -833,6 +836,7 @@
 				39DF7C7E284FF58200C7829D /* LicenseData.swift in Sources */,
 				396FC3E42357B257007B97F3 /* FavoriteCanteensSetting.swift in Sources */,
 				398E077F2848BBF0004FFDFF /* Feedparser.swift in Sources */,
+				39AEA5272A18AF0000A70B6E /* URL.swift in Sources */,
 				39281C8D234297E000E4EFB5 /* Meal+Extensions.swift in Sources */,
 				398B34E2236CB95900C10D9B /* LoadingResult.swift in Sources */,
 				39CD5B19234F778400435E71 /* WebView.swift in Sources */,
@@ -1449,6 +1453,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		39AEA5282A18B3E700A70B6E /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
 		39D0122628330DD300EBA1E4 /* XCRemoteSwiftPackageReference "EmealKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kiliankoe/EmealKit.git";
@@ -1464,6 +1476,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 390B777227E211E600DEF4E3 /* XCRemoteSwiftPackageReference "SwiftClient" */;
 			productName = TelemetryClient;
+		};
+		394655E92A18C54800157411 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39AEA5282A18B3E700A70B6E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 		395EA6D42829BE84002F8055 /* ImageViewerRemote */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1484,6 +1501,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3997DCC62455931500763C07 /* XCRemoteSwiftPackageReference "SwiftyHolidays" */;
 			productName = SwiftyHolidays;
+		};
+		39AEA5292A18B3E800A70B6E /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39AEA5282A18B3E700A70B6E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 		39D0122728330DD300EBA1E4 /* EmealKit */ = {
 			isa = XCSwiftPackageProductDependency;
