@@ -120,14 +120,9 @@ struct MealDetailView: View {
             }
         }
         .navigationBarTitle(Text(""), displayMode: .inline)
-        .navigationBarItems(trailing: BarButtonButton(view: Image(systemName: "square.and.arrow.up"), action: {
-            let activityItems = [self.meal.activityItem]
-            let activityVC = UIActivityViewController(activityItems: activityItems,
-                                                      applicationActivities: nil)
-
-            let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene)
-            windowScene?.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
-        }))
+        .toolbar {
+            ShareLink(item: meal.url, subject: Text(meal.allergenStrippedTitle))
+        }
         .overlay(ImageViewerRemote(
             imageURL: .constant(meal.image.absoluteString),
             viewerShown: $showingDetailView,
