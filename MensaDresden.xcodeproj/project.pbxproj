@@ -63,6 +63,7 @@
 		39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141942348EBEE00FEE789 /* UserDefault.swift */; };
 		39A79148241FC50F0009CF03 /* NewsfeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A79147241FC50F0009CF03 /* NewsfeedView.swift */; };
 		39A7914A241FC96B0009CF03 /* ObservableEmeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A79149241FC96B0009CF03 /* ObservableEmeal.swift */; };
+		39AEA5252A180D6700A70B6E /* CampuscardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AEA5242A180D6700A70B6E /* CampuscardView.swift */; };
 		39AEA5272A18AF0000A70B6E /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AEA5262A18AF0000A70B6E /* URL.swift */; };
 		39AEA52A2A18B3E800A70B6E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 39AEA5292A18B3E800A70B6E /* KeychainAccess */; };
 		39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */; };
@@ -242,6 +243,7 @@
 		39A141972348EF1D00FEE789 /* Mensa Dresden.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mensa Dresden.entitlements"; sourceTree = "<group>"; };
 		39A79147241FC50F0009CF03 /* NewsfeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedView.swift; sourceTree = "<group>"; };
 		39A79149241FC96B0009CF03 /* ObservableEmeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableEmeal.swift; sourceTree = "<group>"; };
+		39AEA5242A180D6700A70B6E /* CampuscardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampuscardView.swift; sourceTree = "<group>"; };
 		39AEA5262A18AF0000A70B6E /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		39BEEB70234BAD2D0081B9AE /* DeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOrientation.swift; sourceTree = "<group>"; };
 		39BEEB72234BB0350081B9AE /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
@@ -488,6 +490,7 @@
 			children = (
 				396C4AF023480E6E009A9F52 /* EmealView.swift */,
 				396FC3B423539145007B97F3 /* EmealCardView.swift */,
+				39AEA5242A180D6700A70B6E /* CampuscardView.swift */,
 				39A79149241FC96B0009CF03 /* ObservableEmeal.swift */,
 				391B9500276674F60071E678 /* CardserviceErrorWrapper.swift */,
 			);
@@ -850,6 +853,7 @@
 				391B94F827656B210071E678 /* L10n.swift in Sources */,
 				39281C882342910600E4EFB5 /* CanteenCell.swift in Sources */,
 				398B34E4236CC6B500C10D9B /* MealList.swift in Sources */,
+				39AEA5252A180D6700A70B6E /* CampuscardView.swift in Sources */,
 				391B94FC2766296C0071E678 /* MensaApp.swift in Sources */,
 				396FC3B0235378C1007B97F3 /* AppView.swift in Sources */,
 				391B94FA276574E40071E678 /* API.swift in Sources */,

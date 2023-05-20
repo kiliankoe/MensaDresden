@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LargeButton<Content: View>: View {
     var textColor = Color.white
-    var backgroundColor = Color.blue
+    var backgroundColor = Color("CampusCardBlue")
 
     var content: () -> Content
 

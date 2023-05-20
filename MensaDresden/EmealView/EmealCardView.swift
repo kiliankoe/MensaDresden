@@ -12,55 +12,69 @@ struct EmealCardView: View {
 
     @State private var isShowingEstimationExplanation = false
 
-    var body: some View {
-        ZStack(alignment: .leading) {
-            Image("emeal_empty")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .shadow(radius: 10)
+    var lastScanned: some View {
+        VStack(alignment: .leading) {
+            if let lastScan = lastScan {
+                Text(verbatim: L10n.Emeal.lastScanned)
+                    .font(.caption.smallCaps())
+                    .foregroundColor(.black)
+                    .padding(.top, UIScreen.main.bounds.height * 0.01)
+                Text(Formatter.string(for: lastScan, dateStyle: .medium, timeStyle: .short))
+                    .font(.subheadline)
+                    .foregroundColor(.black)
+            }
+        }
+        .padding(.leading)
+        .offset(y: -5)
+    }
 
-            VStack(alignment: .leading) {
-                Text(verbatim: L10n.Emeal.balance)
-                    .font(.headline.smallCaps())
+    var mainBody: some View {
+        VStack(alignment: .leading) {
+            Text(verbatim: L10n.Emeal.balance)
+                .font(.headline.smallCaps())
+                .foregroundColor(.white)
+
+            HStack(alignment: .lastTextBaseline) {
+                Text("\(amount, specifier: "%.2f")€")
+                    .font(.system(size: 50))
                     .foregroundColor(.white)
-
-                HStack(alignment: .lastTextBaseline) {
-                    Text("\(amount, specifier: "%.2f")€")
-                        .font(.system(size: 50))
-                        .foregroundColor(.white)
-                        .if(amountIsEstimated) {
-                            $0.italic()
-                        }
-                    if amountIsEstimated {
-                        Button(action: {
-                            self.isShowingEstimationExplanation.toggle()
-                        }, label: {
-                            Image(systemName: "questionmark.circle.fill")
-                                .foregroundColor(.white)
-                        })
+                    .if(amountIsEstimated) {
+                        $0.italic()
                     }
+                if amountIsEstimated {
+                    Button(action: {
+                        self.isShowingEstimationExplanation.toggle()
+                    }, label: {
+                        Image(systemName: "questionmark.circle.fill")
+                            .foregroundColor(.white)
+                    })
                 }
-                .padding(.bottom, UIScreen.main.bounds.height * 0.02)
+            }
+            .padding(.bottom, UIScreen.main.bounds.height * 0.02)
 
-                if !amountIsEstimated {
-                    Text(verbatim: L10n.Emeal.lastTransaction)
-                        .font(.subheadline.smallCaps())
-                        .foregroundColor(.white)
-                    Text("\(lastTransaction, specifier: "%.2f")€")
-                        .font(.title)
-                        .foregroundColor(.white)
-                }
+            if !amountIsEstimated {
+                Text(verbatim: L10n.Emeal.lastTransaction)
+                    .font(.subheadline.smallCaps())
+                    .foregroundColor(.white)
+                Text("\(lastTransaction, specifier: "%.2f")€")
+                    .font(.title)
+                    .foregroundColor(.white)
+            }
+        }
+        .padding(.leading)
+    }
 
-                if let lastScan = lastScan {
-                    Text(verbatim: L10n.Emeal.lastScanned)
-                        .font(.caption.smallCaps())
-                        .foregroundColor(.white)
-                        .padding(.top, UIScreen.main.bounds.height * 0.01)
-                    Text(Formatter.string(for: lastScan, dateStyle: .medium, timeStyle: .short))
-                        .font(.subheadline)
-                        .foregroundColor(.white)
-                }
-            }.offset(x: 20, y: 0)
+    var body: some View {
+        ZStack(alignment: .bottomLeading) {
+            ZStack(alignment: .topLeading) {
+                CampuscardView()
+                    .cornerRadius(10)
+                    .shadow(radius: 10)
+                mainBody
+                    .shadow(radius: 1)
+                    .padding(.vertical)
+            }
+            lastScanned
         }
         .alert(
             Text(verbatim: L10n.Emeal.estimationExplanationTitle),
