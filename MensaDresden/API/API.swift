@@ -27,9 +27,7 @@ class API: ObservableObject {
         } catch {
             Logger.api.error("Failed loading canteens: \(error.localizedDescription)")
             self.canteens = .failure(error)
-            Analytics.send(.apiFailedCanteenLoading, with: [
-                "error": error.localizedDescription
-            ])
+            track(error: error, signalType: .apiFailedCanteenLoading)
         }
     }
 
@@ -57,10 +55,9 @@ class API: ObservableObject {
         } catch {
             Logger.api.error("Failed loading meals: \(String(describing: error))")
             cache(result: .failure(error), for: canteenId, on: date)
-            Analytics.send(.apiFailedMealLoading, with: [
+            track(error: error, signalType: .apiFailedMealLoading, with: [
                 "canteenID": String(canteenId),
-                "date": Formatter.string(for: date, format: .yearMonthDay),
-                "error": String(describing: error)
+                "date": Formatter.string(for: date, format: .yearMonthDay)
             ])
         }
     }
@@ -169,9 +166,7 @@ class API: ObservableObject {
             cache(result: .success(transactions.reversed()))
         } catch {
             Logger.api.error("Failed loading transactions: \(String(describing: error))")
-            Analytics.send(.apiFailedAutoloadTransactionsLoading, with: [
-                "error": String(describing: error)
-            ])
+            track(error: error, signalType: .apiFailedAutoloadTransactionsLoading)
 
             guard let cardserviceError = error as? CardserviceError else { return }
             let wrappedError = CardserviceErrorWrapper(error: cardserviceError)
@@ -185,5 +180,61 @@ class API: ObservableObject {
         Logger.api.info("Getting cached transactions")
         guard let result = cachedTransactions?.result else { return .loading }
         return LoadingResult(from: result)
+    }
+
+    // MARK: Error Analytics
+
+    func track(error: Error, signalType: Analytics, with otherData: [String: String] = [:]) {
+        // These are errors that I don't care about, no need to track them.
+        let allowedErrorCodes = [
+            NSURLErrorNotConnectedToInternet,
+            NSURLErrorTimedOut,
+            NSURLErrorCallIsActive,
+            NSURLErrorDataNotAllowed,
+            NSURLErrorInternationalRoamingOff,
+        ]
+        let description: String
+        switch error {
+        case let error as EmealError:
+            switch error {
+            case .other(let wrapped):
+                track(error: wrapped, signalType: signalType, with: otherData)
+                return
+            case .unknown:
+                description = String(describing: error)
+            }
+        case let error as CardserviceError:
+            switch error {
+            case .network(let wrapped):
+                if let wrapped {
+                    track(error: wrapped, signalType: signalType, with: otherData)
+                    return
+                } else {
+                    description = String(describing: error)
+                }
+            case .decoding(let wrapped):
+                switch wrapped {
+                case .other(let otherError):
+                    track(error: otherError, signalType: signalType, with: otherData)
+                    return
+                case .unknownPaymentType, .unexpectedDateFormat:
+                    description = String(describing: error)
+                }
+            case .invalidURL, .noCardDetails, .invalidLoginCredentials, .rateLimited, .server:
+                description = String(describing: error)
+            }
+        case let error as DecodingError:
+            // TODO: Is there anything more helpful I can do here instead?
+            // This is the error that keeps popping up on Monday evenings for the Meal API.
+            description = String(describing: error)
+        default:
+            let nsError = error as NSError
+            guard !allowedErrorCodes.contains(nsError.code) else { return }
+            description = "\(nsError.code)"
+        }
+        Analytics.send(signalType, with: [
+            "error": description,
+            "errorCode": "\(error._code)"
+        ].merging(otherData, uniquingKeysWith: { lhs, _ in lhs }))
     }
 }
