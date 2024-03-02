@@ -5,25 +5,25 @@
 "tab.settings" = "設定";
 
 // iPad placeholder detail
-"ipad.bon-appetit" = "🍲 食欲をそそる!";
-"ipad.swipe-hint" = "左からスワイプするとカフェテリアの一覧が開きます。";
+"ipad.bon-appetit" = "🍲 めしあがれ!";
+"ipad.swipe-hint" = "左からスワイプすると学食(メンザ)の一覧が開きます。";
 
 // Canteen List
-"canteens.nav" = "缶詰";
-"canteens.no-data" = "カンテーンが見つからない 🤔 笑";
+"canteens.nav" = "学食(メンザ)";
+"canteens.no-data" = "学食(メンザ)が見つからない 🤔 笑";
 
 // Meal List
-"meals.no-meals-today" = "今日のメニューは何もありません。";
-"meals.no-meals-tomorrow" = "明日のメニューは何もありません。";
-"meals.no-meals-other" = "この日のメニューは何もありません。";
+"meals.no-meals-today" = "今日のメニューはありません。";
+"meals.no-meals-tomorrow" = "明日のメニューはありません。";
+"meals.no-meals-other" = "その日のメニューはありません。";
 "meals.holiday" = "今日は %@! 📅";
-"meals.weekend" = "素敵な週末を 🏖";
+"meals.weekend" = "素敵な週末をお過ごしください。 🏖";
 
 // Meal Detail
-"meal.rate-title" = "レートミール";
+"meal.rate-title" = "食事を評価する";
 "meal.rate-description" = "フィードバックを直接Studentenwerkに送ることができます。";
-"meal.dinner" = "晩飯";
-"meal.ingredient-warning" = "この食事は、お好みの食生活に合わない場合があります。";
+"meal.dinner" = "夕食";
+"meal.ingredient-warning" = "この食事は、あなたの好みの食生活に合わないかもしれません。";
 
 // Emeal View
 "emeal.nfc-text" = "Emealカードを端末にかざす。";
@@ -32,56 +32,56 @@
 "emeal.balance" = "口座残高";
 "emeal.last-transaction" = "最後の取引";
 "emeal.last-scanned" = "最終スキャン";
-"emeal.scan-button" = "スキャンEmeal";
-"emeal.autoload-hint" = "オートロードを使用していますか？アプリの設定で資格情報を入力すると、最近の取引はすべてここに表示されます。";
+"emeal.scan-button" = "Emealをスキャン";
+"emeal.autoload-hint" = "オートロードを使用していますか？アプリの設定でアカウント情報を入力すると、最近の取引はすべてここに表示されます。";
 "emeal.autoload-information" = "オートロード情報";
 "emeal.no-transactions" = "過去90日間の取引はありません。";
 "emeal.error.network" = "ネットワークエラーです。";
-"emeal.error.invalid-credentials" = "ユーザー名またはパスワードが無効";
-"emeal.error.server" = "%d サーバー・エラー";
+"emeal.error.invalid-credentials" = "ユーザー名またはパスワードが無効です。";
+"emeal.error.server" = "%d サーバーエラー";
 "emeal.error.decoding" = "データの読み取りに失敗しました。";
-"emeal.error.no-card-details" = "アカウントにEmealが見つかりませんでした。";
+"emeal.error.no-card-details" = "あなたのEmealアカウントが見つかりませんでした。";
 "emeal.error.rate-limited" = "リクエストが多すぎます。しばらくしてからもう一度お試しください。";
-"emeal.estimation-explanation-title" = "概算残高";
-"emeal.estimation-explanation-ok-action" = "オッケー";
-"emeal.estimation-explanation-text" = "お客様のオートロード取引は、お客様のEmeal残高を推定するために使用されました。取引は過去90日間のみ利用可能で、最後のスキャンがそれより古い場合、正しい残高はここに表示されません。\n\n最後にスキャンした残高は%.2f€でした。";
+"emeal.estimation-explanation-title" = "おおよその残高";
+"emeal.estimation-explanation-ok-action" = "OK";
+"emeal.estimation-explanation-text" = "お客様のオートロード取引は、お客様のEmealのおおよその残高を取得するために使用されました。取引は過去90日間のみ利用可能で、最後のスキャンがそれより古い場合、残高は正しく表示されません。\n\n最後にスキャンした残高は%.2f€でした。";
 
 // Settings
 "settings.nav" = "設定";
-"settings.favorite-canteens" = "お気に入りの缶詰";
-"settings.favorite-canteens-description" = "あなたのお気に入りの食堂。ここのリストを削除して再注文するには、トグルまたは編集するには、水筒のメニュー上のハートをタップします。";
+"settings.favorite-canteens" = "お気に入りの学食(メンザ)";
+"settings.favorite-canteens-description" = "あなたのお気に入りの学食(メンザ)。ハートをタップしたり、ここでリストを編集したりしてお気に入り学食(メンザ)の削除や並び替えができます";
 "settings.ingredients-allergens.title" = "成分とアレルゲン";
 "settings.user-diet" = "ダイエット";
-"settings.ingredients" = "材料";
+"settings.ingredients" = "食材";
 "settings.allergens" = "アレルゲン";
-"settings.ingredients-description" = "特定の食事を守るか、特定の成分やアレルゲンを摂取したくないかを選択します。これらのオプションはフィルターとして使用され、あなたに適さない食事はメニューでグレーアウトされます。残念ながら、栄養情報にはやや不備があります。ベジタリアンやビーガンの料理には、そのような表示がないことがあります。\n食事を購入する前には、カフェテリアに掲載されている食材を確認してください。 もちろん、アプリ内のここに記載されている情報を完全に鵜呑みにしてはいけません。";
+"settings.ingredients-description" = "特定の食事療法に従っているか、特定の食材やアレルゲンを摂取したくないかを選択します。これらのオプションはフィルターとして使用され、あなたに適さない食事はメニューでグレーアウトされます。残念ながら、栄養情報にはやや不備があります。ベジタリアンやビーガンの料理には、そのような表示がないことがあります。\n食事を購入する前には、学食(メンザ)に掲載されている食材を確認してください。 アプリ内のここに記載されている情報を完全に鵜呑みにしないでください。";
 "settings.price-type" = "食事代";
 "student" = "学生";
-"employee" = "従業員";
-"settings.canteen-sorting" = "キャンティーン割引";
+"employee" = "大学職員";
+"settings.canteen-sorting" = "学食(メンザ)の並び替え";
 "default" = "デフォルト";
 "distance" = "距離";
 "alphabetical" = "アルファベット順";
-"settings.autoload-description" = "オートロードを使用していますか？ここに資格情報を入力すると、Emealページに最新の取引がすべて表示されます。あなたの資格情報はこのデバイスにのみ安全に保存され、認証のためにStudentenwerkのサーバーにのみ送信されます。";
+"settings.autoload-description" = "オートロードを使用していますか？ここにアカウント情報を入力すると、Emealページに最新の取引がすべて表示されます。あなたのアカウント情報はこのデバイスにのみ安全に保存され、認証のためにStudentenwerkのサーバーにのみ送信されます。";
 "settings.autoload-cardnumber" = "カード番号";
 "settings.autoload-password" = "パスワード";
 "settings.autoload-information" = "オートロード情報";
-"settings.about" = "について";
+"settings.about" = "このアプリについて";
 
 // Licenses
-"licenses.title" = "サードパーティーライセンス";
+"licenses.title" = "ライセンス";
 
 // Info View
-"info.developed-by" = "によって開発された";
-"info.thanks" = "Lucas Vogel、Lars Westermann、Georg Sieber、すべての GitHub 貢献者、そしてベータテスターの皆さん、素晴らしいフィードバックをありがとうございました。";
+"info.developed-by" = "開発者";
+"info.thanks" = "Huge thanks to Lucas Vogel, Lars Westermann, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!";
 "info.email" = "フィードバックを送る";
-"info.translate" = "翻訳を投稿する";
-"info.image-rights" = "画像の権利";
-"info.icon" = "アイコンです";
-"info.nounproject" = "名詞プロジェクトからのEddy Wong";
+"info.translate" = "翻訳に貢献する";
+"info.image-rights" = "画像の著作権";
+"info.icon" = "アイコン";
+"info.nounproject" = "Eddy Wong from The Noun Project";
 
 // Loading List
-"list.try-again" = "もう一度やってみてください。";
+"list.try-again" = "再度試してみてください。";
 
 // Diet
 "all" = "すべて";
@@ -99,11 +99,11 @@
 "fish" = "魚類";
 "peanuts" = "ピーナッツ";
 "soy" = "大豆";
-"lactose" = "乳糖";
+"lactose" = "ラクトース(乳糖)";
 "nuts" = "ナッツ";
 "celery" = "セロリ";
 "mustard" = "マスタード";
 "sesame" = "ゴマ";
-"sulfite" = "亜硫酸塩";
-"lupin" = "ルパン";
-"molluscs" = "軟体動物類";
+"sulfite" = "亜硫酸";
+"lupin" = "ルピナス";
+"molluscs" = "軟体動物(ex.イカ、タコ)";
