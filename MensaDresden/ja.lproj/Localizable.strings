@@ -24,6 +24,8 @@
 "meal.rate-description" = "フィードバックを直接Studentenwerkに送ることができます。";
 "meal.dinner" = "夕食";
 "meal.ingredient-warning" = "この食事は、あなたの好みの食生活に合わないかもしれません。";
+"meal.sold-out" = "売り切れ";
+"meal.sold-out-long" = "この食事はすでに完売しています。";
 
 // Emeal View
 "emeal.nfc-text" = "Emealカードを端末にかざす。";

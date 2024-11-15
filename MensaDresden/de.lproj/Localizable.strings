@@ -24,6 +24,8 @@
 "meal.rate-description" = "Sende Feedback direkt an das Studentenwerk.";
 "meal.dinner" = "Abendangebot";
 "meal.ingredient-warning" = "Diese Mahlzeit entspricht möglicherweise nicht deinen Ernährungseinstellungen.";
+"meal.sold-out" = "Ausverkauft";
+"meal.sold-out-long" = "Diese Mahlzeit ist leider bereits ausverkauft.";
 
 // Emeal View
 "emeal.nfc-text" = "Halte deine Emeal Karte an dein Gerät.";

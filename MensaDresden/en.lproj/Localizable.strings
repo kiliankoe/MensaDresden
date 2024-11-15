@@ -24,6 +24,8 @@
 "meal.rate-description" = "Send feedback directly to the Studentenwerk.";
 "meal.dinner" = "Dinner";
 "meal.ingredient-warning" = "This meal may not match your dietary preferences.";
+"meal.sold-out" = "Sold Out";
+"meal.sold-out-long" = "This meal is already sold out.";
 
 // Emeal View
 "emeal.nfc-text" = "Hold your Emeal card to your device.";
