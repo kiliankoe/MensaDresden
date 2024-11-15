@@ -94,6 +94,13 @@ struct MealDetailView: View {
                         .padding(.horizontal)
                 }
 
+                if (meal.isSoldOut ?? false) {
+                    Text("meal.sold-out-long")
+                        .font(.headline)
+                        .foregroundStyle(.orange)
+                        .padding(.horizontal)
+                }
+
                 HStack {
                     ForEach(meal.ingredients, id: \.rawValue) { ingredient in
                         Text(ingredient.emoji)

@@ -29,54 +29,66 @@ struct MealCell: View {
     }
 
     var body: some View {
-        HStack(spacing: 8) {
-            ZStack(alignment: .bottomLeading) {
-                MealImage(meal: meal,
-                          width: 130,
-                          height: 95,
-                          contentMode: .fill)
-                    .frame(width: 130, height: 95)
-                if settings.priceTypeIsStudent {
-                    PriceLabel(price: meal.prices?.students, shadow: 2)
-                        .padding(.bottom, 4)
-                } else {
-                    PriceLabel(price: meal.prices?.employees, shadow: 2)
-                        .padding(.bottom, 4)
+        ZStack {
+            HStack(spacing: 8) {
+                ZStack(alignment: .bottomLeading) {
+                    MealImage(meal: meal,
+                              width: 130,
+                              height: 95,
+                              contentMode: .fill)
+                        .frame(width: 130, height: 95)
+                    if settings.priceTypeIsStudent {
+                        PriceLabel(price: meal.prices?.students, shadow: 2)
+                            .padding(.bottom, 4)
+                    } else {
+                        PriceLabel(price: meal.prices?.employees, shadow: 2)
+                            .padding(.bottom, 4)
+                    }
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+
+                VStack(alignment: .leading, spacing: 4) {
+                        Text(meal.category)
+                            .font(Font.caption.smallCaps())
+                            .foregroundColor(.gray)
+
+                    Text(meal.allergenStrippedTitle)
+                        .lineLimit(5)
+
+                    ForEach(meal.diet, id: \.self) { diet in
+                        Text(LocalizedStringKey(String(describing: diet)))
+                            .font(Font.caption.smallCaps())
+                            .bold()
+                            .foregroundColor(.green)
+                            .lineLimit(1)
+                    }
+
+                    HStack {
+                        ForEach(meal.ingredients, id: \.rawValue) { ingredient in
+                            Text(ingredient.emoji)
+                                .font(.system(size: 20))
+                                .accessibility(label: Text(LocalizedStringKey(ingredient.rawValue)))
+                                .accessibilityIgnoresInvertColors()
+                        }
+                        if meal.isDinner {
+                            Spacer()
+                            Image(systemName: "moon.fill")
+                                .font(.headline)
+                                .foregroundColor(.yellow)
+                                .accessibility(label: Text("meal.dinner"))
+                        }
+                    }.padding(.top, 5)
                 }
             }
-            .clipShape(RoundedRectangle(cornerRadius: 8))
-
-            VStack(alignment: .leading, spacing: 4) {
-                    Text(meal.category)
-                        .font(Font.caption.smallCaps())
-                        .foregroundColor(.gray)
-
-                Text(meal.allergenStrippedTitle)
-                    .lineLimit(5)
-
-                ForEach(meal.diet, id: \.self) { diet in
-                    Text(LocalizedStringKey(String(describing: diet)))
-                        .font(Font.caption.smallCaps())
-                        .bold()
-                        .foregroundColor(.green)
-                        .lineLimit(1)
-                }
-
-                HStack {
-                    ForEach(meal.ingredients, id: \.rawValue) { ingredient in
-                        Text(ingredient.emoji)
-                            .font(.system(size: 20))
-                            .accessibility(label: Text(LocalizedStringKey(ingredient.rawValue)))
-                            .accessibilityIgnoresInvertColors()
-                    }
-                    if meal.isDinner {
-                        Spacer()
-                        Image(systemName: "moon.fill")
-                            .font(.headline)
-                            .foregroundColor(.yellow)
-                            .accessibility(label: Text("meal.dinner"))
-                    }
-                }.padding(.top, 5)
+            if (meal.isSoldOut ?? false) {
+                Text("meal.sold-out")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundStyle(.red)
+                    .padding()
+                    .border(.red, width: 3)
+                    .opacity(0.6)
+                    .rotationEffect(.degrees(-10))
             }
         }
         .compositingGroup()

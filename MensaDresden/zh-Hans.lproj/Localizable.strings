@@ -24,6 +24,8 @@
 "meal.rate-description" = "直接向大学生服务部发送反馈信息。";
 "meal.dinner" = "晚餐";
 "meal.ingredient-warning" = "这顿饭可能不符合您的饮食偏好。";
+"meal.sold-out" = "已售罄";
+"meal.sold-out-long" = "这顿饭已经售罄。";
 
 // Emeal View
 "emeal.nfc-text" = "拿着你的Emeal卡到你的设备上。";

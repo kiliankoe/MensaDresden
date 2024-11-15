@@ -24,6 +24,8 @@
 "meal.rate-description" = "Отправляйте отзывы непосредственно в Studentenwerk..";
 "meal.dinner" = "ужин";
 "meal.ingredient-warning" = "Эта еда может не соответствовать вашим диетическим предпочтениям.";
+"meal.sold-out" = "Продано";
+"meal.sold-out-long" = "Это блюдо уже распродано.";
 
 // Emeal View
 "emeal.nfc-text" = "Держите карточку с едой на устройстве.";
