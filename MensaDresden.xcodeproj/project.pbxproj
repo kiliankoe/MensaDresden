@@ -1470,7 +1470,7 @@
 			repositoryURL = "https://github.com/kiliankoe/EmealKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.1;
+				minimumVersion = 0.11.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

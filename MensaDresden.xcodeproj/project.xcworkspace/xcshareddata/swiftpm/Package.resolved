@@ -1,12 +1,22 @@
 {
+  "originHash" : "c665f8accb2e14446fa0e4a258fe1eb8ca2a9ecaf26416b45a870c2f3b03efea",
   "pins" : [
     {
       "identity" : "emealkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kiliankoe/EmealKit.git",
       "state" : {
-        "revision" : "13f026e69d39d8d235733aa8b18c866c972a52a9",
-        "version" : "0.10.0"
+        "revision" : "c5a4188cc1f30482e7a7f388ec777406a321e9e7",
+        "version" : "0.11.0"
+      }
+    },
+    {
+      "identity" : "feedkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nmdias/FeedKit.git",
+      "state" : {
+        "revision" : "68493a33d862c33c9a9f67ec729b3b7df1b20ade",
+        "version" : "9.1.2"
       }
     },
     {
@@ -95,10 +105,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/MaxDesiatov/XMLCoder",
       "state" : {
-        "revision" : "f30119af03996939cc4f54e0bf0dda9f88a84da5",
-        "version" : "0.13.1"
+        "revision" : "b1e944cbd0ef33787b13f639a5418d55b3bed501",
+        "version" : "0.17.1"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
