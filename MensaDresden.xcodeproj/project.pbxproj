@@ -88,7 +88,6 @@
 		EF516139282E42F200EF6074 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395EA6D6282A9CD3002F8055 /* Logger.swift */; };
 		EF774C55281738D30047BB97 /* MealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF774C54281738D30047BB97 /* MealImage.swift */; };
 		EF9EF4DA2811504300E7EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4D92811504300E7EE19 /* Assets.xcassets */; };
-		EF9EF4E02811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EF9EF4E72811504300E7EE19 /* MensaDresdenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF4E62811504300E7EE19 /* MensaDresdenApp.swift */; };
 		EF9EF4EB2811504300E7EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4EA2811504300E7EE19 /* Assets.xcassets */; };
 		EF9EF4EE2811504300E7EE19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9EF4ED2811504300E7EE19 /* Preview Assets.xcassets */; };
@@ -140,13 +139,6 @@
 			remoteGlobalIDString = 39281C59234241B900E4EFB5;
 			remoteInfo = MensaDresden;
 		};
-		EF9EF4E12811504300E7EE19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 39281C52234241B900E4EFB5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EF9EF4DE2811504300E7EE19;
-			remoteInfo = "MensaDresdenWatch WatchKit Extension";
-		};
 		EF9EF4F02811504300E7EE19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 39281C52234241B900E4EFB5 /* Project object */;
@@ -157,17 +149,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EF9EF4F62811504300E7EE19 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				EF9EF4E02811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EF9EF4FA2811504300E7EE19 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,7 +248,6 @@
 		EF774C54281738D30047BB97 /* MealImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealImage.swift; sourceTree = "<group>"; };
 		EF9EF4D72811504200E7EE19 /* MensaDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MensaDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9EF4D92811504300E7EE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MensaDresdenWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9EF4E62811504300E7EE19 /* MensaDresdenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensaDresdenApp.swift; sourceTree = "<group>"; };
 		EF9EF4EA2811504300E7EE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF9EF4ED2811504300E7EE19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -347,7 +327,6 @@
 				39FAEBF72781113E0035776F /* UITests.xctest */,
 				39FAEC0A2781E6350035776F /* Screenshots.xctest */,
 				EF9EF4D72811504200E7EE19 /* MensaDD.app */,
-				EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -662,41 +641,17 @@
 			buildConfigurationList = EF9EF4F72811504300E7EE19 /* Build configuration list for PBXNativeTarget "MensaDresdenWatch" */;
 			buildPhases = (
 				EF9EF4D52811504200E7EE19 /* Resources */,
-				EF9EF4F62811504300E7EE19 /* Embed App Extensions */,
+				EF9EF4DB2811504300E7EE19 /* Sources */,
+				EF9EF4DC2811504300E7EE19 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EF9EF4E22811504300E7EE19 /* PBXTargetDependency */,
 			);
 			name = MensaDresdenWatch;
 			productName = MensaDresdenWatch;
 			productReference = EF9EF4D72811504200E7EE19 /* MensaDD.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		EF9EF4DE2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EF9EF4F32811504300E7EE19 /* Build configuration list for PBXNativeTarget "MensaDresdenWatch WatchKit Extension" */;
-			buildPhases = (
-				EF9EF4DB2811504300E7EE19 /* Sources */,
-				EF9EF4DC2811504300E7EE19 /* Frameworks */,
-				EF9EF4DD2811504300E7EE19 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "MensaDresdenWatch WatchKit Extension";
-			packageProductDependencies = (
-				EF9EF5082811532D00E7EE19 /* KeychainItem */,
-				EF9EF50E2811540000E7EE19 /* TelemetryClient */,
-				EF9EF51E2811578000E7EE19 /* SwiftyHolidays */,
-				39D0122928330DDF00EBA1E4 /* EmealKit */,
-				394655E92A18C54800157411 /* KeychainAccess */,
-			);
-			productName = "MensaDresdenWatch WatchKit Extension";
-			productReference = EF9EF4DF2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -704,11 +659,12 @@
 		39281C52234241B900E4EFB5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				KnownAssetTags = (
 					New,
 				);
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 2600;
 				ORGANIZATIONNAME = "Kilian Koeltzsch";
 				TargetAttributes = {
 					39281C59234241B900E4EFB5 = {
@@ -723,9 +679,6 @@
 						TestTargetID = 39281C59234241B900E4EFB5;
 					};
 					EF9EF4D62811504200E7EE19 = {
-						CreatedOnToolsVersion = 13.3.1;
-					};
-					EF9EF4DE2811504300E7EE19 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
@@ -758,7 +711,6 @@
 			targets = (
 				39281C59234241B900E4EFB5 /* MensaDresden */,
 				EF9EF4D62811504200E7EE19 /* MensaDresdenWatch */,
-				EF9EF4DE2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension */,
 				39FAEBF62781113E0035776F /* UITests */,
 				39FAEC092781E6350035776F /* Screenshots */,
 			);
@@ -797,17 +749,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF9EF4DA2811504300E7EE19 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EF9EF4DD2811504300E7EE19 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 				EF9EF4EE2811504300E7EE19 /* Preview Assets.xcassets in Resources */,
 				EF26D77E282B9F5600D35E13 /* Localizable.strings in Resources */,
 				EF9EF4EB2811504300E7EE19 /* Assets.xcassets in Resources */,
+				EF9EF4DA2811504300E7EE19 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -947,11 +892,6 @@
 			target = 39281C59234241B900E4EFB5 /* MensaDresden */;
 			targetProxy = 39FAEC102781E6350035776F /* PBXContainerItemProxy */;
 		};
-		EF9EF4E22811504300E7EE19 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EF9EF4DE2811504300E7EE19 /* MensaDresdenWatch WatchKit Extension */;
-			targetProxy = EF9EF4E12811504300E7EE19 /* PBXContainerItemProxy */;
-		};
 		EF9EF4F12811504300E7EE19 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EF9EF4D62811504200E7EE19 /* MensaDresdenWatch */;
@@ -1031,8 +971,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = HU85FER47E;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1052,6 +994,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1093,8 +1036,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = HU85FER47E;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1107,6 +1052,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -1122,7 +1068,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 99;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresden/Preview Content\"";
-				DEVELOPMENT_TEAM = HU85FER47E;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MensaDresden/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1148,7 +1095,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 99;
 				DEVELOPMENT_ASSET_PATHS = "\"MensaDresden/Preview Content\"";
-				DEVELOPMENT_TEAM = HU85FER47E;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MensaDresden/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1171,7 +1119,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HU85FER47E;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -1190,7 +1137,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HU85FER47E;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -1209,7 +1155,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HU85FER47E;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -1228,7 +1173,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HU85FER47E;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -1241,89 +1185,26 @@
 			};
 			name = Release;
 		};
-		EF9EF4F42811504300E7EE19 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = "MensaDresdenWatch WatchKit Extension/MensaDresdenWatch WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 99;
-				DEVELOPMENT_ASSET_PATHS = "\"MensaDresdenWatch WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = HU85FER47E;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MensaDresdenWatch WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = MensaDD;
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = MensaDresdenWatch_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Kilian Koeltzsch. All rights reserved.";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 2024.2;
-				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
-			};
-			name = Debug;
-		};
-		EF9EF4F52811504300E7EE19 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = "MensaDresdenWatch WatchKit Extension/MensaDresdenWatch WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 99;
-				DEVELOPMENT_ASSET_PATHS = "\"MensaDresdenWatch WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = HU85FER47E;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MensaDresdenWatch WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = MensaDD;
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = MensaDresdenWatch_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Kilian Koeltzsch. All rights reserved.";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 2024.2;
-				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
-			};
-			name = Release;
-		};
 		EF9EF4F82811504300E7EE19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = MensaDresdenWatch/MensaDresdenWatch.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "MensaDresdenWatch WatchKit Extension/MensaDresdenWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 99;
-				DEVELOPMENT_TEAM = HU85FER47E;
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = MensaDresdenWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Kilian Koeltzsch. All rights reserved.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = io.kilian.MensaDresden;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 2024.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp;
 				PRODUCT_NAME = MensaDD;
@@ -1339,18 +1220,23 @@
 		EF9EF4F92811504300E7EE19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = MensaDresdenWatch/MensaDresdenWatch.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "MensaDresdenWatch WatchKit Extension/MensaDresdenWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 99;
-				DEVELOPMENT_TEAM = HU85FER47E;
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = MensaDresdenWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Kilian Koeltzsch. All rights reserved.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = io.kilian.MensaDresden;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 2024.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp;
 				PRODUCT_NAME = MensaDD;
@@ -1398,15 +1284,6 @@
 			buildConfigurations = (
 				39FAEC132781E6350035776F /* Debug */,
 				39FAEC142781E6350035776F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EF9EF4F32811504300E7EE19 /* Build configuration list for PBXNativeTarget "MensaDresdenWatch WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EF9EF4F42811504300E7EE19 /* Debug */,
-				EF9EF4F52811504300E7EE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
