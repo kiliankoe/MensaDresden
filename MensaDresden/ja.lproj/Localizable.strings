@@ -26,6 +26,7 @@
 "meal.ingredient-warning" = "この食事は、あなたの好みの食生活に合わないかもしれません。";
 "meal.sold-out" = "売り切れ";
 "meal.sold-out-long" = "この食事はすでに完売しています。";
+"meal.original" = "原文:";
 
 // Emeal View
 "emeal.nfc-text" = "Emealカードを端末にかざす。";
@@ -50,6 +51,8 @@
 
 // Settings
 "settings.nav" = "設定";
+"settings.section-canteens" = "学食";
+"settings.section-meals" = "料理";
 "settings.favorite-canteens" = "お気に入りの学食(メンザ)";
 "settings.favorite-canteens-description" = "あなたのお気に入りの学食(メンザ)。ハートをタップしたり、ここでリストを編集したりしてお気に入り学食(メンザ)の削除や並び替えができます";
 "settings.ingredients-allergens.title" = "成分とアレルゲン";
@@ -68,6 +71,11 @@
 "settings.autoload-cardnumber" = "カード番号";
 "settings.autoload-password" = "パスワード";
 "settings.autoload-information" = "オートロード情報";
+"settings.translate-meals" = "料理名を翻訳";
+"settings.translate-meals-prompt-title" = "料理名の翻訳を有効にしますか？";
+"settings.translate-meals-prompt-message" = "料理名を自動的にあなたの言語に翻訳できます。最初の表示時に言語ファイル（約100MB）がダウンロードされます。";
+"settings.translate-meals-prompt-enable" = "有効にする";
+"settings.translate-meals-prompt-no-thanks" = "いいえ";
 "settings.about" = "このアプリについて";
 
 // Licenses

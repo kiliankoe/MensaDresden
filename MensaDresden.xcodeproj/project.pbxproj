@@ -11,6 +11,8 @@
 		390B777627E21B6100DEF4E3 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B777527E21B6100DEF4E3 /* Analytics.swift */; };
 		3912B7B9282E8184006C3354 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3912B7B8282E8184006C3354 /* UserDefaults.swift */; };
 		3912B7BA282E818B006C3354 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3912B7B8282E8184006C3354 /* UserDefaults.swift */; };
+		3915B0362EA8C6A50049E093 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915B0352EA8C6A40049E093 /* TranslationService.swift */; };
+		3915B0372EA8C6A50049E093 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915B0352EA8C6A40049E093 /* TranslationService.swift */; };
 		3918AD422782FD2A00B82373 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3918AD412782FD2A00B82373 /* Meal.swift */; };
 		391B94F827656B210071E678 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F727656B210071E678 /* L10n.swift */; };
 		391B94FA276574E40071E678 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B94F9276574E40071E678 /* API.swift */; };
@@ -167,6 +169,7 @@
 		3912B7B6282E807A006C3354 /* MensaDresdenWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MensaDresdenWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		3912B7B7282E8083006C3354 /* MensaDresdenWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MensaDresdenWatch.entitlements; sourceTree = "<group>"; };
 		3912B7B8282E8184006C3354 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		3915B0352EA8C6A40049E093 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		3918AD412782FD2A00B82373 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		391B94F727656B210071E678 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = L10n.swift; path = MensaDresden/L10n.swift; sourceTree = SOURCE_ROOT; };
 		391B94F9276574E40071E678 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -450,6 +453,7 @@
 		39A1418B23481B4D00FEE789 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3915B0352EA8C6A40049E093 /* TranslationService.swift */,
 				39A1418C23481B5F00FEE789 /* LargeButton.swift */,
 				39A1418E2348210000FEE789 /* BarButton.swift */,
 				39A141922348EBC000FEE789 /* BlacklistBinding.swift */,
@@ -782,6 +786,7 @@
 				39BEEB71234BAD2D0081B9AE /* DeviceOrientation.swift in Sources */,
 				39281C7F23427F9B00E4EFB5 /* MealCell.swift in Sources */,
 				39A141912348813D00FEE789 /* Settings.swift in Sources */,
+				3915B0362EA8C6A50049E093 /* TranslationService.swift in Sources */,
 				398B34E8236CDE7D00C10D9B /* LoadingListView.swift in Sources */,
 				39A7914A241FC96B0009CF03 /* ObservableEmeal.swift in Sources */,
 				39DF7C7C284FF16400C7829D /* LicenseView.swift in Sources */,
@@ -855,6 +860,7 @@
 				EF516139282E42F200EF6074 /* Logger.swift in Sources */,
 				EF9EF4FD281151A300E7EE19 /* CanteenListView.swift in Sources */,
 				EF9EF51A2811565C00E7EE19 /* View.swift in Sources */,
+				3915B0372EA8C6A50049E093 /* TranslationService.swift in Sources */,
 				EF9EF5062811525200E7EE19 /* LocationManager.swift in Sources */,
 				EF9EF5172811564C00E7EE19 /* Date.swift in Sources */,
 				EF9EF5042811524D00E7EE19 /* API.swift in Sources */,

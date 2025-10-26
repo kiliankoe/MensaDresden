@@ -26,6 +26,7 @@
 "meal.ingredient-warning" = "Diese Mahlzeit entspricht möglicherweise nicht deinen Ernährungseinstellungen.";
 "meal.sold-out" = "Ausverkauft";
 "meal.sold-out-long" = "Diese Mahlzeit ist leider bereits ausverkauft.";
+"meal.original" = "Original:";
 
 // Emeal View
 "emeal.nfc-text" = "Halte deine Emeal Karte an dein Gerät.";
@@ -50,6 +51,8 @@
 
 // Settings
 "settings.nav" = "Einstellungen";
+"settings.section-canteens" = "Mensen";
+"settings.section-meals" = "Mahlzeiten";
 "settings.favorite-canteens" = "Lieblingsmensen";
 "settings.favorite-canteens-description" = "Deine Lieblingsmensen. Tippe auf das Herz im Speiseplan einer Mensa oder bearbeite die Liste hier um Mensen zu löschen oder umzusortieren.";
 "settings.ingredients-allergens.title" = "Zutaten & Allergene";
@@ -68,6 +71,11 @@
 "settings.autoload-cardnumber" = "Kartennummer";
 "settings.autoload-password" = "Passwort";
 "settings.autoload-information" = "Informationen zu Autoload";
+"settings.translate-meals" = "Mahlzeit übersetzen";
+"settings.translate-meals-prompt-title" = "Übersetzung von Mahlzeiten aktivieren?";
+"settings.translate-meals-prompt-message" = "Mahlzeiten können automatisch in deine Sprache übersetzt werden. Dafür werden beim ersten Anzeigen Sprachdateien (~100MB) heruntergeladen.";
+"settings.translate-meals-prompt-enable" = "Aktivieren";
+"settings.translate-meals-prompt-no-thanks" = "Nein danke";
 "settings.about" = "Über";
 
 // Licenses

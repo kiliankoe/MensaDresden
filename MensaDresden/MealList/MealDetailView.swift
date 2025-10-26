@@ -1,6 +1,7 @@
 import SwiftUI
 import EmealKit
 import ImageViewerRemote
+import Translation
 import os.log
 
 struct MealDetailContainerView: View {
@@ -35,6 +36,7 @@ struct MealDetailView: View {
     let meal: Meal
 
     @State private var showingDetailView = false
+    @State private var translatedText: String?
 
     @EnvironmentObject var settings: Settings
 
@@ -83,9 +85,38 @@ struct MealDetailView: View {
                 }
                 .padding(.horizontal)
 
-                Text(meal.allergenStrippedTitle)
-                    .font(.title)
-                    .padding(.horizontal)
+                VStack(alignment: .leading, spacing: 8) {
+                    Group {
+                        if #available(iOS 18.0, *), settings.translateMeals, TranslationService.shared.shouldTranslate {
+                            Text(translatedText ?? meal.allergenStrippedTitle)
+                                .font(.title)
+                                .translationTask(
+                                    TranslationSession.Configuration(
+                                        source: Locale.Language(identifier: "de"),
+                                        target: Locale.current.language
+                                    )
+                                ) { session in
+                                    Task { @MainActor in
+                                        do {
+                                            let response = try await session.translate(meal.allergenStrippedTitle)
+                                            translatedText = response.targetText
+                                        } catch {
+                                            // Translation failed, keep original text
+                                        }
+                                    }
+                                }
+                        } else {
+                            Text(meal.allergenStrippedTitle)
+                                .font(.title)
+                        }
+                    }
+
+                    if meal.name != meal.allergenStrippedTitle {
+                        (Text("meal.original") + Text(" \(meal.name)"))
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .padding(.horizontal)
 
                 if !passesFilters {
                     Text("meal.ingredient-warning")
@@ -116,11 +147,6 @@ struct MealDetailView: View {
                             .font(.caption)
                     }
                 }.padding(.horizontal)
-
-                Text(meal.name)
-                    .font(.caption)
-                    .padding(.bottom)
-                    .padding(.horizontal)
 
                 FeedbackButton(meal: meal)
                     .padding([.bottom, .horizontal])

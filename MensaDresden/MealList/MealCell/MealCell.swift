@@ -1,10 +1,12 @@
 import SwiftUI
 import EmealKit
+import Translation
 
 struct MealCell: View {
     var meal: Meal
 
     @EnvironmentObject var settings: Settings
+    @State private var translatedText: String?
 
     var passesFilters: Bool {
         let diet = Settings.DietType(rawValue: settings.userDiet)!
@@ -52,8 +54,30 @@ struct MealCell: View {
                             .font(Font.caption.smallCaps())
                             .foregroundColor(.gray)
 
-                    Text(meal.allergenStrippedTitle)
-                        .lineLimit(5)
+                    Group {
+                        if #available(iOS 18.0, *), settings.translateMeals, TranslationService.shared.shouldTranslate {
+                            Text(translatedText ?? meal.allergenStrippedTitle)
+                                .lineLimit(5)
+                                .translationTask(
+                                    TranslationSession.Configuration(
+                                        source: Locale.Language(identifier: "de"),
+                                        target: Locale.current.language
+                                    )
+                                ) { session in
+                                    Task { @MainActor in
+                                        do {
+                                            let response = try await session.translate(meal.allergenStrippedTitle)
+                                            translatedText = response.targetText
+                                        } catch {
+                                            // Translation failed, keep original text
+                                        }
+                                    }
+                                }
+                        } else {
+                            Text(meal.allergenStrippedTitle)
+                                .lineLimit(5)
+                        }
+                    }
 
                     ForEach(meal.diet, id: \.self) { diet in
                         Text(LocalizedStringKey(String(describing: diet)))

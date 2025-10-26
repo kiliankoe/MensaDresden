@@ -16,44 +16,60 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                if !settings.favoriteCanteens.isEmpty {
-                    NavigationLink(destination: FavoriteCanteensSetting()) {
-                        Label {
-                            Text("settings.favorite-canteens")
-                        } icon: {
-                            Image(systemName: "star")
+                Section(header: Text("settings.section-canteens")) {
+                    if !settings.favoriteCanteens.isEmpty {
+                        NavigationLink(destination: FavoriteCanteensSetting()) {
+                            Label {
+                                Text("settings.favorite-canteens")
+                            } icon: {
+                                Image(systemName: "star")
+                            }
+                        }
+                    }
+
+                    Picker(
+                        selection: settings.canteenSortingBinding,
+                        label:
+                            Label {
+                                Text("settings.canteen-sorting")
+                            } icon: {
+                                Image(systemName: "list.number")
+                            }
+                    ) {
+                        ForEach(Settings.CanteenSorting.allCases, id: \.self) { sorting in
+                            Text(LocalizedStringKey(sorting.rawValue)).tag(sorting)
                         }
                     }
                 }
 
-                NavigationLink(destination: IngredientsAllergensSetting()) {
-                    Label {
-                        Text("settings.ingredients-allergens.title")
+                Section(header: Text("settings.section-meals")) {
+                    NavigationLink(destination: IngredientsAllergensSetting()) {
+                        Label {
+                            Text("settings.ingredients-allergens.title")
+                        } icon: {
+                            Image(systemName: "leaf")
+                        }
+                    }
+
+                    if TranslationService.shared.shouldTranslate {
+                        Toggle(isOn: $settings.translateMeals) {
+                            Label {
+                                Text("settings.translate-meals")
+                            } icon: {
+                                Image(systemName: "globe")
+                            }
+                        }
+                    }
+
+                    Picker(selection: settings.priceTypeBinding, label: Label {
+                        Text("settings.price-type")
                     } icon: {
-                        Image(systemName: "leaf")
-                    }
-                }
-
-                Picker(
-                    selection: settings.canteenSortingBinding,
-                    label:
-                        Label {
-                            Text("settings.canteen-sorting")
-                        } icon: {
-                            Image(systemName: "list.number")
-                        }
-                ) {
-                    ForEach(Settings.CanteenSorting.allCases, id: \.self) { sorting in
-                        Text(LocalizedStringKey(sorting.rawValue)).tag(sorting)
-                    }
-                }
-
-                Section(header: Text("settings.price-type")) {
-                    Picker(selection: settings.priceTypeBinding, label: Text("settings.price-type")) {
+                        Image(systemName: "eurosign")
+                    }) {
                         ForEach(Settings.PriceType.allCases, id: \.self) { priceType in
                             Text(LocalizedStringKey(priceType.rawValue)).tag(priceType)
                         }
-                    }.pickerStyle(SegmentedPickerStyle())
+                    }
                 }
 
                 Section(header: Text("Autoload")) {

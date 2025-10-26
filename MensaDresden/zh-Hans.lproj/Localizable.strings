@@ -26,6 +26,7 @@
 "meal.ingredient-warning" = "这顿饭可能不符合您的饮食偏好。";
 "meal.sold-out" = "已售罄";
 "meal.sold-out-long" = "这顿饭已经售罄。";
+"meal.original" = "原文:";
 
 // Emeal View
 "emeal.nfc-text" = "拿着你的Emeal卡到你的设备上。";
@@ -50,6 +51,8 @@
 
 // Settings
 "settings.nav" = "设置";
+"settings.section-canteens" = "食堂";
+"settings.section-meals" = "餐点";
 "settings.favorite-canteens" = "最喜欢的食堂";
 "settings.favorite-canteens-description" = "你喜欢的食堂。轻点食堂菜单上的心，可以在这里切换或编辑列表中的食堂菜单，进行删除和重新排序。";
 "settings.ingredients-allergens.title" = "成分和过敏原";
@@ -68,6 +71,11 @@
 "settings.autoload-cardnumber" = "卡号";
 "settings.autoload-password" = "密码";
 "settings.autoload-information" = "自动加载信息";
+"settings.translate-meals" = "翻译餐点名称";
+"settings.translate-meals-prompt-title" = "启用餐点名称翻译？";
+"settings.translate-meals-prompt-message" = "餐点名称可以自动翻译成您的语言。首次查看餐点时将下载语言文件（约100MB）。";
+"settings.translate-meals-prompt-enable" = "启用";
+"settings.translate-meals-prompt-no-thanks" = "不用了";
 "settings.about" = "关于我们";
 
 // Licenses

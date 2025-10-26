@@ -206,6 +206,15 @@ class Settings: ObservableObject {
         }
     }
 
+    // MARK: Translation
+
+    @UserDefault("translateMeals", defaultValue: true)
+    var translateMeals: Bool {
+        didSet {
+            self.objectWillChange.send()
+        }
+    }
+
     // MARK: Autoload
 
     // These two are no longer used (KeychainItem behaves weirdly). They're sticking around to possibly be migrated
@@ -236,6 +245,7 @@ class Settings: ObservableObject {
         self.userDiet = DietType.all.rawValue
         self.ingredientBlacklist.reset()
         self.allergenBlacklist.reset()
+        self.translateMeals = true
         self.autoloadCardnumber = nil
         self.autoloadPassword = nil
     }

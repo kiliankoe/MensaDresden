@@ -26,6 +26,7 @@
 "meal.ingredient-warning" = "This meal may not match your dietary preferences.";
 "meal.sold-out" = "Sold Out";
 "meal.sold-out-long" = "This meal is already sold out.";
+"meal.original" = "Original:";
 
 // Emeal View
 "emeal.nfc-text" = "Hold your Emeal card to your device.";
@@ -50,6 +51,8 @@
 
 // Settings
 "settings.nav" = "Settings";
+"settings.section-canteens" = "Canteens";
+"settings.section-meals" = "Meals";
 "settings.favorite-canteens" = "Favorite Canteens";
 "settings.favorite-canteens-description" = "Your favorite canteens. Tap the heart on a canteen's menu to toggle or edit the list here to delete and re-order.";
 "settings.ingredients-allergens.title" = "Ingredients & Allergens";
@@ -68,6 +71,11 @@
 "settings.autoload-cardnumber" = "Cardnumber";
 "settings.autoload-password" = "Password";
 "settings.autoload-information" = "Autoload Information";
+"settings.translate-meals" = "Translate Meal Titles";
+"settings.translate-meals-prompt-title" = "Enable Meal Translation?";
+"settings.translate-meals-prompt-message" = "Meal titles can be automatically translated to your language. This will download language files (~100MB) when you first view meals.";
+"settings.translate-meals-prompt-enable" = "Enable";
+"settings.translate-meals-prompt-no-thanks" = "No Thanks";
 "settings.about" = "About";
 
 // Licenses

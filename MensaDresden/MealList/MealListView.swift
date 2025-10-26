@@ -9,6 +9,7 @@ struct MealListView: View {
     @EnvironmentObject var settings: Settings
 
     @State var showingDatePickerView = false
+    @State var showingTranslationPrompt = false
 
     @State var selectedDate: Date = .today
 
@@ -68,6 +69,26 @@ struct MealListView: View {
             if self.selectedDate < Date.today {
                 self.selectedDate = .today
             }
+
+            // Prompt user about translations on first meal list view
+            if #available(iOS 18.0, *),
+               TranslationService.shared.shouldTranslate,
+               !TranslationService.shared.hasPromptedUser,
+               settings.translateMeals {
+                showingTranslationPrompt = true
+            }
+        }
+        .alert("settings.translate-meals-prompt-title", isPresented: $showingTranslationPrompt) {
+            Button("settings.translate-meals-prompt-enable") {
+                TranslationService.shared.hasPromptedUser = true
+                // The system will take care of the rest from here.
+            }
+            Button("settings.translate-meals-prompt-no-thanks") {
+                TranslationService.shared.hasPromptedUser = true
+                settings.translateMeals = false
+            }
+        } message: {
+            Text("settings.translate-meals-prompt-message")
         }
     }
 }

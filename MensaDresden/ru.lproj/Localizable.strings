@@ -26,6 +26,7 @@
 "meal.ingredient-warning" = "Эта еда может не соответствовать вашим диетическим предпочтениям.";
 "meal.sold-out" = "Продано";
 "meal.sold-out-long" = "Это блюдо уже распродано.";
+"meal.original" = "Оригинал:";
 
 // Emeal View
 "emeal.nfc-text" = "Держите карточку с едой на устройстве.";
@@ -50,6 +51,8 @@
 
 // Settings
 "settings.nav" = "Настройки";
+"settings.section-canteens" = "Столовые";
+"settings.section-meals" = "Блюда";
 "settings.favorite-canteens" = "Любимые столовые";
 "settings.favorite-canteens-description" = "Твои любимые столовые. Коснитесь сердца в меню столовой, чтобы переключить или отредактировать список здесь, чтобы удалить и повторно заказать.";
 "settings.ingredients-allergens.title" = "Ингредиенты и аллергены";
@@ -68,6 +71,11 @@
 "settings.autoload-cardnumber" = "Номер карты";
 "settings.autoload-password" = "Пароль";
 "settings.autoload-information" = "Autoload Информация";
+"settings.translate-meals" = "Перевести названия блюд";
+"settings.translate-meals-prompt-title" = "Включить перевод названий блюд?";
+"settings.translate-meals-prompt-message" = "Названия блюд могут быть автоматически переведены на ваш язык. При первом просмотре блюд будут загружены языковые файлы (~100 МБ).";
+"settings.translate-meals-prompt-enable" = "Включить";
+"settings.translate-meals-prompt-no-thanks" = "Нет, спасибо";
 "settings.about" = "О сайте";
 
 // Licenses
