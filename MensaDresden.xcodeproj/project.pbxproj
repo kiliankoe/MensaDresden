@@ -1311,7 +1311,7 @@
 			repositoryURL = "https://github.com/TelemetryDeck/SwiftClient";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 2.9.4;
 			};
 		};
 		395EA6D32829BE84002F8055 /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */ = {
