@@ -1083,7 +1083,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2025.1;
+				MARKETING_VERSION = 2025.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = NO;
@@ -1110,7 +1110,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2025.1;
+				MARKETING_VERSION = 2025.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden;
 				PRODUCT_NAME = "Mensa Dresden";
 				SUPPORTS_MACCATALYST = NO;
@@ -1211,7 +1211,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2025.1;
+				MARKETING_VERSION = 2025.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp;
 				PRODUCT_NAME = MensaDD;
 				SDKROOT = watchos;
@@ -1243,7 +1243,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2025.1;
+				MARKETING_VERSION = 2025.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kilian.MensaDresden.watchkitapp;
 				PRODUCT_NAME = MensaDD;
 				SDKROOT = watchos;
