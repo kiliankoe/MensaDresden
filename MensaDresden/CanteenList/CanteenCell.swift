@@ -27,7 +27,7 @@ struct CanteenCell: View {
     }
 
     var body: some View {
-        HStack {
+        HStack(spacing: 10) {
             ZStack(alignment: .bottomLeading) {
                 Image(canteen.name.replacingOccurrences(of: "/", with: ""))
                     .resizable()
@@ -46,33 +46,49 @@ struct CanteenCell: View {
                         .offset(x: 5, y: -5)
                 }
             }
-
-            VStack(alignment: .leading) {
-                Text(canteen.name)
-                    .font(.headline)
-                Text(canteen.address)
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .lineLimit(3)
-                if settings.canteenSorting == Settings.CanteenSorting.distance.rawValue {
-                    HStack(spacing: 5) {
-                        if let canteenLocation = canteen.location {
-                            CompassView(towards: canteenLocation.coordinate)
-                        }
-                        Text(formattedDistance)
+            
+            VStack(alignment: .leading, spacing: 6) {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(canteen.name)
+                            .font(.headline)
+                        Text(canteen.address.split(separator: ", ").last ?? "")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .lineLimit(2)
                     }
-                    .foregroundColor(.gray)
-                    .font(.caption)
-                    .padding(.top, 5)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "info.circle")
+                        .foregroundColor(.accentColor)
+                        .onTapGesture {
+                            showingSafari.toggle()
+                        }
                 }
+                
+                // Additional information section
+                HStack(spacing: 8) {
+                    // Opening status
+                    OpeningStatusView(canteen: canteen)
+                    
+                    Spacer()
+                    
+                    // Distance and compass
+                    if settings.canteenSorting == Settings.CanteenSorting.distance.rawValue {
+                        HStack(spacing: 4) {
+                            if let canteenLocation = canteen.location {
+                                CompassView(towards: canteenLocation.coordinate)
+                                    .font(.system(size: 13))
+                            }
+                            Text(formattedDistance)
+                                .font(.caption2)
+                        }
+                        .foregroundColor(.secondary)
+                    }
+                }
+                .padding(.top, 2)
             }
-
-            Spacer()
-            Image(systemName: "info.circle")
-                .foregroundColor(.accentColor)
-                .onTapGesture {
-                    showingSafari.toggle()
-                }
         }
         .sheet(isPresented: $showingSafari) {
             SafariView(url: canteen.url)
