@@ -88,6 +88,7 @@ class API: ObservableObject {
         // Sort meals
         if case .success(let meals) = previousResult.result {
             let sortedMeals = meals.sorted(by: Self.mealComparator())
+                .sorted { !($0.isSoldOut ?? false) && ($1.isSoldOut ?? false) }
             previousResult.result = .success(sortedMeals)
         }
 
@@ -124,7 +125,7 @@ class API: ObservableObject {
                 switch (lhs.isDinner, rhs.isDinner) {
                 case (true, true), (false, false):
                     // Both are good/bad and both are dinner or not, so we're sorting based on name
-                    return lhs.allergenStrippedTitle < rhs.allergenStrippedTitle
+                    return lhs.category < rhs.category
                 case (true, false):
                     // Dinner should be at bottom before 3pm, at top after
                     return currentTime > 15
