@@ -117,3 +117,18 @@
 "sulfite" = "亜硫酸";
 "lupin" = "ルピナス";
 "molluscs" = "軟体動物(ex.イカ、タコ)";
+
+// Opening Status
+"opening-status.open" = "営業中";
+"opening-status.closed" = "閉店";
+"opening-status.opens-now" = "今開店";
+"opening-status.opens-in-minutes" = "%d分後に開店";
+"opening-status.opens-in-hours" = "%d時間後に開店";
+"opening-status.closes-now" = "今閉店";
+"opening-status.closes-in-minutes" = "%d分後に閉店";
+"opening-status.modified-hours" = "営業時間変更";
+
+// Date Picker / Opening Hours
+"opening-hours.title" = "営業時間";
+"opening-hours.modified" = "変更された営業時間";
+"opening-hours.house" = "店";

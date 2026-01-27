@@ -117,3 +117,18 @@
 "sulfite" = "亚硫酸盐";
 "lupin" = "卢平";
 "molluscs" = "软体动物";
+
+// Opening Status
+"opening-status.open" = "营业中";
+"opening-status.closed" = "已关闭";
+"opening-status.opens-now" = "现在开门";
+"opening-status.opens-in-minutes" = "%d分钟后开门";
+"opening-status.opens-in-hours" = "%d小时后开门";
+"opening-status.closes-now" = "现在关门";
+"opening-status.closes-in-minutes" = "%d分钟后关门";
+"opening-status.modified-hours" = "修改营业时间";
+
+// Date Picker / Opening Hours
+"opening-hours.title" = "营业时间";
+"opening-hours.modified" = "修改营业时间";
+"opening-hours.house" = "房子";

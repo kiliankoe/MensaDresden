@@ -15,13 +15,13 @@ struct OpeningStatusView: View {
                                 .foregroundColor(status.color)
                             
                             HStack(spacing: 4) {
-                                if status.text == "Open" {
+                                if status.text == NSLocalizedString("opening-status.open", comment: "") {
                                     Text(status.subtext)
                                         .font(.caption2)
                                         .foregroundColor(.primary)
                                         .layoutPriority(1)
                                     
-                                    Text("Open")
+                                    Text("opening-status.open")
                                         .font(.caption2)
                                         .foregroundColor(.secondary)
                                 } else {
@@ -38,12 +38,28 @@ struct OpeningStatusView: View {
                             }
                         }
                     }
+                    
+                    if hasActiveChangedHours {
+                        HStack(spacing: 4) {
+                            Image(systemName: "exclamationmark.triangle")
+                                .font(.system(size: 15))
+                                .foregroundColor(.red)
+                            
+                            Text(canteen.openingHours?.changedHours.first?.area ?? NSLocalizedString("opening-status.modified-hours", comment: ""))
+                                .font(.caption2)
+                                .foregroundColor(.primary)
+                        }
+                    }
                 }
             } else {
                 // Fallback for no data - do not show "Closed", just empty view
                 EmptyView()
             }
         }
+    }
+    
+    private var hasActiveChangedHours: Bool {
+        canteen.openingHours?.hasChangedHours(at: Date()) ?? false
     }
     
     struct StatusDisplay: Identifiable {
@@ -58,7 +74,7 @@ struct OpeningStatusView: View {
     private func openingStatuses(at date: Date) -> [StatusDisplay]? {
         guard let openingHours = canteen.openingHours else {
             return canteen.isOpen(at: date) ? 
-                [StatusDisplay(id: UUID(), text: "Open", subtext: "", icon: "checkmark.circle.fill", color: .green, fillPercentage: 1.0)] : 
+                [StatusDisplay(id: UUID(), text: NSLocalizedString("opening-status.open", comment: ""), subtext: "", icon: "checkmark", color: .green, fillPercentage: 1.0)] : 
                 nil
         }
         
@@ -108,20 +124,22 @@ struct OpeningStatusView: View {
             
             // If empty or too short after cleaning, fallback to "House"
             if areaName.count <= 3 {
-                areaName = "House"
+                areaName = NSLocalizedString("opening-hours.house", comment: "")
             }
             // Remove leading colons/punctuation if present
             areaName = areaName.trimmingCharacters(in: CharacterSet(charactersIn: ": "))
             
             if status.isOpen {
                 // OPEN
-                color = minutes < 30 ? .orange : .green
-                icon = minutes < 60 ? "target" : "checkmark.circle.fill"
+                color = minutes < 60 ? .orange : .green
+                icon = minutes < 60 ? "clock" : "checkmark"
                 
                 if minutes >= 60 {
-                    text = "Open"
+                    text = NSLocalizedString("opening-status.open", comment: "")
+                } else if minutes <= 0 {
+                    text = NSLocalizedString("opening-status.closes-now", comment: "")
                 } else {
-                    text = "Closes in \(minutes)'"
+                    text = String(format: NSLocalizedString("opening-status.closes-in-minutes", comment: ""), minutes)
                 }
                 
                 fill = status.progress
@@ -129,16 +147,16 @@ struct OpeningStatusView: View {
             } else {
                 // CLOSED
                 color = minutes < 60 ? .green : .secondary // Green if opening soon
-                icon = minutes < 60 ? "target" : "clock"
+                icon = "clock"
                 
                 if hours >= 24 {
-                     text = "Closed"
+                     text = NSLocalizedString("opening-status.closed", comment: "")
                 } else if minutes <= 0 {
-                    text = "Opens now"
+                    text = NSLocalizedString("opening-status.opens-now", comment: "")
                 } else if minutes < 60 {
-                    text = "Opens in \(minutes)'"
+                    text = String(format: NSLocalizedString("opening-status.opens-in-minutes", comment: ""), minutes)
                 } else {
-                    text = "Opens in \(hours)h"
+                    text = String(format: NSLocalizedString("opening-status.opens-in-hours", comment: ""), hours)
                 }
                 fill = 0.0
             }

@@ -117,3 +117,18 @@
 "sulfite" = "Сульфит";
 "lupin" = "Люпен";
 "molluscs" = "Моллюски";
+
+// Opening Status
+"opening-status.open" = "Открыто";
+"opening-status.closed" = "Закрыто";
+"opening-status.opens-now" = "Открывается сейчас";
+"opening-status.opens-in-minutes" = "Откроется через %d'";
+"opening-status.opens-in-hours" = "Откроется через %dч";
+"opening-status.closes-now" = "Закрывается сейчас";
+"opening-status.closes-in-minutes" = "Закроется через %d'";
+"opening-status.modified-hours" = "Измененные часы работы";
+
+// Date Picker / Opening Hours
+"opening-hours.title" = "Часы работы";
+"opening-hours.modified" = "Измененные часы";
+"opening-hours.house" = "Дом";

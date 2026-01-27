@@ -117,3 +117,18 @@
 "sulfite" = "Sulfite";
 "lupin" = "Lupin";
 "molluscs" = "Molluscs";
+
+// Opening Status
+"opening-status.open" = "Open";
+"opening-status.closed" = "Closed";
+"opening-status.opens-now" = "Opens now";
+"opening-status.opens-in-minutes" = "Opens in %d'";
+"opening-status.opens-in-hours" = "Opens in %dh";
+"opening-status.closes-now" = "Closes now";
+"opening-status.closes-in-minutes" = "Closes in %d'";
+"opening-status.modified-hours" = "Modified hours active";
+
+// Date Picker / Opening Hours
+"opening-hours.title" = "Opening Hours";
+"opening-hours.modified" = "Modified Hours";
+"opening-hours.house" = "House";
