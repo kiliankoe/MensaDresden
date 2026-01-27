@@ -104,6 +104,8 @@ struct MealCell: View {
                     }.padding(.top, 5)
                 }
             }
+            .saturation((meal.isSoldOut ?? false) ? 0.2 : 1)
+            .opacity((meal.isSoldOut ?? false) ? 0.5 : 1)
             if (meal.isSoldOut ?? false) {
                 Text("meal.sold-out")
                     .font(.largeTitle)
@@ -111,7 +113,7 @@ struct MealCell: View {
                     .foregroundStyle(.red)
                     .padding()
                     .border(.red, width: 3)
-                    .opacity(0.6)
+                    .opacity(0.8)
                     .rotationEffect(.degrees(-10))
             }
         }
