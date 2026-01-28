@@ -153,16 +153,16 @@ class API: ObservableObject {
         Logger.api.info("Loading transactions for \(cardnumber, privacy: .private)")
         if cardnumber == "appledemo" && password == "appledemo" {
             Logger.api.info("Returning example transactions")
-            cache(result: .success(Transaction.exampleValues.reversed()))
+            cache(result: .success(Transaction.extensiveExampleValues.reversed()))
             return
         }
 
         let calendar = Calendar(identifier: .gregorian)
-        guard let ninetyDaysAgo = calendar.date(byAdding: .day, value: -90, to: Date()) else { return }
+        guard let hundredEightyDaysAgo = calendar.date(byAdding: .day, value: -180, to: Date()) else { return }
 
         do {
             let card = try await Cardservice.login(username: cardnumber, password: password)
-            let transactions = try await card.transactions(begin: ninetyDaysAgo)
+            let transactions = try await card.transactions(begin: hundredEightyDaysAgo)
             Logger.api.info("Successfully loaded \(transactions.count) transactions")
             cache(result: .success(transactions.reversed()))
         } catch {

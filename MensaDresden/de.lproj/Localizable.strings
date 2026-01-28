@@ -48,6 +48,32 @@
 "emeal.estimation-explanation-title" = "Geschätztes Guthaben";
 "emeal.estimation-explanation-ok-action" = "Ok";
 "emeal.estimation-explanation-text" = "Deine Autoload-Transaktionen wurden genutzt um das aktuelle Guthaben deines Emeals zu schätzen. Transaktionen existieren nur für die letzten 90 Tage. Falls der letzte Emeal-Scan länger zurückliegt, kann kein korrektes Guthaben angezeigt werden.\n\nDas zuletzt gescannte Guthaben betrug %.2f€.";
+"emeal.tab.transactions" = "Transaktionen";
+"emeal.tab.statistics" = "Statistiken";
+
+// Emeal Statistics
+"emeal.statistics.total-spent" = "Gesamt ausgegeben";
+"emeal.statistics.avg-purchase" = "Durchschn. Ausgabe";
+"emeal.statistics.total-saved" = "Gesamt gespart (gegenüber Gastpreis)";
+"emeal.statistics.activity-title" = "Kaufaktivität (Letzte 180 Tage)";
+"emeal.statistics.activity-legend-less" = "Weniger";
+"emeal.statistics.activity-legend-more" = "Mehr";
+"emeal.statistics.spending-by-month" = "Ausgaben nach Monat";
+"emeal.statistics.spending-by-day" = "Ausgaben nach Wochentag";
+"emeal.statistics.most-visited" = "Meist besuchte Orte";
+"emeal.statistics.spending-by-location" = "Ausgaben nach Ort";
+"emeal.statistics.most-expensive" = "Teuerste Einkäufe";
+"emeal.statistics.summary" = "Zusammenfassung";
+"emeal.statistics.total-transactions" = "Transaktionen gesamt";
+"emeal.statistics.unique-locations" = "Unterschiedliche Orte";
+"emeal.statistics.favorite-location" = "Lieblingsort";
+"emeal.statistics.day.sun" = "So";
+"emeal.statistics.day.mon" = "Mo";
+"emeal.statistics.day.tue" = "Di";
+"emeal.statistics.day.wed" = "Mi";
+"emeal.statistics.day.thu" = "Do";
+"emeal.statistics.day.fri" = "Fr";
+"emeal.statistics.day.sat" = "Sa";
 
 // Settings
 "settings.nav" = "Einstellungen";

@@ -48,6 +48,32 @@
 "emeal.estimation-explanation-title" = "估计余额";
 "emeal.estimation-explanation-ok-action" = "好的";
 "emeal.estimation-explanation-text" = "你的自动充值交易被用来估计你的Emeal余额。交易只适用于过去90天，如果你最后一次扫描的时间比这个时间长，这里就不能显示正确的余额。\n\n你上次扫描的余额是%.2f€。";
+"emeal.tab.transactions" = "明细";
+"emeal.tab.statistics" = "统计";
+
+// Emeal Statistics
+"emeal.statistics.total-spent" = "总支出";
+"emeal.statistics.avg-purchase" = "平均消费";
+"emeal.statistics.total-saved" = "共节省（对比访客价）";
+"emeal.statistics.activity-title" = "消费活跃度（最近180天）";
+"emeal.statistics.activity-legend-less" = "少";
+"emeal.statistics.activity-legend-more" = "多";
+"emeal.statistics.spending-by-month" = "按月支出";
+"emeal.statistics.spending-by-day" = "按星期支出";
+"emeal.statistics.most-visited" = "常去地点";
+"emeal.statistics.spending-by-location" = "按地点支出";
+"emeal.statistics.most-expensive" = "最高消费";
+"emeal.statistics.summary" = "概览";
+"emeal.statistics.total-transactions" = "总交易数";
+"emeal.statistics.unique-locations" = "地点数量";
+"emeal.statistics.favorite-location" = "最喜欢的地点";
+"emeal.statistics.day.sun" = "周日";
+"emeal.statistics.day.mon" = "周一";
+"emeal.statistics.day.tue" = "周二";
+"emeal.statistics.day.wed" = "周三";
+"emeal.statistics.day.thu" = "周四";
+"emeal.statistics.day.fri" = "周五";
+"emeal.statistics.day.sat" = "周六";
 
 // Settings
 "settings.nav" = "设置";

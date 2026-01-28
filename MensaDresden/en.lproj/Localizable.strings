@@ -48,6 +48,32 @@
 "emeal.estimation-explanation-title" = "Estimated Balance";
 "emeal.estimation-explanation-ok-action" = "Ok";
 "emeal.estimation-explanation-text" = "Your autoload transactions were used to estimate your Emeal balance. Transactions are only available for the last 90 days, if your last scan is older than that, a correct balance can't be shown here.\n\nYour last scanned balance was %.2f€.";
+"emeal.tab.transactions" = "Transactions";
+"emeal.tab.statistics" = "Statistics";
+
+// Emeal Statistics
+"emeal.statistics.total-spent" = "Total Spent";
+"emeal.statistics.avg-purchase" = "Avg. Purchase";
+"emeal.statistics.total-saved" = "Total Saved (compared with guest price)";
+"emeal.statistics.activity-title" = "Purchase Activity (Last 180 Days)";
+"emeal.statistics.activity-legend-less" = "Less";
+"emeal.statistics.activity-legend-more" = "More";
+"emeal.statistics.spending-by-month" = "Spending by Month";
+"emeal.statistics.spending-by-day" = "Spending by Day of Week";
+"emeal.statistics.most-visited" = "Most Visited Locations";
+"emeal.statistics.spending-by-location" = "Spending by Location";
+"emeal.statistics.most-expensive" = "Most Expensive Purchases";
+"emeal.statistics.summary" = "Summary";
+"emeal.statistics.total-transactions" = "Total Transactions";
+"emeal.statistics.unique-locations" = "Unique Locations";
+"emeal.statistics.favorite-location" = "Favorite Location";
+"emeal.statistics.day.sun" = "Sun";
+"emeal.statistics.day.mon" = "Mon";
+"emeal.statistics.day.tue" = "Tue";
+"emeal.statistics.day.wed" = "Wed";
+"emeal.statistics.day.thu" = "Thu";
+"emeal.statistics.day.fri" = "Fri";
+"emeal.statistics.day.sat" = "Sat";
 
 // Settings
 "settings.nav" = "Settings";

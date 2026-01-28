@@ -10,6 +10,31 @@ struct EmealView: View {
     @ObservedObject var emeal = ObservableEmeal()
 
     @State private var showingSafari = false
+    @State private var selectedTab: EmealTab = .transactions
+    
+    private let currencyFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = "EUR"
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }()
+    
+    private func formatCurrency(_ value: Double) -> String {
+        currencyFormatter.string(from: NSNumber(value: value)) ?? "€0.00"
+    }
+    
+    enum EmealTab: String, CaseIterable {
+        case transactions
+        case statistics
+        
+        var localizedName: LocalizedStringKey {
+            switch self {
+            case .transactions: return "emeal.tab.transactions"
+            case .statistics: return "emeal.tab.statistics"
+            }
+        }
+    }
 
     var autoloadHint: some View {
         VStack(alignment: .leading) {
@@ -67,63 +92,104 @@ struct EmealView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                if shouldShowEmealView {
-                    EmealCardView(
-                        amount: self.emealBalance,
-                        actualAmount: emeal.currentBalance,
-                        lastTransaction: emeal.lastTransaction,
-                        lastScan: emeal.lastScanDate
-                    )
-                    .padding()
-
-                    LargeButton(content: {
-                        Text("emeal.scan-button")
-                    }) {
-                        self.emeal.beginNFCSession()
-                    }
-                    .padding(.horizontal)
-                }
-
+            VStack(spacing: 0) {
                 if settings.areAutoloadCredentialsAvailable {
-                    LoadingListView(
-                        result: api.transactions(),
-                        noDataMessage: "emeal.no-transactions",
-                        retryAction: {
-                            Task { await self.loadTransactions() }
-                        },
-                        listView: { transactions in
-                            List(transactions, id: \.id) { transaction in
-                                VStack(alignment: .leading) {
-                                    Text(Formatter.string(for: transaction.date, dateStyle: .medium, timeStyle: .short))
-                                        .font(.caption)
-                                        .foregroundColor(.gray)
-                                    HStack {
-                                        Text(transaction.location)
-                                        Spacer()
-                                        Text("\(transaction.amount, specifier: "%.2f")€")
-                                    }
-                                    ForEach(transaction.positions, id: \.id) { pos in
-                                        HStack {
-                                            Text(pos.name)
-                                            Spacer()
-                                            Text("\(pos.price, specifier: "%.2f")€")
+                    Picker("View", selection: $selectedTab) {
+                        ForEach(EmealTab.allCases, id: \.self) { tab in
+                            Text(tab.localizedName).tag(tab)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding()
+                    
+                    if selectedTab == .transactions {
+                        VStack(spacing: 0) {
+                            if shouldShowEmealView {
+                                EmealCardView(
+                                    amount: self.emealBalance,
+                                    actualAmount: emeal.currentBalance,
+                                    lastTransaction: emeal.lastTransaction,
+                                    lastScan: emeal.lastScanDate
+                                )
+                                .padding()
+
+                                LargeButton(content: {
+                                    Text("emeal.scan-button")
+                                }) {
+                                    self.emeal.beginNFCSession()
+                                }
+                                .padding(.horizontal)
+                            }
+                            
+                            LoadingListView(
+                                result: api.transactions(),
+                                noDataMessage: "emeal.no-transactions",
+                                retryAction: {
+                                    Task { await self.loadTransactions() }
+                                },
+                                listView: { transactions in
+                                    List(transactions, id: \.id) { transaction in
+                                        VStack(alignment: .leading) {
+                                            Text(Formatter.string(for: transaction.date, dateStyle: .medium, timeStyle: .short))
+                                                .font(.caption)
+                                                .foregroundColor(.gray)
+                                            HStack {
+                                                Text("\(transaction.location), \(transaction.register)")
+                                                Spacer()
+                                                Text(formatCurrency(transaction.amount))
+                                            }
+                                            ForEach(transaction.positions, id: \.id) { pos in
+                                                HStack {
+                                                    Text("\(pos.amount) × \(pos.name)")
+                                                    Spacer()
+                                                    Text(formatCurrency(pos.price - (pos.discount ?? 0)))
+                                                }
+                                                .font(.caption)
+                                            }
                                         }
-                                        .font(.caption)
+                                    }
+                                    .listStyle(PlainListStyle())
+                                    .refreshable {
+                                        await self.loadTransactions()
                                     }
                                 }
-                            }
-                            .listStyle(PlainListStyle())
-                            .refreshable {
-                                await self.loadTransactions()
-                            }
+                            )
                         }
-                    )
+                    } else {
+                        LoadingListView(
+                            result: api.transactions(),
+                            noDataMessage: "emeal.no-transactions",
+                            retryAction: {
+                                Task { await self.loadTransactions() }
+                            },
+                            listView: { transactions in
+                                EmealStatisticsView(transactions: transactions)
+                            }
+                        )
+                    }
                 } else {
-                    autoloadHint
-                }
+                    VStack {
+                        if shouldShowEmealView {
+                            EmealCardView(
+                                amount: self.emealBalance,
+                                actualAmount: emeal.currentBalance,
+                                lastTransaction: emeal.lastTransaction,
+                                lastScan: emeal.lastScanDate
+                            )
+                            .padding()
 
-                Spacer()
+                            LargeButton(content: {
+                                Text("emeal.scan-button")
+                            }) {
+                                self.emeal.beginNFCSession()
+                            }
+                            .padding(.horizontal)
+                        }
+                        
+                        autoloadHint
+                        Spacer()
+                    }
+                }
             }
             .navigationBarTitle("Emeal")
         }
