@@ -48,6 +48,32 @@
 "emeal.estimation-explanation-title" = "おおよその残高";
 "emeal.estimation-explanation-ok-action" = "OK";
 "emeal.estimation-explanation-text" = "お客様のオートロード取引は、お客様のEmealのおおよその残高を取得するために使用されました。取引は過去90日間のみ利用可能で、最後のスキャンがそれより古い場合、残高は正しく表示されません。\n\n最後にスキャンした残高は%.2f€でした。";
+"emeal.tab.transactions" = "履歴";
+"emeal.tab.statistics" = "分析";
+
+// Emeal Statistics
+"emeal.statistics.total-spent" = "合計支出";
+"emeal.statistics.avg-purchase" = "平均購入額";
+"emeal.statistics.total-saved" = "合計節約額（対一般価格）";
+"emeal.statistics.activity-title" = "アクティビティ（過去180日間）";
+"emeal.statistics.activity-legend-less" = "少ない";
+"emeal.statistics.activity-legend-more" = "多い";
+"emeal.statistics.spending-by-month" = "月別支出";
+"emeal.statistics.spending-by-day" = "曜日別支出";
+"emeal.statistics.most-visited" = "よく行く場所";
+"emeal.statistics.spending-by-location" = "場所別支出";
+"emeal.statistics.most-expensive" = "最も高価な購入";
+"emeal.statistics.summary" = "概要";
+"emeal.statistics.total-transactions" = "合計取引数";
+"emeal.statistics.unique-locations" = "利用した店舗数";
+"emeal.statistics.favorite-location" = "お気に入りの場所";
+"emeal.statistics.day.sun" = "日";
+"emeal.statistics.day.mon" = "月";
+"emeal.statistics.day.tue" = "火";
+"emeal.statistics.day.wed" = "水";
+"emeal.statistics.day.thu" = "木";
+"emeal.statistics.day.fri" = "金";
+"emeal.statistics.day.sat" = "土";
 
 // Settings
 "settings.nav" = "設定";
@@ -117,3 +143,18 @@
 "sulfite" = "亜硫酸";
 "lupin" = "ルピナス";
 "molluscs" = "軟体動物(ex.イカ、タコ)";
+
+// Opening Status
+"opening-status.open" = "営業中";
+"opening-status.closed" = "閉店";
+"opening-status.opens-now" = "今開店";
+"opening-status.opens-in-minutes" = "%d分後に開店";
+"opening-status.opens-in-hours" = "%d時間後に開店";
+"opening-status.closes-now" = "今閉店";
+"opening-status.closes-in-minutes" = "%d分後に閉店";
+"opening-status.modified-hours" = "営業時間変更";
+
+// Date Picker / Opening Hours
+"opening-hours.title" = "営業時間";
+"opening-hours.modified" = "変更された営業時間";
+"opening-hours.house" = "店";

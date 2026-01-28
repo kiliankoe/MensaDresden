@@ -48,6 +48,32 @@
 "emeal.estimation-explanation-title" = "Оценочный баланс";
 "emeal.estimation-explanation-ok-action" = "Хорошо";
 "emeal.estimation-explanation-text" = "Для оценки баланса Emeal были использованы ваши транзакции автозагрузки. Транзакции доступны только за последние 90 дней, если ваш последний скан старше этого срока, то правильный баланс не может быть показан здесь.\n\nВаш последний отсканированный баланс составил %.2f€.";
+"emeal.tab.transactions" = "История";
+"emeal.tab.statistics" = "Статистика";
+
+// Emeal Statistics
+"emeal.statistics.total-spent" = "Всего потрачено";
+"emeal.statistics.avg-purchase" = "Средний чек";
+"emeal.statistics.total-saved" = "Всего сэкономлено (отн. цены для гостей)";
+"emeal.statistics.activity-title" = "Активность покупок (последние 180 дней)";
+"emeal.statistics.activity-legend-less" = "Меньше";
+"emeal.statistics.activity-legend-more" = "Больше";
+"emeal.statistics.spending-by-month" = "Расходы по месяцам";
+"emeal.statistics.spending-by-day" = "Расходы по дням недели";
+"emeal.statistics.most-visited" = "Самые посещаемые места";
+"emeal.statistics.spending-by-location" = "Расходы по местам";
+"emeal.statistics.most-expensive" = "Самые дорогие покупки";
+"emeal.statistics.summary" = "Сводка";
+"emeal.statistics.total-transactions" = "Всего транзакций";
+"emeal.statistics.unique-locations" = "Уникальных мест";
+"emeal.statistics.favorite-location" = "Любимое место";
+"emeal.statistics.day.sun" = "Вс";
+"emeal.statistics.day.mon" = "Пн";
+"emeal.statistics.day.tue" = "Вт";
+"emeal.statistics.day.wed" = "Ср";
+"emeal.statistics.day.thu" = "Чт";
+"emeal.statistics.day.fri" = "Пт";
+"emeal.statistics.day.sat" = "Сб";
 
 // Settings
 "settings.nav" = "Настройки";
@@ -117,3 +143,18 @@
 "sulfite" = "Сульфит";
 "lupin" = "Люпен";
 "molluscs" = "Моллюски";
+
+// Opening Status
+"opening-status.open" = "Открыто";
+"opening-status.closed" = "Закрыто";
+"opening-status.opens-now" = "Открывается сейчас";
+"opening-status.opens-in-minutes" = "Откроется через %d'";
+"opening-status.opens-in-hours" = "Откроется через %dч";
+"opening-status.closes-now" = "Закрывается сейчас";
+"opening-status.closes-in-minutes" = "Закроется через %d'";
+"opening-status.modified-hours" = "Измененные часы работы";
+
+// Date Picker / Opening Hours
+"opening-hours.title" = "Часы работы";
+"opening-hours.modified" = "Измененные часы";
+"opening-hours.house" = "Дом";

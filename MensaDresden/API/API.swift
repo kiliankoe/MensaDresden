@@ -88,6 +88,7 @@ class API: ObservableObject {
         // Sort meals
         if case .success(let meals) = previousResult.result {
             let sortedMeals = meals.sorted(by: Self.mealComparator())
+                .sorted { !($0.isSoldOut ?? false) && ($1.isSoldOut ?? false) }
             previousResult.result = .success(sortedMeals)
         }
 
@@ -124,7 +125,7 @@ class API: ObservableObject {
                 switch (lhs.isDinner, rhs.isDinner) {
                 case (true, true), (false, false):
                     // Both are good/bad and both are dinner or not, so we're sorting based on name
-                    return lhs.allergenStrippedTitle < rhs.allergenStrippedTitle
+                    return lhs.category < rhs.category
                 case (true, false):
                     // Dinner should be at bottom before 3pm, at top after
                     return currentTime > 15
@@ -152,16 +153,16 @@ class API: ObservableObject {
         Logger.api.info("Loading transactions for \(cardnumber, privacy: .private)")
         if cardnumber == "appledemo" && password == "appledemo" {
             Logger.api.info("Returning example transactions")
-            cache(result: .success(Transaction.exampleValues.reversed()))
+            cache(result: .success(Transaction.extensiveExampleValues.reversed()))
             return
         }
 
         let calendar = Calendar(identifier: .gregorian)
-        guard let ninetyDaysAgo = calendar.date(byAdding: .day, value: -90, to: Date()) else { return }
+        guard let hundredEightyDaysAgo = calendar.date(byAdding: .day, value: -180, to: Date()) else { return }
 
         do {
             let card = try await Cardservice.login(username: cardnumber, password: password)
-            let transactions = try await card.transactions(begin: ninetyDaysAgo)
+            let transactions = try await card.transactions(begin: hundredEightyDaysAgo)
             Logger.api.info("Successfully loaded \(transactions.count) transactions")
             cache(result: .success(transactions.reversed()))
         } catch {
