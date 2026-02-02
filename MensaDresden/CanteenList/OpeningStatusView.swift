@@ -92,14 +92,20 @@ struct OpeningStatusView: View {
             if let existingIndex = uniqueStatuses.firstIndex(where: { abs(Int($0.timeUntilChange) - timeKey) < 60 }) {
                 let existing = uniqueStatuses[existingIndex]
                 
-                // If current status is more specific (not "House" / "Öffnungszeiten"), replace existing
+                // Check if names are generic
                 let existingIsGeneric = existing.area.contains("Öffnungszeiten") || existing.area.contains("Haus")
                 let currentIsGeneric = status.area.contains("Öffnungszeiten") || status.area.contains("Haus")
                 
                 if existingIsGeneric && !currentIsGeneric {
+                    // Replace generic with specific
                     uniqueStatuses[existingIndex] = status
+                } else if !existingIsGeneric && !currentIsGeneric {
+                    // Both are specific names - prefer shorter opening span
+                    if status.totalDuration < existing.totalDuration {
+                        uniqueStatuses[existingIndex] = status
+                    }
                 }
-                // If both are generic or both specific, keep existing (earlier in list usually means higher priority from OpeningHours logic)
+                // If both are generic or current is generic, keep existing
             } else {
                 uniqueStatuses.append(status)
             }
