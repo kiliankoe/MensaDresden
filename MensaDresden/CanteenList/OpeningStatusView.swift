@@ -10,7 +10,7 @@ struct OpeningStatusView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     ForEach(statuses) { status in
                         HStack(spacing: 4) {
-                            Image(systemName: status.icon, variableValue: status.fillPercentage)
+                            Image(systemName: status.icon)
                                 .font(.system(size: 15))
                                 .foregroundColor(status.color)
                             
@@ -68,13 +68,12 @@ struct OpeningStatusView: View {
         let subtext: String
         let icon: String
         let color: Color
-        let fillPercentage: Double
     }
     
     private func openingStatuses(at date: Date) -> [StatusDisplay]? {
         guard let openingHours = canteen.openingHours else {
             return canteen.isOpen(at: date) ? 
-                [StatusDisplay(id: UUID(), text: NSLocalizedString("opening-status.open", comment: ""), subtext: "", icon: "checkmark", color: .green, fillPercentage: 1.0)] : 
+                [StatusDisplay(id: UUID(), text: NSLocalizedString("opening-status.open", comment: ""), subtext: "", icon: "checkmark", color: .green)] :
                 nil
         }
         
@@ -83,7 +82,6 @@ struct OpeningStatusView: View {
         
         // Deduplicate statuses with same time
         var uniqueStatuses: [OpeningHours.ServiceStatus] = []
-        var timesSeen: Set<Int> = [] // Time interval as int for rough equality
         
         for status in rawStatuses {
             let timeKey = Int(status.timeUntilChange)
@@ -148,8 +146,6 @@ struct OpeningStatusView: View {
                     text = String(format: NSLocalizedString("opening-status.closes-in-minutes", comment: ""), minutes)
                 }
                 
-                fill = status.progress
-                
             } else {
                 // CLOSED
                 color = minutes < 60 ? .green : .secondary // Green if opening soon
@@ -164,7 +160,6 @@ struct OpeningStatusView: View {
                 } else {
                     text = String(format: NSLocalizedString("opening-status.opens-in-hours", comment: ""), hours)
                 }
-                fill = 0.0
             }
             
             return StatusDisplay(
@@ -172,8 +167,7 @@ struct OpeningStatusView: View {
                 text: text,
                 subtext: areaName,
                 icon: icon,
-                color: color,
-                fillPercentage: fill
+                color: color
             )
         }
     }

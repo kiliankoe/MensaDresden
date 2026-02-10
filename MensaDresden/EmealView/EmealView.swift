@@ -90,6 +90,25 @@ struct EmealView: View {
         return max(emeal.currentBalance + newerTransactionsSum, 0)
     }
 
+    var emealCardViewWithScanButton: some View {
+        Group {
+            EmealCardView(
+                amount: self.emealBalance,
+                actualAmount: emeal.currentBalance,
+                lastTransaction: emeal.lastTransaction,
+                lastScan: emeal.lastScanDate
+            )
+            .padding([.horizontal, .bottom])
+
+            LargeButton(content: {
+                Text("emeal.scan-button")
+            }) {
+                self.emeal.beginNFCSession()
+            }
+            .padding(.horizontal)
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
@@ -105,20 +124,7 @@ struct EmealView: View {
                     if selectedTab == .transactions {
                         VStack(spacing: 0) {
                             if shouldShowEmealView {
-                                EmealCardView(
-                                    amount: self.emealBalance,
-                                    actualAmount: emeal.currentBalance,
-                                    lastTransaction: emeal.lastTransaction,
-                                    lastScan: emeal.lastScanDate
-                                )
-                                .padding()
-
-                                LargeButton(content: {
-                                    Text("emeal.scan-button")
-                                }) {
-                                    self.emeal.beginNFCSession()
-                                }
-                                .padding(.horizontal)
+                                emealCardViewWithScanButton
                             }
                             
                             LoadingListView(
@@ -170,20 +176,7 @@ struct EmealView: View {
                 } else {
                     VStack {
                         if shouldShowEmealView {
-                            EmealCardView(
-                                amount: self.emealBalance,
-                                actualAmount: emeal.currentBalance,
-                                lastTransaction: emeal.lastTransaction,
-                                lastScan: emeal.lastScanDate
-                            )
-                            .padding()
-
-                            LargeButton(content: {
-                                Text("emeal.scan-button")
-                            }) {
-                                self.emeal.beginNFCSession()
-                            }
-                            .padding(.horizontal)
+                            emealCardViewWithScanButton
                         }
                         
                         autoloadHint
