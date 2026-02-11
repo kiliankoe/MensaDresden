@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kiliankoe/EmealKit.git",
       "state" : {
-        "revision" : "1b2f52d0d34e81bacb3b17c6df160f5c7c13b990",
-        "version" : "0.12.0"
+        "revision" : "1faa4e17e5b38b5fe5fea2a077b55d8306da37a9",
+        "version" : "0.12.2"
       }
     },
     {
