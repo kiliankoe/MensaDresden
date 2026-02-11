@@ -17,7 +17,7 @@ class Feedparser: ObservableObject {
                     title: entry.title,
                     description: entry.summary ?? "",
                     date: entry.published ?? Date(),
-                    detailURL: entry.url,
+                    detailURL: entry.url ?? Self.stuweNewsfeedURL,
                     id: entry.id.description
                 )
             }

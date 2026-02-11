@@ -13,6 +13,10 @@ struct MealListView: View {
 
     @State var selectedDate: Date = .today
 
+    private var hasChangedOpeningHours: Bool {
+        !(canteen.openingHours?.changedHours.isEmpty ?? true)
+    }
+    
     var body: some View {
         VStack {
             Picker(
@@ -41,7 +45,7 @@ struct MealListView: View {
         .navigationBarItems(trailing:
             HStack {
                 BarButtonButton(
-                    view: Image(systemName: "calendar"),
+                    view: Image(systemName: hasChangedOpeningHours ? "calendar.badge" : "calendar").symbolRenderingMode(hasChangedOpeningHours ? .multicolor : .monochrome),
                     action: {
                         self.showingDatePickerView.toggle()
                     }

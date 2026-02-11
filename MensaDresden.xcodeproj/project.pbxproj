@@ -64,6 +64,8 @@
 		39A141912348813D00FEE789 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141902348813D00FEE789 /* Settings.swift */; };
 		39A141932348EBC000FEE789 /* BlacklistBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141922348EBC000FEE789 /* BlacklistBinding.swift */; };
 		39A141952348EBEE00FEE789 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A141942348EBEE00FEE789 /* UserDefault.swift */; };
+		39A6347A2F3D34770092DEAF /* OpeningStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A634792F3D34770092DEAF /* OpeningStatusView.swift */; };
+		39A6347C2F3D34970092DEAF /* EmealStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A6347B2F3D34970092DEAF /* EmealStatisticsView.swift */; };
 		39A79148241FC50F0009CF03 /* NewsfeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A79147241FC50F0009CF03 /* NewsfeedView.swift */; };
 		39A7914A241FC96B0009CF03 /* ObservableEmeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A79149241FC96B0009CF03 /* ObservableEmeal.swift */; };
 		39AEA5252A180D6700A70B6E /* CampuscardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AEA5242A180D6700A70B6E /* CampuscardView.swift */; };
@@ -227,6 +229,8 @@
 		39A141922348EBC000FEE789 /* BlacklistBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklistBinding.swift; sourceTree = "<group>"; };
 		39A141942348EBEE00FEE789 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		39A141972348EF1D00FEE789 /* Mensa Dresden.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mensa Dresden.entitlements"; sourceTree = "<group>"; };
+		39A634792F3D34770092DEAF /* OpeningStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningStatusView.swift; sourceTree = "<group>"; };
+		39A6347B2F3D34970092DEAF /* EmealStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmealStatisticsView.swift; sourceTree = "<group>"; };
 		39A79147241FC50F0009CF03 /* NewsfeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedView.swift; sourceTree = "<group>"; };
 		39A79149241FC96B0009CF03 /* ObservableEmeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableEmeal.swift; sourceTree = "<group>"; };
 		39AEA5242A180D6700A70B6E /* CampuscardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampuscardView.swift; sourceTree = "<group>"; };
@@ -389,6 +393,7 @@
 				39281C61234241B900E4EFB5 /* CanteenListView.swift */,
 				39281C872342910600E4EFB5 /* CanteenCell.swift */,
 				391B9E43255ADA43000529A8 /* CompassView.swift */,
+				39A634792F3D34770092DEAF /* OpeningStatusView.swift */,
 			);
 			path = CanteenList;
 			sourceTree = "<group>";
@@ -476,6 +481,7 @@
 			children = (
 				396C4AF023480E6E009A9F52 /* EmealView.swift */,
 				396FC3B423539145007B97F3 /* EmealCardView.swift */,
+				39A6347B2F3D34970092DEAF /* EmealStatisticsView.swift */,
 				39AEA5242A180D6700A70B6E /* CampuscardView.swift */,
 				39A79149241FC96B0009CF03 /* ObservableEmeal.swift */,
 				391B9500276674F60071E678 /* CardserviceErrorWrapper.swift */,
@@ -776,6 +782,7 @@
 				39E215812358E29D00F5EBE9 /* LocationManager.swift in Sources */,
 				391B9501276674F60071E678 /* CardserviceErrorWrapper.swift in Sources */,
 				39A0C94623623B9E0029FA35 /* Date.swift in Sources */,
+				39A6347A2F3D34770092DEAF /* OpeningStatusView.swift in Sources */,
 				398E07832848C9A3004FFDFF /* DisclosureIndicator.swift in Sources */,
 				EFF0399C281180690054C3E9 /* MealImage.swift in Sources */,
 				39281C8F2342985900E4EFB5 /* Canteen+Example.swift in Sources */,
@@ -810,6 +817,7 @@
 				39AEA5252A180D6700A70B6E /* CampuscardView.swift in Sources */,
 				391B94FC2766296C0071E678 /* MensaApp.swift in Sources */,
 				396FC3B0235378C1007B97F3 /* AppView.swift in Sources */,
+				39A6347C2F3D34970092DEAF /* EmealStatisticsView.swift in Sources */,
 				391B94FA276574E40071E678 /* API.swift in Sources */,
 				395EA6D7282A9CD3002F8055 /* Logger.swift in Sources */,
 				39A0C940236227F70029FA35 /* DatePickerView.swift in Sources */,
@@ -1359,7 +1367,7 @@
 			repositoryURL = "https://github.com/kiliankoe/EmealKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.11.0;
+				minimumVersion = 0.12.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

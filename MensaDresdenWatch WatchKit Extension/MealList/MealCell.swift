@@ -29,49 +29,64 @@ struct MealCell: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        ZStack {
+            VStack(alignment: .leading, spacing: 4) {
                 Text(meal.category)
                     .font(Font.caption.smallCaps())
                     .foregroundColor(.gray)
-
-            Text(meal.allergenStrippedTitle)
-                .lineLimit(5)
-
-            ForEach(meal.diet, id: \.self) { diet in
-                Text(LocalizedStringKey(String(describing: diet)))
-                    .font(Font.caption.smallCaps())
-                    .bold()
-                    .foregroundColor(.green)
-                    .lineLimit(1)
+                
+                Text(meal.allergenStrippedTitle)
+                    .lineLimit(5)
+                
+                ForEach(meal.diet, id: \.self) { diet in
+                    Text(LocalizedStringKey(String(describing: diet)))
+                        .font(Font.caption.smallCaps())
+                        .bold()
+                        .foregroundColor(.green)
+                        .lineLimit(1)
+                }
+                
+                HStack(spacing: 8) {
+                    
+                    ZStack(alignment: .bottomLeading) {
+                        if settings.priceTypeIsStudent {
+                            PriceLabel(price: meal.prices?.students, shadow: 2)
+                                .padding(.bottom, 4)
+                        } else {
+                            PriceLabel(price: meal.prices?.employees, shadow: 2)
+                                .padding(.bottom, 4)
+                        }
+                    }
+                    
+                    HStack {
+                        ForEach(meal.ingredients, id: \.rawValue) { ingredient in
+                            Text(ingredient.emoji)
+                                .font(.system(size: 20))
+                                .accessibility(label: Text(LocalizedStringKey(ingredient.rawValue)))
+                        }
+                        if meal.isDinner {
+                            Spacer()
+                            Image(systemName: "moon.fill")
+                                .font(.headline)
+                                .foregroundColor(.yellow)
+                                .accessibility(label: Text("meal.dinner"))
+                        }
+                    }
+                }.padding(.top, 5)
             }
-            
-            HStack(spacing: 8) {
-                
-                ZStack(alignment: .bottomLeading) {
-                    if settings.priceTypeIsStudent {
-                        PriceLabel(price: meal.prices?.students, shadow: 2)
-                            .padding(.bottom, 4)
-                    } else {
-                        PriceLabel(price: meal.prices?.employees, shadow: 2)
-                            .padding(.bottom, 4)
-                    }
-                }
-                
-                HStack {
-                    ForEach(meal.ingredients, id: \.rawValue) { ingredient in
-                        Text(ingredient.emoji)
-                            .font(.system(size: 20))
-                            .accessibility(label: Text(LocalizedStringKey(ingredient.rawValue)))
-                    }
-                    if meal.isDinner {
-                        Spacer()
-                        Image(systemName: "moon.fill")
-                            .font(.headline)
-                            .foregroundColor(.yellow)
-                            .accessibility(label: Text("meal.dinner"))
-                    }
-                }
-            }.padding(.top, 5)
+            .saturation((meal.isSoldOut ?? false) ? 0.2 : 1)
+            .opacity((meal.isSoldOut ?? false) ? 0.5 : 1)
+            if (meal.isSoldOut ?? false) {
+                Text("meal.sold-out")
+                    .font(.headline)
+                    .bold()
+                    .foregroundStyle(.red)
+                    .padding()
+                    .background(.black)
+                    .border(.red, width: 3)
+                    .opacity(0.8)
+                    .rotationEffect(.degrees(-10))
+            }
         }
         .compositingGroup()
         .opacity(passesFilters ? 1.0 : 0.5)
