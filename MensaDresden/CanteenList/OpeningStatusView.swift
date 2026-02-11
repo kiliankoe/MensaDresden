@@ -6,7 +6,10 @@ struct OpeningStatusView: View {
     
     var body: some View {
         TimelineView(.periodic(from: .now, by: 60)) { context in
-            if let statuses = openingStatuses(at: context.date), !statuses.isEmpty {
+            let statuses = openingStatuses(at: context.date) ?? []
+            let hasChanged = hasActiveChangedHours(at: context.date)
+
+            if !statuses.isEmpty || hasChanged {
                 VStack(alignment: .leading, spacing: 4) {
                     ForEach(statuses) { status in
                         HStack(spacing: 4) {
@@ -39,7 +42,7 @@ struct OpeningStatusView: View {
                         }
                     }
                     
-                    if hasActiveChangedHours {
+                    if hasChanged {
                         HStack(spacing: 4) {
                             Image(systemName: "exclamationmark.triangle")
                                 .font(.system(size: 15))
@@ -57,9 +60,9 @@ struct OpeningStatusView: View {
             }
         }
     }
-    
-    private var hasActiveChangedHours: Bool {
-        canteen.openingHours?.hasChangedHours(at: Date()) ?? false
+
+    private func hasActiveChangedHours(at date: Date) -> Bool {
+        canteen.openingHours?.hasChangedHours(at: date) ?? false
     }
     
     struct StatusDisplay: Identifiable {
