@@ -15,7 +15,7 @@ struct OpeningStatusView: View {
                                 .foregroundColor(status.color)
                             
                             HStack(spacing: 4) {
-                                if status.text == NSLocalizedString("opening-status.open", comment: "") {
+                                if status.usesOpenLabelLayout {
                                     Text(status.subtext)
                                         .font(.caption2)
                                         .foregroundColor(.primary)
@@ -68,12 +68,13 @@ struct OpeningStatusView: View {
         let subtext: String
         let icon: String
         let color: Color
+        let usesOpenLabelLayout: Bool
     }
     
     private func openingStatuses(at date: Date) -> [StatusDisplay]? {
         guard let openingHours = canteen.openingHours else {
             return canteen.isOpen(at: date) ? 
-                [StatusDisplay(id: UUID(), text: NSLocalizedString("opening-status.open", comment: ""), subtext: "", icon: "checkmark", color: .green)] :
+                [StatusDisplay(id: UUID(), text: NSLocalizedString("opening-status.open", comment: ""), subtext: "", icon: "checkmark", color: .green, usesOpenLabelLayout: true)] :
                 nil
         }
         
@@ -116,7 +117,7 @@ struct OpeningStatusView: View {
             var text = ""
             var icon = "clock"
             var color: Color = .secondary
-            var fill = 0.0
+            var usesOpenLabelLayout = false
             
             var areaName = status.area
             
@@ -140,6 +141,7 @@ struct OpeningStatusView: View {
                 
                 if minutes >= 60 {
                     text = NSLocalizedString("opening-status.open", comment: "")
+                    usesOpenLabelLayout = true
                 } else if minutes <= 0 {
                     text = NSLocalizedString("opening-status.closes-now", comment: "")
                 } else {
@@ -167,7 +169,8 @@ struct OpeningStatusView: View {
                 text: text,
                 subtext: areaName,
                 icon: icon,
-                color: color
+                color: color,
+                usesOpenLabelLayout: usesOpenLabelLayout
             )
         }
     }
