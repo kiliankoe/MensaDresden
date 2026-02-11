@@ -103,15 +103,22 @@ struct MealCell: View {
                         }
                     }.padding(.top, 5)
                 }
+
+                Spacer(minLength: 0)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .saturation((meal.isSoldOut ?? false) ? 0.2 : 1)
             .opacity((meal.isSoldOut ?? false) ? 0.5 : 1)
             if (meal.isSoldOut ?? false) {
                 Text("meal.sold-out")
                     .font(.largeTitle)
                     .bold()
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .allowsTightening(true)
                     .foregroundStyle(.red)
-                    .padding()
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 16)
                     .border(.red, width: 3)
                     .opacity(0.8)
                     .rotationEffect(.degrees(-10))
