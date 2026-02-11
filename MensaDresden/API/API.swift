@@ -88,7 +88,6 @@ class API: ObservableObject {
         // Sort meals
         if case .success(let meals) = previousResult.result {
             let sortedMeals = meals.sorted(by: Self.mealComparator())
-                .sorted { !($0.isSoldOut ?? false) && ($1.isSoldOut ?? false) }
             previousResult.result = .success(sortedMeals)
         }
 
@@ -107,6 +106,12 @@ class API: ObservableObject {
             .compactMap { Allergen(rawValue: $0) } ?? []
 
         return { lhs, rhs in
+            let lhsIsSoldOut = lhs.isSoldOut ?? false
+            let rhsIsSoldOut = rhs.isSoldOut ?? false
+            if lhsIsSoldOut != rhsIsSoldOut {
+                return !lhsIsSoldOut
+            }
+
             let lhsIsBad = lhs.isIncompatible(
                 withDiet: userDiet,
                 ingredients: unwantedIngredients,
