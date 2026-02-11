@@ -23,7 +23,14 @@
         devShell = pkgs.mkShell {
           packages = with pkgs; [
             tuist
+            swift
+            fastlane
           ];
+          shellHook = ''
+            export DEVELOPER_DIR="/Applications/Xcode-26.2.0.app/Contents/Developer"
+            export PATH="/usr/bin:$PATH"
+            export PATH="$(dirname "$(/usr/bin/xcrun --find swift)"):$PATH"
+          '';
         };
       }
     );

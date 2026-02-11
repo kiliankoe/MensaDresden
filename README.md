@@ -12,3 +12,28 @@ If you're interested in how this app communicates with the Studentenwerk Dresden
 
 ![Screenshots](https://user-images.githubusercontent.com/2625584/148906162-fbdffcb3-da3c-447b-8291-85d907238d58.png)
 
+## Development setup (Tuist)
+
+This repository uses [Tuist](https://tuist.dev) manifests (`Project.swift`) instead of manually editing the Xcode project file.
+
+### Generate the project
+
+```bash
+tuist generate
+```
+
+This opens `MensaDresden.xcworkspace` in Xcode.
+
+### Typical workflow
+
+1. Make project changes in `Project.swift` (targets, dependencies, settings, schemes).
+2. Regenerate with `tuist generate`.
+3. Build/test in Xcode or with `xcodebuild`.
+
+### Useful commands
+
+```bash
+tuist version
+tuist dump
+tuist generate --no-open
+```
