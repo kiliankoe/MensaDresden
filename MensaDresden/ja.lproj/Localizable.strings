@@ -38,7 +38,7 @@
 "emeal.scan-button" = "Emealをスキャン";
 "emeal.autoload-hint" = "オートロードを使用していますか？アプリの設定でアカウント情報を入力すると、最近の取引はすべてここに表示されます。";
 "emeal.autoload-information" = "オートロード情報";
-"emeal.no-transactions" = "過去90日間の取引はありません。";
+"emeal.no-transactions" = "過去180日間の取引はありません。";
 "emeal.error.network" = "ネットワークエラーです。";
 "emeal.error.invalid-credentials" = "ユーザー名またはパスワードが無効です。";
 "emeal.error.server" = "%d サーバーエラー";
@@ -47,7 +47,7 @@
 "emeal.error.rate-limited" = "リクエストが多すぎます。しばらくしてからもう一度お試しください。";
 "emeal.estimation-explanation-title" = "おおよその残高";
 "emeal.estimation-explanation-ok-action" = "OK";
-"emeal.estimation-explanation-text" = "お客様のオートロード取引は、お客様のEmealのおおよその残高を取得するために使用されました。取引は過去90日間のみ利用可能で、最後のスキャンがそれより古い場合、残高は正しく表示されません。\n\n最後にスキャンした残高は%.2f€でした。";
+"emeal.estimation-explanation-text" = "お客様のオートロード取引は、お客様のEmealのおおよその残高を取得するために使用されました。取引は過去180日間のみ利用可能で、最後のスキャンがそれより古い場合、残高は正しく表示されません。\n\n最後にスキャンした残高は%.2f€でした。";
 "emeal.tab.transactions" = "履歴";
 "emeal.tab.statistics" = "分析";
 

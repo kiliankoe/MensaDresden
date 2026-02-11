@@ -38,7 +38,7 @@
 "emeal.scan-button" = "Emeal scannen";
 "emeal.autoload-hint" = "Du nutzt Autoload? Trage deine Zugangsdaten in den App Einstellungen ein damit all deine letzten Transaktionen hier angezeigt werden.";
 "emeal.autoload-information" = "Informationen zu Autoload";
-"emeal.no-transactions" = "Keine Transaktionen in den letzten 90 Tagen.";
+"emeal.no-transactions" = "Keine Transaktionen in den letzten 180 Tagen.";
 "emeal.error.network" = "Netzwerkfehler";
 "emeal.error.invalid-credentials" = "Ungültiger Benutzername oder Passwort";
 "emeal.error.server" = "%d Serverfehler";
@@ -47,7 +47,7 @@
 "emeal.error.rate-limited" = "Zu viele Requests, bitte versuche es in einem Moment noch einmal.";
 "emeal.estimation-explanation-title" = "Geschätztes Guthaben";
 "emeal.estimation-explanation-ok-action" = "Ok";
-"emeal.estimation-explanation-text" = "Deine Autoload-Transaktionen wurden genutzt um das aktuelle Guthaben deines Emeals zu schätzen. Transaktionen existieren nur für die letzten 90 Tage. Falls der letzte Emeal-Scan länger zurückliegt, kann kein korrektes Guthaben angezeigt werden.\n\nDas zuletzt gescannte Guthaben betrug %.2f€.";
+"emeal.estimation-explanation-text" = "Deine Autoload-Transaktionen wurden genutzt um das aktuelle Guthaben deines Emeals zu schätzen. Transaktionen existieren nur für die letzten 180 Tage. Falls der letzte Emeal-Scan länger zurückliegt, kann kein korrektes Guthaben angezeigt werden.\n\nDas zuletzt gescannte Guthaben betrug %.2f€.";
 "emeal.tab.transactions" = "Transaktionen";
 "emeal.tab.statistics" = "Statistiken";
 
@@ -93,7 +93,7 @@
 "default" = "Standard";
 "distance" = "Entfernung";
 "alphabetical" = "Alphabetisch";
-"settings.autoload-description" = "Du benutzt Autoload? Trage hier deine Zugangsdaten ein um die Transaktionen der letzten 90 Tage im Emeal Tab anzuzeigen. Deine Zugangsdaten werden verschlüsselt nur auf diesem Gerät gespeichert und ausschließlich zur Authentifizierung an Server des Studentenwerks übertragen.";
+"settings.autoload-description" = "Du benutzt Autoload? Trage hier deine Zugangsdaten ein um die Transaktionen der letzten 180 Tage im Emeal Tab anzuzeigen. Deine Zugangsdaten werden verschlüsselt nur auf diesem Gerät gespeichert und ausschließlich zur Authentifizierung an Server des Studentenwerks übertragen.";
 "settings.autoload-cardnumber" = "Kartennummer";
 "settings.autoload-password" = "Passwort";
 "settings.autoload-information" = "Informationen zu Autoload";

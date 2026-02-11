@@ -38,7 +38,7 @@
 "emeal.scan-button" = "Scan Emeal";
 "emeal.autoload-hint" = "Using Autoload? Enter your credentials in the app's settings and all of your recent transactions will show up here.";
 "emeal.autoload-information" = "Autoload Information";
-"emeal.no-transactions" = "No transactions in the last 90 days.";
+"emeal.no-transactions" = "No transactions in the last 180 days.";
 "emeal.error.network" = "Network error";
 "emeal.error.invalid-credentials" = "Invalid username or password";
 "emeal.error.server" = "%d Server error";
@@ -47,7 +47,7 @@
 "emeal.error.rate-limited" = "Too many requests. Try again in a moment.";
 "emeal.estimation-explanation-title" = "Estimated Balance";
 "emeal.estimation-explanation-ok-action" = "Ok";
-"emeal.estimation-explanation-text" = "Your autoload transactions were used to estimate your Emeal balance. Transactions are only available for the last 90 days, if your last scan is older than that, a correct balance can't be shown here.\n\nYour last scanned balance was %.2f€.";
+"emeal.estimation-explanation-text" = "Your autoload transactions were used to estimate your Emeal balance. Transactions are only available for the last 180 days, if your last scan is older than that, a correct balance can't be shown here.\n\nYour last scanned balance was %.2f€.";
 "emeal.tab.transactions" = "Transactions";
 "emeal.tab.statistics" = "Statistics";
 
@@ -93,7 +93,7 @@
 "default" = "Default";
 "distance" = "Distance";
 "alphabetical" = "Alphabetical";
-"settings.autoload-description" = "Using Autoload? Enter your credentials here to show transactions of the last 90 days on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers for authentification purposes.";
+"settings.autoload-description" = "Using Autoload? Enter your credentials here to show transactions of the last 180 days on the Emeal page. Your credentials are securely saved on this device only and only sent to Studentenwerk servers for authentification purposes.";
 "settings.autoload-cardnumber" = "Cardnumber";
 "settings.autoload-password" = "Password";
 "settings.autoload-information" = "Autoload Information";

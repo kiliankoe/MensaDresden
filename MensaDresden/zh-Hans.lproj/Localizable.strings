@@ -38,7 +38,7 @@
 "emeal.scan-button" = "扫瞄麦片";
 "emeal.autoload-hint" = "正在使用自动加载？在应用程序的设置中输入您的凭证，您最近的所有交易都会显示在这里。";
 "emeal.autoload-information" = "自动加载信息";
-"emeal.no-transactions" = "过去90天内没有交易。";
+"emeal.no-transactions" = "过去180天内没有交易。";
 "emeal.error.network" = "网络错误";
 "emeal.error.invalid-credentials" = "无效的用户名或密码";
 "emeal.error.server" = "%d 服务器错误";
@@ -47,7 +47,7 @@
 "emeal.error.rate-limited" = "请求太多。稍后再试。";
 "emeal.estimation-explanation-title" = "估计余额";
 "emeal.estimation-explanation-ok-action" = "好的";
-"emeal.estimation-explanation-text" = "你的自动充值交易被用来估计你的Emeal余额。交易只适用于过去90天，如果你最后一次扫描的时间比这个时间长，这里就不能显示正确的余额。\n\n你上次扫描的余额是%.2f€。";
+"emeal.estimation-explanation-text" = "你的自动充值交易被用来估计你的Emeal余额。交易只适用于过去180天，如果你最后一次扫描的时间比这个时间长，这里就不能显示正确的余额。\n\n你上次扫描的余额是%.2f€。";
 "emeal.tab.transactions" = "明细";
 "emeal.tab.statistics" = "统计";
 
