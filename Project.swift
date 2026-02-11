@@ -1,58 +1,73 @@
 import ProjectDescription
 
-let appSettings: SettingsDictionary = [
+let appVersion = "2026.1"
+let appBuildNumber = "99"
+let uiTestVersion = "1.0"
+let uiTestBuildNumber = "1"
+
+let developmentTeam = "HU85FER47E"
+let swiftVersion = "5.0"
+
+let appBundleId = "io.kilian.MensaDresden"
+let watchBundleId = "\(appBundleId).watchkitapp"
+
+let appDeploymentTarget = "16.0"
+let uiTestDeploymentTarget = "15.2"
+let watchDeploymentTarget = "8.5"
+
+let sharedSettings: SettingsDictionary = [
+    "DEVELOPMENT_TEAM": .string(developmentTeam),
+    "SWIFT_VERSION": .string(swiftVersion),
+]
+
+let appSettings = sharedSettings.merging([
     "ASSETCATALOG_COMPILER_APPICON_NAME": "Icon",
     "ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS": "YES",
-    "CURRENT_PROJECT_VERSION": "99",
-    "DEVELOPMENT_TEAM": "HU85FER47E",
+    "CURRENT_PROJECT_VERSION": .string(appBuildNumber),
     "DEVELOPMENT_ASSET_PATHS": "\"MensaDresden/Preview Content\"",
-    "IPHONEOS_DEPLOYMENT_TARGET": "16.0",
+    "IPHONEOS_DEPLOYMENT_TARGET": .string(appDeploymentTarget),
     "LD_RUNPATH_SEARCH_PATHS": [
         "$(inherited)",
         "@executable_path/Frameworks",
     ],
-    "MARKETING_VERSION": "2026.1",
-    "PRODUCT_BUNDLE_IDENTIFIER": "io.kilian.MensaDresden",
+    "MARKETING_VERSION": .string(appVersion),
+    "PRODUCT_BUNDLE_IDENTIFIER": .string(appBundleId),
     "PRODUCT_NAME": "Mensa Dresden",
     "SUPPORTS_MACCATALYST": "NO",
-    "SWIFT_VERSION": "5.0",
     "TARGETED_DEVICE_FAMILY": "1,2",
-]
+]) { _, new in new }
 
-let watchSettings: SettingsDictionary = [
+let watchSettings = sharedSettings.merging([
     "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
     "ASSETCATALOG_COMPILER_COMPLICATION_NAME": "Complication",
     "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
-    "CURRENT_PROJECT_VERSION": "99",
-    "DEVELOPMENT_TEAM": "HU85FER47E",
+    "CURRENT_PROJECT_VERSION": .string(appBuildNumber),
     "INFOPLIST_KEY_CLKComplicationPrincipalClass": "$(PRODUCT_MODULE_NAME).ComplicationController",
     "INFOPLIST_KEY_NSHumanReadableCopyright": "Copyright © 2022 Kilian Koeltzsch. All rights reserved.",
     "INFOPLIST_KEY_UISupportedInterfaceOrientations": "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown",
-    "INFOPLIST_KEY_WKCompanionAppBundleIdentifier": "io.kilian.MensaDresden",
+    "INFOPLIST_KEY_WKCompanionAppBundleIdentifier": .string(appBundleId),
     "INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp": "YES",
     "LD_RUNPATH_SEARCH_PATHS": [
         "@executable_path/Frameworks",
         "@executable_path/../../Frameworks",
     ],
-    "MARKETING_VERSION": "2026.1",
-    "PRODUCT_BUNDLE_IDENTIFIER": "io.kilian.MensaDresden.watchkitapp",
+    "MARKETING_VERSION": .string(appVersion),
+    "PRODUCT_BUNDLE_IDENTIFIER": .string(watchBundleId),
     "PRODUCT_NAME": "MensaDD",
     "SDKROOT": "watchos",
     "SKIP_INSTALL": "YES",
     "SWIFT_EMIT_LOC_STRINGS": "YES",
-    "SWIFT_VERSION": "5.0",
     "TARGETED_DEVICE_FAMILY": "4",
-    "WATCHOS_DEPLOYMENT_TARGET": "8.5",
-]
+    "WATCHOS_DEPLOYMENT_TARGET": .string(watchDeploymentTarget),
+]) { _, new in new }
 
-let uiTestSettings: SettingsDictionary = [
-    "CURRENT_PROJECT_VERSION": "1",
-    "IPHONEOS_DEPLOYMENT_TARGET": "15.2",
-    "MARKETING_VERSION": "1.0",
+let uiTestSettings = sharedSettings.merging([
+    "CURRENT_PROJECT_VERSION": .string(uiTestBuildNumber),
+    "IPHONEOS_DEPLOYMENT_TARGET": .string(uiTestDeploymentTarget),
+    "MARKETING_VERSION": .string(uiTestVersion),
     "SWIFT_EMIT_LOC_STRINGS": "NO",
-    "SWIFT_VERSION": "5.0",
     "TARGETED_DEVICE_FAMILY": "1,2",
-]
+]) { _, new in new }
 
 let project = Project(
     name: "MensaDresden",
@@ -69,7 +84,7 @@ let project = Project(
     ],
     settings: .settings(
         base: [
-            "DEVELOPMENT_TEAM": "HU85FER47E",
+            "DEVELOPMENT_TEAM": .string(developmentTeam),
         ],
         defaultSettings: .recommended
     ),
@@ -78,8 +93,8 @@ let project = Project(
             name: "MensaDresden",
             destinations: .iOS,
             product: .app,
-            bundleId: "io.kilian.MensaDresden",
-            deploymentTargets: .iOS("16.0"),
+            bundleId: appBundleId,
+            deploymentTargets: .iOS(appDeploymentTarget),
             infoPlist: .file(path: "MensaDresden/Info.plist"),
             sources: ["MensaDresden/**/*.swift"],
             resources: [
@@ -107,8 +122,8 @@ let project = Project(
             name: "MensaDresdenWatch",
             destinations: [.appleWatch],
             product: .app,
-            bundleId: "io.kilian.MensaDresden.watchkitapp",
-            deploymentTargets: .watchOS("8.5"),
+            bundleId: watchBundleId,
+            deploymentTargets: .watchOS(watchDeploymentTarget),
             infoPlist: .default,
             sources: [
                 "MensaDresdenWatch WatchKit Extension/AppView.swift",
@@ -166,7 +181,7 @@ let project = Project(
             destinations: .iOS,
             product: .uiTests,
             bundleId: "io.kilian.MensaDresden.UITests",
-            deploymentTargets: .iOS("15.2"),
+            deploymentTargets: .iOS(uiTestDeploymentTarget),
             infoPlist: .default,
             sources: [
                 "UITests/UITests.swift",
@@ -182,7 +197,7 @@ let project = Project(
             destinations: .iOS,
             product: .uiTests,
             bundleId: "io.kilian.MensaDresden.Screenshots",
-            deploymentTargets: .iOS("15.2"),
+            deploymentTargets: .iOS(uiTestDeploymentTarget),
             infoPlist: .default,
             sources: [
                 "Screenshots/Screenshots.swift",
