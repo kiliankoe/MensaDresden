@@ -10,6 +10,7 @@ let swiftVersion = "5.0"
 
 let appBundleId = "io.kilian.MensaDresden"
 let watchBundleId = "\(appBundleId).watchkitapp"
+let watchExtensionBundleId = "\(watchBundleId).watchkitextension"
 
 let appDeploymentTarget = "16.0"
 let uiTestDeploymentTarget = "15.2"
@@ -37,23 +38,30 @@ let appSettings = sharedSettings.merging([
     "TARGETED_DEVICE_FAMILY": "1,2",
 ]) { _, new in new }
 
-let watchSettings = sharedSettings.merging([
+let watchAppSettings = sharedSettings.merging([
     "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
+    "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
+    "CURRENT_PROJECT_VERSION": .string(appBuildNumber),
+    "MARKETING_VERSION": .string(appVersion),
+    "PRODUCT_BUNDLE_IDENTIFIER": .string(watchBundleId),
+    "PRODUCT_NAME": "MensaDD",
+    "SDKROOT": "watchos",
+    "SKIP_INSTALL": "YES",
+    "TARGETED_DEVICE_FAMILY": "4",
+    "WATCHOS_DEPLOYMENT_TARGET": .string(watchDeploymentTarget),
+]) { _, new in new }
+
+let watchExtensionSettings = sharedSettings.merging([
     "ASSETCATALOG_COMPILER_COMPLICATION_NAME": "Complication",
     "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
     "CURRENT_PROJECT_VERSION": .string(appBuildNumber),
-    "INFOPLIST_KEY_CLKComplicationPrincipalClass": "$(PRODUCT_MODULE_NAME).ComplicationController",
-    "INFOPLIST_KEY_NSHumanReadableCopyright": "Copyright © 2022 Kilian Koeltzsch. All rights reserved.",
-    "INFOPLIST_KEY_UISupportedInterfaceOrientations": "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown",
-    "INFOPLIST_KEY_WKCompanionAppBundleIdentifier": .string(appBundleId),
-    "INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp": "YES",
     "LD_RUNPATH_SEARCH_PATHS": [
         "@executable_path/Frameworks",
         "@executable_path/../../Frameworks",
     ],
     "MARKETING_VERSION": .string(appVersion),
-    "PRODUCT_BUNDLE_IDENTIFIER": .string(watchBundleId),
-    "PRODUCT_NAME": "MensaDD",
+    "PRODUCT_BUNDLE_IDENTIFIER": .string(watchExtensionBundleId),
+    "PRODUCT_NAME": "MensaDresdenWatch WatchKit Extension",
     "SDKROOT": "watchos",
     "SKIP_INSTALL": "YES",
     "SWIFT_EMIT_LOC_STRINGS": "YES",
@@ -121,10 +129,37 @@ let project = Project(
         .target(
             name: "MensaDresdenWatch",
             destinations: [.appleWatch],
-            product: .app,
+            product: .watch2App,
             bundleId: watchBundleId,
             deploymentTargets: .watchOS(watchDeploymentTarget),
-            infoPlist: .default,
+            infoPlist: .extendingDefault(with: [
+                "WKCompanionAppBundleIdentifier": .string(appBundleId),
+                "WKWatchKitApp": .boolean(true),
+                "WKRunsIndependentlyOfCompanionApp": .boolean(true),
+            ]),
+            sources: [],
+            resources: [
+                "MensaDresdenWatch/Assets.xcassets",
+            ],
+            dependencies: [
+                .target(name: "MensaDresdenWatchExtension"),
+            ],
+            settings: .settings(base: watchAppSettings)
+        ),
+        .target(
+            name: "MensaDresdenWatchExtension",
+            destinations: [.appleWatch],
+            product: .watch2Extension,
+            bundleId: watchExtensionBundleId,
+            deploymentTargets: .watchOS(watchDeploymentTarget),
+            infoPlist: .extendingDefault(with: [
+                "NSExtension": .dictionary([
+                    "NSExtensionAttributes": .dictionary([
+                        "WKAppBundleIdentifier": .string(watchBundleId),
+                    ]),
+                    "NSExtensionPointIdentifier": .string("com.apple.watchkit"),
+                ]),
+            ]),
             sources: [
                 "MensaDresdenWatch WatchKit Extension/AppView.swift",
                 "MensaDresdenWatch WatchKit Extension/CanteenList/CanteenListView.swift",
@@ -161,7 +196,6 @@ let project = Project(
                 "MensaDresden/Shared/UserDefault.swift",
             ],
             resources: [
-                "MensaDresdenWatch/Assets.xcassets",
                 "MensaDresdenWatch WatchKit Extension/Assets.xcassets",
                 "MensaDresdenWatch WatchKit Extension/Preview Content/Preview Assets.xcassets",
                 "MensaDresden/*.lproj/Localizable.strings",
@@ -174,7 +208,7 @@ let project = Project(
                 .package(product: "KeychainItem"),
                 .package(product: "EmealKit"),
             ],
-            settings: .settings(base: watchSettings)
+            settings: .settings(base: watchExtensionSettings)
         ),
         .target(
             name: "UITests",
