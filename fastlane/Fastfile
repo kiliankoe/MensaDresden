@@ -1,0 +1,70 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Generate localized App Store screenshots"
+  lane :screenshots do
+    project_root = File.expand_path("..", __dir__)
+    workspace_path = File.join(project_root, "MensaDresden.xcworkspace")
+    screenshots_path = File.join(project_root, "appstore_screenshots")
+
+    env_keys_to_delete = ENV.keys.select { |key| key.start_with?("NIX_") }
+    env_keys_to_delete += %w[
+      LD
+      CC
+      CXX
+      CFLAGS
+      CPPFLAGS
+      LDFLAGS
+      LIBRARY_PATH
+      CPATH
+      SDKROOT
+      MACOSX_DEPLOYMENT_TARGET
+    ]
+    env_keys_to_delete.uniq.each { |key| ENV.delete(key) }
+
+    sh("tuist generate --path \"#{project_root}\" --no-open")
+
+    snapshot(
+      scheme: "Screenshots",
+      workspace: workspace_path,
+      devices: [
+        "iPhone 17 Pro Max",
+        "iPhone 11 Pro Max",
+        "iPad Pro 13-inch (M4)",
+      ],
+      languages: [
+        "en-US",
+        "de-DE",
+        "ja",
+        "ru",
+        "zh-Hans",
+      ],
+      output_directory: screenshots_path,
+      clear_previous_screenshots: true,
+      override_status_bar: true,
+      launch_arguments: ["--uitesting"],
+      skip_open_summary: true,
+      number_of_retries: 0,
+      stop_after_first_error: true,
+      concurrent_simulators: false
+    )
+  end
+
+  desc "Upload existing screenshots to App Store Connect"
+  lane :upload_screenshots do
+    upload_to_app_store(
+      skip_binary_upload: true,
+      skip_metadata: true,
+      skip_screenshots: false,
+      overwrite_screenshots: true,
+      submit_for_review: false,
+      force: true
+    )
+  end
+
+  desc "Generate and upload screenshots to App Store Connect"
+  lane :screenshots_and_upload do
+    screenshots
+    upload_screenshots
+  end
+end

@@ -37,3 +37,32 @@ tuist version
 tuist dump
 tuist generate --no-open
 ```
+
+### App Store screenshots
+
+Fastlane is configured for automated localized screenshots using the `Screenshots` UI test target.
+
+```bash
+fastlane ios screenshots
+```
+
+This generates fresh screenshots in `appstore_screenshots` for:
+
+- iPhone 17 Pro Max (6.9")
+- iPhone 11 Pro Max (6.5")
+- iPhone 8 Plus (5.5")
+- iPad Pro 13-inch (M4)
+
+across these locales: `en-US`, `de-DE`, `ja`, `ru`, `zh-Hans`.
+
+To upload screenshots to App Store Connect (without uploading a build or metadata):
+
+```bash
+fastlane ios upload_screenshots
+```
+
+Or generate and upload in one go:
+
+```bash
+fastlane ios screenshots_and_upload
+```

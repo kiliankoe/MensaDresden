@@ -1,5 +1,6 @@
 import XCTest
 
+@MainActor
 class Screenshots: XCTestCase {
 
     var app: XCUIApplication!
@@ -23,16 +24,10 @@ class Screenshots: XCTestCase {
         setupSnapshot(app)
         app.launch()
 
-        app.staticTexts["Mensa Reichenbachstraße"].tap()
+        app.selectCanteen(0)
         Thread.sleep(forTimeInterval: 1) // Make sure meals are loaded
         snapshot("01_Menu")
 
-        app.navigate(to: .emeal)
-        snapshot("02_Emeal")
-
-        app.navigate(to: .menu)
-        app.goBack()
-        app.staticTexts["Mensa Reichenbachstraße"].tap()
         app.selectMeal(0)
         snapshot("03_Meal")
 
@@ -41,5 +36,8 @@ class Screenshots: XCTestCase {
         app.scrollToTop()
         Thread.sleep(forTimeInterval: 1) // Let scrolling indicator disappear
         snapshot("04_Canteens")
+
+        app.navigate(to: .emeal)
+        snapshot("02_Emeal")
     }
 }

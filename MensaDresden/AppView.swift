@@ -6,38 +6,26 @@ struct AppView: View {
         TabView {
             CanteenListView()
                 .tabItem {
-                    VStack {
-                        Image(systemName: "takeoutbag.and.cup.and.straw")
-                            .accessibility(hidden: true)
-                        Text("tab.menu")
-                    }
+                    Label("tab.menu", systemImage: "takeoutbag.and.cup.and.straw")
+                        .accessibilityIdentifier("tab.menu")
                 }
 
             EmealView()
                 .tabItem {
-                    VStack {
-                        Image(systemName: "creditcard")
-                            .accessibility(hidden: true)
-                        Text("tab.emeal")
-                    }
+                    Label("tab.emeal", systemImage: "creditcard")
+                        .accessibilityIdentifier("tab.emeal")
                 }
 
             NewsfeedView()
                 .tabItem {
-                    VStack {
-                        Image(systemName: "bell")
-                            .accessibility(hidden: true)
-                        Text("tab.newsfeed")
-                    }
+                    Label("tab.newsfeed", systemImage: "bell")
+                        .accessibilityIdentifier("tab.newsfeed")
                 }
 
             SettingsView()
                 .tabItem {
-                    VStack {
-                        Image(systemName: "gear")
-                            .accessibility(hidden: true)
-                        Text("tab.settings")
-                    }
+                    Label("tab.settings", systemImage: "gear")
+                        .accessibilityIdentifier("tab.settings")
                 }
         }
         .accentColor(.green)
