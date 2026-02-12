@@ -9,6 +9,7 @@ class UITests: XCTestCase {
 
         app = XCUIApplication()
         app.launchArguments.append("--uitesting")
+        app.launchEnvironment["MENSA_DATA_MODE"] = "fixtures"
     }
 
     func testFavoriteCanteen() throws {

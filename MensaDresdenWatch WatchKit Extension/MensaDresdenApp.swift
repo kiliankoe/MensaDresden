@@ -52,7 +52,7 @@ struct MensaDresdenApp: App {
         }
         
         self.locationManager = LocationManager.shared
-        self.api = API()
+        self.api = API(settings: self.settings)
 
         Analytics.setup()
 

@@ -50,7 +50,7 @@ struct MensaApp: App {
         self.deviceOrientation = DeviceOrientation(isLandscape: isLandscape ?? false)
 
         self.locationManager = LocationManager.shared
-        self.api = API()
+        self.api = API(settings: self.settings)
         self.feedparser = Feedparser()
 
         Analytics.setup()

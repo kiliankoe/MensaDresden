@@ -24,6 +24,19 @@ tuist generate
 
 This opens `MensaDresden.xcworkspace` in Xcode.
 
+### Fixture mode (stable local data)
+
+The app supports a fixture data mode with static canteens, opening hours and meals.
+
+- In debug builds, enable it in `Settings > Developer > Use fixture data`.
+- For automated runs, force it via environment:
+
+```bash
+MENSA_DATA_MODE=fixtures
+```
+
+This is what the screenshot UI tests use, so screenshots are independent of live API timing (weekends, holidays, current serving windows).
+
 ### Typical workflow
 
 1. Make project changes in `Project.swift` (targets, dependencies, settings, schemes).
@@ -50,7 +63,6 @@ This generates fresh screenshots in `appstore_screenshots` for:
 
 - iPhone 17 Pro Max (6.9")
 - iPhone 11 Pro Max (6.5")
-- iPhone 8 Plus (5.5")
 - iPad Pro 13-inch (M4)
 
 across these locales: `en-US`, `de-DE`, `ja`, `ru`, `zh-Hans`.

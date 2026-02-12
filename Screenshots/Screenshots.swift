@@ -11,6 +11,7 @@ class Screenshots: XCTestCase {
         app = XCUIApplication()
         app.launchArguments.append("--uitesting")
         app.launchEnvironment = [
+            "MENSA_DATA_MODE": "fixtures",
             "favoriteCanteens": "Alte Mensa,MiO - Mensa im Osten",
             "autoloadUsername": "appledemo",
             "autoloadPassword": "appledemo",

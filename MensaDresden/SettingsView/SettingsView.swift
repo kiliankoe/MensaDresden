@@ -3,6 +3,7 @@ import os.log
 
 struct SettingsView: View {
     @EnvironmentObject var settings: Settings
+    @EnvironmentObject var api: API
     @State private var showingAutoloadDetails = false
 
     var shortVersion: String {
@@ -71,6 +72,29 @@ struct SettingsView: View {
                         }
                     }
                 }
+
+                #if DEBUG
+                Section(
+                    header: Text("Developer")
+                ) {
+                    Toggle(isOn: Binding(
+                        get: {
+                            settings.useFixtureData
+                        },
+                        set: { newValue in
+                            settings.useFixtureData = newValue
+                            api.reloadDataSource()
+                        }
+                    )) {
+                        Label {
+                            Text("Use fixture data")
+                        } icon: {
+                            Image(systemName: "shippingbox")
+                        }
+                    }
+                    .disabled(api.hasDataModeLaunchOverride)
+                }
+                #endif
 
                 Section(header: Text("Autoload")) {
                     TextField(
@@ -149,8 +173,10 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
+        let settings = Settings()
         SettingsView()
-            .environmentObject(Settings())
+            .environmentObject(settings)
+            .environmentObject(API(settings: settings))
             .previewLayout(.fixed(width: 375, height: 1000))
     }
 }
