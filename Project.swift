@@ -112,6 +112,7 @@ let project = Project(
                 "MensaDresden/Preview Content/Preview Assets.xcassets",
                 "MensaDresden/*.lproj/InfoPlist.strings",
                 "MensaDresden/*.lproj/Localizable.strings",
+                "MensaDresden/Resources/FixtureMealImages/**",
             ],
             entitlements: .file(path: "MensaDresden/Mensa Dresden.entitlements"),
             dependencies: [
