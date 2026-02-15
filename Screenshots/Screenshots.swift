@@ -16,7 +16,7 @@ class Screenshots: XCTestCase {
             "autoloadUsername": "appledemo",
             "autoloadPassword": "appledemo",
             "emeal.currentbalance": "13.37",
-            "emeal.lasttransaction": "6.0",
+            "emeal.lasttransaction": "4.20",
             "emeal.lastscan": "1641205800", // Jan 03 2022 11:30:00 (CET)
         ]
     }
@@ -29,7 +29,7 @@ class Screenshots: XCTestCase {
         Thread.sleep(forTimeInterval: 1) // Make sure meals are loaded
         snapshot("01_Menu")
 
-        app.selectMeal(0)
+        app.selectMeal(1)
         snapshot("03_Meal")
 
         app.goBack()

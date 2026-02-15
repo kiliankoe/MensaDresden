@@ -123,7 +123,7 @@ enum FixtureData {
             notes: ["Menü ist vegan"],
             studentsPrice: 3.45,
             employeesPrice: 6.27,
-            category: "Fertig 2",
+            category: "Fertig 3",
             image: fixtureMealImage("329359"),
             url: "https://www.studentenwerk-dresden.de/mensen/speiseplan/details-329359.html"
         ),
@@ -143,7 +143,7 @@ enum FixtureData {
             notes: ["Menü ist vegetarisch", "Milch/Milchzucker (Laktose) (G)", "Ei (C)"],
             studentsPrice: 2.35,
             employeesPrice: 4.90,
-            category: "Fertig 3",
+            category: "Fertig 4",
             image: fixtureMealImage("329360"),
             url: "https://www.studentenwerk-dresden.de/mensen/speiseplan/details-329360.html"
         ),
