@@ -71,9 +71,10 @@ struct CanteenCell: View {
                 HStack(spacing: 8) {
                     // Opening status
                     OpeningStatusView(canteen: canteen)
-                    
+                        .layoutPriority(1)
+
                     Spacer()
-                    
+
                     // Distance and compass
                     if settings.canteenSorting == Settings.CanteenSorting.distance.rawValue {
                         HStack(spacing: 4) {
@@ -83,6 +84,7 @@ struct CanteenCell: View {
                             }
                             Text(formattedDistance)
                                 .font(.caption2)
+                                .lineLimit(1)
                         }
                         .foregroundColor(.secondary)
                     }

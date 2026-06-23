@@ -152,6 +152,9 @@
 "opening-status.opens-in-hours" = "Откроется через %dч";
 "opening-status.closes-now" = "Закрывается сейчас";
 "opening-status.closes-in-minutes" = "Закроется через %d'";
+"opening-status.in-minutes-short" = "%d'";
+"opening-status.in-hours-short" = "%dч";
+"opening-status.now-short" = "сейчас";
 "opening-status.modified-hours" = "Измененные часы работы";
 
 // Date Picker / Opening Hours
