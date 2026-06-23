@@ -152,6 +152,9 @@
 "opening-status.opens-in-hours" = "Öffnet in %dh";
 "opening-status.closes-now" = "Schließt jetzt";
 "opening-status.closes-in-minutes" = "Schließt in %d'";
+"opening-status.in-minutes-short" = "%d'";
+"opening-status.in-hours-short" = "%dh";
+"opening-status.now-short" = "jetzt";
 "opening-status.modified-hours" = "Geänderte Öffnungszeiten";
 
 // Date Picker / Opening Hours

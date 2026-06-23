@@ -152,6 +152,9 @@
 "opening-status.opens-in-hours" = "%d小时后开门";
 "opening-status.closes-now" = "现在关门";
 "opening-status.closes-in-minutes" = "%d分钟后关门";
+"opening-status.in-minutes-short" = "%d分";
+"opening-status.in-hours-short" = "%d时";
+"opening-status.now-short" = "现在";
 "opening-status.modified-hours" = "修改营业时间";
 
 // Date Picker / Opening Hours

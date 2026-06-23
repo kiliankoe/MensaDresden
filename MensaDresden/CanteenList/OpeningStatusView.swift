@@ -16,41 +16,27 @@ struct OpeningStatusView: View {
                             Image(systemName: status.icon)
                                 .font(.system(size: 15))
                                 .foregroundColor(status.color)
-                            
-                            HStack(spacing: 4) {
-                                if status.usesOpenLabelLayout {
-                                    Text(status.subtext)
-                                        .font(.caption2)
-                                        .foregroundColor(.primary)
-                                        .layoutPriority(1)
-                                    
-                                    Text("opening-status.open")
-                                        .font(.caption2)
-                                        .foregroundColor(.secondary)
-                                } else {
-                                    Text(status.text)
-                                        .font(.caption2)
-                                        .foregroundColor(.primary)
-                                        .layoutPriority(1)
-                                    
-                                    Text(status.subtext)
-                                        .font(.caption2)
-                                        .foregroundColor(.secondary)
-                                        .lineLimit(1)
-                                }
-                            }
+                                .frame(width: 18, alignment: .center)
+
+                            label(for: status)
+                                .font(.caption2)
+                                .lineLimit(1)
+                                .truncationMode(.tail)
                         }
                     }
-                    
+
                     if hasChanged {
                         HStack(spacing: 4) {
                             Image(systemName: "exclamationmark.triangle")
                                 .font(.system(size: 15))
                                 .foregroundColor(.red)
-                            
+                                .frame(width: 18, alignment: .center)
+
                             Text(canteen.openingHours?.changedHours.first?.area ?? NSLocalizedString("opening-status.modified-hours", comment: ""))
                                 .font(.caption2)
                                 .foregroundColor(.primary)
+                                .lineLimit(2)
+                                .truncationMode(.tail)
                         }
                     }
                 }
@@ -64,20 +50,29 @@ struct OpeningStatusView: View {
     private func hasActiveChangedHours(at date: Date) -> Bool {
         canteen.openingHours?.hasChangedHours(at: date) ?? false
     }
-    
+
+    /// Builds the compact status label: a leading detail token (countdown / "now" /
+    /// "closed") in secondary color, followed by the area name in primary color.
+    /// Concatenating into a single `Text` prevents per-character wrapping on narrow rows.
+    private func label(for status: StatusDisplay) -> Text {
+        let area = Text(status.area).foregroundColor(.primary)
+        if status.detail.isEmpty { return area }
+        if status.area.isEmpty { return Text(status.detail).foregroundColor(.secondary) }
+        return Text(status.detail).foregroundColor(.secondary) + Text(" ") + area
+    }
+
     struct StatusDisplay: Identifiable {
         let id: UUID
-        let text: String
-        let subtext: String
+        let area: String      // meal/area name, may be ""
+        let detail: String    // leading token (countdown / "now" / "closed"), may be ""
         let icon: String
         let color: Color
-        let usesOpenLabelLayout: Bool
     }
     
     private func openingStatuses(at date: Date) -> [StatusDisplay]? {
         guard let openingHours = canteen.openingHours else {
-            return canteen.isOpen(at: date) ? 
-                [StatusDisplay(id: UUID(), text: NSLocalizedString("opening-status.open", comment: ""), subtext: "", icon: "checkmark", color: .green, usesOpenLabelLayout: true)] :
+            return canteen.isOpen(at: date) ?
+                [StatusDisplay(id: UUID(), area: "", detail: NSLocalizedString("opening-status.open", comment: ""), icon: "checkmark", color: .green)] :
                 nil
         }
         
@@ -116,64 +111,63 @@ struct OpeningStatusView: View {
         return uniqueStatuses.map { status in
             let minutes = Int(status.timeUntilChange / 60)
             let hours = Int(status.timeUntilChange / 3600)
-            
-            var text = ""
+
+            var detail = ""
             var icon = "clock"
             var color: Color = .secondary
-            var usesOpenLabelLayout = false
-            
+
             var areaName = status.area
-            
+
             // Clean up area name
             // Remove "Öffnungszeiten" and "Semester"
             areaName = areaName.replacingOccurrences(of: "Öffnungszeiten", with: "")
                 .replacingOccurrences(of: "Semester", with: "")
                 .trimmingCharacters(in: .whitespacesAndNewlines)
-            
+
             // If empty or too short after cleaning, fallback to "House"
             if areaName.count <= 3 {
                 areaName = NSLocalizedString("opening-hours.house", comment: "")
             }
             // Remove leading colons/punctuation if present
             areaName = areaName.trimmingCharacters(in: CharacterSet(charactersIn: ": "))
-            
+
+            // The verbose state words ("Open"/"Opens in"/"Closes in") are dropped — the
+            // icon and color convey the state. Only a compact time token is shown.
             if status.isOpen {
                 // OPEN
                 color = minutes < 60 ? .orange : .green
-                icon = minutes < 60 ? "clock" : "checkmark"
-                
+                icon = minutes < 60 ? "hourglass" : "checkmark"
+
                 if minutes >= 60 {
-                    text = NSLocalizedString("opening-status.open", comment: "")
-                    usesOpenLabelLayout = true
+                    detail = "" // plenty of time left: just the area name
                 } else if minutes <= 0 {
-                    text = NSLocalizedString("opening-status.closes-now", comment: "")
+                    detail = NSLocalizedString("opening-status.now-short", comment: "")
                 } else {
-                    text = String(format: NSLocalizedString("opening-status.closes-in-minutes", comment: ""), minutes)
+                    detail = String(format: NSLocalizedString("opening-status.in-minutes-short", comment: ""), minutes)
                 }
-                
+
             } else {
                 // CLOSED
                 color = minutes < 60 ? .green : .secondary // Green if opening soon
                 icon = "clock"
-                
+
                 if hours >= 24 {
-                     text = NSLocalizedString("opening-status.closed", comment: "")
+                    detail = NSLocalizedString("opening-status.closed", comment: "")
                 } else if minutes <= 0 {
-                    text = NSLocalizedString("opening-status.opens-now", comment: "")
+                    detail = NSLocalizedString("opening-status.now-short", comment: "")
                 } else if minutes < 60 {
-                    text = String(format: NSLocalizedString("opening-status.opens-in-minutes", comment: ""), minutes)
+                    detail = String(format: NSLocalizedString("opening-status.in-minutes-short", comment: ""), minutes)
                 } else {
-                    text = String(format: NSLocalizedString("opening-status.opens-in-hours", comment: ""), hours)
+                    detail = String(format: NSLocalizedString("opening-status.in-hours-short", comment: ""), hours)
                 }
             }
-            
+
             return StatusDisplay(
                 id: status.id,
-                text: text,
-                subtext: areaName,
+                area: areaName,
+                detail: detail,
                 icon: icon,
-                color: color,
-                usesOpenLabelLayout: usesOpenLabelLayout
+                color: color
             )
         }
     }
