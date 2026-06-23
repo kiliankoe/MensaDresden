@@ -1,0 +1,163 @@
+// App/Tab View
+"tab.menu" = "메뉴";
+"tab.emeal" = "Emeal";
+"tab.newsfeed" = "소식";
+"tab.settings" = "설정";
+
+// iPad placeholder detail
+"ipad.bon-appetit" = "🍲 맛있게 드세요!";
+"ipad.swipe-hint" = "왼쪽에서 쓸어넘기면 학식당 목록이 열립니다.";
+
+// Canteen List
+"canteens.nav" = "학식당";
+"canteens.no-data" = "학식당을 찾을 수 없습니다 🤔";
+
+// Meal List
+"meals.no-meals-today" = "오늘은 메뉴에 아무것도 없습니다.";
+"meals.no-meals-tomorrow" = "내일은 메뉴에 아무것도 없습니다.";
+"meals.no-meals-other" = "이 날은 메뉴에 아무것도 없습니다.";
+"meals.holiday" = "오늘은 %@입니다! 📅";
+"meals.weekend" = "즐거운 주말 보내세요! 🏖";
+
+// Meal Detail
+"meal.rate-title" = "식사 평가";
+"meal.rate-description" = "Studentenwerk에 직접 의견을 보냅니다.";
+"meal.dinner" = "저녁";
+"meal.ingredient-warning" = "이 식사는 회원님의 식단 선호와 맞지 않을 수 있습니다.";
+"meal.sold-out" = "품절";
+"meal.sold-out-long" = "이 식사는 이미 품절되었습니다.";
+"meal.original" = "원문:";
+
+// Emeal View
+"emeal.nfc-text" = "Emeal 카드를 기기에 가까이 대세요.";
+"emeal.nfc-reading-error" = "NFC 태그를 읽을 수 없습니다.";
+"emeal.nfc-connection-error" = "연결 오류입니다. 다시 시도해 주세요.";
+"emeal.balance" = "잔액";
+"emeal.last-transaction" = "최근 거래";
+"emeal.last-scanned" = "마지막 스캔";
+"emeal.scan-button" = "Emeal 스캔";
+"emeal.autoload-hint" = "Autoload를 사용하시나요? 앱 설정에 자격 증명을 입력하면 최근 거래 내역이 모두 여기에 표시됩니다.";
+"emeal.autoload-information" = "Autoload 정보";
+"emeal.no-transactions" = "지난 180일 동안 거래가 없습니다.";
+"emeal.error.network" = "네트워크 오류";
+"emeal.error.invalid-credentials" = "사용자 이름 또는 비밀번호가 올바르지 않습니다";
+"emeal.error.server" = "서버 오류 %d";
+"emeal.error.decoding" = "데이터를 읽지 못했습니다.";
+"emeal.error.no-card-details" = "계정에서 Emeal을 찾을 수 없습니다.";
+"emeal.error.rate-limited" = "요청이 너무 많습니다. 잠시 후 다시 시도해 주세요.";
+"emeal.estimation-explanation-title" = "예상 잔액";
+"emeal.estimation-explanation-ok-action" = "확인";
+"emeal.estimation-explanation-text" = "Autoload 거래 내역을 사용하여 Emeal 잔액을 추정했습니다. 거래 내역은 지난 180일 동안만 제공되므로, 마지막 스캔이 그보다 오래되었다면 정확한 잔액을 여기에 표시할 수 없습니다.\n\n마지막으로 스캔한 잔액은 %.2f€였습니다.";
+"emeal.tab.transactions" = "거래 내역";
+"emeal.tab.statistics" = "통계";
+
+// Emeal Statistics
+"emeal.statistics.total-spent" = "총 지출";
+"emeal.statistics.avg-purchase" = "평균 구매액";
+"emeal.statistics.total-saved" = "총 절약액 (방문자 가격 대비)";
+"emeal.statistics.activity-title" = "구매 활동 (지난 180일)";
+"emeal.statistics.activity-legend-less" = "적음";
+"emeal.statistics.activity-legend-more" = "많음";
+"emeal.statistics.spending-by-month" = "월별 지출";
+"emeal.statistics.spending-by-day" = "요일별 지출";
+"emeal.statistics.most-visited" = "가장 많이 방문한 장소";
+"emeal.statistics.spending-by-location" = "장소별 지출";
+"emeal.statistics.most-expensive" = "가장 비싼 구매";
+"emeal.statistics.summary" = "요약";
+"emeal.statistics.total-transactions" = "총 거래 수";
+"emeal.statistics.unique-locations" = "방문 장소 수";
+"emeal.statistics.favorite-location" = "자주 가는 장소";
+"emeal.statistics.day.sun" = "일";
+"emeal.statistics.day.mon" = "월";
+"emeal.statistics.day.tue" = "화";
+"emeal.statistics.day.wed" = "수";
+"emeal.statistics.day.thu" = "목";
+"emeal.statistics.day.fri" = "금";
+"emeal.statistics.day.sat" = "토";
+
+// Settings
+"settings.nav" = "설정";
+"settings.section-canteens" = "학식당";
+"settings.section-meals" = "식사";
+"settings.favorite-canteens" = "즐겨찾는 학식당";
+"settings.favorite-canteens-description" = "즐겨찾는 학식당입니다. 학식당 메뉴에서 하트를 탭하여 추가/해제하거나, 여기서 목록을 편집하여 삭제하고 순서를 바꿀 수 있습니다.";
+"settings.ingredients-allergens.title" = "재료 및 알레르기 유발 물질";
+"settings.user-diet" = "식단";
+"settings.ingredients" = "재료";
+"settings.allergens" = "알레르기 유발 물질";
+"settings.ingredients-description" = "특정 식단을 따르는지, 또는 특정 재료나 알레르기 유발 물질을 섭취하지 않으려는지 선택하세요. 이 옵션은 필터로 사용되며, 회원님에게 적합하지 않은 식사는 메뉴에서 흐리게 표시됩니다. 안타깝게도 영양 정보는 다소 불완전합니다. 채식 및 비건 식사가 그렇게 표시되지 않을 수도 있습니다.\n식사를 구매하기 전에 학식당에 표시된 재료를 꼭 확인하세요. 앱에 표시된 정보에 의존해서는 안 됩니다.";
+"settings.price-type" = "식사 가격";
+"student" = "학생";
+"employee" = "교직원";
+"settings.canteen-sorting" = "학식당 정렬";
+"default" = "기본";
+"distance" = "거리";
+"alphabetical" = "가나다순";
+"settings.autoload-description" = "Autoload를 사용하시나요? Emeal 페이지에 지난 180일간의 거래를 표시하려면 여기에 자격 증명을 입력하세요. 자격 증명은 이 기기에만 안전하게 저장되며 인증 목적으로만 Studentenwerk 서버로 전송됩니다.";
+"settings.autoload-cardnumber" = "카드 번호";
+"settings.autoload-password" = "비밀번호";
+"settings.autoload-information" = "Autoload 정보";
+"settings.translate-meals" = "식사 이름 번역";
+"settings.translate-meals-prompt-title" = "식사 번역을 켜시겠어요?";
+"settings.translate-meals-prompt-message" = "식사 이름을 회원님의 언어로 자동 번역할 수 있습니다. 식사를 처음 볼 때 언어 파일(~100MB)을 다운로드합니다.";
+"settings.translate-meals-prompt-enable" = "켜기";
+"settings.translate-meals-prompt-no-thanks" = "아니요";
+"settings.about" = "정보";
+
+// Licenses
+"licenses.title" = "타사 라이선스";
+
+// Info View
+"info.developed-by" = "개발자";
+"info.thanks" = "훌륭한 피드백을 주신 Lucas Vogel, Lars Westermann, Georg Sieber, 모든 GitHub 기여자 및 베타 테스터 분들께 진심으로 감사드립니다!";
+"info.email" = "피드백 보내기";
+"info.translate" = "번역에 기여하기";
+"info.image-rights" = "이미지 권리";
+"info.icon" = "아이콘";
+"info.nounproject" = "The Noun Project의 Eddy Wong";
+
+// Loading List
+"list.try-again" = "다시 시도하세요.";
+
+// Diet
+"all" = "전체";
+"vegetarian" = "채식";
+"vegan" = "비건";
+
+"pork" = "돼지고기";
+"beef" = "소고기";
+"alcohol" = "알코올";
+"garlic" = "마늘";
+
+"gluten" = "글루텐";
+"shellfish" = "갑각류";
+"eggs" = "달걀";
+"fish" = "생선";
+"peanuts" = "땅콩";
+"soy" = "대두";
+"lactose" = "유당";
+"nuts" = "견과류";
+"celery" = "셀러리";
+"mustard" = "겨자";
+"sesame" = "참깨";
+"sulfite" = "아황산염";
+"lupin" = "루핀";
+"molluscs" = "연체동물";
+
+// Opening Status
+"opening-status.open" = "영업 중";
+"opening-status.closed" = "영업 종료";
+"opening-status.opens-now" = "지금 영업 시작";
+"opening-status.opens-in-minutes" = "%d분 후 영업 시작";
+"opening-status.opens-in-hours" = "%d시간 후 영업 시작";
+"opening-status.closes-now" = "지금 영업 종료";
+"opening-status.closes-in-minutes" = "%d분 후 영업 종료";
+"opening-status.in-minutes-short" = "%d분";
+"opening-status.in-hours-short" = "%d시간";
+"opening-status.now-short" = "지금";
+"opening-status.modified-hours" = "변경된 운영 시간 적용 중";
+
+// Date Picker / Opening Hours
+"opening-hours.title" = "운영 시간";
+"opening-hours.modified" = "변경된 운영 시간";
+"opening-hours.house" = "건물";

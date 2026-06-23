@@ -1,0 +1,163 @@
+// App/Tab View
+"tab.menu" = "Menú";
+"tab.emeal" = "Emeal";
+"tab.newsfeed" = "Noticias";
+"tab.settings" = "Ajustes";
+
+// iPad placeholder detail
+"ipad.bon-appetit" = "🍲 ¡Buen provecho!";
+"ipad.swipe-hint" = "Desliza desde la izquierda para abrir la lista de comedores.";
+
+// Canteen List
+"canteens.nav" = "Comedores";
+"canteens.no-data" = "No se encontraron comedores 🤔";
+
+// Meal List
+"meals.no-meals-today" = "Hoy no hay nada en el menú.";
+"meals.no-meals-tomorrow" = "Mañana no hay nada en el menú.";
+"meals.no-meals-other" = "No hay nada en el menú para este día.";
+"meals.holiday" = "¡Es %@! 📅";
+"meals.weekend" = "¡Buen fin de semana! 🏖";
+
+// Meal Detail
+"meal.rate-title" = "Valorar plato";
+"meal.rate-description" = "Envía tu opinión directamente al Studentenwerk.";
+"meal.dinner" = "Cena";
+"meal.ingredient-warning" = "Este plato puede no ajustarse a tus preferencias alimentarias.";
+"meal.sold-out" = "Agotado";
+"meal.sold-out-long" = "Este plato ya está agotado.";
+"meal.original" = "Original:";
+
+// Emeal View
+"emeal.nfc-text" = "Acerca tu tarjeta Emeal al dispositivo.";
+"emeal.nfc-reading-error" = "No se pudo leer la etiqueta NFC.";
+"emeal.nfc-connection-error" = "Error de conexión. Inténtalo de nuevo.";
+"emeal.balance" = "Saldo";
+"emeal.last-transaction" = "Última transacción";
+"emeal.last-scanned" = "Último escaneo";
+"emeal.scan-button" = "Escanear Emeal";
+"emeal.autoload-hint" = "¿Usas Autoload? Introduce tus credenciales en los ajustes de la app y todas tus transacciones recientes aparecerán aquí.";
+"emeal.autoload-information" = "Información de Autoload";
+"emeal.no-transactions" = "Sin transacciones en los últimos 180 días.";
+"emeal.error.network" = "Error de red";
+"emeal.error.invalid-credentials" = "Usuario o contraseña no válidos";
+"emeal.error.server" = "Error del servidor %d";
+"emeal.error.decoding" = "No se pudieron leer los datos.";
+"emeal.error.no-card-details" = "No se encontró ninguna Emeal en la cuenta.";
+"emeal.error.rate-limited" = "Demasiadas solicitudes. Inténtalo de nuevo en un momento.";
+"emeal.estimation-explanation-title" = "Saldo estimado";
+"emeal.estimation-explanation-ok-action" = "Ok";
+"emeal.estimation-explanation-text" = "Tus transacciones de Autoload se usaron para estimar el saldo de tu Emeal. Las transacciones solo están disponibles durante los últimos 180 días; si tu último escaneo es anterior a eso, no se puede mostrar aquí un saldo correcto.\n\nTu último saldo escaneado fue de %.2f€.";
+"emeal.tab.transactions" = "Transacciones";
+"emeal.tab.statistics" = "Estadísticas";
+
+// Emeal Statistics
+"emeal.statistics.total-spent" = "Total gastado";
+"emeal.statistics.avg-purchase" = "Compra media";
+"emeal.statistics.total-saved" = "Total ahorrado (comparado con el precio de invitado)";
+"emeal.statistics.activity-title" = "Actividad de compras (últimos 180 días)";
+"emeal.statistics.activity-legend-less" = "Menos";
+"emeal.statistics.activity-legend-more" = "Más";
+"emeal.statistics.spending-by-month" = "Gasto por mes";
+"emeal.statistics.spending-by-day" = "Gasto por día de la semana";
+"emeal.statistics.most-visited" = "Lugares más visitados";
+"emeal.statistics.spending-by-location" = "Gasto por lugar";
+"emeal.statistics.most-expensive" = "Compras más caras";
+"emeal.statistics.summary" = "Resumen";
+"emeal.statistics.total-transactions" = "Total de transacciones";
+"emeal.statistics.unique-locations" = "Lugares distintos";
+"emeal.statistics.favorite-location" = "Lugar favorito";
+"emeal.statistics.day.sun" = "Dom";
+"emeal.statistics.day.mon" = "Lun";
+"emeal.statistics.day.tue" = "Mar";
+"emeal.statistics.day.wed" = "Mié";
+"emeal.statistics.day.thu" = "Jue";
+"emeal.statistics.day.fri" = "Vie";
+"emeal.statistics.day.sat" = "Sáb";
+
+// Settings
+"settings.nav" = "Ajustes";
+"settings.section-canteens" = "Comedores";
+"settings.section-meals" = "Platos";
+"settings.favorite-canteens" = "Comedores favoritos";
+"settings.favorite-canteens-description" = "Tus comedores favoritos. Toca el corazón en el menú de un comedor para activarlo o edita la lista aquí para eliminar y reordenar.";
+"settings.ingredients-allergens.title" = "Ingredientes y alérgenos";
+"settings.user-diet" = "Dieta";
+"settings.ingredients" = "Ingredientes";
+"settings.allergens" = "Alérgenos";
+"settings.ingredients-description" = "Elige si sigues una dieta determinada o no quieres ingerir ciertos ingredientes o alérgenos. Estas opciones se usan como filtros y los platos que no son adecuados para ti aparecen atenuados en el menú. Por desgracia, la información nutricional es algo incompleta. Puede ocurrir que platos vegetarianos y veganos no estén marcados como tales.\nAntes de comprar un plato, presta atención a los ingredientes indicados en el comedor. No deberías confiar en la información que aparece en la app.";
+"settings.price-type" = "Precio del plato";
+"student" = "Estudiante";
+"employee" = "Empleado";
+"settings.canteen-sorting" = "Orden de comedores";
+"default" = "Predeterminado";
+"distance" = "Distancia";
+"alphabetical" = "Alfabético";
+"settings.autoload-description" = "¿Usas Autoload? Introduce tus credenciales aquí para mostrar las transacciones de los últimos 180 días en la página de Emeal. Tus credenciales se guardan de forma segura solo en este dispositivo y únicamente se envían a los servidores del Studentenwerk con fines de autenticación.";
+"settings.autoload-cardnumber" = "Número de tarjeta";
+"settings.autoload-password" = "Contraseña";
+"settings.autoload-information" = "Información de Autoload";
+"settings.translate-meals" = "Traducir títulos de platos";
+"settings.translate-meals-prompt-title" = "¿Activar la traducción de platos?";
+"settings.translate-meals-prompt-message" = "Los títulos de los platos pueden traducirse automáticamente a tu idioma. Esto descargará archivos de idioma (~100 MB) la primera vez que veas los platos.";
+"settings.translate-meals-prompt-enable" = "Activar";
+"settings.translate-meals-prompt-no-thanks" = "No, gracias";
+"settings.about" = "Acerca de";
+
+// Licenses
+"licenses.title" = "Licencias de terceros";
+
+// Info View
+"info.developed-by" = "Desarrollado por";
+"info.thanks" = "¡Muchísimas gracias a Lucas Vogel, Lars Westermann, Georg Sieber, a todos los colaboradores de GitHub y a los probadores beta por sus excelentes comentarios!";
+"info.email" = "Enviar comentarios";
+"info.translate" = "Contribuir con traducciones";
+"info.image-rights" = "Derechos de imagen";
+"info.icon" = "Icono";
+"info.nounproject" = "Eddy Wong de The Noun Project";
+
+// Loading List
+"list.try-again" = "Inténtalo de nuevo.";
+
+// Diet
+"all" = "todo";
+"vegetarian" = "vegetariano";
+"vegan" = "vegano";
+
+"pork" = "Cerdo";
+"beef" = "Ternera";
+"alcohol" = "Alcohol";
+"garlic" = "Ajo";
+
+"gluten" = "Gluten";
+"shellfish" = "Marisco";
+"eggs" = "Huevos";
+"fish" = "Pescado";
+"peanuts" = "Cacahuetes";
+"soy" = "Soja";
+"lactose" = "Lactosa";
+"nuts" = "Frutos secos";
+"celery" = "Apio";
+"mustard" = "Mostaza";
+"sesame" = "Sésamo";
+"sulfite" = "Sulfitos";
+"lupin" = "Altramuz";
+"molluscs" = "Moluscos";
+
+// Opening Status
+"opening-status.open" = "Abierto";
+"opening-status.closed" = "Cerrado";
+"opening-status.opens-now" = "Abre ahora";
+"opening-status.opens-in-minutes" = "Abre en %d'";
+"opening-status.opens-in-hours" = "Abre en %dh";
+"opening-status.closes-now" = "Cierra ahora";
+"opening-status.closes-in-minutes" = "Cierra en %d'";
+"opening-status.in-minutes-short" = "%d'";
+"opening-status.in-hours-short" = "%dh";
+"opening-status.now-short" = "ahora";
+"opening-status.modified-hours" = "Horario modificado activo";
+
+// Date Picker / Opening Hours
+"opening-hours.title" = "Horario de apertura";
+"opening-hours.modified" = "Horario modificado";
+"opening-hours.house" = "Edificio";

@@ -1,0 +1,163 @@
+// App/Tab View
+"tab.menu" = "Menü";
+"tab.emeal" = "Emeal";
+"tab.newsfeed" = "Haberler";
+"tab.settings" = "Ayarlar";
+
+// iPad placeholder detail
+"ipad.bon-appetit" = "🍲 Afiyet olsun!";
+"ipad.swipe-hint" = "Yemekhane listesini açmak için soldan kaydırın.";
+
+// Canteen List
+"canteens.nav" = "Yemekhaneler";
+"canteens.no-data" = "Yemekhane bulunamadı 🤔";
+
+// Meal List
+"meals.no-meals-today" = "Bugün menüde hiçbir şey yok.";
+"meals.no-meals-tomorrow" = "Yarın menüde hiçbir şey yok.";
+"meals.no-meals-other" = "Bu gün için menüde hiçbir şey yok.";
+"meals.holiday" = "Bugün %@! 📅";
+"meals.weekend" = "İyi hafta sonları! 🏖";
+
+// Meal Detail
+"meal.rate-title" = "Yemeği değerlendir";
+"meal.rate-description" = "Geri bildiriminizi doğrudan Studentenwerk'e gönderin.";
+"meal.dinner" = "Akşam yemeği";
+"meal.ingredient-warning" = "Bu yemek beslenme tercihlerinize uymayabilir.";
+"meal.sold-out" = "Tükendi";
+"meal.sold-out-long" = "Bu yemek zaten tükendi.";
+"meal.original" = "Orijinal:";
+
+// Emeal View
+"emeal.nfc-text" = "Emeal kartınızı cihazınıza yaklaştırın.";
+"emeal.nfc-reading-error" = "NFC etiketi okunamadı.";
+"emeal.nfc-connection-error" = "Bağlantı hatası. Lütfen tekrar deneyin.";
+"emeal.balance" = "Bakiye";
+"emeal.last-transaction" = "Son işlem";
+"emeal.last-scanned" = "Son tarama";
+"emeal.scan-button" = "Emeal'i tara";
+"emeal.autoload-hint" = "Autoload mu kullanıyorsunuz? Kimlik bilgilerinizi uygulamanın ayarlarına girin; tüm son işlemleriniz burada görünecektir.";
+"emeal.autoload-information" = "Autoload bilgileri";
+"emeal.no-transactions" = "Son 180 günde işlem yok.";
+"emeal.error.network" = "Ağ hatası";
+"emeal.error.invalid-credentials" = "Geçersiz kullanıcı adı veya parola";
+"emeal.error.server" = "%d Sunucu hatası";
+"emeal.error.decoding" = "Veriler okunamadı.";
+"emeal.error.no-card-details" = "Hesapta Emeal bulunamadı.";
+"emeal.error.rate-limited" = "Çok fazla istek. Birazdan tekrar deneyin.";
+"emeal.estimation-explanation-title" = "Tahmini bakiye";
+"emeal.estimation-explanation-ok-action" = "Tamam";
+"emeal.estimation-explanation-text" = "Emeal bakiyenizi tahmin etmek için Autoload işlemleriniz kullanıldı. İşlemler yalnızca son 180 gün için kullanılabilir; son taramanız bundan eskiyse burada doğru bir bakiye gösterilemez.\n\nSon taranan bakiyeniz %.2f€ idi.";
+"emeal.tab.transactions" = "İşlemler";
+"emeal.tab.statistics" = "İstatistikler";
+
+// Emeal Statistics
+"emeal.statistics.total-spent" = "Toplam harcama";
+"emeal.statistics.avg-purchase" = "Ortalama alışveriş";
+"emeal.statistics.total-saved" = "Toplam tasarruf (misafir fiyatına kıyasla)";
+"emeal.statistics.activity-title" = "Alışveriş etkinliği (son 180 gün)";
+"emeal.statistics.activity-legend-less" = "Daha az";
+"emeal.statistics.activity-legend-more" = "Daha çok";
+"emeal.statistics.spending-by-month" = "Aya göre harcama";
+"emeal.statistics.spending-by-day" = "Haftanın gününe göre harcama";
+"emeal.statistics.most-visited" = "En çok ziyaret edilen yerler";
+"emeal.statistics.spending-by-location" = "Yere göre harcama";
+"emeal.statistics.most-expensive" = "En pahalı alışverişler";
+"emeal.statistics.summary" = "Özet";
+"emeal.statistics.total-transactions" = "Toplam işlem";
+"emeal.statistics.unique-locations" = "Farklı yerler";
+"emeal.statistics.favorite-location" = "Favori yer";
+"emeal.statistics.day.sun" = "Paz";
+"emeal.statistics.day.mon" = "Pzt";
+"emeal.statistics.day.tue" = "Sal";
+"emeal.statistics.day.wed" = "Çar";
+"emeal.statistics.day.thu" = "Per";
+"emeal.statistics.day.fri" = "Cum";
+"emeal.statistics.day.sat" = "Cmt";
+
+// Settings
+"settings.nav" = "Ayarlar";
+"settings.section-canteens" = "Yemekhaneler";
+"settings.section-meals" = "Yemekler";
+"settings.favorite-canteens" = "Favori yemekhaneler";
+"settings.favorite-canteens-description" = "Favori yemekhaneleriniz. Açıp kapatmak için bir yemekhanenin menüsündeki kalbe dokunun veya silmek ve yeniden sıralamak için listeyi buradan düzenleyin.";
+"settings.ingredients-allergens.title" = "İçindekiler ve alerjenler";
+"settings.user-diet" = "Beslenme";
+"settings.ingredients" = "İçindekiler";
+"settings.allergens" = "Alerjenler";
+"settings.ingredients-description" = "Belirli bir beslenme düzenine uyup uymadığınızı ya da belirli içerikleri veya alerjenleri almak istemediğinizi seçin. Bu seçenekler filtre olarak kullanılır ve size uygun olmayan yemekler menüde soluk gösterilir. Maalesef besin bilgileri biraz eksiktir. Vejetaryen ve vegan yemeklerin böyle işaretlenmemiş olması mümkündür.\nBir yemek satın almadan önce lütfen yemekhanede belirtilen içeriklere dikkat edin. Uygulamada gösterilen bilgilere güvenmemelisiniz.";
+"settings.price-type" = "Yemek fiyatı";
+"student" = "Öğrenci";
+"employee" = "Çalışan";
+"settings.canteen-sorting" = "Yemekhane sıralaması";
+"default" = "Varsayılan";
+"distance" = "Mesafe";
+"alphabetical" = "Alfabetik";
+"settings.autoload-description" = "Autoload mu kullanıyorsunuz? Son 180 günün işlemlerini Emeal sayfasında göstermek için kimlik bilgilerinizi buraya girin. Kimlik bilgileriniz yalnızca bu cihazda güvenli bir şekilde saklanır ve yalnızca kimlik doğrulama amacıyla Studentenwerk sunucularına gönderilir.";
+"settings.autoload-cardnumber" = "Kart numarası";
+"settings.autoload-password" = "Parola";
+"settings.autoload-information" = "Autoload bilgileri";
+"settings.translate-meals" = "Yemek başlıklarını çevir";
+"settings.translate-meals-prompt-title" = "Yemek çevirisi etkinleştirilsin mi?";
+"settings.translate-meals-prompt-message" = "Yemek başlıkları otomatik olarak dilinize çevrilebilir. Yemekleri ilk görüntülediğinizde dil dosyaları (~100 MB) indirilecektir.";
+"settings.translate-meals-prompt-enable" = "Etkinleştir";
+"settings.translate-meals-prompt-no-thanks" = "Hayır, teşekkürler";
+"settings.about" = "Hakkında";
+
+// Licenses
+"licenses.title" = "Üçüncü taraf lisansları";
+
+// Info View
+"info.developed-by" = "Geliştiren";
+"info.thanks" = "Değerli geri bildirimleri için Lucas Vogel, Lars Westermann, Georg Sieber, tüm GitHub katkıda bulunanlara ve beta test kullanıcılarına çok teşekkürler!";
+"info.email" = "Geri bildirim gönder";
+"info.translate" = "Çevirilere katkıda bulun";
+"info.image-rights" = "Görsel hakları";
+"info.icon" = "Simge";
+"info.nounproject" = "The Noun Project'ten Eddy Wong";
+
+// Loading List
+"list.try-again" = "Tekrar deneyin.";
+
+// Diet
+"all" = "her şey";
+"vegetarian" = "vejetaryen";
+"vegan" = "vegan";
+
+"pork" = "Domuz eti";
+"beef" = "Dana eti";
+"alcohol" = "Alkol";
+"garlic" = "Sarımsak";
+
+"gluten" = "Gluten";
+"shellfish" = "Kabuklu deniz ürünleri";
+"eggs" = "Yumurta";
+"fish" = "Balık";
+"peanuts" = "Yer fıstığı";
+"soy" = "Soya";
+"lactose" = "Laktoz";
+"nuts" = "Kuruyemiş";
+"celery" = "Kereviz";
+"mustard" = "Hardal";
+"sesame" = "Susam";
+"sulfite" = "Sülfit";
+"lupin" = "Acı bakla";
+"molluscs" = "Yumuşakçalar";
+
+// Opening Status
+"opening-status.open" = "Açık";
+"opening-status.closed" = "Kapalı";
+"opening-status.opens-now" = "Şimdi açılıyor";
+"opening-status.opens-in-minutes" = "%d' sonra açılıyor";
+"opening-status.opens-in-hours" = "%ds sonra açılıyor";
+"opening-status.closes-now" = "Şimdi kapanıyor";
+"opening-status.closes-in-minutes" = "%d' sonra kapanıyor";
+"opening-status.in-minutes-short" = "%d'";
+"opening-status.in-hours-short" = "%ds";
+"opening-status.now-short" = "şimdi";
+"opening-status.modified-hours" = "Değiştirilmiş saatler etkin";
+
+// Date Picker / Opening Hours
+"opening-hours.title" = "Açılış saatleri";
+"opening-hours.modified" = "Değiştirilmiş saatler";
+"opening-hours.house" = "Bina";

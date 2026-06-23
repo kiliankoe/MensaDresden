@@ -20,7 +20,7 @@
 "meals.weekend" = "祝你周末愉快 🏖。";
 
 // Meal Detail
-"meal.rate-title" = "饭菜价格";
+"meal.rate-title" = "评价餐点";
 "meal.rate-description" = "直接向大学生服务部发送反馈信息。";
 "meal.dinner" = "晚餐";
 "meal.ingredient-warning" = "这顿饭可能不符合您的饮食偏好。";
@@ -35,7 +35,7 @@
 "emeal.balance" = "帐户余额";
 "emeal.last-transaction" = "最后交易";
 "emeal.last-scanned" = "卡片最后一次扫描";
-"emeal.scan-button" = "扫瞄麦片";
+"emeal.scan-button" = "扫描 Emeal";
 "emeal.autoload-hint" = "正在使用自动加载？在应用程序的设置中输入您的凭证，您最近的所有交易都会显示在这里。";
 "emeal.autoload-information" = "自动加载信息";
 "emeal.no-transactions" = "过去180天内没有交易。";
@@ -82,16 +82,16 @@
 "settings.favorite-canteens" = "最喜欢的食堂";
 "settings.favorite-canteens-description" = "你喜欢的食堂。轻点食堂菜单上的心，可以在这里切换或编辑列表中的食堂菜单，进行删除和重新排序。";
 "settings.ingredients-allergens.title" = "成分和过敏原";
-"settings.user-diet" = "营养学";
+"settings.user-diet" = "饮食";
 "settings.ingredients" = "成分";
 "settings.allergens" = "过敏原";
 "settings.ingredients-description" = "选择您是遵循某种饮食习惯还是不想摄入某些成分或过敏原。这些选项是作为过滤器使用的，不适合你的餐品会在菜单中被灰化。遗憾的是，营养信息有些不完整。可能会出现素食和纯素菜没有标明的情况。\n在买饭之前，请先查看食堂列出的食材，当然，不能完全依赖APP中这里给出的信息。";
 "settings.price-type" = "饭钱";
 "student" = "学生";
 "employee" = "员工";
-"settings.canteen-sorting" = "食堂折扣";
+"settings.canteen-sorting" = "食堂排序";
 "default" = "默认值";
-"distance" = "距離";
+"distance" = "距离";
 "alphabetical" = "按字母顺序排列";
 "settings.autoload-description" = "正在使用自动加载？请在此输入您的凭证，以显示 Emeal 页面上的所有最新交易。您的凭证仅安全地保存在此设备上，并只发送给 Studentenwerk 服务器用于自动验证。";
 "settings.autoload-cardnumber" = "卡号";
@@ -108,7 +108,7 @@
 "licenses.title" = "第三方许可证";
 
 // Info View
-"info.developed-by" = "由开发";
+"info.developed-by" = "开发者";
 "info.thanks" = "非常感谢Lucas Vogel、Lars Westermann、Georg Sieber、所有GitHub的贡献者和beta测试者们的巨大反馈!";
 "info.email" = "发送反馈";
 "info.translate" = "提供翻译";
@@ -160,4 +160,4 @@
 // Date Picker / Opening Hours
 "opening-hours.title" = "营业时间";
 "opening-hours.modified" = "修改营业时间";
-"opening-hours.house" = "房子";
+"opening-hours.house" = "楼栋";

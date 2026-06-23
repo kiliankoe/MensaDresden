@@ -1,0 +1,163 @@
+// App/Tab View
+"tab.menu" = "القائمة";
+"tab.emeal" = "Emeal";
+"tab.newsfeed" = "الأخبار";
+"tab.settings" = "الإعدادات";
+
+// iPad placeholder detail
+"ipad.bon-appetit" = "🍲 بالهناء والشفاء!";
+"ipad.swipe-hint" = "اسحب من اليسار لفتح قائمة المطاعم الجامعية.";
+
+// Canteen List
+"canteens.nav" = "المطاعم الجامعية";
+"canteens.no-data" = "لم يُعثر على أي مطعم جامعي 🤔";
+
+// Meal List
+"meals.no-meals-today" = "لا يوجد شيء في قائمة اليوم.";
+"meals.no-meals-tomorrow" = "لا يوجد شيء في قائمة الغد.";
+"meals.no-meals-other" = "لا يوجد شيء في القائمة لهذا اليوم.";
+"meals.holiday" = "إنه %@! 📅";
+"meals.weekend" = "عطلة نهاية أسبوع سعيدة! 🏖";
+
+// Meal Detail
+"meal.rate-title" = "تقييم الوجبة";
+"meal.rate-description" = "أرسِل ملاحظاتك مباشرةً إلى Studentenwerk.";
+"meal.dinner" = "العشاء";
+"meal.ingredient-warning" = "قد لا تتوافق هذه الوجبة مع تفضيلاتك الغذائية.";
+"meal.sold-out" = "نفدت الكمية";
+"meal.sold-out-long" = "نفدت كمية هذه الوجبة بالفعل.";
+"meal.original" = "الأصل:";
+
+// Emeal View
+"emeal.nfc-text" = "قرّب بطاقة Emeal من جهازك.";
+"emeal.nfc-reading-error" = "تعذّرت قراءة علامة NFC.";
+"emeal.nfc-connection-error" = "خطأ في الاتصال. يرجى المحاولة مرة أخرى.";
+"emeal.balance" = "الرصيد";
+"emeal.last-transaction" = "آخر معاملة";
+"emeal.last-scanned" = "آخر مسح";
+"emeal.scan-button" = "مسح Emeal";
+"emeal.autoload-hint" = "هل تستخدم Autoload؟ أدخِل بيانات اعتمادك في إعدادات التطبيق وستظهر جميع معاملاتك الأخيرة هنا.";
+"emeal.autoload-information" = "معلومات Autoload";
+"emeal.no-transactions" = "لا توجد معاملات خلال آخر ١٨٠ يومًا.";
+"emeal.error.network" = "خطأ في الشبكة";
+"emeal.error.invalid-credentials" = "اسم المستخدم أو كلمة المرور غير صحيحة";
+"emeal.error.server" = "خطأ في الخادم %d";
+"emeal.error.decoding" = "تعذّرت قراءة البيانات.";
+"emeal.error.no-card-details" = "لم يُعثر على بطاقة Emeal في الحساب.";
+"emeal.error.rate-limited" = "عدد كبير جدًا من الطلبات. حاول مرة أخرى بعد قليل.";
+"emeal.estimation-explanation-title" = "الرصيد التقديري";
+"emeal.estimation-explanation-ok-action" = "حسنًا";
+"emeal.estimation-explanation-text" = "استُخدمت معاملات Autoload لتقدير رصيد بطاقة Emeal الخاصة بك. المعاملات متاحة فقط لآخر ١٨٠ يومًا، وإذا كان آخر مسح لك أقدم من ذلك، فلا يمكن عرض رصيد صحيح هنا.\n\nكان آخر رصيد ممسوح لك هو %.2f€.";
+"emeal.tab.transactions" = "المعاملات";
+"emeal.tab.statistics" = "الإحصائيات";
+
+// Emeal Statistics
+"emeal.statistics.total-spent" = "إجمالي الإنفاق";
+"emeal.statistics.avg-purchase" = "متوسط الشراء";
+"emeal.statistics.total-saved" = "إجمالي التوفير (مقارنةً بسعر الضيف)";
+"emeal.statistics.activity-title" = "نشاط الشراء (آخر ١٨٠ يومًا)";
+"emeal.statistics.activity-legend-less" = "أقل";
+"emeal.statistics.activity-legend-more" = "أكثر";
+"emeal.statistics.spending-by-month" = "الإنفاق حسب الشهر";
+"emeal.statistics.spending-by-day" = "الإنفاق حسب يوم الأسبوع";
+"emeal.statistics.most-visited" = "الأماكن الأكثر زيارة";
+"emeal.statistics.spending-by-location" = "الإنفاق حسب المكان";
+"emeal.statistics.most-expensive" = "أغلى عمليات الشراء";
+"emeal.statistics.summary" = "الملخّص";
+"emeal.statistics.total-transactions" = "إجمالي المعاملات";
+"emeal.statistics.unique-locations" = "أماكن مختلفة";
+"emeal.statistics.favorite-location" = "المكان المفضّل";
+"emeal.statistics.day.sun" = "الأحد";
+"emeal.statistics.day.mon" = "الإثنين";
+"emeal.statistics.day.tue" = "الثلاثاء";
+"emeal.statistics.day.wed" = "الأربعاء";
+"emeal.statistics.day.thu" = "الخميس";
+"emeal.statistics.day.fri" = "الجمعة";
+"emeal.statistics.day.sat" = "السبت";
+
+// Settings
+"settings.nav" = "الإعدادات";
+"settings.section-canteens" = "المطاعم الجامعية";
+"settings.section-meals" = "الوجبات";
+"settings.favorite-canteens" = "المطاعم المفضّلة";
+"settings.favorite-canteens-description" = "مطاعمك الجامعية المفضّلة. انقر على القلب في قائمة المطعم للتبديل، أو عدّل القائمة هنا للحذف وإعادة الترتيب.";
+"settings.ingredients-allergens.title" = "المكوّنات ومسببات الحساسية";
+"settings.user-diet" = "النظام الغذائي";
+"settings.ingredients" = "المكوّنات";
+"settings.allergens" = "مسببات الحساسية";
+"settings.ingredients-description" = "اختر ما إذا كنت تتبع نظامًا غذائيًا معينًا أو لا ترغب في تناول مكوّنات أو مسببات حساسية معينة. تُستخدم هذه الخيارات كعوامل تصفية، وتظهر الوجبات غير المناسبة لك باهتة في القائمة. للأسف، المعلومات الغذائية غير مكتملة إلى حد ما. وقد يحدث ألا تكون الأطباق النباتية والنباتية الصِّرفة موسومة بذلك.\nقبل شراء أي وجبة، يُرجى الانتباه إلى المكوّنات المذكورة في المطعم الجامعي. ولا ينبغي الاعتماد على المعلومات المعروضة في التطبيق.";
+"settings.price-type" = "سعر الوجبة";
+"student" = "طالب";
+"employee" = "موظف";
+"settings.canteen-sorting" = "ترتيب المطاعم";
+"default" = "افتراضي";
+"distance" = "المسافة";
+"alphabetical" = "أبجدي";
+"settings.autoload-description" = "هل تستخدم Autoload؟ أدخِل بيانات اعتمادك هنا لعرض معاملات آخر ١٨٠ يومًا في صفحة Emeal. تُحفظ بياناتك بأمان على هذا الجهاز فقط، ولا تُرسَل إلى خوادم Studentenwerk إلا لأغراض المصادقة.";
+"settings.autoload-cardnumber" = "رقم البطاقة";
+"settings.autoload-password" = "كلمة المرور";
+"settings.autoload-information" = "معلومات Autoload";
+"settings.translate-meals" = "ترجمة أسماء الوجبات";
+"settings.translate-meals-prompt-title" = "تفعيل ترجمة الوجبات؟";
+"settings.translate-meals-prompt-message" = "يمكن ترجمة أسماء الوجبات تلقائيًا إلى لغتك. سيؤدي ذلك إلى تنزيل ملفات اللغة (~١٠٠ ميغابايت) عند عرض الوجبات لأول مرة.";
+"settings.translate-meals-prompt-enable" = "تفعيل";
+"settings.translate-meals-prompt-no-thanks" = "لا، شكرًا";
+"settings.about" = "حول";
+
+// Licenses
+"licenses.title" = "تراخيص الطرف الثالث";
+
+// Info View
+"info.developed-by" = "تطوير";
+"info.thanks" = "شكر جزيل لـ Lucas Vogel و Lars Westermann و Georg Sieber وجميع المساهمين على GitHub والمختبِرين التجريبيين على ملاحظاتهم الرائعة!";
+"info.email" = "إرسال ملاحظات";
+"info.translate" = "المساهمة في الترجمة";
+"info.image-rights" = "حقوق الصور";
+"info.icon" = "الأيقونة";
+"info.nounproject" = "Eddy Wong من The Noun Project";
+
+// Loading List
+"list.try-again" = "حاول مرة أخرى.";
+
+// Diet
+"all" = "كل شيء";
+"vegetarian" = "نباتي";
+"vegan" = "نباتي صِرف";
+
+"pork" = "لحم الخنزير";
+"beef" = "لحم البقر";
+"alcohol" = "الكحول";
+"garlic" = "الثوم";
+
+"gluten" = "الغلوتين";
+"shellfish" = "القشريات";
+"eggs" = "البيض";
+"fish" = "السمك";
+"peanuts" = "الفول السوداني";
+"soy" = "الصويا";
+"lactose" = "اللاكتوز";
+"nuts" = "المكسرات";
+"celery" = "الكرفس";
+"mustard" = "الخردل";
+"sesame" = "السمسم";
+"sulfite" = "الكبريتات";
+"lupin" = "الترمس";
+"molluscs" = "الرخويات";
+
+// Opening Status
+"opening-status.open" = "مفتوح";
+"opening-status.closed" = "مغلق";
+"opening-status.opens-now" = "يفتح الآن";
+"opening-status.opens-in-minutes" = "يفتح خلال %d'";
+"opening-status.opens-in-hours" = "يفتح خلال %dس";
+"opening-status.closes-now" = "يغلق الآن";
+"opening-status.closes-in-minutes" = "يغلق خلال %d'";
+"opening-status.in-minutes-short" = "%d'";
+"opening-status.in-hours-short" = "%dس";
+"opening-status.now-short" = "الآن";
+"opening-status.modified-hours" = "ساعات معدّلة نشطة";
+
+// Date Picker / Opening Hours
+"opening-hours.title" = "ساعات العمل";
+"opening-hours.modified" = "ساعات معدّلة";
+"opening-hours.house" = "المبنى";
