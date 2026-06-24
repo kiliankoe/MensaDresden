@@ -51,6 +51,30 @@ tuist dump
 tuist generate --no-open
 ```
 
+### Building & releasing
+
+Builds and releases run locally via fastlane (this project no longer uses Xcode Cloud). Authentication uses an App Store Connect API key — set these (e.g. in a gitignored `.envrc.local`):
+
+```bash
+export ASC_KEY_ID="..."
+export ASC_ISSUER_ID="..."
+export ASC_KEY_FILEPATH="/absolute/path/to/AuthKey_XXXXXXXX.p8"
+```
+
+Build and upload a TestFlight build:
+
+```bash
+fastlane ios beta
+```
+
+Build and upload to App Store Connect (without submitting for review):
+
+```bash
+fastlane ios release
+```
+
+Both lanes run `tuist generate` first, derive the next build number from the latest TestFlight build, and produce a signed App Store `.ipa`. Signing uses the project's automatic signing, so the distribution certificate/profile must be available in the local keychain.
+
 ### App Store screenshots
 
 Fastlane is configured for automated localized screenshots using the `Screenshots` UI test target.

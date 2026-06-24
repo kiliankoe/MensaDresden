@@ -4,24 +4,85 @@ project_root = File.expand_path("..", __dir__)
 workspace_path = File.join(project_root, "MensaDresden.xcworkspace")
 screenshots_path = File.join(project_root, "appstore_screenshots")
 metadata_path = File.join(project_root, "fastlane", "metadata")
+build_output_path = File.join(project_root, "build")
+app_identifier = "io.kilian.MensaDresden"
+
+# When fastlane runs inside the nix devshell, nix injects a compiler/SDK
+# environment (NIX_*, CC, SDKROOT, ...) that leaks into xcodebuild and breaks
+# it. Strip those before any xcodebuild invocation (snapshot, build_app).
+def scrub_build_env
+  keys = ENV.keys.select { |key| key.start_with?("NIX_") }
+  keys += %w[
+    LD
+    CC
+    CXX
+    CFLAGS
+    CPPFLAGS
+    LDFLAGS
+    LIBRARY_PATH
+    CPATH
+    SDKROOT
+    MACOSX_DEPLOYMENT_TARGET
+  ]
+  keys.uniq.each { |key| ENV.delete(key) }
+end
 
 platform :ios do
+  # App Store Connect API key auth. Set these (e.g. in .envrc.local, which is
+  # gitignored): ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_FILEPATH (path to the .p8).
+  # Downstream actions pick the key up automatically from the lane context.
+  private_lane :setup_asc_api_key do
+    app_store_connect_api_key(
+      key_id: ENV.fetch("ASC_KEY_ID"),
+      issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+      key_filepath: ENV.fetch("ASC_KEY_FILEPATH")
+    )
+  end
+
+  # Generate the (gitignored) Xcode workspace and build a signed App Store .ipa.
+  # The build number is derived from TestFlight so it never has to be bumped by
+  # hand in Project.swift now that Xcode Cloud no longer auto-increments it.
+  # Requires setup_asc_api_key to have run first (for the build-number lookup).
+  private_lane :build_appstore_ipa do
+    scrub_build_env
+
+    sh("tuist generate --path \"#{project_root}\" --no-open")
+
+    build_number = latest_testflight_build_number(app_identifier: app_identifier) + 1
+
+    build_app(
+      scheme: "MensaDresden",
+      workspace: workspace_path,
+      configuration: "Release",
+      export_method: "app-store",
+      output_directory: build_output_path,
+      clean: true,
+      xcargs: "CURRENT_PROJECT_VERSION=#{build_number}"
+    )
+  end
+
+  desc "Build and upload a new build to TestFlight"
+  lane :beta do
+    setup_asc_api_key
+    build_appstore_ipa
+    upload_to_testflight(skip_waiting_for_build_processing: true)
+  end
+
+  desc "Build and upload a new build to App Store Connect (no submission)"
+  lane :release do
+    setup_asc_api_key
+    build_appstore_ipa
+    upload_to_app_store(
+      skip_metadata: true,
+      skip_screenshots: true,
+      submit_for_review: false,
+      force: true
+    )
+  end
+
   desc "Generate localized App Store screenshots"
   lane :screenshots do
-    env_keys_to_delete = ENV.keys.select { |key| key.start_with?("NIX_") }
-    env_keys_to_delete += %w[
-      LD
-      CC
-      CXX
-      CFLAGS
-      CPPFLAGS
-      LDFLAGS
-      LIBRARY_PATH
-      CPATH
-      SDKROOT
-      MACOSX_DEPLOYMENT_TARGET
-    ]
-    env_keys_to_delete.uniq.each { |key| ENV.delete(key) }
+    scrub_build_env
 
     sh("tuist generate --path \"#{project_root}\" --no-open")
 
@@ -53,6 +114,7 @@ platform :ios do
 
   desc "Upload existing screenshots to App Store Connect"
   lane :upload_screenshots do
+    setup_asc_api_key
     upload_to_app_store(
       skip_binary_upload: true,
       skip_metadata: true,
@@ -71,6 +133,7 @@ platform :ios do
 
   desc "Upload App Store metadata without uploading a build"
   lane :upload_metadata do
+    setup_asc_api_key
     upload_to_app_store(
       skip_binary_upload: true,
       skip_metadata: false,
@@ -83,6 +146,7 @@ platform :ios do
 
   desc "Upload App Store metadata and existing screenshots"
   lane :upload_metadata_and_screenshots do
+    setup_asc_api_key
     upload_to_app_store(
       skip_binary_upload: true,
       skip_metadata: false,
