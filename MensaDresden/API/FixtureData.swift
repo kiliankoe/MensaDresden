@@ -6,6 +6,20 @@ enum FixtureData {
 
     static let canteens: [Canteen] = [
         canteen(
+            id: 1,
+            name: "Neue Mensa",
+            address: "Bergstraße 51, 01069 Dresden",
+            coordinates: [51.029041, 13.731532],
+            url: "https://www.studentenwerk-dresden.de/mensen/details-neue-mensa.html",
+            menu: "https://www.studentenwerk-dresden.de/mensen/speiseplan/neue-mensa.html",
+            openingSlots: [
+                timeSlot(area: "Mittagstisch", hoursText: "Mo-Fr 11:00-15:00", days: monToFri, open: (11, 0), close: (15, 0)),
+                timeSlot(area: "Cafeterie", hoursText: "Mo-Fr 08:00-15:00", days: monToFri, open: (8, 0), close: (15, 0)),
+                timeSlot(area: "Kaffeelounge", hoursText: "Mo-Fr 11:00-16:00", days: monToFri, open: (11, 0), close: (16, 0)),
+                timeSlot(area: "Bierstube", hoursText: "Mo-Fr 15:30-22:00", days: monToFri, open: (15, 30), close: (22, 0)),
+            ]
+        ),
+        canteen(
             id: 4,
             name: "Alte Mensa",
             address: "Mommsenstr. 13, 01069 Dresden",
@@ -28,19 +42,6 @@ enum FixtureData {
             menu: "https://www.studentenwerk-dresden.de/mensen/speiseplan/mensa-matrix.html",
             openingSlots: [
                 timeSlot(area: "House", hoursText: "Mo-Fr 10:45-14:00", days: monToFri, open: (10, 45), close: (14, 0)),
-            ]
-        ),
-        canteen(
-            id: 35,
-            name: "Zeltschlösschen",
-            address: "Nürnberger Str. 55, 01187 Dresden",
-            coordinates: [51.03183, 13.72597],
-            url: "https://www.studentenwerk-dresden.de/mensen/details-zeltschloesschen.html",
-            menu: "https://www.studentenwerk-dresden.de/mensen/speiseplan/zeltschloesschen.html",
-            openingSlots: [
-                timeSlot(area: "Kaffeelounge", hoursText: "Mo-Fr 08:00-17:00", days: monToFri, open: (8, 0), close: (17, 0)),
-                timeSlot(area: "House", hoursText: "Mo-Fr 08:30-17:00", days: monToFri, open: (8, 30), close: (17, 0)),
-                timeSlot(area: "Mittagstisch", hoursText: "Mo-Fr 11:00-15:00", days: monToFri, open: (11, 0), close: (15, 0)),
             ]
         ),
         canteen(
