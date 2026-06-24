@@ -78,3 +78,31 @@ Or generate and upload in one go:
 ```bash
 fastlane ios screenshots_and_upload
 ```
+
+### App Store metadata
+
+Fastlane is also configured for localized App Store metadata (name, subtitle, description, keywords, release notes, URLs, review info).
+
+Pull the current metadata from App Store Connect into `fastlane/metadata`:
+
+```bash
+fastlane ios download_metadata
+```
+
+Upload metadata only (without build and without screenshots):
+
+```bash
+fastlane ios upload_metadata
+```
+
+Upload metadata and already-generated screenshots together:
+
+```bash
+fastlane ios upload_metadata_and_screenshots
+```
+
+Or generate fresh screenshots first, then upload both metadata and screenshots:
+
+```bash
+fastlane ios screenshots_and_upload_all_assets
+```

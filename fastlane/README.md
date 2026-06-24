@@ -31,6 +31,30 @@ Generate localized App Store screenshots
 
 Upload existing screenshots to App Store Connect
 
+### ios download_metadata
+
+```sh
+[bundle exec] fastlane ios download_metadata
+```
+
+Download App Store metadata into fastlane/metadata
+
+### ios upload_metadata
+
+```sh
+[bundle exec] fastlane ios upload_metadata
+```
+
+Upload App Store metadata without uploading a build
+
+### ios upload_metadata_and_screenshots
+
+```sh
+[bundle exec] fastlane ios upload_metadata_and_screenshots
+```
+
+Upload App Store metadata and existing screenshots
+
 ### ios screenshots_and_upload
 
 ```sh
@@ -38,6 +62,14 @@ Upload existing screenshots to App Store Connect
 ```
 
 Generate and upload screenshots to App Store Connect
+
+### ios screenshots_and_upload_all_assets
+
+```sh
+[bundle exec] fastlane ios screenshots_and_upload_all_assets
+```
+
+Generate screenshots, then upload metadata and screenshots
 
 ----
 

@@ -1,12 +1,13 @@
 default_platform(:ios)
 
+project_root = File.expand_path("..", __dir__)
+workspace_path = File.join(project_root, "MensaDresden.xcworkspace")
+screenshots_path = File.join(project_root, "appstore_screenshots")
+metadata_path = File.join(project_root, "fastlane", "metadata")
+
 platform :ios do
   desc "Generate localized App Store screenshots"
   lane :screenshots do
-    project_root = File.expand_path("..", __dir__)
-    workspace_path = File.join(project_root, "MensaDresden.xcworkspace")
-    screenshots_path = File.join(project_root, "appstore_screenshots")
-
     env_keys_to_delete = ENV.keys.select { |key| key.start_with?("NIX_") }
     env_keys_to_delete += %w[
       LD
@@ -56,6 +57,38 @@ platform :ios do
       skip_binary_upload: true,
       skip_metadata: true,
       skip_screenshots: false,
+      screenshots_path: screenshots_path,
+      overwrite_screenshots: true,
+      submit_for_review: false,
+      force: true
+    )
+  end
+
+  desc "Download App Store metadata into fastlane/metadata"
+  lane :download_metadata do
+    sh("fastlane deliver download_metadata --force --metadata_path \"#{metadata_path}\"")
+  end
+
+  desc "Upload App Store metadata without uploading a build"
+  lane :upload_metadata do
+    upload_to_app_store(
+      skip_binary_upload: true,
+      skip_metadata: false,
+      metadata_path: metadata_path,
+      skip_screenshots: true,
+      submit_for_review: false,
+      force: true
+    )
+  end
+
+  desc "Upload App Store metadata and existing screenshots"
+  lane :upload_metadata_and_screenshots do
+    upload_to_app_store(
+      skip_binary_upload: true,
+      skip_metadata: false,
+      metadata_path: metadata_path,
+      skip_screenshots: false,
+      screenshots_path: screenshots_path,
       overwrite_screenshots: true,
       submit_for_review: false,
       force: true
@@ -66,5 +99,11 @@ platform :ios do
   lane :screenshots_and_upload do
     screenshots
     upload_screenshots
+  end
+
+  desc "Generate screenshots, then upload metadata and screenshots"
+  lane :screenshots_and_upload_all_assets do
+    screenshots
+    upload_metadata_and_screenshots
   end
 end
