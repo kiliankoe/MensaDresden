@@ -1,0 +1,2 @@
+NSLocationWhenInUseUsageDescription = "Mensa Dresden은 위치 정보를 사용하여 학식당을 가까운 순으로 정렬합니다.";
+NFCReaderUsageDescription = "Mensa Dresden은 NFC를 사용하여 Emeal 카드의 잔액을 읽습니다.";

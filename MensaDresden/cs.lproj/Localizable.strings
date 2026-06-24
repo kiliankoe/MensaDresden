@@ -1,0 +1,163 @@
+// App/Tab View
+"tab.menu" = "Menu";
+"tab.emeal" = "Emeal";
+"tab.newsfeed" = "Novinky";
+"tab.settings" = "Nastavení";
+
+// iPad placeholder detail
+"ipad.bon-appetit" = "🍲 Dobrou chuť!";
+"ipad.swipe-hint" = "Přejetím zleva otevřete seznam menz.";
+
+// Canteen List
+"canteens.nav" = "Menzy";
+"canteens.no-data" = "Žádné menzy nenalezeny 🤔";
+
+// Meal List
+"meals.no-meals-today" = "Dnes není v menu nic.";
+"meals.no-meals-tomorrow" = "Zítra není v menu nic.";
+"meals.no-meals-other" = "V tento den není v menu nic.";
+"meals.holiday" = "Je %@! 📅";
+"meals.weekend" = "Hezký víkend! 🏖";
+
+// Meal Detail
+"meal.rate-title" = "Ohodnotit jídlo";
+"meal.rate-description" = "Pošlete zpětnou vazbu přímo Studentenwerku.";
+"meal.dinner" = "Večeře";
+"meal.ingredient-warning" = "Toto jídlo nemusí odpovídat vašim stravovacím preferencím.";
+"meal.sold-out" = "Vyprodáno";
+"meal.sold-out-long" = "Toto jídlo je již vyprodané.";
+"meal.original" = "Originál:";
+
+// Emeal View
+"emeal.nfc-text" = "Přiložte kartu Emeal k zařízení.";
+"emeal.nfc-reading-error" = "Nelze přečíst NFC tag.";
+"emeal.nfc-connection-error" = "Chyba připojení. Zkuste to znovu.";
+"emeal.balance" = "Zůstatek";
+"emeal.last-transaction" = "Poslední transakce";
+"emeal.last-scanned" = "Naposledy načteno";
+"emeal.scan-button" = "Načíst Emeal";
+"emeal.autoload-hint" = "Používáte Autoload? Zadejte své přihlašovací údaje v nastavení aplikace a všechny vaše nedávné transakce se zobrazí zde.";
+"emeal.autoload-information" = "Informace o Autoload";
+"emeal.no-transactions" = "Za posledních 180 dní žádné transakce.";
+"emeal.error.network" = "Chyba sítě";
+"emeal.error.invalid-credentials" = "Neplatné uživatelské jméno nebo heslo";
+"emeal.error.server" = "Chyba serveru %d";
+"emeal.error.decoding" = "Nepodařilo se přečíst data.";
+"emeal.error.no-card-details" = "V účtu nebyla nalezena žádná Emeal.";
+"emeal.error.rate-limited" = "Příliš mnoho požadavků. Zkuste to za chvíli znovu.";
+"emeal.estimation-explanation-title" = "Odhadovaný zůstatek";
+"emeal.estimation-explanation-ok-action" = "Ok";
+"emeal.estimation-explanation-text" = "K odhadu zůstatku vaší Emeal byly použity vaše transakce Autoload. Transakce jsou k dispozici jen za posledních 180 dní; pokud je vaše poslední načtení starší, správný zůstatek zde nelze zobrazit.\n\nVáš naposledy načtený zůstatek byl %.2f€.";
+"emeal.tab.transactions" = "Transakce";
+"emeal.tab.statistics" = "Statistiky";
+
+// Emeal Statistics
+"emeal.statistics.total-spent" = "Celkem utraceno";
+"emeal.statistics.avg-purchase" = "Průměrný nákup";
+"emeal.statistics.total-saved" = "Celkem ušetřeno (oproti ceně pro hosty)";
+"emeal.statistics.activity-title" = "Nákupní aktivita (posledních 180 dní)";
+"emeal.statistics.activity-legend-less" = "Méně";
+"emeal.statistics.activity-legend-more" = "Více";
+"emeal.statistics.spending-by-month" = "Výdaje podle měsíce";
+"emeal.statistics.spending-by-day" = "Výdaje podle dne v týdnu";
+"emeal.statistics.most-visited" = "Nejnavštěvovanější místa";
+"emeal.statistics.spending-by-location" = "Výdaje podle místa";
+"emeal.statistics.most-expensive" = "Nejdražší nákupy";
+"emeal.statistics.summary" = "Souhrn";
+"emeal.statistics.total-transactions" = "Celkem transakcí";
+"emeal.statistics.unique-locations" = "Různá místa";
+"emeal.statistics.favorite-location" = "Oblíbené místo";
+"emeal.statistics.day.sun" = "Ne";
+"emeal.statistics.day.mon" = "Po";
+"emeal.statistics.day.tue" = "Út";
+"emeal.statistics.day.wed" = "St";
+"emeal.statistics.day.thu" = "Čt";
+"emeal.statistics.day.fri" = "Pá";
+"emeal.statistics.day.sat" = "So";
+
+// Settings
+"settings.nav" = "Nastavení";
+"settings.section-canteens" = "Menzy";
+"settings.section-meals" = "Jídla";
+"settings.favorite-canteens" = "Oblíbené menzy";
+"settings.favorite-canteens-description" = "Vaše oblíbené menzy. Klepnutím na srdce v menu menzy přepnete oblíbenost nebo zde upravte seznam pro mazání a změnu pořadí.";
+"settings.ingredients-allergens.title" = "Složení a alergeny";
+"settings.user-diet" = "Strava";
+"settings.ingredients" = "Složení";
+"settings.allergens" = "Alergeny";
+"settings.ingredients-description" = "Zvolte, zda dodržujete určitou stravu nebo nechcete přijímat určité ingredience či alergeny. Tyto možnosti slouží jako filtry a jídla, která pro vás nejsou vhodná, jsou v menu zašednutá. Bohužel jsou nutriční informace poněkud neúplné. Může se stát, že vegetariánská a veganská jídla nejsou takto označena.\nPřed koupí jídla věnujte prosím pozornost ingrediencím uvedeným v menze. Neměli byste se spoléhat na informace zobrazené v aplikaci.";
+"settings.price-type" = "Cena jídla";
+"student" = "Student";
+"employee" = "Zaměstnanec";
+"settings.canteen-sorting" = "Řazení menz";
+"default" = "Výchozí";
+"distance" = "Vzdálenost";
+"alphabetical" = "Abecedně";
+"settings.autoload-description" = "Používáte Autoload? Zadejte zde své přihlašovací údaje, aby se na stránce Emeal zobrazily transakce za posledních 180 dní. Vaše údaje jsou bezpečně uloženy pouze na tomto zařízení a odesílají se na servery Studentenwerku výhradně pro účely ověření.";
+"settings.autoload-cardnumber" = "Číslo karty";
+"settings.autoload-password" = "Heslo";
+"settings.autoload-information" = "Informace o Autoload";
+"settings.translate-meals" = "Překládat názvy jídel";
+"settings.translate-meals-prompt-title" = "Zapnout překlad jídel?";
+"settings.translate-meals-prompt-message" = "Názvy jídel lze automaticky přeložit do vašeho jazyka. Při prvním zobrazení jídel se stáhnou jazykové soubory (~100 MB).";
+"settings.translate-meals-prompt-enable" = "Zapnout";
+"settings.translate-meals-prompt-no-thanks" = "Ne, děkuji";
+"settings.about" = "O aplikaci";
+
+// Licenses
+"licenses.title" = "Licence třetích stran";
+
+// Info View
+"info.developed-by" = "Vyvinul";
+"info.thanks" = "Obrovské díky Lucasi Voglovi, Larsi Westermannovi, Georgu Sieberovi, všem přispěvatelům na GitHubu a beta testerům za jejich skvělou zpětnou vazbu!";
+"info.email" = "Odeslat zpětnou vazbu";
+"info.translate" = "Přispět překladem";
+"info.image-rights" = "Práva k obrázkům";
+"info.icon" = "Ikona";
+"info.nounproject" = "Eddy Wong z The Noun Project";
+
+// Loading List
+"list.try-again" = "Zkuste to znovu.";
+
+// Diet
+"all" = "vše";
+"vegetarian" = "vegetariánské";
+"vegan" = "veganské";
+
+"pork" = "Vepřové";
+"beef" = "Hovězí";
+"alcohol" = "Alkohol";
+"garlic" = "Česnek";
+
+"gluten" = "Lepek";
+"shellfish" = "Korýši";
+"eggs" = "Vejce";
+"fish" = "Ryby";
+"peanuts" = "Arašídy";
+"soy" = "Sója";
+"lactose" = "Laktóza";
+"nuts" = "Ořechy";
+"celery" = "Celer";
+"mustard" = "Hořčice";
+"sesame" = "Sezam";
+"sulfite" = "Siřičitany";
+"lupin" = "Vlčí bob";
+"molluscs" = "Měkkýši";
+
+// Opening Status
+"opening-status.open" = "Otevřeno";
+"opening-status.closed" = "Zavřeno";
+"opening-status.opens-now" = "Otevírá nyní";
+"opening-status.opens-in-minutes" = "Otevírá za %d'";
+"opening-status.opens-in-hours" = "Otevírá za %dh";
+"opening-status.closes-now" = "Zavírá nyní";
+"opening-status.closes-in-minutes" = "Zavírá za %d'";
+"opening-status.in-minutes-short" = "%d'";
+"opening-status.in-hours-short" = "%dh";
+"opening-status.now-short" = "nyní";
+"opening-status.modified-hours" = "Aktivní upravená otevírací doba";
+
+// Date Picker / Opening Hours
+"opening-hours.title" = "Otevírací doba";
+"opening-hours.modified" = "Upravená otevírací doba";
+"opening-hours.house" = "Budova";

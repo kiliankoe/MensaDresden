@@ -1,6 +1,6 @@
 import ProjectDescription
 
-let appVersion = "2026.1"
+let appVersion = "2026.3"
 let appBuildNumber = "99"
 let uiTestVersion = "1.0"
 let uiTestBuildNumber = "1"

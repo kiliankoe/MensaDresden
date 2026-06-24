@@ -82,7 +82,7 @@
 "settings.favorite-canteens" = "お気に入りの学食(メンザ)";
 "settings.favorite-canteens-description" = "あなたのお気に入りの学食(メンザ)。ハートをタップしたり、ここでリストを編集したりしてお気に入り学食(メンザ)の削除や並び替えができます";
 "settings.ingredients-allergens.title" = "成分とアレルゲン";
-"settings.user-diet" = "ダイエット";
+"settings.user-diet" = "食事の好み";
 "settings.ingredients" = "食材";
 "settings.allergens" = "アレルゲン";
 "settings.ingredients-description" = "特定の食事療法に従っているか、特定の食材やアレルゲンを摂取したくないかを選択します。これらのオプションはフィルターとして使用され、あなたに適さない食事はメニューでグレーアウトされます。残念ながら、栄養情報にはやや不備があります。ベジタリアンやビーガンの料理には、そのような表示がないことがあります。\n食事を購入する前には、学食(メンザ)に掲載されている食材を確認してください。 アプリ内のここに記載されている情報を完全に鵜呑みにしないでください。";
@@ -109,7 +109,7 @@
 
 // Info View
 "info.developed-by" = "開発者";
-"info.thanks" = "Huge thanks to Lucas Vogel, Lars Westermann, Georg Sieber, all GitHub contributors and the beta testers for their great feedback!";
+"info.thanks" = "Lucas Vogel、Lars Westermann、Georg Sieber、すべてのGitHubコントリビューター、そして素晴らしいフィードバックをくれたベータテスターの皆さんに心から感謝します！";
 "info.email" = "フィードバックを送る";
 "info.translate" = "翻訳に貢献する";
 "info.image-rights" = "画像の著作権";
@@ -152,6 +152,9 @@
 "opening-status.opens-in-hours" = "%d時間後に開店";
 "opening-status.closes-now" = "今閉店";
 "opening-status.closes-in-minutes" = "%d分後に閉店";
+"opening-status.in-minutes-short" = "%d分";
+"opening-status.in-hours-short" = "%d時";
+"opening-status.now-short" = "今";
 "opening-status.modified-hours" = "営業時間変更";
 
 // Date Picker / Opening Hours

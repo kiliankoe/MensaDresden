@@ -20,8 +20,8 @@
 "meals.weekend" = "Приятных выходных 🏖";
 
 // Meal Detail
-"meal.rate-title" = "Тарифный обед";
-"meal.rate-description" = "Отправляйте отзывы непосредственно в Studentenwerk..";
+"meal.rate-title" = "Оценить блюдо";
+"meal.rate-description" = "Отправляйте отзывы непосредственно в Studentenwerk.";
 "meal.dinner" = "ужин";
 "meal.ingredient-warning" = "Эта еда может не соответствовать вашим диетическим предпочтениям.";
 "meal.sold-out" = "Продано";
@@ -29,13 +29,13 @@
 "meal.original" = "Оригинал:";
 
 // Emeal View
-"emeal.nfc-text" = "Держите карточку с едой на устройстве.";
+"emeal.nfc-text" = "Поднесите карту Emeal к устройству.";
 "emeal.nfc-reading-error" = "Невозможно прочитать NFC метку.";
 "emeal.nfc-connection-error" = "Ошибка подключения. Пожалуйста, попробуйте еще раз.";
 "emeal.balance" = "Баланс счёта";
 "emeal.last-transaction" = "Последняя транзакция";
 "emeal.last-scanned" = "Последний отсканированный";
-"emeal.scan-button" = "Сканированная каша";
+"emeal.scan-button" = "Сканировать Emeal";
 "emeal.autoload-hint" = "Используешь Autoload? Введите свои учетные данные в настройки приложения, и все последние транзакции будут отображаться здесь.";
 "emeal.autoload-information" = "Информация об Autoload";
 "emeal.no-transactions" = "Никаких операций за последние 180 дней.";
@@ -43,7 +43,7 @@
 "emeal.error.invalid-credentials" = "Неверное имя пользователя или пароль";
 "emeal.error.server" = "%d Ошибка сервера";
 "emeal.error.decoding" = "Не удалось считать данные.";
-"emeal.error.no-card-details" = "На счете не обнаружено ни одного емиля.";
+"emeal.error.no-card-details" = "В аккаунте не найдено карты Emeal.";
 "emeal.error.rate-limited" = "Слишком много запросов. Повторите попытку через минуту.";
 "emeal.estimation-explanation-title" = "Оценочный баланс";
 "emeal.estimation-explanation-ok-action" = "Хорошо";
@@ -85,11 +85,11 @@
 "settings.user-diet" = "рацион питания";
 "settings.ingredients" = "ингредиенты";
 "settings.allergens" = "аллергены";
-"settings.ingredients-description" = "Выберите, следуете ли вы определенной диете или не хотите принимать определенные ингредиенты или аллергены. Эти опции используются как фильтры, а блюда, которые вам не подходят, выделены в меню серым цветом. К сожалению, информация о питании несколько неполная. Может случиться так, что вегетарианские и вегетарианские блюда не будут обозначены как таковые.\nПеред покупкой блюд, пожалуйста, проверьте ингредиенты, перечисленные в кафетерии. Конечно, вы не должны полностью полагаться на информацию, приведенную здесь в приложении.";
+"settings.ingredients-description" = "Выберите, следуете ли вы определенной диете или не хотите принимать определенные ингредиенты или аллергены. Эти опции используются как фильтры, а блюда, которые вам не подходят, выделены в меню серым цветом. К сожалению, информация о питании несколько неполная. Может случиться так, что вегетарианские и веганские блюда не будут обозначены как таковые.\nПеред покупкой блюд, пожалуйста, проверьте ингредиенты, перечисленные в кафетерии. Конечно, вы не должны полностью полагаться на информацию, приведенную здесь в приложении.";
 "settings.price-type" = "стоимость питания";
 "student" = "Студент";
 "employee" = "Сотрудник";
-"settings.canteen-sorting" = "Скидка на столовую";
+"settings.canteen-sorting" = "Сортировка столовых";
 "default" = "По умолчанию";
 "distance" = "Расстояние";
 "alphabetical" = "Алфавитный";
@@ -102,7 +102,7 @@
 "settings.translate-meals-prompt-message" = "Названия блюд могут быть автоматически переведены на ваш язык. При первом просмотре блюд будут загружены языковые файлы (~100 МБ).";
 "settings.translate-meals-prompt-enable" = "Включить";
 "settings.translate-meals-prompt-no-thanks" = "Нет, спасибо";
-"settings.about" = "О сайте";
+"settings.about" = "О приложении";
 
 // Licenses
 "licenses.title" = "Лицензии третьих лиц";
@@ -113,7 +113,7 @@
 "info.email" = "Отправить отзыв";
 "info.translate" = "Содействовать переводам";
 "info.image-rights" = "Права на изображение";
-"info.icon" = "Икона";
+"info.icon" = "Иконка";
 "info.nounproject" = "Эдди Вонг из The Noun Project.";
 
 // Loading List
@@ -152,6 +152,9 @@
 "opening-status.opens-in-hours" = "Откроется через %dч";
 "opening-status.closes-now" = "Закрывается сейчас";
 "opening-status.closes-in-minutes" = "Закроется через %d'";
+"opening-status.in-minutes-short" = "%d'";
+"opening-status.in-hours-short" = "%dч";
+"opening-status.now-short" = "сейчас";
 "opening-status.modified-hours" = "Измененные часы работы";
 
 // Date Picker / Opening Hours
