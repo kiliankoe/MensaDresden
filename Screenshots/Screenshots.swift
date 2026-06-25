@@ -1,5 +1,6 @@
 import XCTest
 
+@MainActor
 class Screenshots: XCTestCase {
 
     var app: XCUIApplication!
@@ -10,11 +11,12 @@ class Screenshots: XCTestCase {
         app = XCUIApplication()
         app.launchArguments.append("--uitesting")
         app.launchEnvironment = [
+            "MENSA_DATA_MODE": "fixtures",
             "favoriteCanteens": "Alte Mensa,MiO - Mensa im Osten",
             "autoloadUsername": "appledemo",
             "autoloadPassword": "appledemo",
             "emeal.currentbalance": "13.37",
-            "emeal.lasttransaction": "6.0",
+            "emeal.lasttransaction": "4.20",
             "emeal.lastscan": "1641205800", // Jan 03 2022 11:30:00 (CET)
         ]
     }
@@ -23,17 +25,11 @@ class Screenshots: XCTestCase {
         setupSnapshot(app)
         app.launch()
 
-        app.staticTexts["Mensa Reichenbachstraße"].tap()
+        app.selectCanteen(0)
         Thread.sleep(forTimeInterval: 1) // Make sure meals are loaded
         snapshot("01_Menu")
 
-        app.navigate(to: .emeal)
-        snapshot("02_Emeal")
-
-        app.navigate(to: .menu)
-        app.goBack()
-        app.staticTexts["Mensa Reichenbachstraße"].tap()
-        app.selectMeal(0)
+        app.selectMeal(1)
         snapshot("03_Meal")
 
         app.goBack()
@@ -41,5 +37,8 @@ class Screenshots: XCTestCase {
         app.scrollToTop()
         Thread.sleep(forTimeInterval: 1) // Let scrolling indicator disappear
         snapshot("04_Canteens")
+
+        app.navigate(to: .emeal)
+        snapshot("02_Emeal")
     }
 }

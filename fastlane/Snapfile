@@ -1,0 +1,37 @@
+devices([
+  "iPhone 17 Pro Max",
+  "iPhone 11 Pro Max",
+  "iPad Pro 13-inch (M4)",
+])
+
+# App Store Connect locale codes — these must match the metadata folder names
+# in fastlane/metadata so screenshots upload to the right listing localization.
+languages([
+  "de-DE",
+  "en-US",
+  "ar-SA",
+  "cs",
+  "es-ES",
+  "es-MX",
+  "fr-FR",
+  "it",
+  "ja",
+  "ko",
+  "pl",
+  "pt-PT",
+  "pt-BR",
+  "ru",
+  "tr",
+  "zh-Hans",
+])
+
+scheme("Screenshots")
+workspace("MensaDresden.xcworkspace")
+output_directory("./appstore_screenshots")
+clear_previous_screenshots(true)
+override_status_bar(true)
+launch_arguments(["--uitesting"])
+skip_open_summary(true)
+number_of_retries(0)
+stop_after_first_error(true)
+concurrent_simulators(false)

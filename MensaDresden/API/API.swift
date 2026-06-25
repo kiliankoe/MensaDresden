@@ -4,8 +4,34 @@ import os.log
 
 @MainActor
 class API: ObservableObject {
+    private let settings: Settings
+    private let launchDataModeOverride: AppDataMode?
 
-    init() {
+    var hasDataModeLaunchOverride: Bool {
+        launchDataModeOverride != nil
+    }
+
+    private var dataMode: AppDataMode {
+        launchDataModeOverride ?? settings.appDataMode
+    }
+
+    private var usesFixtureData: Bool {
+        dataMode == .fixtures
+    }
+
+    init(settings: Settings = Settings()) {
+        self.settings = settings
+        self.launchDataModeOverride = AppDataMode.from(launchEnvironment: ProcessInfo.processInfo.environment)
+
+        Task {
+            await loadCanteens()
+        }
+    }
+
+    func reloadDataSource() {
+        cachedMeals = [:]
+        cachedTransactions = nil
+
         Task {
             await loadCanteens()
         }
@@ -20,6 +46,14 @@ class API: ObservableObject {
     func loadCanteens() async {
         Logger.api.info("Loading canteens")
         self.canteens = .loading
+
+        if usesFixtureData {
+            let fixtureCanteens = FixtureData.canteens
+            Logger.api.info("Successfully loaded \(fixtureCanteens.count) fixture canteens")
+            self.canteens = .success(fixtureCanteens)
+            return
+        }
+
         do {
             let canteens = try await Canteen.all()
             Logger.api.info("Successfully loaded \(canteens.count) canteens")
@@ -48,6 +82,14 @@ class API: ObservableObject {
 
     func loadMeals(for canteenId: Int, on date: Date) async {
         Logger.api.info("Loading meals for canteen \(canteenId) on \(date)")
+
+        if usesFixtureData {
+            let fixtureMeals = FixtureData.meals(for: canteenId)
+            Logger.api.info("Successfully loaded \(fixtureMeals.count) fixture meals")
+            cache(result: .success(fixtureMeals), for: canteenId, on: date)
+            return
+        }
+
         do {
             let meals = try await Meal.for(canteen: canteenId, on: date)
             Logger.api.info("Successfully loaded \(meals.count) meals")
@@ -87,14 +129,15 @@ class API: ObservableObject {
 
         // Sort meals
         if case .success(let meals) = previousResult.result {
-            let sortedMeals = meals.sorted(by: Self.mealComparator())
+            let sortedMeals = meals.sorted(by: mealComparator())
             previousResult.result = .success(sortedMeals)
         }
 
         return LoadingResult(from: previousResult.result)
     }
 
-    private static func mealComparator() -> (Meal, Meal) -> Bool {
+    private func mealComparator() -> (Meal, Meal) -> Bool {
+        let fixtureMode = usesFixtureData
         let userDiet = UserDefaults.standard
             .string(forKey: "userDiet")
             .flatMap(Settings.DietType.init(rawValue:)) ?? .all
@@ -125,7 +168,7 @@ class API: ObservableObject {
 
             switch (lhsIsBad, rhsIsBad) {
             case (true, true), (false, false):
-                let currentTime = Calendar.current.component(.hour, from: Date())
+                let currentTime = fixtureMode ? 12 : Calendar.current.component(.hour, from: Date())
 
                 switch (lhs.isDinner, rhs.isDinner) {
                 case (true, true), (false, false):
@@ -156,7 +199,7 @@ class API: ObservableObject {
 
     func loadTransactions(cardnumber: String, password: String) async {
         Logger.api.info("Loading transactions for \(cardnumber, privacy: .private)")
-        if cardnumber == "appledemo" && password == "appledemo" {
+        if usesFixtureData || (cardnumber == "appledemo" && password == "appledemo") {
             Logger.api.info("Returning example transactions")
             cache(result: .success(Transaction.extensiveExampleValues.reversed()))
             return

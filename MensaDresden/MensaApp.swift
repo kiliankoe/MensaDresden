@@ -30,15 +30,15 @@ struct MensaApp: App {
 
         if let currentBalanceStr = ProcessInfo.processInfo.environment["emeal.currentbalance"] {
             let currentBalance = Double(currentBalanceStr) ?? 0.0
-            UserDefaults.standard.set(currentBalance, forKey: "emeal.currentbalance")
+            UserDefaults.mensaDresdenGroup.set(currentBalance, forKey: "emeal.currentbalance")
         }
         if let lastTransactionStr = ProcessInfo.processInfo.environment["emeal.lasttransaction"] {
             let lastTransaction = Double(lastTransactionStr) ?? 0.0
-            UserDefaults.standard.set(lastTransaction, forKey: "emeal.lasttransaction")
+            UserDefaults.mensaDresdenGroup.set(lastTransaction, forKey: "emeal.lasttransaction")
         }
         if let lastScanStr = ProcessInfo.processInfo.environment["emeal.lastscan"] {
             let lastScan = Double(lastScanStr).flatMap { Date(timeIntervalSince1970: $0) } ?? Date()
-            UserDefaults.standard.set(lastScan, forKey: "emeal.lastscan")
+            UserDefaults.mensaDresdenGroup.set(lastScan, forKey: "emeal.lastscan")
         }
 
 
@@ -50,7 +50,7 @@ struct MensaApp: App {
         self.deviceOrientation = DeviceOrientation(isLandscape: isLandscape ?? false)
 
         self.locationManager = LocationManager.shared
-        self.api = API()
+        self.api = API(settings: self.settings)
         self.feedparser = Feedparser()
 
         Analytics.setup()

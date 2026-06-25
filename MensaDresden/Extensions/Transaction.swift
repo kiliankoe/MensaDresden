@@ -1,6 +1,19 @@
 import Foundation
 import EmealKit
 
+private struct SeededRandomNumberGenerator: RandomNumberGenerator {
+    private var state: UInt64
+
+    init(seed: UInt64) {
+        self.state = seed
+    }
+
+    mutating func next() -> UInt64 {
+        state = 6364136223846793005 &* state &+ 1442695040888963407
+        return state
+    }
+}
+
 extension Transaction {
     init(id: Int, date: Date, location: String, kind: Transaction.Kind, amount: Double, positions: [Position]) {
         self.init(clientID: 0, id: id, transactionID: "0", date: date, location: location, register: "", kind: kind, amount: amount, positions: positions)
@@ -35,13 +48,15 @@ extension Transaction {
     }
     
     static var extensiveExampleValues: [Transaction] {
-        let calendar = Calendar(identifier: .gregorian)
-        let now = Date()
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        let now = Date(timeIntervalSince1970: 1_735_732_800) // 2025-01-17 12:00:00 UTC
+        var randomNumberGenerator = SeededRandomNumberGenerator(seed: 0x5eed5eed)
         var transactions: [Transaction] = []
         var id = 0
-        
+
         let locations = [
-            ("Mensa Reichenbachstraße", ["Kasse 1", "Kasse 2"]),
+            ("Mensa Matrix", ["Kasse 1", "Kasse 2"]),
             ("Alte Mensa", ["Westsaal Nord", "Westsaal Süd", "Ostsaal Nord", "Ostsaal Süd", "Cafeteria Zebradiele"]),
             ("Mensa Siedepunkt", ["Kasse A", "Kasse B"]),
             ("Mensa Zeltschlösschen", ["Kasse 1"]),
@@ -69,21 +84,21 @@ extension Transaction {
             // Skip weekends
             let weekday = calendar.component(.weekday, from: date)
             if weekday == 1 || weekday == 7 { continue }
-            
-            // Random number of transactions per day (0-3)
-            let transactionsPerDay = Int.random(in: 0...2)
-            
+
+            // Random number of transactions per day (0-2)
+            let transactionsPerDay = Int.random(in: 0...2, using: &randomNumberGenerator)
+
             for _ in 0..<transactionsPerDay {
-                let (location, registers) = locations.randomElement()!
-                let register = registers.randomElement()!
-                
-                // Random number of positions (1-3)
-                let positionCount = Int.random(in: 1...2)
+                let (location, registers) = locations.randomElement(using: &randomNumberGenerator)!
+                let register = registers.randomElement(using: &randomNumberGenerator)!
+
+                // Random number of positions (1-2)
+                let positionCount = Int.random(in: 1...2, using: &randomNumberGenerator)
                 var positions: [Position] = []
                 var totalAmount = 0.0
-                
+
                 for posId in 0..<positionCount {
-                    let (mealName, guestPrice, discount) = meals.randomElement()!
+                    let (mealName, guestPrice, discount) = meals.randomElement(using: &randomNumberGenerator)!
                     let studentPrice = guestPrice - discount
                     positions.append(Position(id: posId, name: mealName, price: studentPrice, discount: discount))
                     totalAmount += studentPrice
@@ -108,7 +123,7 @@ extension Transaction {
             transactions.append(Transaction(
                 id: id,
                 date: chargeDate,
-                location: "Mensa Reichenbachstraße",
+                location: "Mensa Matrix",
                 register: "Aufwerter",
                 kind: .cardCharge,
                 amount: 50.0,
@@ -116,8 +131,13 @@ extension Transaction {
             ))
             id += 1
         }
-        
-        return transactions.sorted { $0.date > $1.date }
+
+        return transactions.sorted {
+            if $0.date == $1.date {
+                return $0.id > $1.id
+            }
+            return $0.date > $1.date
+        }
     }
 }
 
@@ -130,4 +150,3 @@ extension Transaction.Position {
         self.init(clientID: 0, id: id, transactionID: "0", positionID: 1, name: name, amount: 1, price: price, totalPrice: price, discount: discount, rating: 0)
     }
 }
-

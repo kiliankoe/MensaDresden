@@ -15,9 +15,13 @@ class TranslationService: ObservableObject {
     }
 
     var shouldTranslate: Bool {
+        #if targetEnvironment(simulator)
+        return false
+        #else
         if #available(iOS 18, watchOS 9, *) {
             return Locale.current.language.languageCode?.identifier != "de"
         }
         return false
+        #endif
     }
 }

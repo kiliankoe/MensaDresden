@@ -215,6 +215,30 @@ class Settings: ObservableObject {
         }
     }
 
+    // MARK: Data Source
+
+    @UserDefault("appDataMode", defaultValue: AppDataMode.live.rawValue)
+    private var appDataModeRawValue: String
+
+    var appDataMode: AppDataMode {
+        get {
+            AppDataMode(rawValue: appDataModeRawValue) ?? .live
+        }
+        set {
+            appDataModeRawValue = newValue.rawValue
+            self.objectWillChange.send()
+        }
+    }
+
+    var useFixtureData: Bool {
+        get {
+            appDataMode == .fixtures
+        }
+        set {
+            appDataMode = newValue ? .fixtures : .live
+        }
+    }
+
     // MARK: Autoload
 
     // These two are no longer used (KeychainItem behaves weirdly). They're sticking around to possibly be migrated
@@ -246,6 +270,7 @@ class Settings: ObservableObject {
         self.ingredientBlacklist.reset()
         self.allergenBlacklist.reset()
         self.translateMeals = true
+        self.appDataMode = .live
         self.autoloadCardnumber = nil
         self.autoloadPassword = nil
     }
