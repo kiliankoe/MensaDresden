@@ -4,18 +4,22 @@ devices([
   "iPad Pro 13-inch (M4)",
 ])
 
+# App Store Connect locale codes — these must match the metadata folder names
+# in fastlane/metadata so screenshots upload to the right listing localization.
 languages([
-  "de",
-  "en",
-  "ar",
+  "de-DE",
+  "en-US",
+  "ar-SA",
   "cs",
-  "es",
-  "fr",
+  "es-ES",
+  "es-MX",
+  "fr-FR",
   "it",
   "ja",
   "ko",
   "pl",
-  "pt",
+  "pt-PT",
+  "pt-BR",
   "ru",
   "tr",
   "zh-Hans",
