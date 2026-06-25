@@ -50,6 +50,19 @@ platform :ios do
 
     build_number = latest_testflight_build_number(app_identifier: app_identifier) + 1
 
+    # Let xcodebuild create/download the App Store provisioning profiles itself,
+    # authenticated with the ASC API key. Without -allowProvisioningUpdates it
+    # falls back to the wildcard dev profile, which can't carry the App Group the
+    # app + watch extension require. The -authenticationKey* flags keep this
+    # API-key driven so no Apple ID account needs to be signed into Xcode.
+    require "shellwords"
+    provisioning_args = [
+      "-allowProvisioningUpdates",
+      "-authenticationKeyPath", ENV.fetch("ASC_KEY_FILEPATH"),
+      "-authenticationKeyID", ENV.fetch("ASC_KEY_ID"),
+      "-authenticationKeyIssuerID", ENV.fetch("ASC_ISSUER_ID"),
+    ].shelljoin
+
     build_app(
       scheme: "MensaDresden",
       workspace: workspace_path,
@@ -57,7 +70,7 @@ platform :ios do
       export_method: "app-store",
       output_directory: build_output_path,
       clean: true,
-      xcargs: "CURRENT_PROJECT_VERSION=#{build_number}"
+      xcargs: "#{provisioning_args} CURRENT_PROJECT_VERSION=#{build_number}"
     )
   end
 
