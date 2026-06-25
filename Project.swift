@@ -1,7 +1,9 @@
 import ProjectDescription
 
 let appVersion = "2026.3"
-let appBuildNumber = "99"
+// Baseline only — must be numeric (CFBundleVersion can't be "dev"). The release
+// lane overrides this per build via CURRENT_PROJECT_VERSION (see fastlane/Fastfile).
+let appBuildNumber = "1"
 let uiTestVersion = "1.0"
 let uiTestBuildNumber = "1"
 
@@ -10,7 +12,6 @@ let swiftVersion = "5.0"
 
 let appBundleId = "io.kilian.MensaDresden"
 let watchBundleId = "\(appBundleId).watchkitapp"
-let watchExtensionBundleId = "\(watchBundleId).watchkitextension"
 
 let appDeploymentTarget = "16.0"
 let uiTestDeploymentTarget = "15.2"
@@ -38,30 +39,13 @@ let appSettings = sharedSettings.merging([
     "TARGETED_DEVICE_FAMILY": "1,2",
 ]) { _, new in new }
 
-let watchAppSettings = sharedSettings.merging([
+let watchSettings = sharedSettings.merging([
     "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
     "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
     "CURRENT_PROJECT_VERSION": .string(appBuildNumber),
     "MARKETING_VERSION": .string(appVersion),
     "PRODUCT_BUNDLE_IDENTIFIER": .string(watchBundleId),
     "PRODUCT_NAME": "MensaDD",
-    "SDKROOT": "watchos",
-    "SKIP_INSTALL": "YES",
-    "TARGETED_DEVICE_FAMILY": "4",
-    "WATCHOS_DEPLOYMENT_TARGET": .string(watchDeploymentTarget),
-]) { _, new in new }
-
-let watchExtensionSettings = sharedSettings.merging([
-    "ASSETCATALOG_COMPILER_COMPLICATION_NAME": "Complication",
-    "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
-    "CURRENT_PROJECT_VERSION": .string(appBuildNumber),
-    "LD_RUNPATH_SEARCH_PATHS": [
-        "@executable_path/Frameworks",
-        "@executable_path/../../Frameworks",
-    ],
-    "MARKETING_VERSION": .string(appVersion),
-    "PRODUCT_BUNDLE_IDENTIFIER": .string(watchExtensionBundleId),
-    "PRODUCT_NAME": "MensaDresdenWatch WatchKit Extension",
     "SDKROOT": "watchos",
     "SKIP_INSTALL": "YES",
     "SWIFT_EMIT_LOC_STRINGS": "YES",
@@ -130,45 +114,17 @@ let project = Project(
         .target(
             name: "MensaDresdenWatch",
             destinations: [.appleWatch],
-            product: .watch2App,
+            product: .app,
             bundleId: watchBundleId,
             deploymentTargets: .watchOS(watchDeploymentTarget),
             infoPlist: .extendingDefault(with: [
-                // Must match the companion app; reference the same build settings
-                // instead of Tuist's literal "1.0"/"1" defaults.
+                // Versions must match the companion app; reference the same build
+                // settings instead of Tuist's literal "1.0"/"1" defaults.
                 "CFBundleShortVersionString": .string("$(MARKETING_VERSION)"),
                 "CFBundleVersion": .string("$(CURRENT_PROJECT_VERSION)"),
+                // Single-target watchOS app (no separate WatchKit extension).
+                "WKApplication": .boolean(true),
                 "WKCompanionAppBundleIdentifier": .string(appBundleId),
-                "WKWatchKitApp": .boolean(true),
-            ]),
-            sources: [],
-            resources: [
-                "MensaDresdenWatch/Assets.xcassets",
-            ],
-            dependencies: [
-                .target(name: "MensaDresdenWatchExtension"),
-            ],
-            settings: .settings(base: watchAppSettings)
-        ),
-        .target(
-            name: "MensaDresdenWatchExtension",
-            destinations: [.appleWatch],
-            product: .watch2Extension,
-            bundleId: watchExtensionBundleId,
-            deploymentTargets: .watchOS(watchDeploymentTarget),
-            infoPlist: .extendingDefault(with: [
-                // Keep versions in sync with the app + watch app (see above).
-                "CFBundleShortVersionString": .string("$(MARKETING_VERSION)"),
-                "CFBundleVersion": .string("$(CURRENT_PROJECT_VERSION)"),
-                // Per Xcode's store validation, WKRunsIndependentlyOfCompanionApp
-                // must live on the WatchKit *extension*, not the WatchKit app.
-                "WKRunsIndependentlyOfCompanionApp": .boolean(true),
-                "NSExtension": .dictionary([
-                    "NSExtensionAttributes": .dictionary([
-                        "WKAppBundleIdentifier": .string(watchBundleId),
-                    ]),
-                    "NSExtensionPointIdentifier": .string("com.apple.watchkit"),
-                ]),
             ]),
             sources: [
                 "MensaDresdenWatch WatchKit Extension/AppView.swift",
@@ -208,11 +164,11 @@ let project = Project(
                 "MensaDresden/Shared/UserDefault.swift",
             ],
             resources: [
-                "MensaDresdenWatch WatchKit Extension/Assets.xcassets",
+                "MensaDresdenWatch/Assets.xcassets",
                 "MensaDresdenWatch WatchKit Extension/Preview Content/Preview Assets.xcassets",
                 "MensaDresden/*.lproj/Localizable.strings",
             ],
-            entitlements: .file(path: "MensaDresdenWatch WatchKit Extension/MensaDresdenWatch WatchKit Extension.entitlements"),
+            entitlements: .file(path: "MensaDresdenWatch/MensaDresdenWatch.entitlements"),
             dependencies: [
                 .package(product: "KeychainAccess"),
                 .package(product: "SwiftyHolidays"),
@@ -220,7 +176,7 @@ let project = Project(
                 .package(product: "KeychainItem"),
                 .package(product: "EmealKit"),
             ],
-            settings: .settings(base: watchExtensionSettings)
+            settings: .settings(base: watchSettings)
         ),
         .target(
             name: "UITests",
