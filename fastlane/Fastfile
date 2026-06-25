@@ -86,30 +86,9 @@ platform :ios do
 
     sh("tuist generate --path \"#{project_root}\" --no-open")
 
-    snapshot(
-      scheme: "Screenshots",
-      workspace: workspace_path,
-      devices: [
-        "iPhone 17 Pro Max",
-        "iPhone 11 Pro Max",
-        "iPad Pro 13-inch (M4)",
-      ],
-      languages: [
-        "en-US",
-        "de-DE",
-        "ja",
-        "ru",
-        "zh-Hans",
-      ],
-      output_directory: screenshots_path,
-      clear_previous_screenshots: true,
-      override_status_bar: true,
-      launch_arguments: ["--uitesting"],
-      skip_open_summary: true,
-      number_of_retries: 0,
-      stop_after_first_error: true,
-      concurrent_simulators: false
-    )
+    # Configuration (devices, languages, scheme, ...) lives in fastlane/Snapfile.
+    # Don't pass those as arguments here — explicit args override the Snapfile.
+    snapshot
   end
 
   desc "Upload existing screenshots to App Store Connect"

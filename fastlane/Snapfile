@@ -5,10 +5,19 @@ devices([
 ])
 
 languages([
-  "en-US",
-  "de-DE",
+  "de",
+  "en",
+  "ar",
+  "cs",
+  "es",
+  "fr",
+  "it",
   "ja",
+  "ko",
+  "pl",
+  "pt",
   "ru",
+  "tr",
   "zh-Hans",
 ])
 
@@ -18,3 +27,7 @@ output_directory("./appstore_screenshots")
 clear_previous_screenshots(true)
 override_status_bar(true)
 launch_arguments(["--uitesting"])
+skip_open_summary(true)
+number_of_retries(0)
+stop_after_first_error(true)
+concurrent_simulators(false)
