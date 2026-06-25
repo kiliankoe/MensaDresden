@@ -134,6 +134,10 @@ let project = Project(
             bundleId: watchBundleId,
             deploymentTargets: .watchOS(watchDeploymentTarget),
             infoPlist: .extendingDefault(with: [
+                // Must match the companion app; reference the same build settings
+                // instead of Tuist's literal "1.0"/"1" defaults.
+                "CFBundleShortVersionString": .string("$(MARKETING_VERSION)"),
+                "CFBundleVersion": .string("$(CURRENT_PROJECT_VERSION)"),
                 "WKCompanionAppBundleIdentifier": .string(appBundleId),
                 "WKWatchKitApp": .boolean(true),
             ]),
@@ -153,6 +157,9 @@ let project = Project(
             bundleId: watchExtensionBundleId,
             deploymentTargets: .watchOS(watchDeploymentTarget),
             infoPlist: .extendingDefault(with: [
+                // Keep versions in sync with the app + watch app (see above).
+                "CFBundleShortVersionString": .string("$(MARKETING_VERSION)"),
+                "CFBundleVersion": .string("$(CURRENT_PROJECT_VERSION)"),
                 // Per Xcode's store validation, WKRunsIndependentlyOfCompanionApp
                 // must live on the WatchKit *extension*, not the WatchKit app.
                 "WKRunsIndependentlyOfCompanionApp": .boolean(true),
