@@ -136,7 +136,6 @@ let project = Project(
             infoPlist: .extendingDefault(with: [
                 "WKCompanionAppBundleIdentifier": .string(appBundleId),
                 "WKWatchKitApp": .boolean(true),
-                "WKRunsIndependentlyOfCompanionApp": .boolean(true),
             ]),
             sources: [],
             resources: [
@@ -154,6 +153,9 @@ let project = Project(
             bundleId: watchExtensionBundleId,
             deploymentTargets: .watchOS(watchDeploymentTarget),
             infoPlist: .extendingDefault(with: [
+                // Per Xcode's store validation, WKRunsIndependentlyOfCompanionApp
+                // must live on the WatchKit *extension*, not the WatchKit app.
+                "WKRunsIndependentlyOfCompanionApp": .boolean(true),
                 "NSExtension": .dictionary([
                     "NSExtensionAttributes": .dictionary([
                         "WKAppBundleIdentifier": .string(watchBundleId),
