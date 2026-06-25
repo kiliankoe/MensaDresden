@@ -1,6 +1,6 @@
 import ProjectDescription
 
-let appVersion = "2026.3"
+let appVersion = "2026.4"
 // Baseline only — must be numeric (CFBundleVersion can't be "dev"). The release
 // lane overrides this per build via CURRENT_PROJECT_VERSION (see fastlane/Fastfile).
 let appBuildNumber = "1"
