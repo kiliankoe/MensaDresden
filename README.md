@@ -8,7 +8,12 @@ Looking to see what's for lunch today?
 
 If you're interested in how this app communicates with the Studentenwerk Dresden server to fetch meal information, your recent Emeal transactions or how it reads your Emeal balance via NFC, check out [EmealKit](https://github.com/kiliankoe/emealkit).
 
-![Screenshots](https://user-images.githubusercontent.com/2625584/148906162-fbdffcb3-da3c-447b-8291-85d907238d58.png)
+<p>
+  <img src="docs/screenshots/menu.png" width="200" alt="Menu" />
+  <img src="docs/screenshots/emeal.png" width="200" alt="Emeal" />
+  <img src="docs/screenshots/meal.png" width="200" alt="Meal" />
+  <img src="docs/screenshots/canteens.png" width="200" alt="Canteens" />
+</p>
 
 ## Development setup (Tuist)
 
