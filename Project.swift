@@ -125,6 +125,7 @@ let project = Project(
                 // Single-target watchOS app (no separate WatchKit extension).
                 "WKApplication": .boolean(true),
                 "WKCompanionAppBundleIdentifier": .string(appBundleId),
+                "WKRunsIndependentlyOfCompanionApp": .boolean(true),
             ]),
             sources: [
                 "MensaDresdenWatch WatchKit Extension/AppView.swift",
